@@ -104,5 +104,184 @@
             color: var(--text-main); display: inline-flex; align-items: center; gap: 6px;
         }
         .btn-primary {
-            background
+            background: linear-gradient(135deg, #22c55e, #16a34a);
+            border-color: transparent; color: #022c22; font-weight: 600;
+        }
+
+        .links-grid {
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+            gap: 8px; margin-top: 10px;
+        }
+        .link-pill {
+            border-radius: 999px; padding: 8px 10px; font-size: 13px;
+            border: 1px solid var(--border-soft);
+            background: rgba(15, 23, 42, 0.9);
+            display: flex; align-items: center; justify-content: space-between;
+            color: var(--text-muted);
+        }
+        .link-pill span.label { color: var(--text-main); }
+
+        footer {
+            margin-top: 28px; text-align: center; font-size: 11px;
+            color: var(--text-muted); border-top: 1px solid #020617; padding-top: 12px;
+        }
+    </style>
+</head>
+
+<body>
+<div class="page">
+
+    <header>
+
+        <!-- ✅ SVG LOGO -->
+        <div class="logo">
+            <svg width="120" height="32" viewBox="0 0 300 80" xmlns="http://www.w3.org/2000/svg">
+                <text x="0" y="55" font-size="48" font-family="Arial, sans-serif" fill="#22c55e" font-weight="700">
+                    SPDJ
+                </text>
+            </svg>
+        </div>
+
+        <div class="tagline">Community Support · Google Ecosystem</div>
+
+        <h1 class="hero-title">SP Digital Journey – Community Google Support</h1>
+
+        <p class="hero-sub">
+            One-on-one, practical guidance for 
+            <span class="hero-highlight">Google Maps, Business Profiles, Street View, and digital presence</span> — with a pay-as-you-like model.
+        </p>
+
+        <div class="pill-row">
+            <div class="pill">Digital Marketer & Google Ecosystem Specialist (15+ Years)</div>
+            <div class="pill">Ex–Google Maps · 2007 Pilot Batch</div>
+            <div class="pill">5000+ Business Owners Guided</div>
+            <div class="pill">2000+ Street View Shoots · 7+ States · 100+ Cities</div>
+        </div>
+    </header>
+
+    <main class="grid">
+
+        <!-- LEFT SIDE -->
+        <section class="card">
+            <div class="card-title"><span>About</span> · SP Digital Journey</div>
+
+            <p>For the past 15 years, I’ve been working deep inside the Google ecosystem—Maps, Street View, Play Store, and Business Profiles. I’ve helped thousands of businesses appear online, get discovered, and grow their visibility.</p>
+
+            <p>SP Digital Journey is my way of sharing that experience with you. Whether you’re a small business owner, a freelancer, or just curious about how Google tools really work, I break everything down step by step.</p>
+
+            <p>From optimizing your Google Business Profile, to creating WhatsApp catalogues, to using Street View for marketing—my goal is to make digital growth simple, practical, and accessible.</p>
+
+            <div class="stat-row">
+                <div class="stat-pill"><strong>Google Business Profile:</strong> Setup · Fix · Optimization</div>
+                <div class="stat-pill"><strong>Street View:</strong> Virtual tours for trust & discovery</div>
+                <div class="stat-pill"><strong>WhatsApp & Local:</strong> Catalogues · Simple funnels</div>
+                <div class="stat-pill"><strong>Training:</strong> 1-to-1 & group sessions</div>
+            </div>
+        </section>
+
+        <!-- RIGHT SIDE -->
+        <section class="card">
+            <div class="card-title"><span>Community</span> · Support Model</div>
+
+            <div class="support-box">
+                <div class="support-title">Community Support · Pay As You Like</div>
+                <p class="support-text">
+                    This is a community support initiative. There is no fixed charge.  
+                    You may contribute any amount based on your comfort and the value you feel from the support.
+                </p>
+            </div>
+
+            <p class="muted" style="margin-top: 10px;">
+                If you know anyone who needs Google support, guidance, or training, I would be grateful if you could share my profile with them. Your referral means a lot to my work. 🙏
+            </p>
+
+            <ul class="contact-list">
+                <li><span class="contact-label">Name:</span> Sanjay Paul · SPDigitalJourney</li>
+                <li><span class="contact-label">Role:</span> Digital Marketer & Google Ecosystem Specialist</li>
+                <li><span class="contact-label">Experience:</span> 15+ Years · Ex–Google Maps (2007 Pilot Batch)</li>
+            </ul>
+
+            <div class="cta-buttons">
+                <a class="btn btn-primary" href="https://wa.me/7799423794" target="_blank">💬 WhatsApp</a>
+                <a class="btn" href="tel:+917799423794">📞 Call Now</a>
+                <a class="btn" href="upi://pay?pa=7799423794@upi">💚 Support via UPI</a>
+            </div>
+
+            <!-- ✅ SHARE BUTTON -->
+            <div class="cta-buttons" style="margin-top: 12px;">
+                <button class="btn" onclick="shareProfile()">🔗 Share this Profile</button>
+            </div>
+
+            <ul class="contact-list" style="margin-top: 10px;">
+                <li><span class="contact-label">Phone / WhatsApp / GPay:</span> 7799423794</li>
+                <li><span class="contact-label">Email:</span> <a href="mailto:rpsanjaypaul@gmail.com">rpsanjaypaul@gmail.com</a></li>
+            </ul>
+        </section>
+
+    </main>
+
+    <!-- LINKS SECTION -->
+    <section class="card" style="margin-top: 16px;">
+        <div class="card-title"><span>Learn</span> · Join · Explore</div>
+
+        <p class="muted">
+            I share practical, step-by-step content on how to use Google tools for real-world growth.
+            Follow along, learn at your pace, and share this with anyone who needs genuine support.
+        </p>
+
+        <div class="links-grid">
+            <a class="link-pill" href="https://spdigitaljourney.blogspot.com/" target="_blank">
+                <span class="label">Blog</span><span>Visit Blog ↗</span>
+            </a>
+
+            <a class="link-pill" href="https://wa.me/7799423794" target="_blank">
+                <span class="label">WhatsApp</span><span>Chat Now ↗</span>
+            </a>
+
+            <a class="link-pill" href="mailto:rpsanjaypaul@gmail.com">
+                <span class="label">Email</span><span>rpsanjaypaul@gmail.com</span>
+            </a>
+
+            <a class="link-pill" href="https://x.com/spdigitaljourne" target="_blank">
+                <span class="label">X (Twitter)</span><span>@spdigitaljourne ↗</span>
+            </a>
+
+            <a class="link-pill" href="https://instagram.com/spdigitaljourney" target="_blank">
+                <span class="label">Instagram</span><span>@spdigitaljourney ↗</span>
+            </a>
+
+            <a class="link-pill" href="https://youtube.com/@spdigitaljourney" target="_blank">
+                <span class="label">YouTube</span><span>@spdigitaljourney ↗</span>
+            </a>
+        </div>
+    </section>
+
+    <footer>
+        © <span id="year"></span> SP Digital Journey · Community Support Initiative · Built on GitHub Pages
+    </footer>
+
+</div>
+
+<script>
+document.getElementById('year').textContent = new Date().getFullYear();
+
+function shareProfile() {
+    const shareData = {
+        title: "SP Digital Journey – Community Google Support",
+        text: "Genuine Google Maps, Business Profile & Street View support by SP Digital Journey.",
+        url: "https://spdigitaljourney.github.io"
+    };
+
+    if (navigator.share) {
+        navigator.share(shareData);
+    } else {
+        navigator.clipboard.writeText(shareData.url);
+        alert("Link copied to clipboard!");
+    }
+}
+</script>
+
+</body>
+</html>
+
 
