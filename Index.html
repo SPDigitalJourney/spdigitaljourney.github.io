@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SP Digital Journey – Community Support</title>
+    <style>
+        :root {
+            --bg: #050816;
+            --card: #0f172a;
+            --accent: #22c55e;
+            --accent-soft: rgba(34, 197, 94, 0.1);
+            --text-main: #e5e7eb;
+            --text-muted: #9ca3af;
+            --border-soft: #1f2937;
+        }
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            margin: 0;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            background: radial-gradient(circle at top, #111827 0, #020617 45%, #000 100%);
+            color: var(--text-main);
+        }
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+        .page {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 24px 16px 40px;
+        }
+        header {
+            text-align: center;
+            padding: 32px 16px 16px;
+        }
+        .tagline {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 4px 12px;
+            border-radius: 999px;
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            background: rgba(15, 23, 42, 0.9);
+            border: 1px solid var(--border-soft);
+            color: var(--accent);
+        }
+        .hero-title {
+            margin: 20px 0 8px;
+            font-size: 28px;
+            font-weight: 700;
+        }
+        .hero-sub {
+            font-size: 15px;
+            color: var(--text-muted);
+            max-width: 520px;
+            margin: 0 auto;
+        }
+        .hero-highlight {
+            color: var(--accent);
+        }
+        .pill-row {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 8px;
+            margin-top: 16px;
+        }
+        .pill {
+            font-size: 11px;
+            padding: 5px 12px;
+            border-radius: 999px;
+            background: rgba(15, 23, 42, 0.85);
+            border: 1px solid var(--border-soft);
+            color: var(--text-muted);
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: minmax(0, 2fr) minmax(0, 1.4fr);
+            gap: 16px;
+            margin-top: 24px;
+        }
+        @media (max-width: 768px) {
+            .grid {
+                grid-template-columns: minmax(0, 1fr);
+            }
+            header {
+                padding-top: 24px;
+            }
+        }
+        .card {
+            background: rgba(15, 23, 42, 0.92);
+            border-radius: 16px;
+            border: 1px solid var(--border-soft);
+            padding: 18px 16px 16px;
+        }
+        .card-title {
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 0.14em;
+            color: var(--text-muted);
+            margin-bottom: 10px;
+        }
+        .card-title span {
+            color: var(--accent);
+        }
+        .card p {
+            margin: 0 0 8px;
+            font-size: 14px;
+            line-height: 1.5;
+            color: var(--text-main);
+        }
+        .muted {
+            color: var(--text-muted);
+            font-size: 13px;
+        }
+        .stat-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 10px;
+        }
+        .stat-pill {
+            padding: 6px 10px;
+            border-radius: 999px;
+            background: rgba(15, 23, 42, 0.9);
+            border: 1px solid var(--border-soft);
+            font-size: 11px;
+            color: var(--text-muted);
+        }
+        .stat-pill strong {
+            color: var(--accent);
+            font-weight: 600;
+        }
+        .support-box {
+            background: var(--accent-soft);
+            border-radius: 14px;
+            border: 1px solid rgba(34, 197, 94, 0.4);
+            padding: 14px 12px;
+            margin-top: 10px;
+        }
+        .support-title {
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--accent);
+            margin-bottom: 4px;
+        }
+        .support-text {
+            font-size: 13px;
+            color: #bbf7d0;
+        }
+        .contact-list {
+            list-style: none;
+            padding: 0;
+            margin: 8px 0 0;
+            font-size: 13px;
+        }
+        .contact-list li {
+            margin-bottom: 4px;
+        }
+        .contact-label {
+            color: var(--text-muted);
+        }
+        .cta-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 10px;
+        }
+        .btn {
+            border-radius: 999px;
+            font-size: 13px;
+            padding: 7px 14px;
+            border: 1px solid var(--border-soft);
+            background: rgba(15, 23, 42, 0.95);
+            color: var(--text-main);
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+        .btn-primary {
+            background: linear-gradient(135deg, #22c55e, #16a34a);
+            border-color: transparent;
+            color: #022c22;
+            font-weight: 600;
+        }
+        .btn span.icon {
+            font-size: 14px;
+        }
+        .links-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+            gap: 8px;
+            margin-top: 10px;
+        }
+        .link-pill {
+            border-radius: 999px;
+            padding: 8px 10px;
+            font-size: 13px;
+            border: 1px solid var(--border-soft);
+            background: rgba(15, 23, 42, 0.9);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            color: var(--text-muted);
+        }
+        .link-pill span.label {
+            color: var(--text-main);
+        }
+        footer {
+            margin-top: 28px;
+            text-align: center;
+            font-size: 11px;
+            color: var(--text-muted);
+            border-top: 1px solid #020617;
+            padding-top: 12px;
+        }
+    </style>
+</head>
+<body>
+    <div class="page">
+        <header>
+            <div class="tagline">
+                <span>Community Support · Google Ecosystem</span>
+            </div>
+            <h1 class="hero-title">SP Digital Journey – Community Google Support</h1>
+            <p class="hero-sub">
+                One-on-one, practical guidance for 
+                <span class="hero-highlight">Google Maps, Business Profiles, Street View, and digital presence</span> — with a pay-as-you-like model.
+            </p>
+            <div class="pill-row">
+                <div class="pill">Digital Marketer & Google Ecosystem Specialist (15+ Years)</div>
+                <div class="pill">Ex–Google Maps · 2007 Pilot Batch</div>
+                <div class="pill">5000+ Business Owners Guided</div>
+                <div class="pill">2000+ Street View Shoots · 7+ States · 100+ Cities</div>
+            </div>
+        </header>
+
+        <main class="grid">
+            <!-- Left: About / What I Do -->
+            <section class="card">
+                <div class="card-title"><span>About</span> · SP Digital Journey</div>
+                <p>
+                    For the past 15 years, I’ve been working deep inside the Google ecosystem—Maps, Street View, Play Store, and Business Profiles. I’ve helped thousands of businesses appear online, get discovered, and grow their visibility.
+                </p>
+                <p>
+                    SP Digital Journey is my way of sharing that experience with you. Whether you’re a small business owner, a freelancer, or just curious about how Google tools really work, I break everything down step by step.
+                </p>
+                <p>
+                    From optimizing your Google Business Profile, to creating WhatsApp catalogues, to using Street View for marketing—my goal is to make digital growth simple, practical, and accessible.
+                </p>
+
+                <div class="stat-row">
+                    <div class="stat-pill"><strong>Google Business Profile:</strong> Setup · Fix · Optimization</div>
+                    <div class="stat-pill"><strong>Street View:</strong> Virtual tours for trust & discovery</div>
+                    <div class="stat-pill"><strong>WhatsApp & Local:</strong> Catalogues · Simple funnels</div>
+                    <div class="stat-pill"><strong>Training:</strong> 1-to-1 & group sessions</div>
+                </div>
+            </section>
+
+            <!-- Right: Community Support + Contact -->
+            <section class="card">
+                <div class="card-title"><span>Community</span> · Support Model</div>
+                <div class="support-box">
+                    <div class="support-title">Community Support · Pay As You Like</div>
+                    <p class="support-text">
+                        This is a community support initiative. There is no fixed charge.  
+                        You may contribute any amount based on your comfort and the value you feel from the support.
+                    </p>
+                </div>
+                <p class="muted" style="margin-top: 10px;">
+                    If you come across anyone who is looking for Google support, guidance, or training, I would be truly grateful if you could share my profile with them. Your referral means a lot to my work. 🙏
+                </p>
+
+                <ul class="contact-list">
+                    <li><span class="contact-label">Name:</span> Sanjay Paul · SPDigitalJourney</li>
+                    <li><span class="contact-label">Role:</span> Digital Marketer & Google Ecosystem Specialist</li>
+                    <li><span class="contact-label">Experience:</span> 15+ Years · Ex–Google Maps (2007 Pilot Batch)</li>
+                </ul>
+
+                <div class="cta-buttons">
+                    <a class="btn btn-primary" href="https://wa.me/7799423794" target="_blank" rel="noopener">
+                        <span class="icon">💬</span><span>Message on WhatsApp</span>
+                    </a>
+                    <a class="btn" href="tel:+917799423794">
+                        <span class="icon">📞</span><span>Call Now</span>
+                    </a>
+                    <a class="btn" href="upi://pay?pa=7799423794@upi">
+                        <span class="icon">💚</span><span>Support via UPI / GPay</span>
+                    </a>
+                </div>
+
+                <ul class="contact-list" style="margin-top: 10px;">
+                    <li><span class="contact-label">Phone / WhatsApp / GPay:</span> 7799423794</li>
+                    <li><span class="contact-label">Email:</span> <a href="mailto:spdigitaljourney@gmail.com">spdigitaljourney@gmail.com</a></li>
+                </ul>
+            </section>
+        </main>
+
+        <!-- Links / Channels -->
+        <section class="card" style="margin-top: 16px;">
+            <div class="card-title"><span>Learn</span> · Join · Explore</div>
+            <p class="muted">
+                I share practical, step-by-step content on how to use Google tools for real-world growth.  
+                You can follow, learn, or send this to someone who needs genuine, patient support in simple language.
+            </p>
+            <div class="links-grid">
+                <a class="link-pill" href="https://spdigitaljourney.blogspot.com/" target="_blank" rel="noopener">
+                    <span class="label">Blog</span><span>spdigitaljourney.blogspot.com ↗</span>
+                </a>
+                <a class="link-pill" href="https://wa.me/7799423794" target="_blank" rel="noopener">
+                    <span class="label">WhatsApp</span><span>Chat ↗</span>
+                </a>
+                <a class="link-pill" href="mailto:spdigitaljourney@gmail.com">
+                    <span class="label">Email</span><span>spdigitaljourney@gmail.com</span>
+                </a>
+                <a class="link-pill" href="https://x.com/spdigitaljourne" target="_blank" rel="noopener">
+                    <span class="label">X (Twitter)</span><span>@spdigitaljourne ↗</span>
+                </a>
+                <a class="link-pill" href="https://instagram.com/spdigitaljourney" target="_blank" rel="noopener">
+                    <span class="label">Instagram</span><span>@spdigitaljourney ↗</span>
+                </a>
+                <a class="link-pill" href="https://youtube.com/@spdigitaljourney" target="_blank" rel="noopener">
+                    <span class="label">YouTube</span><span>@spdigitaljourney ↗</span>
+                </a>
+            </div>
+        </section>
+
+        <footer>
+            © <span id="year"></span> SP Digital Journey · Community Support Initiative · Built on GitHub Pages
+        </footer>
+    </div>
+
+    <script>
+        // Set current year
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
