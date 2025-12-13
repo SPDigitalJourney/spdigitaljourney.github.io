@@ -4,141 +4,207 @@
   <meta charset="UTF-8">
   <title>SPDigitalJourney – Google Business Profile Guidance</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- GLOBAL POLISHED DESIGN -->
   <style>
-    body { font-family: Arial, sans-serif; margin:0; padding:0; color:#333; }
-    a { color:#0A66C2; }
-    .nav { display:flex; flex-wrap:wrap; justify-content:space-between; align-items:center; padding:10px 20px; border-bottom:1px solid #e0e0e0; }
-    .nav-left { font-weight:700; font-size:20px; color:#0A66C2; }
-    .nav-right a { margin-left:15px; text-decoration:none; font-size:15px; color:#555; }
-    .nav-right a:hover { color:#0A66C2; }
-    .hero { text-align:center; padding:30px 15px; }
-    .hero img { width:100%; max-width:900px; border-radius:8px; margin-bottom:25px; }
-    .hero h1 { font-size:30px; color:#0A66C2; margin-bottom:10px; }
-    .hero p { font-size:18px; max-width:800px; margin:0 auto; line-height:1.6; color:#444; }
-    .section { padding:20px 15px; max-width:900px; margin:0 auto; }
-    .section h2 { color:#0A66C2; margin-bottom:10px; }
-    .section ul { font-size:18px; line-height:1.6; padding-left:20px; }
-    .section p { font-size:18px; line-height:1.6; }
-    .divider { border:0; border-top:1px solid #e0e0e0; margin:30px 0; }
-    .btn-center { text-align:center; margin:30px 0; }
-    .btn-primary {
-      background:#0A66C2; color:#fff; padding:12px 24px; text-decoration:none;
-      border-radius:6px; font-size:18px; font-weight:600; display:inline-block;
+    body {
+      font-family: Arial, sans-serif;
+      margin:0;
+      padding:0;
+      color:#333;
+      background:#fff;
     }
-    .social { text-align:center; margin:40px 0 20px; }
-    .social a { margin:0 8px; text-decoration:none; font-size:16px; }
-    .footer { text-align:center; padding:15px; font-size:13px; color:#777; border-top:1px solid #e0e0e0; margin-top:20px; }
+
+    a { color:#0A66C2; }
+
+    /* NAVIGATION */
+    .nav {
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      padding:12px 20px;
+      border-bottom:1px solid #e0e0e0;
+      position:sticky;
+      top:0;
+      background:#fff;
+      z-index:1000;
+    }
+
+    .nav-left {
+      font-weight:700;
+      font-size:22px;
+      color:#0A66C2;
+    }
+
+    .nav-right {
+      display:flex;
+      gap:18px;
+    }
+
+    .nav-right a {
+      text-decoration:none;
+      color:#555;
+      font-size:16px;
+    }
+
+    .nav-right a:hover {
+      color:#0A66C2;
+    }
+
+    /* MOBILE MENU */
+    .hamburger {
+      display:none;
+      font-size:28px;
+      cursor:pointer;
+      color:#0A66C2;
+    }
+
+    @media (max-width: 768px) {
+      .nav-right {
+        display:none;
+        flex-direction:column;
+        background:#fff;
+        width:100%;
+        padding:15px 0;
+        border-top:1px solid #e0e0e0;
+      }
+
+      .nav-right.show {
+        display:flex;
+      }
+
+      .hamburger {
+        display:block;
+      }
+    }
+
+    /* SECTIONS */
+    .section {
+      padding:30px 20px;
+      max-width:900px;
+      margin:auto;
+    }
+
+    .section h1, .section h2, .section h3 {
+      color:#0A66C2;
+    }
+
+    .section p, .section li {
+      font-size:18px;
+      line-height:1.6;
+    }
+
+    /* HERO */
+    .hero {
+      text-align:center;
+      padding:30px 15px;
+    }
+
+    .hero img {
+      width:100%;
+      max-width:900px;
+      border-radius:8px;
+      margin-bottom:25px;
+    }
+
+    .hero h1 {
+      font-size:30px;
+      color:#0A66C2;
+      margin-bottom:10px;
+    }
+
+    .hero p {
+      font-size:18px;
+      max-width:800px;
+      margin:0 auto;
+      line-height:1.6;
+      color:#444;
+    }
+
+    /* BUTTONS */
+    .btn-primary {
+      background:#0A66C2;
+      color:#fff;
+      padding:14px 26px;
+      text-decoration:none;
+      border-radius:8px;
+      font-size:18px;
+      font-weight:600;
+      display:inline-block;
+      transition:0.2s;
+    }
+
+    .btn-primary:hover {
+      background:#084a8f;
+    }
+
+    .btn-center {
+      text-align:center;
+      margin:30px 0;
+    }
+
+    /* TESTIMONIAL CARDS */
+    .testimonial-card {
+      border:1px solid #e0e0e0;
+      padding:20px;
+      border-radius:8px;
+      margin-bottom:20px;
+      background:#fafafa;
+    }
+
+    /* FOOTER */
+    .footer {
+      text-align:center;
+      padding:15px;
+      font-size:13px;
+      color:#777;
+      border-top:1px solid #e0e0e0;
+      margin-top:20px;
+    }
+
+    /* MOBILE TYPOGRAPHY */
+    @media (max-width: 768px) {
+      h1 { font-size:26px; }
+      h2 { font-size:22px; }
+      h3 { font-size:18px; }
+      p, li { font-size:16px; }
+      .section { padding:20px; }
+    }
   </style>
 </head>
+
 <body>
 
-  <!-- NAV -->
-  <style>
-  /* GLOBAL MOBILE IMPROVEMENTS */
-@media (max-width: 768px) {
-  h1 { font-size:26px; }
-  h2 { font-size:22px; }
-  h3 { font-size:18px; }
-  p, li { font-size:16px; line-height:1.6; }
-  .section { padding:15px; }
-  .hero img { border-radius:6px; }
-}
-
-  .nav-left {
-    font-weight:700;
-    font-size:22px;
-    color:#0A66C2;
-  }
-
-  .nav-right {
-    display:flex;
-    gap:18px;
-  }
-
-  .nav-right a {
-    text-decoration:none;
-    color:#555;
-    font-size:16px;
-  }
-
-  .nav-right a:hover {
-    color:#0A66C2;
-  }
-.btn-primary {
-  background:#0A66C2;
-  color:#fff;
-  padding:14px 26px;
-  text-decoration:none;
-  border-radius:8px;
-  font-size:18px;
-  font-weight:600;
-  display:inline-block;
-  transition:0.2s;
-}
-
-.btn-primary:hover {
-  background:#084a8f;
-}
-
-  /* MOBILE MENU */
-  .hamburger {
-    display:none;
-    font-size:28px;
-    cursor:pointer;
-    color:#0A66C2;
-  }
-
-  @media (max-width: 768px) {
-    .nav-right {
-      display:none;
-      flex-direction:column;
-      background:#fff;
-      width:100%;
-      padding:15px 0;
-      border-top:1px solid #e0e0e0;
-    }
-
-    .nav-right.show {
-      display:flex;
-    }
-
-    .hamburger {
-      display:block;
-    }
-  }
-</style>
-
-<div class="nav">
-  <div class="nav-left">SPDigitalJourney</div>
-  <div class="hamburger" onclick="toggleMenu()">☰</div>
-  <div class="nav-right" id="menu">
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="services.html">Services</a>
-    <a href="booking.html">Booking</a>
-    <a href="faq.html">FAQ</a>
-    <a href="testimonials.html">Testimonials</a>
-    <a href="contact.html">Contact</a>
+  <!-- NAVIGATION -->
+  <div class="nav">
+    <div class="nav-left">SPDigitalJourney</div>
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
+    <div class="nav-right" id="menu">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="booking.html">Booking</a>
+      <a href="faq.html">FAQ</a>
+      <a href="testimonials.html">Testimonials</a>
+      <a href="contact.html">Contact</a>
+    </div>
   </div>
-</div>
 
-<script>
-  function toggleMenu() {
-    document.getElementById("menu").classList.toggle("show");
-  }
-</script>
+  <script>
+    function toggleMenu() {
+      document.getElementById("menu").classList.toggle("show");
+    }
+  </script>
 
-  <!-- HERO -->
+  <!-- HERO SECTION -->
   <div class="hero">
     <img src="https://via.placeholder.com/900x350?text=Your+Image+Here" alt="SPDigitalJourney">
     <h1>Understand How Customers See Your Business on Google</h1>
     <p>
-      I help business owners understand how Google presents their business to customers — clearly, ethically, 
+      I help business owners understand how Google presents their business to customers — clearly, ethically,
       and without taking logins or control. You stay in charge. I guide you with clarity.
     </p>
   </div>
-
-  <hr class="divider">
 
   <!-- WHAT I DO -->
   <div class="section">
@@ -152,8 +218,6 @@
     </ul>
   </div>
 
-  <hr class="divider">
-
   <!-- SERVICES OVERVIEW -->
   <div class="section">
     <h2>Services Overview</h2>
@@ -161,25 +225,23 @@
     <h3>Full Guidance Session</h3>
     <ul>
       <li>Complete Google Business Profile review</li>
-      <li>Visibility analysis and gap identification</li>
-      <li>Photo & content strategy</li>
-      <li>Category & description clarity</li>
-      <li>Review best practices and trust signals</li>
+      <li>Visibility analysis & gap detection</li>
+      <li>Photo & content guidance</li>
+      <li>Category, description & attribute clarity</li>
+      <li>Review management best practices</li>
     </ul>
     <p><b>Duration:</b> 45–60 minutes</p>
 
     <h3>Mini Guidance Session</h3>
     <ul>
       <li>Quick profile review</li>
-      <li>Top 3 improvements</li>
+      <li>Top 3 priority improvements</li>
       <li>Simple, practical action steps</li>
     </ul>
     <p><b>Duration:</b> 20–30 minutes</p>
 
-    <p><b>Contribution:</b> Pay-as-you-like (₹500–₹1,000 suggested).</p>
+    <p><b>Contribution:</b> Pay-as-you-like (₹500–₹1,000 suggested)</p>
   </div>
-
-  <hr class="divider">
 
   <!-- WHY CHOOSE ME -->
   <div class="section">
@@ -188,40 +250,31 @@
       <li>15+ years experience with Google Maps & Business Profiles</li>
       <li>Part of the 2007 Google Maps Pilot Batch</li>
       <li>2000+ Street View projects contributed</li>
-      <li>Guided 5000+ business owners across multiple states</li>
-      <li>Ethical, safe, no‑login guidance model</li>
-      <li>Simple, clear, structured explanations</li>
+      <li>Guided 5000+ business owners</li>
+      <li>Ethical, safe, no‑login guidance</li>
+      <li>Simple, clear, actionable steps</li>
       <li>Pay‑as‑you‑like contribution model</li>
     </ul>
   </div>
 
-  <hr class="divider">
-
   <!-- TESTIMONIALS -->
   <div class="section">
     <h2>Testimonials</h2>
-    <p style="color:#777;">Real client feedback will appear here over time.</p>
-    <ul>
-      <li>“Sanjay explained everything clearly. I finally understand how Google shows my business.”</li>
-      <li>“Very ethical, patient and helpful guidance. Highly recommended.”</li>
-      <li>“Simple steps, noticeable improvement in visibility within weeks.”</li>
-    </ul>
-  </div>
 
-  <hr class="divider">
+    <div class="testimonial-card">
+      “Sanjay explained everything clearly. I finally understand how Google shows my business.”
+      <br><b>— Clinic Owner</b>
+    </div>
 
-  <!-- FAQ PREVIEW -->
-  <div class="section">
-    <h2>Quick FAQ</h2>
+    <div class="testimonial-card">
+      “Very ethical and helpful guidance. Highly recommended.”
+      <br><b>— Salon Owner</b>
+    </div>
 
-    <h3>Do you take logins?</h3>
-    <p>No. You stay in full control of your accounts. I only guide you.</p>
-
-    <h3>Is this marketing or paid ads?</h3>
-    <p>No. This is guidance based on Google’s visibility and trust signals, not ad campaigns.</p>
-
-    <h3>How do I book?</h3>
-    <p>You can book through WhatsApp using the button below or visit the Booking page.</p>
+    <div class="testimonial-card">
+      “Simple steps, big improvement in visibility.”
+      <br><b>— Tuition Center</b>
+    </div>
   </div>
 
   <!-- BOOK NOW -->
@@ -231,14 +284,16 @@
     </a>
   </div>
 
-  <!-- SOCIAL -->
-  <div class="social">
+  <!-- SOCIAL LINKS -->
+  <div class="section" style="text-align:center;">
     <h3>Connect With SPDigitalJourney</h3>
-    <a href="https://x.com/spdigitaljourne" target="_blank">X</a>
-    <a href="https://www.instagram.com/spdigitaljourney?igsh=eGVkY2Zwb29obWdt" target="_blank">Instagram</a>
-    <a href="https://www.facebook.com/profile.php?id=61584622684344" target="_blank">Facebook</a>
-    <a href="https://youtube.com/@spdigitaljourney" target="_blank">YouTube</a>
-    <a href="https://pin.it/3gmZ0JT6U" target="_blank">Pinterest</a>
+    <p>
+      <a href="https://x.com/spdigitaljourne" target="_blank">X</a> ·
+      <a href="https://www.instagram.com/spdigitaljourney?igsh=eGVkY2Zwb29obWdt" target="_blank">Instagram</a> ·
+      <a href="https://www.facebook.com/profile.php?id=61584622684344" target="_blank">Facebook</a> ·
+      <a href="https://youtube.com/@spdigitaljourney" target="_blank">YouTube</a> ·
+      <a href="https://pin.it/3gmZ0JT6U" target="_blank">Pinterest</a>
+    </p>
   </div>
 
   <!-- FOOTER -->
@@ -248,7 +303,3 @@
 
 </body>
 </html>
-
-
-
-
