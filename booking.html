@@ -4,132 +4,225 @@
   <meta charset="UTF-8">
   <title>Booking – SPDigitalJourney</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- GLOBAL POLISHED DESIGN -->
   <style>
-    body { font-family: Arial, sans-serif; margin:0; padding:0; color:#333; }
-    a { color:#0A66C2; }
-    .nav { display:flex; flex-wrap:wrap; justify-content:space-between; align-items:center; padding:10px 20px; border-bottom:1px solid #e0e0e0; }
-    .nav-left { font-weight:700; font-size:20px; color:#0A66C2; }
-    .nav-right a { margin-left:15px; text-decoration:none; font-size:15px; color:#555; }
-    .nav-right a:hover { color:#0A66C2; }
-    .section { padding:20px 15px; max-width:900px; margin:0 auto; }
-    .section h1, .section h2 { color:#0A66C2; }
-    .section p { font-size:18px; line-height:1.6; }
-    .btn-center { text-align:center; margin:30px 0; }
-    .btn-primary {
-      background:#0A66C2; color:#fff; padding:12px 24px; text-decoration:none;
-      border-radius:6px; font-size:18px; font-weight:600; display:inline-block;
+    body {
+      font-family: Arial, sans-serif;
+      margin:0;
+      padding:0;
+      color:#333;
+      background:#fff;
     }
-    .calendar-placeholder { border:1px dashed #ccc; padding:20px; text-align:center; color:#777; margin-top:20px; }
-    .footer { text-align:center; padding:15px; font-size:13px; color:#777; border-top:1px solid #e0e0e0; margin-top:20px; }
+
+    a { color:#0A66C2; }
+
+    /* NAVIGATION */
+    .nav {
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      padding:12px 20px;
+      border-bottom:1px solid #e0e0e0;
+      position:sticky;
+      top:0;
+      background:#fff;
+      z-index:1000;
+    }
+
+    .nav-left {
+      font-weight:700;
+      font-size:22px;
+      color:#0A66C2;
+    }
+
+    .nav-right {
+      display:flex;
+      gap:18px;
+    }
+
+    .nav-right a {
+      text-decoration:none;
+      color:#555;
+      font-size:16px;
+    }
+
+    .nav-right a:hover {
+      color:#0A66C2;
+    }
+
+    /* MOBILE MENU */
+    .hamburger {
+      display:none;
+      font-size:28px;
+      cursor:pointer;
+      color:#0A66C2;
+    }
+
+    @media (max-width: 768px) {
+      .nav-right {
+        display:none;
+        flex-direction:column;
+        background:#fff;
+        width:100%;
+        padding:15px 0;
+        border-top:1px solid #e0e0e0;
+      }
+
+      .nav-right.show {
+        display:flex;
+      }
+
+      .hamburger {
+        display:block;
+      }
+    }
+
+    /* SECTIONS */
+    .section {
+      padding:30px 20px;
+      max-width:900px;
+      margin:auto;
+    }
+
+    .section h1, .section h2 {
+      color:#0A66C2;
+    }
+
+    .section p {
+      font-size:18px;
+      line-height:1.6;
+    }
+
+    /* BUTTONS */
+    .btn-primary {
+      background:#0A66C2;
+      color:#fff;
+      padding:14px 26px;
+      text-decoration:none;
+      border-radius:8px;
+      font-size:18px;
+      font-weight:600;
+      display:inline-block;
+      transition:0.2s;
+    }
+
+    .btn-primary:hover {
+      background:#084a8f;
+    }
+
+    .btn-center {
+      text-align:center;
+      margin:30px 0;
+    }
+
+    /* CALENDAR BOX */
+    .calendar-box {
+      border:1px solid #e0e0e0;
+      border-radius:8px;
+      overflow:hidden;
+      margin-top:20px;
+    }
+
+    /* FOOTER */
+    .footer {
+      text-align:center;
+      padding:15px;
+      font-size:13px;
+      color:#777;
+      border-top:1px solid #e0e0e0;
+      margin-top:20px;
+    }
+
+    /* MOBILE TYPOGRAPHY */
+    @media (max-width: 768px) {
+      h1 { font-size:26px; }
+      h2 { font-size:22px; }
+      p { font-size:16px; }
+      .section { padding:20px; }
+    }
   </style>
 </head>
+
 <body>
 
-  <style>
-  /* GLOBAL MOBILE IMPROVEMENTS */
-@media (max-width: 768px) {
-  h1 { font-size:26px; }
-  h2 { font-size:22px; }
-  h3 { font-size:18px; }
-  p, li { font-size:16px; line-height:1.6; }
-  .section { padding:15px; }
-  .hero img { border-radius:6px; }
-}
+  <!-- NAVIGATION -->
+  <div class="nav">
+    <div class="nav-left">SPDigitalJourney</div>
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
+    <div class="nav-right" id="menu">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="booking.html">Booking</a>
+      <a href="faq.html">FAQ</a>
+      <a href="testimonials.html">Testimonials</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </div>
 
-  .nav-left {
-    font-weight:700;
-    font-size:22px;
-    color:#0A66C2;
-  }
-
-  .nav-right {
-    display:flex;
-    gap:18px;
-  }
-
-  .nav-right a {
-    text-decoration:none;
-    color:#555;
-    font-size:16px;
-  }
-
-  .nav-right a:hover {
-    color:#0A66C2;
-  }
-
-  /* MOBILE MENU */
-  .hamburger {
-    display:none;
-    font-size:28px;
-    cursor:pointer;
-    color:#0A66C2;
-  }
-.btn-primary {
-  background:#0A66C2;
-  color:#fff;
-  padding:14px 26px;
-  text-decoration:none;
-  border-radius:8px;
-  font-size:18px;
-  font-weight:600;
-  display:inline-block;
-  transition:0.2s;
-}
-
-.btn-primary:hover {
-  background:#084a8f;
-}
-
-  @media (max-width: 768px) {
-    .nav-right {
-      display:none;
-      flex-direction:column;
-      background:#fff;
-      width:100%;
-      padding:15px 0;
-      border-top:1px solid #e0e0e0;
+  <script>
+    function toggleMenu() {
+      document.getElementById("menu").classList.toggle("show");
     }
+  </script>
 
-    .nav-right.show {
-      display:flex;
-    }
-
-    .hamburger {
-      display:block;
-    }
-  }
-</style>
-
-<script>
-  function toggleMenu() {
-    document.getElementById("menu").classList.toggle("show");
-  }
-</script>
-
+  <!-- BOOKING SECTION -->
   <div class="section">
     <h1>Book a Guidance Session</h1>
+
     <p>
       Choose a convenient time and connect with me for a clear, ethical and practical Google Business Profile guidance session.
-      You can book directly via WhatsApp, and we’ll confirm the time together.
+      You can book directly through WhatsApp, and we’ll confirm the timing together.
+    </p>
+
+    <p>
+      I offer two types of sessions:
+    </p>
+
+    <ul>
+      <li><b>Full Guidance Session</b> — 45–60 minutes</li>
+      <li><b>Mini Guidance Session</b> — 20–30 minutes</li>
+    </ul>
+
+    <p>
+      <b>Contribution:</b> Pay-as-you-like (₹500–₹1,000 suggested)
     </p>
   </div>
 
+  <!-- BOOK NOW BUTTON -->
   <div class="btn-center">
     <a class="btn-primary" href="https://wa.me/917799423794?text=Hi%20Sanjay,%20I%20want%20to%20book%20a%20guidance%20session" target="_blank">
       BOOK NOW ON WHATSAPP
     </a>
   </div>
 
+  <!-- CALENDAR SECTION -->
+  <div class="section">
+    <h2>Availability Calendar</h2>
+    <p>
+      You can check available time slots below. Once your Google Calendar is ready, replace the placeholder with your embed code.
+    </p>
+
+    <div class="calendar-box">
+      <!-- Replace this iframe with your real Google Calendar embed -->
+      <iframe 
+        src="https://calendar.google.com/calendar/embed?src=your_calendar_here"
+        style="border:0; width:100%; height:600px;"
+        frameborder="0"
+        scrolling="no">
+      </iframe>
+    </div>
+
+    <p style="font-size:15px; color:#777; margin-top:15px;">
+      To embed your calendar: Google Calendar → Settings → Integrate Calendar → Copy iframe → Paste here.
+    </p>
+  </div>
+
+  <!-- FOOTER -->
   <div class="footer">
     © 2025 SPDigitalJourney — Ethical Google Business Profile Guidance
   </div>
 
 </body>
 </html>
-
-
-
-
-
-
-
