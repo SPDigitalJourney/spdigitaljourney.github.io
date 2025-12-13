@@ -1,8 +1,3 @@
-<div class="hero" style="background:url('https://i.imgur.com/8fKQ2QG.png'); background-size:cover; padding:70px 20px; text-align:center; color:white;">
-  <h1>Book a Session</h1>
-  <p>Choose a convenient time and start your clarity journey.</p>
-</div>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,7 +5,6 @@
   <title>Booking – SPDigitalJourney</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <!-- GLOBAL POLISHED DESIGN -->
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -56,7 +50,6 @@
       color:#0A66C2;
     }
 
-    /* MOBILE MENU */
     .hamburger {
       display:none;
       font-size:28px;
@@ -73,14 +66,33 @@
         padding:15px 0;
         border-top:1px solid #e0e0e0;
       }
+      .nav-right.show { display:flex; }
+      .hamburger { display:block; }
+    }
 
-      .nav-right.show {
-        display:flex;
-      }
+    /* HERO */
+    .hero {
+      padding:70px 20px;
+      text-align:center;
+      background:url('https://i.imgur.com/8fKQ2QG.png');
+      background-size:cover;
+      background-position:center;
+      color:white;
+      border-radius:0 0 12px 12px;
+    }
 
-      .hamburger {
-        display:block;
-      }
+    .hero h1 {
+      font-size:32px;
+      margin-bottom:10px;
+      color:white;
+    }
+
+    .hero p {
+      max-width:700px;
+      margin:auto;
+      font-size:18px;
+      line-height:1.6;
+      color:#f0f0f0;
     }
 
     /* SECTIONS */
@@ -90,16 +102,16 @@
       margin:auto;
     }
 
-    .section h1, .section h2 {
+    .section h2 {
       color:#0A66C2;
     }
 
-    .section p {
+    .section p, .section li {
       font-size:18px;
       line-height:1.6;
     }
 
-    /* BUTTONS */
+    /* BUTTON */
     .btn-primary {
       background:#0A66C2;
       color:#fff;
@@ -139,11 +151,10 @@
       margin-top:20px;
     }
 
-    /* MOBILE TYPOGRAPHY */
     @media (max-width: 768px) {
       h1 { font-size:26px; }
       h2 { font-size:22px; }
-      p { font-size:16px; }
+      p, li { font-size:16px; }
       .section { padding:20px; }
     }
   </style>
@@ -151,17 +162,19 @@
 
 <body>
 
-  <!-- NAVIGATION -->
+  <!-- NAV -->
   <div class="nav">
     <div class="nav-left">SPDigitalJourney</div>
     <div class="hamburger" onclick="toggleMenu()">☰</div>
     <div class="nav-right" id="menu">
       <a href="index.html">Home</a>
-      <a href="about.html">About</a>
+      <a href="blog.html">Blog</a>
+      <a href="resources.html">Resources</a>
       <a href="services.html">Services</a>
       <a href="booking.html">Booking</a>
       <a href="faq.html">FAQ</a>
       <a href="testimonials.html">Testimonials</a>
+      <a href="forms.html">Forms</a>
       <a href="contact.html">Contact</a>
     </div>
   </div>
@@ -172,17 +185,18 @@
     }
   </script>
 
+  <!-- HERO -->
+  <div class="hero">
+    <h1>Book a Session</h1>
+    <p>Choose a convenient time and start your clarity journey.</p>
+  </div>
+
   <!-- BOOKING SECTION -->
   <div class="section">
-    <h1>Book a Guidance Session</h1>
-
+    <h2>How to Book</h2>
     <p>
-      Choose a convenient time and connect with me for a clear, ethical and practical Google Business Profile guidance session.
-      You can book directly through WhatsApp, and we’ll confirm the timing together.
-    </p>
-
-    <p>
-      I offer two types of sessions:
+      Booking a session is simple. Just message me on WhatsApp and we’ll confirm a time that works for you.
+      You can choose between:
     </p>
 
     <ul>
@@ -190,19 +204,17 @@
       <li><b>Mini Guidance Session</b> — 20–30 minutes</li>
     </ul>
 
-    <p>
-      <b>Contribution:</b> Pay-as-you-like (₹500–₹1,000 suggested)
-    </p>
+    <p><b>Contribution:</b> Pay-as-you-like (₹500–₹1,000 suggested)</p>
   </div>
 
-  <!-- BOOK NOW BUTTON -->
+  <!-- CTA -->
   <div class="btn-center">
     <a class="btn-primary" href="https://wa.me/917799423794?text=Hi%20Sanjay,%20I%20want%20to%20book%20a%20guidance%20session" target="_blank">
       BOOK NOW ON WHATSAPP
     </a>
   </div>
 
-  <!-- CALENDAR SECTION -->
+  <!-- CALENDAR -->
   <div class="section">
     <h2>Availability Calendar</h2>
     <p>
@@ -231,4 +243,3 @@
 
 </body>
 </html>
-
