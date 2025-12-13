@@ -4,131 +4,202 @@
   <meta charset="UTF-8">
   <title>Testimonials – SPDigitalJourney</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- GLOBAL POLISHED DESIGN -->
   <style>
-    body { font-family: Arial, sans-serif; margin:0; padding:0; color:#333; }
+    body {
+      font-family: Arial, sans-serif;
+      margin:0;
+      padding:0;
+      color:#333;
+      background:#fff;
+    }
+
     a { color:#0A66C2; }
-    .nav { display:flex; justify-content:space-between; padding:10px 20px; border-bottom:1px solid #e0e0e0; }
-    .nav-left { font-weight:700; font-size:20px; color:#0A66C2; }
-    .nav-right a { margin-left:15px; text-decoration:none; color:#555; }
-    .section { padding:20px 15px; max-width:900px; margin:auto; }
-    .section h1 { color:#0A66C2; }
-    .section ul { font-size:18px; line-height:1.6; }
-    .footer { text-align:center; padding:15px; font-size:13px; color:#777; border-top:1px solid #e0e0e0; margin-top:20px; }
+
+    /* NAVIGATION */
+    .nav {
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      padding:12px 20px;
+      border-bottom:1px solid #e0e0e0;
+      position:sticky;
+      top:0;
+      background:#fff;
+      z-index:1000;
+    }
+
+    .nav-left {
+      font-weight:700;
+      font-size:22px;
+      color:#0A66C2;
+    }
+
+    .nav-right {
+      display:flex;
+      gap:18px;
+    }
+
+    .nav-right a {
+      text-decoration:none;
+      color:#555;
+      font-size:16px;
+    }
+
+    .nav-right a:hover {
+      color:#0A66C2;
+    }
+
+    /* MOBILE MENU */
+    .hamburger {
+      display:none;
+      font-size:28px;
+      cursor:pointer;
+      color:#0A66C2;
+    }
+
+    @media (max-width: 768px) {
+      .nav-right {
+        display:none;
+        flex-direction:column;
+        background:#fff;
+        width:100%;
+        padding:15px 0;
+        border-top:1px solid #e0e0e0;
+      }
+
+      .nav-right.show {
+        display:flex;
+      }
+
+      .hamburger {
+        display:block;
+      }
+    }
+
+    /* SECTIONS */
+    .section {
+      padding:30px 20px;
+      max-width:900px;
+      margin:auto;
+    }
+
+    .section h1, .section h2 {
+      color:#0A66C2;
+    }
+
+    .section p, .section li {
+      font-size:18px;
+      line-height:1.6;
+    }
+
+    /* TESTIMONIAL CARDS */
+    .testimonial-card {
+      border:1px solid #e0e0e0;
+      padding:20px;
+      border-radius:8px;
+      margin-bottom:20px;
+      background:#fafafa;
+      font-size:18px;
+      line-height:1.6;
+    }
+
+    .testimonial-card b {
+      display:block;
+      margin-top:10px;
+      color:#0A66C2;
+    }
+
+    /* FOOTER */
+    .footer {
+      text-align:center;
+      padding:15px;
+      font-size:13px;
+      color:#777;
+      border-top:1px solid #e0e0e0;
+      margin-top:20px;
+    }
+
+    /* MOBILE TYPOGRAPHY */
+    @media (max-width: 768px) {
+      h1 { font-size:26px; }
+      h2 { font-size:22px; }
+      p, li { font-size:16px; }
+      .section { padding:20px; }
+    }
   </style>
 </head>
+
 <body>
 
-  <style>
-  /* GLOBAL MOBILE IMPROVEMENTS */
-@media (max-width: 768px) {
-  h1 { font-size:26px; }
-  h2 { font-size:22px; }
-  h3 { font-size:18px; }
-  p, li { font-size:16px; line-height:1.6; }
-  .section { padding:15px; }
-  .hero img { border-radius:6px; }
-}
-
-  .nav-left {
-    font-weight:700;
-    font-size:22px;
-    color:#0A66C2;
-  }
-
-  .nav-right {
-    display:flex;
-    gap:18px;
-  }
-
-  .nav-right a {
-    text-decoration:none;
-    color:#555;
-    font-size:16px;
-  }
-
-  .nav-right a:hover {
-    color:#0A66C2;
-  }
-.btn-primary {
-  background:#0A66C2;
-  color:#fff;
-  padding:14px 26px;
-  text-decoration:none;
-  border-radius:8px;
-  font-size:18px;
-  font-weight:600;
-  display:inline-block;
-  transition:0.2s;
-}
-
-.btn-primary:hover {
-  background:#084a8f;
-}
-
-  /* MOBILE MENU */
-  .hamburger {
-    display:none;
-    font-size:28px;
-    cursor:pointer;
-    color:#0A66C2;
-  }
-
-  @media (max-width: 768px) {
-    .nav-right {
-      display:none;
-      flex-direction:column;
-      background:#fff;
-      width:100%;
-      padding:15px 0;
-      border-top:1px solid #e0e0e0;
-    }
-
-    .nav-right.show {
-      display:flex;
-    }
-
-    .hamburger {
-      display:block;
-    }
-  }
-<style>
-  .testimonial-card {
-    border:1px solid #e0e0e0;
-    padding:20px;
-    border-radius:8px;
-    margin-bottom:20px;
-    background:#fafafa;
-  }
-</style>
-
-<div class="section">
-  <h2>Testimonials</h2>
-
-  <div class="testimonial-card">
-    “Sanjay explained everything clearly. I finally understand how Google shows my business.”
-    <br><b>— Clinic Owner</b>
+  <!-- NAVIGATION -->
+  <div class="nav">
+    <div class="nav-left">SPDigitalJourney</div>
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
+    <div class="nav-right" id="menu">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="booking.html">Booking</a>
+      <a href="faq.html">FAQ</a>
+      <a href="testimonials.html">Testimonials</a>
+      <a href="contact.html">Contact</a>
+    </div>
   </div>
 
-  <div class="testimonial-card">
-    “Very ethical and helpful guidance. Highly recommended.”
-    <br><b>— Salon Owner</b>
+  <script>
+    function toggleMenu() {
+      document.getElementById("menu").classList.toggle("show");
+    }
+  </script>
+
+  <!-- TESTIMONIALS SECTION -->
+  <div class="section">
+    <h1>Client Testimonials</h1>
+    <p>
+      Real experiences from business owners who gained clarity, confidence, and direction through SPDigitalJourney’s ethical guidance model.
+    </p>
+
+    <div class="testimonial-card">
+      “Sanjay explained everything clearly. I finally understand how Google shows my business.  
+      His guidance helped me fix mistakes I didn’t even know existed.”
+      <b>— Clinic Owner</b>
+    </div>
+
+    <div class="testimonial-card">
+      “Very ethical and extremely patient. He never asked for logins and still helped me understand everything.  
+      Highly recommended for any business owner.”
+      <b>— Salon Owner</b>
+    </div>
+
+    <div class="testimonial-card">
+      “Simple steps, big improvement in visibility.  
+      I saw changes within weeks after following his suggestions.”
+      <b>— Tuition Center</b>
+    </div>
+
+    <div class="testimonial-card">
+      “I finally understood why my business wasn’t appearing properly on Google.  
+      The session was eye‑opening and very practical.”
+      <b>— Service Provider</b>
+    </div>
+
+    <div class="testimonial-card">
+      “Clear, honest, and structured guidance.  
+      No confusion, no pressure — just pure clarity.”
+      <b>— Retail Shop Owner</b>
+    </div>
+
+    <p style="margin-top:30px; font-size:16px; color:#777;">
+      More testimonials will be added as SPDigitalJourney continues helping business owners across India.
+    </p>
   </div>
 
-  <div class="testimonial-card">
-    “Simple steps, big improvement in visibility.”
-    <br><b>— Tuition Center</b>
-  </div>
-</div>
-
+  <!-- FOOTER -->
   <div class="footer">
     © 2025 SPDigitalJourney — Ethical Google Business Profile Guidance
   </div>
 
 </body>
 </html>
-
-
-
-
-
-
