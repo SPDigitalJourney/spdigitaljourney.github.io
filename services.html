@@ -1,8 +1,3 @@
-<div class="hero" style="background:url('https://i.imgur.com/8fKQ2QG.png'); background-size:cover; padding:70px 20px; text-align:center; color:white;">
-  <h1>Guidance Services</h1>
-  <p>Clear, structured sessions designed to give you confidence and clarity.</p>
-</div>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,7 +5,6 @@
   <title>Services – SPDigitalJourney</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <!-- GLOBAL POLISHED DESIGN -->
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -56,7 +50,6 @@
       color:#0A66C2;
     }
 
-    /* MOBILE MENU */
     .hamburger {
       display:none;
       font-size:28px;
@@ -73,14 +66,33 @@
         padding:15px 0;
         border-top:1px solid #e0e0e0;
       }
+      .nav-right.show { display:flex; }
+      .hamburger { display:block; }
+    }
 
-      .nav-right.show {
-        display:flex;
-      }
+    /* HERO */
+    .hero {
+      padding:70px 20px;
+      text-align:center;
+      background:url('https://i.imgur.com/8fKQ2QG.png');
+      background-size:cover;
+      background-position:center;
+      color:white;
+      border-radius:0 0 12px 12px;
+    }
 
-      .hamburger {
-        display:block;
-      }
+    .hero h1 {
+      font-size:32px;
+      margin-bottom:10px;
+      color:white;
+    }
+
+    .hero p {
+      max-width:700px;
+      margin:auto;
+      font-size:18px;
+      line-height:1.6;
+      color:#f0f0f0;
     }
 
     /* SECTIONS */
@@ -90,7 +102,7 @@
       margin:auto;
     }
 
-    .section h1, .section h2, .section h3 {
+    .section h2, .section h3 {
       color:#0A66C2;
     }
 
@@ -101,28 +113,6 @@
 
     .section ul {
       padding-left:20px;
-    }
-
-    /* BUTTONS */
-    .btn-primary {
-      background:#0A66C2;
-      color:#fff;
-      padding:14px 26px;
-      text-decoration:none;
-      border-radius:8px;
-      font-size:18px;
-      font-weight:600;
-      display:inline-block;
-      transition:0.2s;
-    }
-
-    .btn-primary:hover {
-      background:#084a8f;
-    }
-
-    .btn-center {
-      text-align:center;
-      margin:30px 0;
     }
 
     /* TABLE */
@@ -144,6 +134,28 @@
       font-weight:600;
     }
 
+    /* BUTTON */
+    .btn-primary {
+      background:#0A66C2;
+      color:#fff;
+      padding:14px 26px;
+      text-decoration:none;
+      border-radius:8px;
+      font-size:18px;
+      font-weight:600;
+      display:inline-block;
+      transition:0.2s;
+    }
+
+    .btn-primary:hover {
+      background:#084a8f;
+    }
+
+    .btn-center {
+      text-align:center;
+      margin:30px 0;
+    }
+
     /* FOOTER */
     .footer {
       text-align:center;
@@ -154,7 +166,6 @@
       margin-top:20px;
     }
 
-    /* MOBILE TYPOGRAPHY */
     @media (max-width: 768px) {
       h1 { font-size:26px; }
       h2 { font-size:22px; }
@@ -168,17 +179,19 @@
 
 <body>
 
-  <!-- NAVIGATION -->
+  <!-- NAV -->
   <div class="nav">
     <div class="nav-left">SPDigitalJourney</div>
     <div class="hamburger" onclick="toggleMenu()">☰</div>
     <div class="nav-right" id="menu">
       <a href="index.html">Home</a>
-      <a href="about.html">About</a>
+      <a href="blog.html">Blog</a>
+      <a href="resources.html">Resources</a>
       <a href="services.html">Services</a>
       <a href="booking.html">Booking</a>
       <a href="faq.html">FAQ</a>
       <a href="testimonials.html">Testimonials</a>
+      <a href="forms.html">Forms</a>
       <a href="contact.html">Contact</a>
     </div>
   </div>
@@ -189,14 +202,14 @@
     }
   </script>
 
+  <!-- HERO -->
+  <div class="hero">
+    <h1>Guidance Services</h1>
+    <p>Clear, structured sessions designed to give you confidence and clarity.</p>
+  </div>
+
   <!-- SERVICES SECTION -->
   <div class="section">
-    <h1>Guidance Services</h1>
-    <p>
-      I offer two structured guidance sessions designed to help business owners understand how Google sees their business,
-      what customers experience, and how to improve visibility ethically and effectively.
-    </p>
-
     <h2>1️⃣ Full Guidance Session</h2>
     <ul>
       <li>Complete Google Business Profile review</li>
@@ -206,9 +219,9 @@
       <li>Review management best practices</li>
       <li>Open Q&A based on your business</li>
     </ul>
-    <p><b>Duration:</b> 45–60 minutes<br>
-       <b>Mode:</b> Online or in-person (where possible)<br>
-       <b>Nature:</b> Guidance only (no logins, no execution)</p>
+    <p><b>Duration:</b> 45–60 minutes</p>
+    <p><b>Mode:</b> Online or in-person (where possible)</p>
+    <p><b>Nature:</b> Guidance only (no logins, no execution)</p>
 
     <h2>2️⃣ Mini Guidance Session</h2>
     <ul>
@@ -216,8 +229,8 @@
       <li>Top 3 priority improvements</li>
       <li>Simple, practical action steps you can execute immediately</li>
     </ul>
-    <p><b>Duration:</b> 20–30 minutes<br>
-       <b>Contribution:</b> Pay-as-you-like (₹500 suggested)</p>
+    <p><b>Duration:</b> 20–30 minutes</p>
+    <p><b>Contribution:</b> Pay-as-you-like (₹500 suggested)</p>
 
     <h2>Important Boundaries</h2>
     <ul>
@@ -250,7 +263,7 @@
     </table>
   </div>
 
-  <!-- BOOK NOW BUTTON -->
+  <!-- CTA -->
   <div class="btn-center">
     <a class="btn-primary" href="https://wa.me/917799423794?text=Hi%20Sanjay,%20I%20want%20to%20book%20a%20guidance%20session" target="_blank">
       BOOK A SESSION ON WHATSAPP
@@ -264,4 +277,3 @@
 
 </body>
 </html>
-
