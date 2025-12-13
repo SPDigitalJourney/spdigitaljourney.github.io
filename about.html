@@ -4,163 +4,171 @@
   <meta charset="UTF-8">
   <title>About – SPDigitalJourney</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- GLOBAL POLISHED DESIGN -->
   <style>
-    body { font-family: Arial, sans-serif; margin:0; padding:0; color:#333; }
+    body {
+      font-family: Arial, sans-serif;
+      margin:0;
+      padding:0;
+      color:#333;
+      background:#fff;
+    }
+
     a { color:#0A66C2; }
-    .nav { display:flex; flex-wrap:wrap; justify-content:space-between; align-items:center; padding:10px 20px; border-bottom:1px solid #e0e0e0; }
-    .nav-left { font-weight:700; font-size:20px; color:#0A66C2; }
-    .nav-right a { margin-left:15px; text-decoration:none; font-size:15px; color:#555; }
-    .nav-right a:hover { color:#0A66C2; }
-    .section { padding:20px 15px; max-width:900px; margin:0 auto; }
-    .section h1, .section h2 { color:#0A66C2; }
-    .section p, .section ul { font-size:18px; line-height:1.6; }
-    .section ul { padding-left:20px; }
-    .footer { text-align:center; padding:15px; font-size:13px; color:#777; border-top:1px solid #e0e0e0; margin-top:20px; }
+
+    /* NAVIGATION */
+    .nav {
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      padding:12px 20px;
+      border-bottom:1px solid #e0e0e0;
+      position:sticky;
+      top:0;
+      background:#fff;
+      z-index:1000;
+    }
+
+    .nav-left {
+      font-weight:700;
+      font-size:22px;
+      color:#0A66C2;
+    }
+
+    .nav-right {
+      display:flex;
+      gap:18px;
+    }
+
+    .nav-right a {
+      text-decoration:none;
+      color:#555;
+      font-size:16px;
+    }
+
+    .nav-right a:hover {
+      color:#0A66C2;
+    }
+
+    /* MOBILE MENU */
+    .hamburger {
+      display:none;
+      font-size:28px;
+      cursor:pointer;
+      color:#0A66C2;
+    }
+
+    @media (max-width: 768px) {
+      .nav-right {
+        display:none;
+        flex-direction:column;
+        background:#fff;
+        width:100%;
+        padding:15px 0;
+        border-top:1px solid #e0e0e0;
+      }
+
+      .nav-right.show {
+        display:flex;
+      }
+
+      .hamburger {
+        display:block;
+      }
+    }
+
+    /* SECTIONS */
+    .section {
+      padding:30px 20px;
+      max-width:900px;
+      margin:auto;
+    }
+
+    .section h1, .section h2 {
+      color:#0A66C2;
+    }
+
+    .section p, .section li {
+      font-size:18px;
+      line-height:1.6;
+    }
+
+    .section ul {
+      padding-left:20px;
+    }
+
+    /* FOOTER */
+    .footer {
+      text-align:center;
+      padding:15px;
+      font-size:13px;
+      color:#777;
+      border-top:1px solid #e0e0e0;
+      margin-top:20px;
+    }
+
+    /* MOBILE TYPOGRAPHY */
+    @media (max-width: 768px) {
+      h1 { font-size:26px; }
+      h2 { font-size:22px; }
+      p, li { font-size:16px; }
+      .section { padding:20px; }
+    }
   </style>
 </head>
+
 <body>
 
-  <style>
-  /* GLOBAL MOBILE IMPROVEMENTS */
-@media (max-width: 768px) {
-  h1 { font-size:26px; }
-  h2 { font-size:22px; }
-  h3 { font-size:18px; }
-  p, li { font-size:16px; line-height:1.6; }
-  .section { padding:15px; }
-  .hero img { border-radius:6px; }
-}
-
-  .nav-left {
-    font-weight:700;
-    font-size:22px;
-    color:#0A66C2;
-  }
-
-  .nav-right {
-    display:flex;
-    gap:18px;
-  }
-
-  .nav-right a {
-    text-decoration:none;
-    color:#555;
-    font-size:16px;
-  }
-
-  .nav-right a:hover {
-    color:#0A66C2;
-  }
-.btn-primary {
-  background:#0A66C2;
-  color:#fff;
-  padding:14px 26px;
-  text-decoration:none;
-  border-radius:8px;
-  font-size:18px;
-  font-weight:600;
-  display:inline-block;
-  transition:0.2s;
-}
-
-.btn-primary:hover {
-  background:#084a8f;
-}
-.btn-primary {
-  background:#0A66C2;
-  color:#fff;
-  padding:14px 26px;
-  text-decoration:none;
-  border-radius:8px;
-  font-size:18px;
-  font-weight:600;
-  display:inline-block;
-  transition:0.2s;
-}
-
-.btn-primary:hover {
-  background:#084a8f;
-}
-
-  /* MOBILE MENU */
-  .hamburger {
-    display:none;
-    font-size:28px;
-    cursor:pointer;
-    color:#0A66C2;
-  }
-
-  @media (max-width: 768px) {
-    .nav-right {
-      display:none;
-      flex-direction:column;
-      background:#fff;
-      width:100%;
-      padding:15px 0;
-      border-top:1px solid #e0e0e0;
-    }
-
-    .nav-right.show {
-      display:flex;
-    }
-
-    .hamburger {
-      display:block;
-    }
-  }
-</style>
-
-<div class="nav">
-  <div class="nav-left">SPDigitalJourney</div>
-  <div class="hamburger" onclick="toggleMenu()">☰</div>
-  <div class="nav-right" id="menu">
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="services.html">Services</a>
-    <a href="booking.html">Booking</a>
-    <a href="faq.html">FAQ</a>
-    <a href="testimonials.html">Testimonials</a>
-    <a href="contact.html">Contact</a>
+  <!-- NAVIGATION -->
+  <div class="nav">
+    <div class="nav-left">SPDigitalJourney</div>
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
+    <div class="nav-right" id="menu">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="booking.html">Booking</a>
+      <a href="faq.html">FAQ</a>
+      <a href="testimonials.html">Testimonials</a>
+      <a href="contact.html">Contact</a>
+    </div>
   </div>
-</div>
 
-<script>
-  function toggleMenu() {
-    document.getElementById("menu").classList.toggle("show");
-  }
-</script>
+  <script>
+    function toggleMenu() {
+      document.getElementById("menu").classList.toggle("show");
+    }
+  </script>
 
+  <!-- ABOUT SECTION -->
   <div class="section">
     <h1>About SPDigitalJourney</h1>
 
     <p>
-      My name is <b>Sanjay Paul</b>, a Digital Marketer and Google Ecosystem Specialist with 15+ years of experience working with
-      Google Maps, Business Profiles and local discovery platforms.
+      My name is <b>Sanjay Paul</b>, a Digital Marketer and Google Ecosystem Specialist with over 15 years of experience 
+      working across Google Maps, Business Profiles, Street View, and local discovery systems.
     </p>
 
     <p>
-      I was part of the <b>Global Google Maps Division (2007 Pilot Batch)</b> and contributed to:
+      I was part of the <b>2007 Google Maps Pilot Batch</b>, contributing to the transformation from paper maps to 
+      digital mapping. Over the years, I’ve helped thousands of business owners understand how Google sees their 
+      business — and how customers discover them.
     </p>
 
+    <h2>My Background</h2>
     <ul>
-      <li>Transition from paper maps to digital maps</li>
-      <li>Road mapping (local roads, state highways, naming & numbering)</li>
-      <li>Street View editing and validation</li>
-      <li>House numbering and address structuring</li>
-      <li>User support through Google Help Forums</li>
+      <li>15+ years working with Google Maps & Business Profiles</li>
+      <li>2000+ Street View projects contributed</li>
+      <li>5000+ business owners guided across India</li>
+      <li>Experience in road mapping, address structuring, and local discovery systems</li>
+      <li>Active contributor to Google Help Communities</li>
     </ul>
 
-    <p>I have contributed to:</p>
-    <ul>
-      <li>2000+ Street View projects</li>
-      <li>Businesses across 7+ states and 100+ cities</li>
-      <li>Training and guiding 5000+ business owners</li>
-    </ul>
-
-    <h2>Why SPDigitalJourney Exists</h2>
+    <h2>Why I Started SPDigitalJourney</h2>
     <p>
-      Businesses don’t struggle because of lack of effort — they struggle because Google’s systems are misunderstood.
-      SPDigitalJourney was created to bridge that gap through <b>clear guidance, not dependency</b>.
+      Most business owners don’t struggle because of lack of effort — they struggle because Google’s systems 
+      are misunderstood. SPDigitalJourney was created to bridge that gap through <b>clear, ethical, no‑login guidance</b>.
     </p>
 
     <ul>
@@ -168,8 +176,14 @@
       <li>Guidance builds confidence and independence</li>
       <li>Ethical practices create long‑term, sustainable growth</li>
     </ul>
+
+    <p>
+      My goal is simple:  
+      <b>Help you understand how Google sees your business — so you can improve it with clarity and confidence.</b>
+    </p>
   </div>
 
+  <!-- SOCIAL LINKS -->
   <div class="section" style="text-align:center;">
     <h2>Connect With Me</h2>
     <p>
@@ -181,14 +195,10 @@
     </p>
   </div>
 
+  <!-- FOOTER -->
   <div class="footer">
     © 2025 SPDigitalJourney — Ethical Google Business Profile Guidance
   </div>
 
 </body>
 </html>
-
-
-
-
-
