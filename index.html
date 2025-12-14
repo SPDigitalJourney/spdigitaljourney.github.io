@@ -1,325 +1,374 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SPDigitalJourney | Google Business Profile Guidance</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sanjay Paul | SPDigitalJourney</title>
+    <meta name="description" content="Digital Marketer & Google Ecosystem Specialist (15+ Years) helping businesses grow with Google Maps, GMB, and Local Visibility.">
+    <style>
+        :root {
+            --primary-color: #1a73e8; /* Google Blue */
+            --secondary-color: #3c4043; /* Dark Gray */
+            --background-color: #ffffff;
+            --light-background: #f8f9fa;
+            --text-color: #202124;
+            --link-color: #1a73e8;
+        }
 
-<style>
-:root {
-  --bg: #f7f8fb;
-  --card: #ffffff;
-  --text: #1f2937;
-  --muted: #6b7280;
-  --accent: #2563eb;
-  --border: #e5e7eb;
-}
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
 
-* { box-sizing: border-box; }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
 
-body {
-  margin: 0;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  background: var(--bg);
-  color: var(--text);
-  line-height: 1.6;
-}
+        /* --- Header Section --- */
+        header {
+            text-align: center;
+            padding: 40px 0;
+            background-color: var(--light-background);
+            border-bottom: 4px solid var(--primary-color);
+            margin-bottom: 30px;
+        }
 
-/* HERO */
-header {
-  background: linear-gradient(135deg, #1e3a8a, #2563eb);
-  color: #fff;
-  padding: 80px 20px 70px;
-}
+        header h1 {
+            color: var(--primary-color);
+            font-size: 2.5em;
+            margin-bottom: 5px;
+        }
 
-.hero {
-  max-width: 1000px;
-  margin: auto;
-  display: grid;
-  grid-template-columns: 1.3fr 0.7fr;
-  gap: 40px;
-  align-items: center;
-}
+        header p.title {
+            font-size: 1.2em;
+            color: var(--secondary-color);
+            margin: 0 0 15px 0;
+            font-weight: bold;
+        }
 
-.hero h1 {
-  font-size: 2.3rem;
-  margin-bottom: 14px;
-}
+        header .stats {
+            font-size: 0.9em;
+            color: var(--secondary-color);
+            padding: 10px;
+            background-color: #e8f0fe;
+            border-radius: 8px;
+            display: inline-block;
+            margin-top: 10px;
+        }
+        
+        /* --- Contact Bar --- */
+        .contact-bar {
+            background-color: #f1f3f4;
+            padding: 15px 0;
+            text-align: center;
+            font-size: 0.9em;
+            border-radius: 8px;
+            margin-bottom: 30px;
+        }
 
-.hero p {
-  font-size: 1.05rem;
-  max-width: 620px;
-  opacity: 0.95;
-}
+        .contact-bar a {
+            color: var(--secondary-color);
+            text-decoration: none;
+            margin: 0 10px;
+            display: inline-block;
+        }
 
-.hero-badge {
-  display: inline-block;
-  margin-top: 18px;
-  padding: 6px 14px;
-  border-radius: 999px;
-  background: rgba(255,255,255,0.15);
-  font-size: 0.85rem;
-}
+        .contact-bar strong {
+            color: var(--primary-color);
+            margin-right: 5px;
+        }
 
-/* HERO SVG */
-.hero-svg {
-  width: 100%;
-  max-width: 320px;
-  justify-self: center;
-}
+        .contact-bar .social-links a {
+            font-size: 1.2em;
+            margin: 0 8px;
+        }
 
-/* NAV */
-nav {
-  background: #fff;
-  border-bottom: 1px solid var(--border);
-  position: sticky;
-  top: 0;
-  z-index: 10;
-}
+        /* --- General Section Styling --- */
+        .section {
+            padding: 20px 0;
+            margin-bottom: 30px;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        .section:last-child {
+            border-bottom: none;
+        }
 
-nav ul {
-  list-style: none;
-  display: flex;
-  gap: 18px;
-  padding: 12px 20px;
-  margin: 0 auto;
-  max-width: 1000px;
-  overflow-x: auto;
-}
+        h2 {
+            color: var(--primary-color);
+            font-size: 1.8em;
+            margin-top: 0;
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 5px;
+            margin-bottom: 15px;
+        }
 
-nav a {
-  text-decoration: none;
-  color: var(--text);
-  font-weight: 500;
-  font-size: 0.95rem;
-}
+        h3 {
+            color: var(--secondary-color);
+            font-size: 1.4em;
+            margin-top: 20px;
+        }
 
-nav a:hover { color: var(--accent); }
+        ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
 
-/* MAIN */
-main {
-  max-width: 1000px;
-  margin: auto;
-  padding: 50px 20px;
-}
+        ul li {
+            margin-bottom: 10px;
+            padding-left: 1.5em;
+            text-indent: -1.5em;
+        }
 
-section { margin-bottom: 60px; }
+        ul.check-list li:before {
+            content: '✓ ';
+            color: var(--primary-color);
+            font-weight: bold;
+        }
+        
+        /* --- Contribution/Model --- */
+        .contribution-model {
+            background-color: #fff3e0; /* Light Orange/Yellow background */
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            margin-bottom: 30px;
+            border: 1px solid #ffe0b2;
+        }
+        
+        .contribution-model h3 {
+            color: #e65100; /* Darker Orange */
+            margin-top: 0;
+            font-size: 1.5em;
+        }
+        
+        .contribution-model p {
+            font-size: 1.1em;
+        }
+        
+        /* --- Testimonials --- */
+        .testimonial-block {
+            margin-bottom: 20px;
+            padding: 15px;
+            background-color: var(--light-background);
+            border-left: 5px solid var(--primary-color);
+            border-radius: 4px;
+        }
 
-h2 {
-  font-size: 1.7rem;
-  margin-bottom: 20px;
-}
+        .testimonial-block p {
+            margin: 0 0 10px 0;
+            font-style: italic;
+        }
 
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 22px;
-}
+        .testimonial-block .author {
+            display: block;
+            text-align: right;
+            font-weight: bold;
+            color: var(--secondary-color);
+        }
 
-.card {
-  background: var(--card);
-  border: 1px solid var(--border);
-  border-radius: 16px;
-  padding: 22px;
-}
+        /* --- Guidance Services Cards --- */
+        .guidance-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+        }
 
-.icon {
-  width: 30px;
-  height: 30px;
-  fill: var(--accent);
-  margin-bottom: 10px;
-}
+        .service-card {
+            border: 1px solid #ddd;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+        
+        .service-card.mini {
+            background-color: #e8f5e9; /* Light green for mini */
+            border-color: #a5d6a7;
+        }
+        
+        .service-card h4 {
+            color: var(--primary-color);
+            margin-top: 0;
+            font-size: 1.2em;
+        }
 
-.muted {
-  color: var(--muted);
-  font-size: 0.95rem;
-}
+        .service-card strong {
+            display: block;
+            margin-top: 10px;
+        }
+        
+        /* --- Links & Icons (Simple Fallback) --- */
+        a {
+            color: var(--link-color);
+            text-decoration: none;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+        }
 
-.cta {
-  display: inline-block;
-  margin-top: 18px;
-  padding: 10px 20px;
-  background: var(--accent);
-  color: #fff;
-  text-decoration: none;
-  border-radius: 8px;
-  font-weight: 500;
-}
+        /* Simple icon emulation for social links */
+        .social-links a:before {
+            margin-right: 5px;
+            font-family: sans-serif; /* Fallback for basic symbols */
+        }
+        .social-links a[href*="blogspot"]:before { content: '📰'; }
+        .social-links a[href*="pinterest"]:before { content: '📌'; }
+        .social-links a[href*="x.com"]:before { content: '🐦'; }
+        .social-links a[href*="instagram"]:before { content: '📸'; }
+        .social-links a[href*="facebook"]:before { content: '👍'; }
+        .social-links a[href*="youtube"]:before { content: '▶️'; }
+        .social-links a[href*="github.io"]:before { content: '💻'; }
+        .social-links a[href*="mailto"]:before { content: '📧'; }
 
-/* FOOTER */
-footer {
-  background: #fff;
-  border-top: 1px solid var(--border);
-  padding: 30px 20px;
-  font-size: 0.9rem;
-  color: var(--muted);
-}
-
-footer .container {
-  max-width: 1000px;
-  margin: auto;
-}
-
-@media (max-width: 768px) {
-  .hero {
-    grid-template-columns: 1fr;
-    text-align: left;
-  }
-
-  .hero-svg {
-    margin-top: 30px;
-  }
-}
-</style>
+    </style>
 </head>
-
 <body>
 
-<header id="home">
-  <div class="hero">
-    <div>
-      <h1>Google Business Profile Guidance for Local Businesses</h1>
-      <p>
-        Calm, practical sessions to help business owners understand how Google
-        presents their business — and how to improve it with clarity.
-      </p>
-      <div class="hero-badge">
-        Online sessions globally · Offline guidance across India
-      </div>
+    <div class="container">
+        
+        <header>
+            <h1>Sanjay Paul | SPDigitalJourney</h1>
+            <p class="title">Digital Marketer & Google Ecosystem Specialist (15+ Years)</p>
+            <div class="stats">
+                Helping & Guiding Businesses Grow with Google Maps, GMB, Catalogues & Local Visibility | Ex-Google Maps (2007 Pilot Batch) | Guided/Trained/Empowered **5000+ Individuals** | **2000+ Street View Shoots** | **7+ States | 100+ Cities** | Community Support Model | Pay-As-You-Like
+            </div>
+        </header>
+
+        <div class="contact-bar">
+            <strong>📞 Contact:</strong> Call / WhatsApp / GPay: <a href="tel:7799423794">7799423794</a> | 
+            <a href="mailto:rpsanjaypaul@gmail.com">rpsanjaypaul@gmail.com</a>
+            <div class="social-links" style="margin-top: 8px;">
+                <a href="https://spdigitaljourney.blogspot.com/" target="_blank">Blog</a> 
+                <a href="https://pin.it/3gmZ0JT6U" target="_blank">Pinterest</a> 
+                <a href="https://x.com/spdigitaljourne" target="_blank">X (Twitter)</a> 
+                <a href="https://www.instagram.com/spdigitaljourney?igsh=eGVkY2Zwb29obWdt" target="_blank">Instagram</a> 
+                <a href="https://www.facebook.com/profile.php?id=61584622684344" target="_blank">Facebook</a> 
+                <a href="https://youtube.com/@spdigitaljourney" target="_blank">YouTube</a>
+                <a href="https://spdigitaljourney.github.io/" target="_blank">Website</a>
+            </div>
+        </div>
+
+        <section class="section">
+            <h2>SPDigitalJourney – Google Business Profile Guidance</h2>
+            <p><strong>Helping local businesses understand Google visibility, trust, and discovery — clearly and ethically.</strong></p>
+            <p>For over 15 years, I’ve worked deeply within the Google ecosystem — Maps, Business Profiles, Street View, and local discovery systems. During this journey, I’ve helped thousands of businesses understand how Google actually presents them to customers.</p>
+            <p>SPDigitalJourney is a guidance‑focused initiative created to simplify Google Business Profile understanding for business owners, schools, clinics, and service providers.</p>
+            <p>My role is simple: I guide you so you understand what works, what doesn’t, and what to improve — independently and confidently.</p>
+            
+            <h3>What I Guide You On</h3>
+            <ul class="check-list">
+                <li>How customers see your business on Google</li>
+                <li>Visibility gaps and common mistakes</li>
+                <li>Photo and content strategy (what builds trust)</li>
+                <li>Categories, descriptions, and relevance</li>
+                <li>Reviews, responses, and credibility signals</li>
+            </ul>
+        </section>
+        
+        <div class="contribution-model">
+            <h3>🤝 Contribution Model (Community Support)</h3>
+            <p>This is a community support initiative. There is **no fixed fee** — you may contribute any amount based on comfort and value received.</p>
+            <p style="font-style: italic; color: #d84315;">(Most contributions range between ₹500 – ₹1,000.)</p>
+            <p>Call / WhatsApp / GPay: <strong>7799423794</strong></p>
+        </div>
+
+        <section class="section">
+            <h2>🌍 About SPDigitalJourney & My Background</h2>
+            <p>My name is **Sanjay Paul**, a Digital Marketer and Google Ecosystem Specialist with **15+ years of experience** working with Google Maps, Business Profiles, and local discovery platforms.</p>
+
+            <h3>Ex-Google Maps Experience (2007 Pilot Batch)</h3>
+            <p>I was part of the Global Google Maps Division and contributed to:</p>
+            <ul class="check-list">
+                <li>Transitioning from paper maps to digital maps</li>
+                <li>Road mapping (local roads, state highways, naming & numbering)</li>
+                <li>Street View editing</li>
+                <li>House numbering</li>
+                <li>Google Help Forum interactions</li>
+            </ul>
+
+            <h3>Current Contributions</h3>
+            <p>Currently working with a digital marketing private limited company, I have contributed to:</p>
+            <ul class="check-list">
+                <li>**2000+** Street View projects</li>
+                <li>Businesses across **7+ states and 100+ cities**</li>
+                <li>Training and guiding **5000+** business owners</li>
+            </ul>
+
+            <h3>Why SPDigitalJourney Exists</h3>
+            <blockquote style="border-left: 3px solid #f90; padding-left: 15px; color: #555;">
+                <p>Over the years, I noticed one major gap: Businesses don’t struggle because of lack of effort — they struggle because Google’s systems are misunderstood.</p>
+            </blockquote>
+            <p>SPDigitalJourney was created to bridge that gap through **clear guidance, not dependency.**</p>
+            <p>This platform is about empowering understanding, not selling shortcuts.</p>
+        </section>
+
+        <section class="section">
+            <h2>📈 Guidance Services</h2>
+            <div class="guidance-grid">
+                
+                <div class="service-card">
+                    <h4>Google Business Profile Guidance (One‑Time Session)</h4>
+                    <ul class="check-list">
+                        <li>Review of your existing Google Business Profile</li>
+                        <li>Understanding how customers discover you</li>
+                        <li>Identifying missing or weak areas</li>
+                        <li>Photo & content guidance</li>
+                        <li>Category & description clarity</li>
+                        <li>Review best practices</li>
+                        <li>Open Q&A</li>
+                    </ul>
+                    <strong>Duration:</strong> 45–60 minutes | <strong>Mode:</strong> Online or In‑person | <strong>Nature:</strong> Guidance only
+                </div>
+
+                <div class="service-card mini">
+                    <h4>Mini Guidance Session</h4>
+                    <p>Ideal for small businesses or quick clarity.</p>
+                    <ul class="check-list">
+                        <li>Quick profile review</li>
+                        <li>Top 3 improvements</li>
+                        <li>Clear action steps</li>
+                    </ul>
+                    <strong>Duration:</strong> 20–30 minutes | <strong>Contribution:</strong> Suggested ₹500
+                </div>
+
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>⭐ What People Say</h2>
+            
+            <div class="testimonial-block">
+                <p>“The session helped us clearly understand what Google was showing about our business and what needed attention. Very practical and easy to follow.”</p>
+                <span class="author">— Business Owner, Education Sector</span>
+            </div>
+
+            <div class="testimonial-block">
+                <p>“Instead of selling services, he explained things calmly and helped us decide our next steps ourselves.”</p>
+                <span class="author">— Local Business Owner</span>
+            </div>
+        </section>
+
+
+        <footer class="section contact-bar" style="border-top: 1px solid #ddd; margin-top: 30px; background-color: var(--light-background);">
+            <h2>Let’s Connect</h2>
+            <p>If you’re looking for clarity on how your business appears on Google, feel free to reach out.</p>
+            <p style="font-size: 1.1em;">
+                **📞 Call / WhatsApp:** <a href="tel:7799423794">7799423794</a> | 
+                **💳 GPay/Online Pay Available**
+            </p>
+            <p style="font-size: 0.9em;">
+                Sessions are scheduled based on availability.
+            </p>
+        </footer>
+
     </div>
-
-    <!-- INLINE SVG HERO -->
-    <svg class="hero-svg" viewBox="0 0 300 260" xmlns="http://www.w3.org/2000/svg">
-      <circle cx="150" cy="130" r="110" fill="rgba(255,255,255,0.15)"/>
-      <path d="M90 170 L150 90 L210 170" stroke="#ffffff" stroke-width="6" fill="none"/>
-      <circle cx="150" cy="90" r="10" fill="#ffffff"/>
-      <circle cx="90" cy="170" r="10" fill="#ffffff"/>
-      <circle cx="210" cy="170" r="10" fill="#ffffff"/>
-      <text x="150" y="215" text-anchor="middle" fill="#ffffff" font-size="12">
-        clarity • direction • guidance
-      </text>
-    </svg>
-  </div>
-</header>
-
-<nav>
-  <ul>
-    <li><a href="#services">Services</a></li>
-    <li><a href="#testimonials">Testimonials</a></li>
-    <li><a href="#booking">Booking</a></li>
-    <li><a href="#faq">FAQ</a></li>
-    <li><a href="#resources">Resources</a></li>
-    <li><a href="#contact">Contact</a></li>
-  </ul>
-</nav>
-
-<main>
-
-<section id="services">
-<h2>What I Help With</h2>
-
-<div class="grid">
-
-<div class="card">
-<svg class="icon" viewBox="0 0 24 24">
-<path d="M12 2a10 10 0 100 20 10 10 0 000-20zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/>
-</svg>
-<h3>Google Business Profile Understanding</h3>
-<p class="muted">Learn what Google shows, what’s missing, and what actually matters.</p>
-</div>
-
-<div class="card">
-<svg class="icon" viewBox="0 0 24 24">
-<path d="M3 3h18v2H3V3zm0 4h18v14H3V7z"/>
-</svg>
-<h3>Content & Photo Strategy</h3>
-<p class="muted">Understand what kind of updates and visuals help customers trust you.</p>
-</div>
-
-<div class="card">
-<svg class="icon" viewBox="0 0 24 24">
-<path d="M12 4a8 8 0 108 8 8 8 0 00-8-8z"/>
-</svg>
-<h3>Clarity Sessions for Owners</h3>
-<p class="muted">One-to-one guidance so you can decide your next steps confidently.</p>
-</div>
-
-</div>
-</section>
-
-<section id="testimonials">
-<h2>What People Say</h2>
-
-<div class="grid">
-
-<div class="card">
-<svg class="icon" viewBox="0 0 24 24">
-<path d="M7 7h4v10H5V9a2 2 0 012-2zm10 0h4v10h-6V9a2 2 0 012-2z"/>
-</svg>
-<p class="muted">
-“The guidance session helped us understand our Google presence clearly.
-No pressure, no sales talk — just clarity.”
-</p>
-<p><strong>— Business Owner</strong></p>
-</div>
-
-<div class="card">
-<svg class="icon" viewBox="0 0 24 24">
-<path d="M7 7h4v10H5V9a2 2 0 012-2zm10 0h4v10h-6V9a2 2 0 012-2z"/>
-</svg>
-<p class="muted">
-“He explained things patiently and helped us decide what to do ourselves.”
-</p>
-<p><strong>— Local Entrepreneur</strong></p>
-</div>
-
-</div>
-</section>
-
-<section id="booking">
-<h2>How Sessions Work</h2>
-<div class="card">
-<p>Guidance only. No execution. No account access.</p>
-<p class="muted">Pay-as-you-like. Many contribute ₹500–₹1,000 based on value.</p>
-<a class="cta" href="#contact">Request a Session</a>
-</div>
-</section>
-
-<section id="faq">
-<h2>FAQ</h2>
-<div class="card">
-<p><strong>Do you take login access?</strong><br><span class="muted">No.</span></p>
-<p><strong>Online or offline?</strong><br><span class="muted">Online globally, offline across India.</span></p>
-<p><strong>Execution services?</strong><br><span class="muted">No. Guidance only.</span></p>
-</div>
-</section>
-
-<section id="resources">
-<h2>Resources</h2>
-<div class="card">
-<p class="muted">Practical insights shared via blog and platforms.</p>
-<a class="cta" href="https://spdigitaljourney.blogspot.com/" target="_blank">Visit Blog</a>
-</div>
-</section>
-
-<section id="contact">
-<h2>Contact</h2>
-<div class="card">
-<p>
-📞 7799423794<br>
-📧 rpsanjaypaul@gmail.com
-</p>
-<p class="muted">Online worldwide · Offline within India</p>
-</div>
-</section>
-
-</main>
-
-<footer>
-<div class="container">
-© 2025 SPDigitalJourney · Guidance based on 15+ years in the Google ecosystem
-</div>
-</footer>
 
 </body>
 </html>
