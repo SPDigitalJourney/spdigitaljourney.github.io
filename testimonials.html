@@ -140,9 +140,40 @@
       .section { padding:20px; }
     }
   </style>
+  .nav {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:15px 20px;
+  background:white;
+  border-bottom:1px solid #eee;
+}
+
+.nav .logo {
+  font-size:20px;
+  font-weight:700;
+  color:#0A66C2;
+}
+
+.nav .menu a {
+  margin-left:15px;
+  text-decoration:none;
+  color:#0A66C2;
+  font-weight:600;
+}
+
 </head>
 
 <body>
+<div class="nav">
+  <div class="logo">SPDigitalJourney</div>
+  <div class="menu">
+    <a href="index.html">Home</a>
+    <a href="blog.html">Blog</a>
+    <a href="community-support.html">Community Support</a>
+    <a href="contact.html">Contact</a>
+  </div>
+</div>
 
   <!-- NAV -->
   <div class="hero-new">
@@ -224,6 +255,7 @@
 
 </body>
 </html>
+
 
 
 
