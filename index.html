@@ -13,6 +13,7 @@
             --light-background: #f8f9fa;
             --text-color: #202124;
             --link-color: #1a73e8;
+            --success-color: #34a853; /* Google Green */
         }
 
         body {
@@ -203,6 +204,36 @@
             margin-top: 10px;
         }
         
+        /* --- Contact Form Styles --- */
+        .contact-box {
+            background-color: #f1f8e9;
+            padding: 30px;
+            border-radius: 8px;
+            margin-top: 30px;
+            border: 1px solid var(--success-color);
+            text-align: center; /* Center the content inside the box */
+        }
+
+        .contact-box .booking-button {
+            display: block;
+            width: 80%; /* Adjusted width for centering */
+            max-width: 400px;
+            margin: 15px auto; /* Center the button */
+            padding: 15px;
+            background-color: var(--success-color);
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            font-size: 1.2em;
+            transition: background-color 0.3s;
+        }
+
+        .contact-box .booking-button:hover {
+            background-color: #3c8f4c;
+        }
+
         /* --- Links & Icons (Simple Fallback) --- */
         a {
             color: var(--link-color);
@@ -339,6 +370,25 @@
                 </div>
 
             </div>
+        </section>
+        
+        <section class="contact-box" id="book-a-session">
+            <h2>📅 Book a Clarity Session</h2>
+            <p style="font-weight: bold; font-size: 1.1em;">Choose your preferred way to connect and get guidance:</p>
+            
+            <a href="https://calendar.app.google/e3BNop6ioBwkDTdj6" target="_blank" class="booking-button">
+                👉 Option 1: **Book an Appointment** (via Google Calendar)
+            </a>
+            <p style="text-align: center; color: var(--secondary-color);">*This is the quickest way to check my live availability and schedule a session directly.</p>
+            
+            <hr style="border-top: 1px dashed #bbb; margin: 30px 0; width: 80%; max-width: 400px; margin-left: auto; margin-right: auto;">
+            
+            <h3 style="margin-top: 0; text-align: center;">Or, Send a Detailed Inquiry</h3>
+            
+            <a href="https://forms.gle/VjbtJB9F9vzURfD78" target="_blank" class="booking-button" style="background-color: var(--primary-color);">
+                📝 Option 2: **Fill out an Inquiry Form** (via Google Forms)
+            </a>
+            <p style="font-size: 0.9em; text-align: center; color: #777; margin-top: 10px;">(We will review your answers and reply via email/WhatsApp to schedule the session.)</p>
         </section>
 
         <section class="section">
