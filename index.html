@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>SPDigitalJourney – Google Business Profile Guidance</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin:0;
+      padding:0;
+      color:#333;
+      background:#fff;
+    }
+
+    a { color:#0A66C2; }
+
+    /* NAVIGATION */
+    .nav {
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      padding:12px 20px;
+      border-bottom:1px solid #e0e0e0;
+      position:sticky;
+      top:0;
+      background:#fff;
+      z-index:1000;
+    }
+
+    .nav-left {
+      font-weight:700;
+      font-size:22px;
+      color:#0A66C2;
+    }
+
+    .nav-right {
+      display:flex;
+      gap:18px;
+    }
+
+    .nav-right a {
+      text-decoration:none;
+      color:#555;
+      font-size:16px;
+    }
+
+    .nav-right a:hover {
+      color:#0A66C2;
+    }
+
+    .hamburger {
+      display:none;
+      font-size:28px;
+      cursor:pointer;
+      color:#0A66C2;
+    }
+
+    @media (max-width: 768px) {
+      .nav-right {
+        display:none;
+        flex-direction:column;
+        background:#fff;
+        width:100%;
+        padding:15px 0;
+        border-top:1px solid #e0e0e0;
+      }
+      .nav-right.show { display:flex; }
+      .hamburger { display:block; }
+    }
+
+    /* HERO */
+    .hero {
+      padding:70px 20px;
+      text-align:center;
+      background:url('https://i.imgur.com/8fKQ2QG.png');
+      background-size:cover;
+      background-position:center;
+      color:white;
+      border-radius:0 0 12px 12px;
+    }
+
+    .hero h1 {
+      font-size:32px;
+      margin-bottom:10px;
+      color:white;
+    }
+
+    .hero p {
+      max-width:700px;
+      margin:auto;
+      font-size:18px;
+      line-height:1.6;
+      color:#f0f0f0;
+    }
+
+    /* SECTIONS */
+    .section {
+      padding:30px 20px;
+      max-width:900px;
+      margin:auto;
+    }
+
+    .section h2, .section h3 {
+      color:#0A66C2;
+    }
+
+    .section p, .section li {
+      font-size:18px;
+      line-height:1.6;
+    }
+
+    /* BUTTON */
+    .btn-primary {
+      background:#0A66C2;
+      color:#fff;
+      padding:14px 26px;
+      text-decoration:none;
+      border-radius:8px;
+      font-size:18px;
+      font-weight:600;
+      display:inline-block;
+      transition:0.2s;
+    }
+
+    .btn-primary:hover {
+      background:#084a8f;
+    }
+
+    .btn-center {
+      text-align:center;
+      margin:30px 0;
+    }
+
+    /* TESTIMONIALS */
+    .testimonial-card {
+      border:1px solid #e0e0e0;
+      padding:20px;
+      border-radius:8px;
+      margin-bottom:20px;
+      background:#fafafa;
+    }
+
+    /* FOOTER */
+    .footer {
+      text-align:center;
+      padding:15px;
+      font-size:13px;
+      color:#777;
+      border-top:1px solid #e0e0e0;
+      margin-top:20px;
+    }
+
+    @media (max-width: 768px) {
+      h1 { font-size:26px; }
+      h2 { font-size:22px; }
+      h3 { font-size:18px; }
+      p, li { font-size:16px; }
+      .section { padding:20px; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAV -->
+  <div class="nav">
+    <div class="nav-left">SPDigitalJourney</div>
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
+    <div class="nav-right" id="menu">
+      <a href="index.html">Home</a>
+      <a href="blog.html">Blog</a>
+      <a href="resources.html">Resources</a>
+      <a href="services.html">Services</a>
+      <a href="booking.html">Booking</a>
+      <a href="faq.html">FAQ</a>
+      <a href="testimonials.html">Testimonials</a>
+      <a href="forms.html">Forms</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </div>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById("menu").classList.toggle("show");
+    }
+  </script>
+
+  <!-- HERO -->
+  <div class="hero">
+    <h1>Understand How Customers See Your Business on Google</h1>
+    <p>
+      Clear, ethical, no‑login guidance for business owners across India.  
+      Learn how Google interprets your business and how customers discover you.
+    </p>
+  </div>
+
+  <!-- WHAT I DO -->
+  <div class="section">
+    <h2>What I Do</h2>
+    <ul>
+      <li>Explain how customers discover your business on Google</li>
+      <li>Identify visibility gaps and mistakes</li>
+      <li>Guide you on photos, content, and categories</li>
+      <li>Help you understand reviews and trust signals</li>
+      <li>Give you clear, actionable steps you can execute yourself</li>
+    </ul>
+  </div>
+
+  <!-- SERVICES -->
+  <div class="section">
+    <h2>Services Overview</h2>
+
+    <h3>Full Guidance Session</h3>
+    <ul>
+      <li>Complete Google Business Profile review</li>
+      <li>Visibility analysis & gap detection</li>
+      <li>Photo & content guidance</li>
+      <li>Category, description & attribute clarity</li>
+      <li>Review management best practices</li>
+    </ul>
+
+    <h3>Mini Guidance Session</h3>
+    <ul>
+      <li>Quick profile review</li>
+      <li>Top 3 priority improvements</li>
+      <li>Simple, practical action steps</li>
+    </ul>
+
+    <p><b>Contribution:</b> Pay‑as‑you‑like (₹500–₹1,000 suggested)</p>
+  </div>
+
+  <!-- WHY CHOOSE ME -->
+  <div class="section">
+    <h2>Why Choose SPDigitalJourney</h2>
+    <ul>
+      <li>15+ years experience with Google Maps & Business Profiles</li>
+      <li>Part of the 2007 Google Maps Pilot Batch</li>
+      <li>2000+ Street View projects contributed</li>
+      <li>Guided 5000+ business owners</li>
+      <li>Ethical, safe, no‑login guidance</li>
+      <li>Simple, clear, actionable steps</li>
+      <li>Pay‑as‑you‑like contribution model</li>
+    </ul>
+  </div>
+
+  <!-- TESTIMONIALS -->
+  <div class="section">
+    <h2>Testimonials</h2>
+
+    <div class="testimonial-card">
+      “Sanjay explained everything clearly. I finally understand how Google shows my business.”
+      <br><b>— Clinic Owner</b>
+    </div>
+
+    <div class="testimonial-card">
+      “Very ethical and helpful guidance. Highly recommended.”
+      <br><b>— Salon Owner</b>
+    </div>
+
+    <div class="testimonial-card">
+      “Simple steps, big improvement in visibility.”
+      <br><b>— Tuition Center</b>
+    </div>
+  </div>
+
+  <!-- CTA -->
+  <div class="btn-center">
+    <a class="btn-primary" href="https://wa.me/917799423794?text=Hi%20Sanjay,%20I%20want%20to%20book%20a%20guidance%20session" target="_blank">
+      BOOK NOW ON WHATSAPP
+    </a>
+  </div>
+
+  <!-- SOCIAL -->
+  <div class="section" style="text-align:center;">
+    <h3>Connect With SPDigitalJourney</h3>
+    <p>
+      <a href="https://x.com/spdigitaljourne" target="_blank">X</a> ·
+      <a href="https://www.instagram.com/spdigitaljourney" target="_blank">Instagram</a> ·
+      <a href="https://www.facebook.com/profile.php?id=61584622684344" target="_blank">Facebook</a> ·
+      <a href="https://youtube.com/@spdigitaljourney" target="_blank">YouTube</a> ·
+      <a href="https://pin.it/3gmZ0JT6U" target="_blank">Pinterest</a>
+    </p>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="footer">
+    © 2025 SPDigitalJourney — Ethical Google Business Profile Guidance
+  </div>
+
+</body>
+</html>
