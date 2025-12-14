@@ -25,23 +25,24 @@ body {
   line-height: 1.6;
 }
 
+/* HERO */
 header {
   background: linear-gradient(135deg, #1e3a8a, #2563eb);
   color: #fff;
-  padding: 70px 20px;
+  padding: 80px 20px 70px;
 }
 
 .hero {
   max-width: 1000px;
   margin: auto;
   display: grid;
-  grid-template-columns: 1.2fr 0.8fr;
+  grid-template-columns: 1.3fr 0.7fr;
   gap: 40px;
   align-items: center;
 }
 
 .hero h1 {
-  font-size: 2.4rem;
+  font-size: 2.3rem;
   margin-bottom: 14px;
 }
 
@@ -53,18 +54,21 @@ header {
 
 .hero-badge {
   display: inline-block;
-  margin-top: 16px;
+  margin-top: 18px;
   padding: 6px 14px;
   border-radius: 999px;
   background: rgba(255,255,255,0.15);
   font-size: 0.85rem;
 }
 
+/* HERO SVG */
 .hero-svg {
   width: 100%;
-  max-width: 360px;
+  max-width: 320px;
+  justify-self: center;
 }
 
+/* NAV */
 nav {
   background: #fff;
   border-bottom: 1px solid var(--border);
@@ -92,6 +96,7 @@ nav a {
 
 nav a:hover { color: var(--accent); }
 
+/* MAIN */
 main {
   max-width: 1000px;
   margin: auto;
@@ -141,6 +146,7 @@ h2 {
   font-weight: 500;
 }
 
+/* FOOTER */
 footer {
   background: #fff;
   border-top: 1px solid var(--border);
@@ -157,6 +163,11 @@ footer .container {
 @media (max-width: 768px) {
   .hero {
     grid-template-columns: 1fr;
+    text-align: left;
+  }
+
+  .hero-svg {
+    margin-top: 30px;
   }
 }
 </style>
@@ -169,8 +180,8 @@ footer .container {
     <div>
       <h1>Google Business Profile Guidance for Local Businesses</h1>
       <p>
-        Practical, explanation-driven sessions to help business owners understand
-        how Google presents their business — and how to improve it.
+        Calm, practical sessions to help business owners understand how Google
+        presents their business — and how to improve it with clarity.
       </p>
       <div class="hero-badge">
         Online sessions globally · Offline guidance across India
@@ -214,7 +225,7 @@ footer .container {
 <path d="M12 2a10 10 0 100 20 10 10 0 000-20zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/>
 </svg>
 <h3>Google Business Profile Understanding</h3>
-<p class="muted">Learn what Google shows about your business, what’s missing, and what matters.</p>
+<p class="muted">Learn what Google shows, what’s missing, and what actually matters.</p>
 </div>
 
 <div class="card">
@@ -222,7 +233,7 @@ footer .container {
 <path d="M3 3h18v2H3V3zm0 4h18v14H3V7z"/>
 </svg>
 <h3>Content & Photo Strategy</h3>
-<p class="muted">Understand what kind of visuals and updates help customers and Google.</p>
+<p class="muted">Understand what kind of updates and visuals help customers trust you.</p>
 </div>
 
 <div class="card">
@@ -230,7 +241,7 @@ footer .container {
 <path d="M12 4a8 8 0 108 8 8 8 0 00-8-8z"/>
 </svg>
 <h3>Clarity Sessions for Owners</h3>
-<p class="muted">One-to-one guidance so you can take confident, informed decisions.</p>
+<p class="muted">One-to-one guidance so you can decide your next steps confidently.</p>
 </div>
 
 </div>
@@ -246,9 +257,10 @@ footer .container {
 <path d="M7 7h4v10H5V9a2 2 0 012-2zm10 0h4v10h-6V9a2 2 0 012-2z"/>
 </svg>
 <p class="muted">
-“The session helped us clearly understand what Google was showing about our business and what needed attention. Very practical and easy to follow.”
+“The guidance session helped us understand our Google presence clearly.
+No pressure, no sales talk — just clarity.”
 </p>
-<p><strong>— Business Owner, Education Sector</strong></p>
+<p><strong>— Business Owner</strong></p>
 </div>
 
 <div class="card">
@@ -256,9 +268,9 @@ footer .container {
 <path d="M7 7h4v10H5V9a2 2 0 012-2zm10 0h4v10h-6V9a2 2 0 012-2z"/>
 </svg>
 <p class="muted">
-“Instead of pushing services, he explained things calmly and helped us decide our next steps ourselves.”
+“He explained things patiently and helped us decide what to do ourselves.”
 </p>
-<p><strong>— Local Business Owner</strong></p>
+<p><strong>— Local Entrepreneur</strong></p>
 </div>
 
 </div>
@@ -267,25 +279,25 @@ footer .container {
 <section id="booking">
 <h2>How Sessions Work</h2>
 <div class="card">
-<p>Sessions are explanation-driven. No execution. No account access.</p>
-<p class="muted">Pay-as-you-like model. Many contribute ₹500–₹1,000 based on value.</p>
-<a class="cta" href="#contact">Request a Guidance Session</a>
+<p>Guidance only. No execution. No account access.</p>
+<p class="muted">Pay-as-you-like. Many contribute ₹500–₹1,000 based on value.</p>
+<a class="cta" href="#contact">Request a Session</a>
 </div>
 </section>
 
 <section id="faq">
 <h2>FAQ</h2>
 <div class="card">
-<p><strong>Do you take login access?</strong><br><span class="muted">No. Guidance only.</span></p>
-<p><strong>Available outside India?</strong><br><span class="muted">Yes. Online sessions globally.</span></p>
-<p><strong>Do you execute services?</strong><br><span class="muted">No. I guide, explain, and empower.</span></p>
+<p><strong>Do you take login access?</strong><br><span class="muted">No.</span></p>
+<p><strong>Online or offline?</strong><br><span class="muted">Online globally, offline across India.</span></p>
+<p><strong>Execution services?</strong><br><span class="muted">No. Guidance only.</span></p>
 </div>
 </section>
 
 <section id="resources">
 <h2>Resources</h2>
 <div class="card">
-<p class="muted">Practical insights shared through blog and social platforms.</p>
+<p class="muted">Practical insights shared via blog and platforms.</p>
 <a class="cta" href="https://spdigitaljourney.blogspot.com/" target="_blank">Visit Blog</a>
 </div>
 </section>
@@ -297,7 +309,7 @@ footer .container {
 📞 7799423794<br>
 📧 rpsanjaypaul@gmail.com
 </p>
-<p class="muted">Online guidance worldwide · Offline within India</p>
+<p class="muted">Online worldwide · Offline within India</p>
 </div>
 </section>
 
