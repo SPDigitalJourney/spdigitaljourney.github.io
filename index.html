@@ -1,177 +1,199 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>SPDigitalJourney | Google Business Guidance</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SPDigitalJourney | Google Business Guidance</title>
 
-  <style>
-    :root {
-      --bg: #f7f8fa;
-      --card: #ffffff;
-      --text: #1f2937;
-      --muted: #6b7280;
-      --accent: #2563eb;
-      --border: #e5e7eb;
-    }
+<style>
+:root {
+  --bg: #f7f8fb;
+  --card: #ffffff;
+  --text: #1f2937;
+  --muted: #6b7280;
+  --accent: #2563eb;
+  --border: #e5e7eb;
+}
 
-    * {
-      box-sizing: border-box;
-    }
+* { box-sizing: border-box; }
 
-    body {
-      margin: 0;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.6;
-    }
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+}
 
-    header {
-      background: linear-gradient(135deg, #1e3a8a, #2563eb);
-      color: #fff;
-      padding: 56px 20px;
-    }
+header {
+  background: linear-gradient(135deg, #1e3a8a, #2563eb);
+  color: #fff;
+  padding: 70px 20px;
+}
 
-    header .container {
-      max-width: 960px;
-      margin: auto;
-    }
+.hero {
+  max-width: 1000px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 40px;
+  align-items: center;
+}
 
-    h1 {
-      font-size: 2.2rem;
-      margin-bottom: 12px;
-    }
+.hero h1 {
+  font-size: 2.4rem;
+  margin-bottom: 14px;
+}
 
-    header p {
-      max-width: 700px;
-      font-size: 1.05rem;
-      opacity: 0.95;
-    }
+.hero p {
+  font-size: 1.05rem;
+  max-width: 600px;
+  opacity: 0.95;
+}
 
-    .badge {
-      display: inline-block;
-      margin-top: 12px;
-      padding: 6px 12px;
-      border-radius: 999px;
-      background: rgba(255,255,255,0.15);
-      font-size: 0.85rem;
-    }
+.hero-badge {
+  display: inline-block;
+  margin-top: 16px;
+  padding: 6px 14px;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.15);
+  font-size: 0.85rem;
+}
 
-    nav {
-      background: #fff;
-      border-bottom: 1px solid var(--border);
-      position: sticky;
-      top: 0;
-      z-index: 10;
-    }
+.hero-svg {
+  width: 100%;
+  max-width: 360px;
+}
 
-    nav ul {
-      list-style: none;
-      display: flex;
-      gap: 18px;
-      padding: 12px 20px;
-      margin: 0;
-      max-width: 960px;
-      margin-inline: auto;
-      overflow-x: auto;
-    }
+nav {
+  background: #fff;
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
 
-    nav a {
-      text-decoration: none;
-      color: var(--text);
-      font-weight: 500;
-      font-size: 0.95rem;
-    }
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 18px;
+  padding: 12px 20px;
+  margin: 0 auto;
+  max-width: 1000px;
+  overflow-x: auto;
+}
 
-    nav a:hover {
-      color: var(--accent);
-    }
+nav a {
+  text-decoration: none;
+  color: var(--text);
+  font-weight: 500;
+  font-size: 0.95rem;
+}
 
-    main {
-      max-width: 960px;
-      margin: auto;
-      padding: 40px 20px;
-    }
+nav a:hover { color: var(--accent); }
 
-    section {
-      margin-bottom: 56px;
-    }
+main {
+  max-width: 1000px;
+  margin: auto;
+  padding: 50px 20px;
+}
 
-    h2 {
-      font-size: 1.6rem;
-      margin-bottom: 16px;
-    }
+section { margin-bottom: 60px; }
 
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 20px;
-    }
+h2 {
+  font-size: 1.7rem;
+  margin-bottom: 20px;
+}
 
-    .card {
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 14px;
-      padding: 20px;
-    }
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 22px;
+}
 
-    .icon {
-      width: 28px;
-      height: 28px;
-      margin-bottom: 10px;
-      fill: var(--accent);
-    }
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 22px;
+}
 
-    .muted {
-      color: var(--muted);
-      font-size: 0.95rem;
-    }
+.icon {
+  width: 30px;
+  height: 30px;
+  fill: var(--accent);
+  margin-bottom: 10px;
+}
 
-    .cta {
-      display: inline-block;
-      margin-top: 16px;
-      padding: 10px 18px;
-      background: var(--accent);
-      color: #fff;
-      text-decoration: none;
-      border-radius: 8px;
-      font-weight: 500;
-    }
+.muted {
+  color: var(--muted);
+  font-size: 0.95rem;
+}
 
-    footer {
-      background: #fff;
-      border-top: 1px solid var(--border);
-      padding: 30px 20px;
-      font-size: 0.9rem;
-    }
+.cta {
+  display: inline-block;
+  margin-top: 18px;
+  padding: 10px 20px;
+  background: var(--accent);
+  color: #fff;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 500;
+}
 
-    footer .container {
-      max-width: 960px;
-      margin: auto;
-      color: var(--muted);
-    }
-  </style>
+footer {
+  background: #fff;
+  border-top: 1px solid var(--border);
+  padding: 30px 20px;
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+footer .container {
+  max-width: 1000px;
+  margin: auto;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    grid-template-columns: 1fr;
+    text-align: left;
+  }
+}
+</style>
 </head>
 
 <body>
 
 <header id="home">
-  <div class="container">
-    <h1>SPDigitalJourney</h1>
-    <p>
-      I help business owners understand and improve how they appear on Google.
-      Guidance focused. No execution. No account access.
-    </p>
-    <div class="badge">
-      Online sessions available globally · Offline guidance available across India
+  <div class="hero">
+    <div>
+      <h1>SPDigitalJourney</h1>
+      <p>
+        I help business owners understand and improve how they appear on Google.
+        Guidance-focused. No execution. No account access.
+      </p>
+      <div class="hero-badge">
+        Online sessions globally · Offline guidance across India
+      </div>
     </div>
+
+    <!-- INLINE SVG HERO ILLUSTRATION -->
+    <svg class="hero-svg" viewBox="0 0 300 260" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="150" cy="130" r="110" fill="rgba(255,255,255,0.15)"/>
+      <path d="M90 170 L150 90 L210 170" stroke="#ffffff" stroke-width="6" fill="none"/>
+      <circle cx="150" cy="90" r="10" fill="#ffffff"/>
+      <circle cx="90" cy="170" r="10" fill="#ffffff"/>
+      <circle cx="210" cy="170" r="10" fill="#ffffff"/>
+      <text x="150" y="215" text-anchor="middle" fill="#ffffff" font-size="12">
+        clarity • direction • guidance
+      </text>
+    </svg>
   </div>
 </header>
 
 <nav>
   <ul>
-    <li><a href="#home">Home</a></li>
     <li><a href="#services">Services</a></li>
     <li><a href="#booking">Booking</a></li>
     <li><a href="#faq">FAQ</a></li>
@@ -183,110 +205,74 @@
 <main>
 
 <section id="services">
-  <h2>What I Help With</h2>
+<h2>What I Help With</h2>
 
-  <div class="grid">
+<div class="grid">
 
-    <div class="card">
-      <svg class="icon" viewBox="0 0 24 24">
-        <path d="M12 2a10 10 0 100 20 10 10 0 000-20zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/>
-      </svg>
-      <h3>Google Business Profile Guidance</h3>
-      <p class="muted">
-        Understand what Google is showing about your business, what’s missing, and what actually impacts visibility.
-      </p>
-    </div>
+<div class="card">
+<svg class="icon" viewBox="0 0 24 24"><path d="M12 2a10 10 0 100 20 10 10 0 000-20zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg>
+<h3>Google Business Profile Guidance</h3>
+<p class="muted">Understand what Google shows, what’s missing, and what impacts visibility.</p>
+</div>
 
-    <div class="card">
-      <svg class="icon" viewBox="0 0 24 24">
-        <path d="M3 3h18v2H3V3zm0 4h18v14H3V7zm4 3v2h10v-2H7z"/>
-      </svg>
-      <h3>Content & Photo Strategy</h3>
-      <p class="muted">
-        Learn what type of photos, updates, and descriptions help customers and Google understand your business better.
-      </p>
-    </div>
+<div class="card">
+<svg class="icon" viewBox="0 0 24 24"><path d="M3 3h18v2H3V3zm0 4h18v14H3V7z"/></svg>
+<h3>Content & Photo Strategy</h3>
+<p class="muted">Learn what kind of visuals and updates actually help customers and Google.</p>
+</div>
 
-    <div class="card">
-      <svg class="icon" viewBox="0 0 24 24">
-        <path d="M12 4a8 8 0 108 8 8 8 0 00-8-8zm1 11h-2v-2h2v2zm0-4h-2V7h2v4z"/>
-      </svg>
-      <h3>Clarity Sessions for Owners</h3>
-      <p class="muted">
-        One-to-one sessions explaining visibility issues in simple language so you can take informed decisions.
-      </p>
-    </div>
+<div class="card">
+<svg class="icon" viewBox="0 0 24 24"><path d="M12 4a8 8 0 108 8 8 8 0 00-8-8z"/></svg>
+<h3>Owner Clarity Sessions</h3>
+<p class="muted">One-to-one explanations so you can take informed decisions confidently.</p>
+</div>
 
-  </div>
+</div>
 </section>
 
 <section id="booking">
-  <h2>How Sessions Work</h2>
-
-  <div class="card">
-    <p>
-      Sessions are explanation-driven and practical.
-      I do not perform execution, uploads, or optimizations on your behalf.
-    </p>
-    <p class="muted">
-      Pay-as-you-like model. Many contribute between ₹500–₹1,000 based on value.
-    </p>
-    <a class="cta" href="#contact">Request a Guidance Session</a>
-  </div>
+<h2>How Sessions Work</h2>
+<div class="card">
+<p>Sessions are explanation-driven and practical.</p>
+<p class="muted">Pay-as-you-like model. Many contribute ₹500–₹1,000 based on value.</p>
+<a class="cta" href="#contact">Request a Session</a>
+</div>
 </section>
 
 <section id="faq">
-  <h2>Frequently Asked Questions</h2>
-
-  <div class="card">
-    <p><strong>Do you take login access?</strong><br>
-      <span class="muted">No. All guidance is provided without accessing your account.</span>
-    </p>
-
-    <p><strong>Are sessions available outside India?</strong><br>
-      <span class="muted">Yes. Online guidance sessions are available globally.</span>
-    </p>
-
-    <p><strong>Do you offer execution or services?</strong><br>
-      <span class="muted">No. I focus strictly on guidance and understanding.</span>
-    </p>
-  </div>
+<h2>FAQ</h2>
+<div class="card">
+<p><strong>Do you take login access?</strong><br><span class="muted">No. Guidance only.</span></p>
+<p><strong>Available outside India?</strong><br><span class="muted">Yes. Online sessions globally.</span></p>
+<p><strong>Do you execute services?</strong><br><span class="muted">No. I guide, explain, and empower.</span></p>
+</div>
 </section>
 
 <section id="resources">
-  <h2>Free Resources</h2>
-
-  <div class="card">
-    <p class="muted">
-      Articles, explanations, and insights shared through my blog and social platforms.
-    </p>
-    <a class="cta" href="https://spdigitaljourney.blogspot.com/" target="_blank">
-      Visit the Blog
-    </a>
-  </div>
+<h2>Resources</h2>
+<div class="card">
+<p class="muted">Practical insights shared through blog and social platforms.</p>
+<a class="cta" href="https://spdigitaljourney.blogspot.com/" target="_blank">Visit Blog</a>
+</div>
 </section>
 
 <section id="contact">
-  <h2>Contact</h2>
-
-  <div class="card">
-    <p>
-      📞 Call / WhatsApp / GPay: <strong>7799423794</strong><br>
-      📧 Email: <strong>rpsanjaypaul@gmail.com</strong>
-    </p>
-
-    <p class="muted">
-      Reach out for online guidance sessions worldwide or offline sessions within India.
-    </p>
-  </div>
+<h2>Contact</h2>
+<div class="card">
+<p>
+📞 7799423794<br>
+📧 rpsanjaypaul@gmail.com
+</p>
+<p class="muted">Online guidance worldwide · Offline within India</p>
+</div>
 </section>
 
 </main>
 
 <footer>
-  <div class="container">
-    © 2025 SPDigitalJourney · Guidance based on 15+ years within the Google ecosystem
-  </div>
+<div class="container">
+© 2025 SPDigitalJourney · Guidance based on 15+ years in the Google ecosystem
+</div>
 </footer>
 
 </body>
