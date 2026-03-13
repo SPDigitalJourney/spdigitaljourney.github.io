@@ -559,8 +559,8 @@
   }
 
   /* TABS LOGIC */
-  .pricing-set { display: none; }
-  .pricing-set.active { display: grid; }
+  .pricing-set { display: none !important; }
+  .pricing-set.active { display: grid !important; }
 </style>
 </head>
 <body>
@@ -734,9 +734,9 @@
   </div>
 
   <div class="pricing-tabs">
-    <button class="tab-btn active" onclick="showTab('setup')">Digital Setup</button>
-    <button class="tab-btn" onclick="showTab('monthly')">Maintenance Packs</button>
-    <button class="tab-btn" onclick="showTab('community')">Community Pack</button>
+    <button class="tab-btn active" onclick="showTab('setup', this)">Digital Setup</button>
+    <button class="tab-btn" onclick="showTab('monthly', this)">Maintenance Packs</button>
+    <button class="tab-btn" onclick="showTab('community', this)">Community Pack</button>
   </div>
 
   <div class="pricing-grid pricing-set active" id="tab-setup">
@@ -908,7 +908,7 @@
       </div>
       <div class="contact-item">
         <span class="icon">✉️</span>
-        <a href="/cdn-cgi/l/email-protection#04767477656a6e657d74657168446369656d682a676b69"><span class="__cf_email__" data-cfemail="b3c1c3c0d2ddd9d2cac3d2c6dff3d4ded2dadf9dd0dcde">[email&#160;protected]</span></a>
+        <a href="mailto:rpsanjaypaul@gmail.com">rpsanjaypaul@gmail.com</a>
       </div>
     </div>
 
@@ -975,15 +975,15 @@
 <!-- FOOTER -->
 <footer>
   <p>© 2025 <strong>SPDigitalJourney</strong> · Govt. Registered MSME · Sanjay Paul</p>
-  <p style="margin-top: 6px;">📞 7799423794 · <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="fb898b889a95919a828b9a8e97bb9c969a9297d5989496">[email&#160;protected]</a> · Trusted Google Ecosystem Specialist since 2007</p>
+  <p style="margin-top: 6px;">📞 7799423794 · <a href="mailto:rpsanjaypaul@gmail.com" style="color: var(--cyan); text-decoration: none;">rpsanjaypaul@gmail.com</a> · Trusted Google Ecosystem Specialist since 2007</p>
 </footer>
 
 <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
-  function showTab(id) {
-    document.querySelectorAll('.pricing-set').forEach(el => el.classList.remove('active'));
-    document.querySelectorAll('.tab-btn').forEach(el => el.classList.remove('active'));
+  function showTab(id, el) {
+    document.querySelectorAll('.pricing-set').forEach(e => e.classList.remove('active'));
+    document.querySelectorAll('.tab-btn').forEach(e => e.classList.remove('active'));
     document.getElementById('tab-' + id).classList.add('active');
-    event.target.classList.add('active');
+    el.classList.add('active');
   }
 
   // Scroll-triggered fade-in
