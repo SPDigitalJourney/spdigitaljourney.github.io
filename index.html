@@ -1,424 +1,991 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sanjay Paul | SPDigitalJourney</title>
-    <meta name="description" content="Digital Marketer & Google Ecosystem Specialist (15+ Years) helping businesses grow with Google Maps, GMB, and Local Visibility.">
-    <style>
-        :root {
-            --primary-color: #1a73e8; /* Google Blue */
-            --secondary-color: #3c4043; /* Dark Gray */
-            --background-color: #ffffff;
-            --light-background: #f8f9fa;
-            --text-color: #202124;
-            --link-color: #1a73e8;
-            --success-color: #34a853; /* Google Green */
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SPDigitalJourney | Google Maps & GMB Specialist</title>
+<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Exo+2:ital,wght@0,300;0,400;0,600;0,800;1,300&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #050d1a;
+    --deep: #0a1628;
+    --mid: #0d2040;
+    --cyan: #00d4ff;
+    --cyan2: #00a8cc;
+    --gold: #f0b429;
+    --gold2: #e09b10;
+    --white: #e8f4fc;
+    --muted: #7ba3c0;
+    --glow: 0 0 20px rgba(0,212,255,0.3);
+  }
 
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: var(--background-color);
-            color: var(--text-color);
-            line-height: 1.6;
-        }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
 
-        .container {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 20px;
-        }
+  html { scroll-behavior: smooth; }
 
-        /* --- Header Section --- */
-        header {
-            text-align: center;
-            padding: 40px 0;
-            background-color: var(--light-background);
-            border-bottom: 4px solid var(--primary-color);
-            margin-bottom: 30px;
-        }
+  body {
+    font-family: 'Exo 2', sans-serif;
+    background: var(--navy);
+    color: var(--white);
+    overflow-x: hidden;
+  }
 
-        header h1 {
-            color: var(--primary-color);
-            font-size: 2.5em;
-            margin-bottom: 5px;
-        }
+  /* GRID BG */
+  body::before {
+    content: '';
+    position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+    background-image:
+      linear-gradient(rgba(0,212,255,0.04) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(0,212,255,0.04) 1px, transparent 1px);
+    background-size: 60px 60px;
+    pointer-events: none; z-index: 0;
+  }
 
-        header p.title {
-            font-size: 1.2em;
-            color: var(--secondary-color);
-            margin: 0 0 15px 0;
-            font-weight: bold;
-        }
+  /* NAV */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 16px 40px;
+    background: rgba(5,13,26,0.92);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(0,212,255,0.15);
+  }
 
-        header .stats {
-            font-size: 0.9em;
-            color: var(--secondary-color);
-            padding: 10px;
-            background-color: #e8f0fe;
-            border-radius: 8px;
-            display: inline-block;
-            margin-top: 10px;
-        }
-        
-        /* --- Contact Bar --- */
-        .contact-bar {
-            background-color: #f1f3f4;
-            padding: 15px 0;
-            text-align: center;
-            font-size: 0.9em;
-            border-radius: 8px;
-            margin-bottom: 30px;
-        }
+  .nav-brand {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 1.5rem; font-weight: 700;
+    color: var(--cyan);
+    letter-spacing: 1px;
+  }
+  .nav-brand span { color: var(--gold); }
 
-        .contact-bar a {
-            color: var(--secondary-color);
-            text-decoration: none;
-            margin: 0 10px;
-            display: inline-block;
-        }
+  .nav-links { display: flex; gap: 28px; list-style: none; }
+  .nav-links a {
+    color: var(--muted); text-decoration: none;
+    font-size: 0.85rem; font-weight: 600; letter-spacing: 1.5px;
+    text-transform: uppercase;
+    transition: color 0.2s;
+  }
+  .nav-links a:hover { color: var(--cyan); }
 
-        .contact-bar strong {
-            color: var(--primary-color);
-            margin-right: 5px;
-        }
+  .nav-cta {
+    background: transparent;
+    border: 1.5px solid var(--cyan);
+    color: var(--cyan);
+    padding: 8px 20px; border-radius: 4px;
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 0.9rem; font-weight: 600; letter-spacing: 1px;
+    cursor: pointer; text-decoration: none;
+    transition: all 0.2s;
+  }
+  .nav-cta:hover { background: var(--cyan); color: var(--navy); }
 
-        .contact-bar .social-links a {
-            font-size: 1.2em;
-            margin: 0 8px;
-        }
+  /* HERO */
+  .hero {
+    min-height: 100vh;
+    display: flex; align-items: center; justify-content: center;
+    text-align: center;
+    padding: 100px 20px 60px;
+    position: relative;
+    overflow: hidden;
+  }
 
-        /* --- General Section Styling --- */
-        .section {
-            padding: 20px 0;
-            margin-bottom: 30px;
-            border-bottom: 1px solid #ddd;
-        }
-        
-        .section:last-child {
-            border-bottom: none;
-        }
+  .hero::after {
+    content: '';
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    width: 700px; height: 700px;
+    background: radial-gradient(circle, rgba(0,212,255,0.08) 0%, transparent 70%);
+    pointer-events: none;
+  }
 
-        h2 {
-            color: var(--primary-color);
-            font-size: 1.8em;
-            margin-top: 0;
-            border-bottom: 2px solid var(--primary-color);
-            padding-bottom: 5px;
-            margin-bottom: 15px;
-        }
+  .hero-badge {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: rgba(240,180,41,0.1);
+    border: 1px solid rgba(240,180,41,0.4);
+    border-radius: 100px;
+    padding: 6px 16px;
+    font-size: 0.75rem; font-weight: 600; letter-spacing: 2px;
+    text-transform: uppercase; color: var(--gold);
+    margin-bottom: 24px;
+    animation: fadeUp 0.6s ease both;
+  }
 
-        h3 {
-            color: var(--secondary-color);
-            font-size: 1.4em;
-            margin-top: 20px;
-        }
+  .hero-badge::before {
+    content: '★';
+    font-size: 0.7rem;
+  }
 
-        ul {
-            list-style-type: none;
-            padding-left: 0;
-        }
+  h1 {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: clamp(2.4rem, 6vw, 4.5rem);
+    font-weight: 700;
+    line-height: 1.1;
+    color: var(--white);
+    margin-bottom: 12px;
+    animation: fadeUp 0.6s 0.1s ease both;
+  }
+  h1 .accent { color: var(--cyan); }
+  h1 .gold { color: var(--gold); }
 
-        ul li {
-            margin-bottom: 10px;
-            padding-left: 1.5em;
-            text-indent: -1.5em;
-        }
+  .hero-sub {
+    font-size: clamp(0.9rem, 2vw, 1.15rem);
+    color: var(--muted);
+    max-width: 680px; margin: 0 auto 16px;
+    font-weight: 300;
+    line-height: 1.7;
+    animation: fadeUp 0.6s 0.2s ease both;
+  }
 
-        ul.check-list li:before {
-            content: '✓ ';
-            color: var(--primary-color);
-            font-weight: bold;
-        }
-        
-        /* --- Contribution/Model --- */
-        .contribution-model {
-            background-color: #fff3e0; /* Light Orange/Yellow background */
-            padding: 20px;
-            border-radius: 8px;
-            text-align: center;
-            margin-bottom: 30px;
-            border: 1px solid #ffe0b2;
-        }
-        
-        .contribution-model h3 {
-            color: #e65100; /* Darker Orange */
-            margin-top: 0;
-            font-size: 1.5em;
-        }
-        
-        .contribution-model p {
-            font-size: 1.1em;
-        }
-        
-        /* --- Testimonials --- */
-        .testimonial-block {
-            margin-bottom: 20px;
-            padding: 15px;
-            background-color: var(--light-background);
-            border-left: 5px solid var(--primary-color);
-            border-radius: 4px;
-        }
+  .hero-years {
+    display: flex; gap: 32px; justify-content: center;
+    margin: 28px 0 36px;
+    animation: fadeUp 0.6s 0.3s ease both;
+  }
 
-        .testimonial-block p {
-            margin: 0 0 10px 0;
-            font-style: italic;
-        }
+  .stat {
+    text-align: center;
+  }
+  .stat-num {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 2.2rem; font-weight: 700;
+    color: var(--cyan);
+    line-height: 1;
+  }
+  .stat-label {
+    font-size: 0.72rem; color: var(--muted);
+    letter-spacing: 1.5px; text-transform: uppercase;
+    margin-top: 4px;
+  }
 
-        .testimonial-block .author {
-            display: block;
-            text-align: right;
-            font-weight: bold;
-            color: var(--secondary-color);
-        }
+  .hero-btns {
+    display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;
+    animation: fadeUp 0.6s 0.4s ease both;
+  }
 
-        /* --- Guidance Services Cards --- */
-        .guidance-grid {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 20px;
-        }
+  .btn-primary {
+    background: linear-gradient(135deg, var(--cyan), var(--cyan2));
+    color: var(--navy);
+    padding: 14px 32px; border-radius: 4px;
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 1rem; font-weight: 700; letter-spacing: 1px;
+    text-decoration: none;
+    transition: all 0.2s;
+    box-shadow: 0 0 24px rgba(0,212,255,0.3);
+  }
+  .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 0 36px rgba(0,212,255,0.5); }
 
-        .service-card {
-            border: 1px solid #ddd;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-        }
-        
-        .service-card.mini {
-            background-color: #e8f5e9; /* Light green for mini */
-            border-color: #a5d6a7;
-        }
-        
-        .service-card h4 {
-            color: var(--primary-color);
-            margin-top: 0;
-            font-size: 1.2em;
-        }
+  .btn-outline {
+    border: 1.5px solid rgba(0,212,255,0.4);
+    color: var(--cyan);
+    padding: 14px 32px; border-radius: 4px;
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 1rem; font-weight: 600; letter-spacing: 1px;
+    text-decoration: none;
+    transition: all 0.2s;
+    background: rgba(0,212,255,0.05);
+  }
+  .btn-outline:hover { border-color: var(--cyan); background: rgba(0,212,255,0.12); }
 
-        .service-card strong {
-            display: block;
-            margin-top: 10px;
-        }
-        
-        /* --- Contact Form Styles --- */
-        .contact-box {
-            background-color: #f1f8e9;
-            padding: 30px;
-            border-radius: 8px;
-            margin-top: 30px;
-            border: 1px solid var(--success-color);
-            text-align: center; /* Center the content inside the box */
-        }
+  /* MSME BADGE */
+  .msme-badge {
+    position: relative; display: inline-block;
+    margin: 40px auto 0;
+    animation: fadeUp 0.6s 0.5s ease both;
+  }
 
-        .contact-box .booking-button {
-            display: block;
-            width: 80%; /* Adjusted width for centering */
-            max-width: 400px;
-            margin: 15px auto; /* Center the button */
-            padding: 15px;
-            background-color: var(--success-color);
-            color: white;
-            text-align: center;
-            text-decoration: none;
-            font-weight: bold;
-            border-radius: 5px;
-            font-size: 1.2em;
-            transition: background-color 0.3s;
-        }
+  .msme-ring {
+    width: 110px; height: 110px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--gold), var(--gold2));
+    display: flex; align-items: center; justify-content: center;
+    box-shadow: 0 0 30px rgba(240,180,41,0.4);
+    margin: 0 auto;
+  }
 
-        .contact-box .booking-button:hover {
-            background-color: #3c8f4c;
-        }
+  .msme-inner {
+    width: 86px; height: 86px; border-radius: 50%;
+    background: var(--navy);
+    border: 3px solid var(--gold2);
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    gap: 2px;
+    text-align: center;
+  }
 
-        /* --- Links & Icons (Simple Fallback) --- */
-        a {
-            color: var(--link-color);
-            text-decoration: none;
-        }
-        
-        a:hover {
-            text-decoration: underline;
-        }
+  .msme-flag { font-size: 1.2rem; }
+  .msme-text { font-size: 0.55rem; font-weight: 700; color: var(--gold); letter-spacing: 0.5px; text-transform: uppercase; line-height: 1.4; }
+  .msme-main { font-size: 0.85rem; font-weight: 800; color: var(--gold); font-family: 'Rajdhani', sans-serif; }
 
-        /* Simple icon emulation for social links */
-        .social-links a:before {
-            margin-right: 5px;
-            font-family: sans-serif; /* Fallback for basic symbols */
-        }
-        .social-links a[href*="blogspot"]:before { content: '📰'; }
-        .social-links a[href*="pinterest"]:before { content: '📌'; }
-        .social-links a[href*="x.com"]:before { content: '🐦'; }
-        .social-links a[href*="instagram"]:before { content: '📸'; }
-        .social-links a[href*="facebook"]:before { content: '👍'; }
-        .social-links a[href*="youtube"]:before { content: '▶️'; }
-        .social-links a[href*="github.io"]:before { content: '💻'; }
-        .social-links a[href*="mailto"]:before { content: '📧'; }
+  /* SECTIONS */
+  section { position: relative; z-index: 1; }
 
-    </style>
+  .section-header {
+    text-align: center; margin-bottom: 48px;
+  }
+
+  .section-tag {
+    display: inline-block;
+    font-size: 0.7rem; font-weight: 700; letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--cyan); margin-bottom: 12px;
+    border-bottom: 1px solid rgba(0,212,255,0.3);
+    padding-bottom: 4px;
+  }
+
+  h2 {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: clamp(1.8rem, 4vw, 3rem);
+    font-weight: 700;
+    color: var(--white);
+    line-height: 1.2;
+  }
+
+  h2 span { color: var(--cyan); }
+
+  .section-desc {
+    font-size: 1rem; color: var(--muted);
+    max-width: 560px; margin: 12px auto 0;
+    line-height: 1.7; font-weight: 300;
+  }
+
+  /* ABOUT */
+  .about { padding: 80px 40px; max-width: 1100px; margin: 0 auto; }
+
+  .about-grid {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 48px;
+    align-items: start;
+  }
+
+  .about-content h3 {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 1.6rem; font-weight: 700; color: var(--cyan);
+    margin-bottom: 16px;
+  }
+
+  .about-content p {
+    color: var(--muted); line-height: 1.8; font-size: 0.95rem;
+    margin-bottom: 14px; font-weight: 300;
+  }
+
+  .about-highlights {
+    display: flex; flex-direction: column; gap: 14px;
+  }
+
+  .highlight-item {
+    display: flex; gap: 14px; align-items: flex-start;
+    padding: 16px;
+    background: rgba(0,212,255,0.04);
+    border: 1px solid rgba(0,212,255,0.1);
+    border-radius: 8px;
+    transition: border-color 0.2s;
+  }
+  .highlight-item:hover { border-color: rgba(0,212,255,0.3); }
+
+  .hi-icon {
+    font-size: 1.4rem; flex-shrink: 0; margin-top: 2px;
+  }
+
+  .hi-text strong {
+    display: block;
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 1rem; font-weight: 700; color: var(--white);
+    margin-bottom: 2px;
+  }
+  .hi-text span {
+    font-size: 0.82rem; color: var(--muted); font-weight: 300;
+  }
+
+  /* SERVICES */
+  .services { padding: 80px 40px; background: rgba(13,32,64,0.4); }
+  .services-inner { max-width: 1100px; margin: 0 auto; }
+
+  .services-grid {
+    display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+  }
+
+  .service-card {
+    background: rgba(10,22,40,0.8);
+    border: 1px solid rgba(0,212,255,0.1);
+    border-radius: 8px;
+    padding: 24px;
+    transition: all 0.25s;
+    cursor: default;
+  }
+
+  .service-card:hover {
+    border-color: rgba(0,212,255,0.4);
+    background: rgba(0,212,255,0.04);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 32px rgba(0,212,255,0.1);
+  }
+
+  .sc-icon { font-size: 1.8rem; margin-bottom: 12px; }
+
+  .sc-title {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 1.05rem; font-weight: 700; color: var(--white);
+    margin-bottom: 8px;
+  }
+
+  .sc-desc { font-size: 0.82rem; color: var(--muted); line-height: 1.6; font-weight: 300; }
+
+  /* PRICING */
+  .pricing { padding: 80px 40px; max-width: 1100px; margin: 0 auto; }
+
+  .pricing-tabs {
+    display: flex; justify-content: center; gap: 8px;
+    margin-bottom: 40px; flex-wrap: wrap;
+  }
+
+  .tab-btn {
+    padding: 8px 22px; border-radius: 100px;
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 0.85rem; font-weight: 600; letter-spacing: 1px;
+    text-transform: uppercase;
+    border: 1.5px solid rgba(0,212,255,0.2);
+    background: transparent; color: var(--muted);
+    cursor: pointer; transition: all 0.2s;
+  }
+  .tab-btn.active, .tab-btn:hover {
+    border-color: var(--cyan); color: var(--cyan);
+    background: rgba(0,212,255,0.08);
+  }
+
+  .pricing-grid {
+    display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 24px;
+  }
+
+  .price-card {
+    background: rgba(10,22,40,0.9);
+    border: 1px solid rgba(0,212,255,0.12);
+    border-radius: 12px; overflow: hidden;
+    transition: all 0.25s;
+  }
+
+  .price-card.featured {
+    border-color: var(--cyan);
+    box-shadow: 0 0 32px rgba(0,212,255,0.15);
+  }
+
+  .price-card:hover { transform: translateY(-4px); box-shadow: 0 12px 40px rgba(0,212,255,0.12); }
+
+  .pc-header {
+    padding: 20px 24px 16px;
+    border-bottom: 1px solid rgba(0,212,255,0.1);
+  }
+
+  .pc-featured-tag {
+    display: inline-block;
+    background: var(--cyan); color: var(--navy);
+    font-size: 0.65rem; font-weight: 700; letter-spacing: 2px;
+    text-transform: uppercase; border-radius: 100px;
+    padding: 3px 10px; margin-bottom: 10px;
+  }
+
+  .pc-name {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 1.2rem; font-weight: 700; color: var(--white);
+    margin-bottom: 4px;
+  }
+
+  .pc-price {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 2rem; font-weight: 700; color: var(--gold);
+  }
+
+  .pc-price sub { font-size: 0.9rem; }
+  .pc-price .strikethrough { text-decoration: line-through; color: var(--muted); font-size: 1rem; margin-left: 8px; }
+
+  .pc-type { font-size: 0.75rem; color: var(--muted); margin-top: 2px; }
+
+  .pc-body { padding: 20px 24px; }
+
+  .pc-feature {
+    display: flex; align-items: flex-start; gap: 8px;
+    font-size: 0.82rem; color: var(--muted);
+    margin-bottom: 10px; line-height: 1.5;
+  }
+
+  .pc-feature::before { content: '✓'; color: var(--cyan); font-weight: 700; flex-shrink: 0; margin-top: 1px; }
+
+  .pc-cta {
+    display: block; text-align: center;
+    margin: 20px 24px 24px;
+    padding: 12px; border-radius: 6px;
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 0.9rem; font-weight: 700; letter-spacing: 1px;
+    text-decoration: none;
+    border: 1.5px solid var(--cyan);
+    color: var(--cyan);
+    transition: all 0.2s;
+  }
+
+  .price-card.featured .pc-cta {
+    background: var(--cyan); color: var(--navy);
+  }
+
+  .pc-cta:hover { background: var(--cyan); color: var(--navy); }
+
+  /* TESTIMONIALS */
+  .testimonials { padding: 80px 40px; background: rgba(13,32,64,0.4); }
+  .testimonials-inner { max-width: 900px; margin: 0 auto; }
+
+  .testi-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+
+  .testi-card {
+    background: rgba(10,22,40,0.8);
+    border: 1px solid rgba(0,212,255,0.1);
+    border-radius: 10px; padding: 28px;
+    position: relative;
+  }
+
+  .testi-card::before {
+    content: '"';
+    position: absolute; top: 16px; right: 20px;
+    font-size: 4rem; line-height: 1;
+    color: rgba(0,212,255,0.1);
+    font-family: Georgia, serif;
+  }
+
+  .testi-stars { color: var(--gold); font-size: 0.85rem; margin-bottom: 14px; letter-spacing: 3px; }
+
+  .testi-text {
+    font-size: 0.9rem; color: var(--white);
+    line-height: 1.7; font-style: italic; font-weight: 300;
+    margin-bottom: 20px;
+  }
+
+  .testi-author {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 0.85rem; font-weight: 700; color: var(--cyan);
+  }
+  .testi-role { font-size: 0.75rem; color: var(--muted); margin-top: 2px; }
+
+  /* BOOKING */
+  .booking { padding: 80px 40px; max-width: 800px; margin: 0 auto; text-align: center; }
+
+  .booking-card {
+    background: rgba(10,22,40,0.9);
+    border: 1px solid rgba(0,212,255,0.2);
+    border-radius: 16px; padding: 48px 40px;
+    position: relative; overflow: hidden;
+  }
+
+  .booking-card::before {
+    content: '';
+    position: absolute; top: 0; left: 0; right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--cyan), var(--gold), var(--cyan));
+  }
+
+  .booking-card h2 { margin-bottom: 12px; }
+  .booking-card p { color: var(--muted); font-weight: 300; margin-bottom: 32px; }
+
+  .contact-items { display: flex; flex-direction: column; gap: 14px; margin-bottom: 32px; }
+
+  .contact-item {
+    display: flex; align-items: center; gap: 12px; justify-content: center;
+    font-size: 0.95rem; color: var(--white);
+  }
+
+  .contact-item .icon { font-size: 1.2rem; }
+  .contact-item a { color: var(--cyan); text-decoration: none; transition: color 0.2s; }
+  .contact-item a:hover { color: var(--white); }
+
+  .social-links { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; margin-top: 24px; }
+
+  .social-link {
+    display: flex; align-items: center; gap: 6px;
+    padding: 8px 16px; border-radius: 6px;
+    border: 1px solid rgba(0,212,255,0.2);
+    color: var(--muted); text-decoration: none;
+    font-size: 0.78rem; font-weight: 600; letter-spacing: 1px;
+    transition: all 0.2s;
+  }
+  .social-link:hover { border-color: var(--cyan); color: var(--cyan); background: rgba(0,212,255,0.06); }
+
+  /* T&C */
+  .terms { padding: 60px 40px; background: rgba(5,13,26,0.8); }
+  .terms-inner { max-width: 900px; margin: 0 auto; }
+
+  .terms-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 20px; margin-top: 40px; }
+
+  .term-item {
+    padding: 20px;
+    border: 1px solid rgba(0,212,255,0.08);
+    border-radius: 8px;
+    background: rgba(10,22,40,0.6);
+  }
+
+  .term-label {
+    font-size: 0.68rem; font-weight: 700; letter-spacing: 2px;
+    text-transform: uppercase; color: var(--cyan);
+    margin-bottom: 8px;
+  }
+
+  .term-val { font-size: 0.85rem; color: var(--muted); line-height: 1.6; font-weight: 300; }
+
+  /* FOOTER */
+  footer {
+    padding: 32px 40px;
+    border-top: 1px solid rgba(0,212,255,0.1);
+    text-align: center;
+    color: var(--muted);
+    font-size: 0.8rem;
+    background: var(--navy);
+  }
+
+  footer strong { color: var(--cyan); }
+
+  /* ANIMATIONS */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(24px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  /* MOBILE */
+  @media (max-width: 768px) {
+    nav { padding: 14px 20px; }
+    .nav-links { display: none; }
+    .about-grid { grid-template-columns: 1fr; }
+    .testi-grid { grid-template-columns: 1fr; }
+    .hero-years { gap: 20px; }
+    .about, .pricing, .booking { padding: 60px 20px; }
+    .services, .testimonials, .terms { padding: 60px 20px; }
+    .booking-card { padding: 32px 20px; }
+  }
+
+  /* TABS LOGIC */
+  .pricing-set { display: none; }
+  .pricing-set.active { display: grid; }
+</style>
 </head>
 <body>
 
-    <div class="container">
-        
-        <header>
-            <h1>Sanjay Paul | SPDigitalJourney</h1>
-            <p class="title">Digital Marketer & Google Ecosystem Specialist (15+ Years)</p>
-            <div class="stats">
-                Helping & Guiding Businesses Grow with Google Maps, GMB, Catalogues & Local Visibility | Ex-Google Maps (2007 Pilot Batch) | Guided/Trained/Empowered **5000+ Individuals** | **2000+ Street View Shoots** | **7+ States | 100+ Cities** | Community Support Model | Pay-As-You-Like
-            </div>
-        </header>
+<!-- NAV -->
+<nav>
+  <div class="nav-brand">SP<span>Digital</span>Journey</div>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#pricing">Pricing</a></li>
+    <li><a href="#booking">Contact</a></li>
+  </ul>
+  <a href="https://calendar.app.google/SoNVWrpURBiTUoKz5" class="nav-cta" target="_blank">Book a Session</a>
+</nav>
 
-        <div class="contact-bar">
-            <strong>📞 Contact:</strong> Call / WhatsApp / GPay: <a href="tel:7799423794">7799423794</a> | 
-            <a href="mailto:rpsanjaypaul@gmail.com">rpsanjaypaul@gmail.com</a>
-            <div class="social-links" style="margin-top: 8px;">
-                <a href="https://spdigitaljourney.blogspot.com/" target="_blank">Blog</a> 
-                <a href="https://pin.it/3gmZ0JT6U" target="_blank">Pinterest</a> 
-                <a href="https://x.com/spdigitaljourne" target="_blank">X (Twitter)</a> 
-                <a href="https://www.instagram.com/spdigitaljourney?igsh=eGVkY2Zwb29obWdt" target="_blank">Instagram</a> 
-                <a href="https://www.facebook.com/profile.php?id=61584622684344" target="_blank">Facebook</a> 
-                <a href="https://youtube.com/@spdigitaljourney" target="_blank">YouTube</a>
-                <a href="https://spdigitaljourney.github.io/" target="_blank">Website</a>
-            </div>
-        </div>
+<!-- HERO -->
+<section class="hero" id="top">
+  <div style="position:relative; z-index:1;">
+    <div class="hero-badge">Govt. Registered MSME · Trusted Since 2007</div>
 
-        <section class="section">
-            <h2>SPDigitalJourney – Google Business Profile Guidance</h2>
-            <p><strong>Helping local businesses understand Google visibility, trust, and discovery — clearly and ethically.</strong></p>
-            <p>For over 15 years, I’ve worked deeply within the Google ecosystem — Maps, Business Profiles, Street View, and local discovery systems. During this journey, I’ve helped thousands of businesses understand how Google actually presents them to customers.</p>
-            <p>SPDigitalJourney is a guidance‑focused initiative created to simplify Google Business Profile understanding for business owners, schools, clinics, and service providers.</p>
-            <p>My role is simple: I guide you so you understand what works, what doesn’t, and what to improve — independently and confidently.</p>
-            
-            <h3>What I Guide You On</h3>
-            <ul class="check-list">
-                <li>How customers see your business on Google</li>
-                <li>Visibility gaps and common mistakes</li>
-                <li>Photo and content strategy (what builds trust)</li>
-                <li>Categories, descriptions, and relevance</li>
-                <li>Reviews, responses, and credibility signals</li>
-            </ul>
-        </section>
-        
-        <div class="contribution-model">
-            <h3>🤝 Contribution Model (Community Support)</h3>
-            <p>This is a community support initiative. There is **no fixed fee** — you may contribute any amount based on comfort and value received.</p>
-            <p style="font-style: italic; color: #d84315;">(Most contributions range between ₹500 – ₹1,000.)</p>
-            <p>Call / WhatsApp / GPay: <strong>7799423794</strong></p>
-        </div>
+    <h1>
+      India's Trusted<br>
+      <span class="accent">Google Maps</span> &<br>
+      <span class="gold">GMB Specialist</span>
+    </h1>
 
-        <section class="section">
-            <h2>🌍 About SPDigitalJourney & My Background</h2>
-            <p>My name is **Sanjay Paul**, a Digital Marketer and Google Ecosystem Specialist with **15+ years of experience** working with Google Maps, Business Profiles, and local discovery platforms.</p>
+    <p class="hero-sub">
+      15+ years turning businesses invisible on Google into local landmarks.<br>
+      Ex-Google Maps – Hyderabad India (2007 Pilot Batch) · <strong>SPDigitalJourney</strong>
+    </p>
 
-            <h3>Ex-Google Maps Experience (2007 Pilot Batch)</h3>
-            <p>I was part of the Global Google Maps Division and contributed to:</p>
-            <ul class="check-list">
-                <li>Transitioning from paper maps to digital maps</li>
-                <li>Road mapping (local roads, state highways, naming & numbering)</li>
-                <li>Street View editing</li>
-                <li>House numbering</li>
-                <li>Google Help Forum interactions</li>
-            </ul>
-
-            <h3>Current Contributions</h3>
-            <p>Currently working with a digital marketing private limited company, I have contributed to:</p>
-            <ul class="check-list">
-                <li>**2000+** Street View projects</li>
-                <li>Businesses across **7+ states and 100+ cities**</li>
-                <li>Training and guiding **5000+** business owners</li>
-            </ul>
-
-            <h3>Why SPDigitalJourney Exists</h3>
-            <blockquote style="border-left: 3px solid #f90; padding-left: 15px; color: #555;">
-                <p>Over the years, I noticed one major gap: Businesses don’t struggle because of lack of effort — they struggle because Google’s systems are misunderstood.</p>
-            </blockquote>
-            <p>SPDigitalJourney was created to bridge that gap through **clear guidance, not dependency.**</p>
-            <p>This platform is about empowering understanding, not selling shortcuts.</p>
-        </section>
-
-        <section class="section">
-            <h2>📈 Guidance Services</h2>
-            <div class="guidance-grid">
-                
-                <div class="service-card">
-                    <h4>Google Business Profile Guidance (One‑Time Session)</h4>
-                    <ul class="check-list">
-                        <li>Review of your existing Google Business Profile</li>
-                        <li>Understanding how customers discover you</li>
-                        <li>Identifying missing or weak areas</li>
-                        <li>Photo & content guidance</li>
-                        <li>Category & description clarity</li>
-                        <li>Review best practices</li>
-                        <li>Open Q&A</li>
-                    </ul>
-                    <strong>Duration:</strong> 45–60 minutes | <strong>Mode:</strong> Online or In‑person | <strong>Nature:</strong> Guidance only
-                </div>
-
-                <div class="service-card mini">
-                    <h4>Mini Guidance Session</h4>
-                    <p>Ideal for small businesses or quick clarity.</p>
-                    <ul class="check-list">
-                        <li>Quick profile review</li>
-                        <li>Top 3 improvements</li>
-                        <li>Clear action steps</li>
-                    </ul>
-                    <strong>Duration:</strong> 20–30 minutes | <strong>Contribution:</strong> Suggested ₹500
-                </div>
-
-            </div>
-        </section>
-        
-        <section class="contact-box" id="book-a-session">
-            <h2>📅 Book a Clarity Session</h2>
-            <p style="font-weight: bold; font-size: 1.1em;">Choose your preferred way to connect and get guidance:</p>
-            
-            <a href="https://calendar.app.google/e3BNop6ioBwkDTdj6" target="_blank" class="booking-button">
-                👉 Option 1: **Book an Appointment** (via Google Calendar)
-            </a>
-            <p style="text-align: center; color: var(--secondary-color);">*This is the quickest way to check my live availability and schedule a session directly.</p>
-            
-            <hr style="border-top: 1px dashed #bbb; margin: 30px 0; width: 80%; max-width: 400px; margin-left: auto; margin-right: auto;">
-            
-            <h3 style="margin-top: 0; text-align: center;">Or, Send a Detailed Inquiry</h3>
-            
-            <a href="https://forms.gle/VjbtJB9F9vzURfD78" target="_blank" class="booking-button" style="background-color: var(--primary-color);">
-                📝 Option 2: **Fill out an Inquiry Form** (via Google Forms)
-            </a>
-            <p style="font-size: 0.9em; text-align: center; color: #777; margin-top: 10px;">(We will review your answers and reply via email/WhatsApp to schedule the session.)</p>
-        </section>
-
-        <section class="section">
-            <h2>⭐ What People Say</h2>
-            
-            <div class="testimonial-block">
-                <p>“The session helped us clearly understand what Google was showing about our business and what needed attention. Very practical and easy to follow.”</p>
-                <span class="author">— Business Owner, Education Sector</span>
-            </div>
-
-            <div class="testimonial-block">
-                <p>“Instead of selling services, he explained things calmly and helped us decide our next steps ourselves.”</p>
-                <span class="author">— Local Business Owner</span>
-            </div>
-        </section>
-
-
-        <footer class="section contact-bar" style="border-top: 1px solid #ddd; margin-top: 30px; background-color: var(--light-background);">
-            <h2>Let’s Connect</h2>
-            <p>If you’re looking for clarity on how your business appears on Google, feel free to reach out.</p>
-            <p style="font-size: 1.1em;">
-                **📞 Call / WhatsApp:** <a href="tel:7799423794">7799423794</a> | 
-                **💳 GPay/Online Pay Available**
-            </p>
-            <p style="font-size: 0.9em;">
-                Sessions are scheduled based on availability.
-            </p>
-        </footer>
-
+    <div class="hero-years">
+      <div class="stat"><div class="stat-num">15+</div><div class="stat-label">Years Experience</div></div>
+      <div class="stat"><div class="stat-num">5000+</div><div class="stat-label">Individuals Guided</div></div>
+      <div class="stat"><div class="stat-num">2000+</div><div class="stat-label">Businesses Scanned</div></div>
+      <div class="stat"><div class="stat-num">7+</div><div class="stat-label">States Covered</div></div>
     </div>
 
-</body>
-</html>
+    <div class="hero-btns">
+      <a href="#pricing" class="btn-primary">View Packages</a>
+      <a href="https://calendar.app.google/SoNVWrpURBiTUoKz5" class="btn-outline" target="_blank">Book a Session</a>
+    </div>
+
+    <div class="msme-badge">
+      <div class="msme-ring">
+        <div class="msme-inner">
+          <div class="msme-flag">🇮🇳</div>
+          <div class="msme-text">GOVT.<br>REGISTERED</div>
+          <div class="msme-main">MSME</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+  <div class="section-header">
+    <div class="section-tag">Who We Are</div>
+    <h2>Why <span>SPDigitalJourney</span> Exists</h2>
+    <p class="section-desc">Businesses don't struggle because of lack of effort — they struggle because Google's systems are misunderstood.</p>
+  </div>
+  <div class="about-grid">
+    <div class="about-content">
+      <h3>Sanjay Paul</h3>
+      <p>I was part of the <strong>Global Google Maps Division</strong> (2007 Hyderabad Pilot Batch) and contributed directly to India's transition from paper maps to digital — working on road mapping, Street View, house numbering, and user-submitted issue resolution.</p>
+      <p>SPDigitalJourney was created to bridge the gap between businesses and Google's systems through <strong>clear guidance, not dependency</strong>. This platform is about empowering understanding, not selling shortcuts.</p>
+      <p style="color: var(--gold); font-size: 0.85rem; font-weight: 600;">📍 Serving 100+ Cities across 7+ States across India</p>
+    </div>
+    <div class="about-highlights">
+      <div class="highlight-item">
+        <div class="hi-icon">🗺️</div>
+        <div class="hi-text"><strong>Ex-Google Maps (2007 Pilot)</strong><span>Part of the global team that digitized India's roads, street views, and local addresses.</span></div>
+      </div>
+      <div class="highlight-item">
+        <div class="hi-icon">🏢</div>
+        <div class="hi-text"><strong>2000+ Street View Projects</strong><span>Worked with a digital marketing agency on GMB and Street View across India.</span></div>
+      </div>
+      <div class="highlight-item">
+        <div class="hi-icon">🎓</div>
+        <div class="hi-text"><strong>5000+ Trained & Guided</strong><span>Business owners, students, agencies, and collaborators across 100+ cities.</span></div>
+      </div>
+      <div class="highlight-item">
+        <div class="hi-icon">🏛️</div>
+        <div class="hi-text"><strong>MSME Registered</strong><span>Government-registered, PAN-based invoicing available. Fully documented work delivery.</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="services" id="services">
+  <div class="services-inner">
+    <div class="section-header">
+      <div class="section-tag">What We Do</div>
+      <h2>Our <span>Services</span></h2>
+      <p class="section-desc">End-to-end Google ecosystem solutions to build your local digital presence.</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="sc-icon">🔍</div>
+        <div class="sc-title">Live GMB Technical Audit</div>
+        <div class="sc-desc">Complete Google Business Profile audit delivered live within 30 minutes. Identify what's hurting your visibility.</div>
+      </div>
+      <div class="service-card">
+        <div class="sc-icon">🗺️</div>
+        <div class="sc-title">Google Maps Issue Fix</div>
+        <div class="sc-desc">Fast-track resolution of Google Maps errors, duplicate listings, wrong info, and ranking issues.</div>
+      </div>
+      <div class="service-card">
+        <div class="sc-icon">📊</div>
+        <div class="sc-title">GMB Profile Optimization</div>
+        <div class="sc-desc">Complete optimization of your Google Business Profile for maximum local search visibility.</div>
+      </div>
+      <div class="service-card">
+        <div class="sc-icon">📱</div>
+        <div class="sc-title">Social Connect Setup</div>
+        <div class="sc-desc">YouTube, Instagram, Facebook, and LinkedIn profiles connected and optimized for your brand.</div>
+      </div>
+      <div class="service-card">
+        <div class="sc-icon">💬</div>
+        <div class="sc-title">WhatsApp Integration</div>
+        <div class="sc-desc">WhatsApp Business integration with digital catalogues for seamless customer communication.</div>
+      </div>
+      <div class="service-card">
+        <div class="sc-icon">📷</div>
+        <div class="sc-title">360° Street View</div>
+        <div class="sc-desc">Professional 360° Street View photography and publishing for your entire business space.</div>
+      </div>
+      <div class="service-card">
+        <div class="sc-icon">⭐</div>
+        <div class="sc-title">Review & Trust Management</div>
+        <div class="sc-desc">Build and manage your online reputation with Google reviews and trust signals.</div>
+      </div>
+      <div class="service-card">
+        <div class="sc-icon">📢</div>
+        <div class="sc-title">Offers & Updates Broadcasting</div>
+        <div class="sc-desc">New arrivals, offers, events, and updates broadcast across Google and social platforms.</div>
+      </div>
+      <div class="service-card">
+        <div class="sc-icon">📈</div>
+        <div class="sc-title">Local Ranking Monitoring</div>
+        <div class="sc-desc">Expert Google Local Search ranking monitoring, performance reports, and ongoing improvement.</div>
+      </div>
+      <div class="service-card">
+        <div class="sc-icon">🎓</div>
+        <div class="sc-title">Training & Workshops</div>
+        <div class="sc-desc">Hands-on training for business owners, students, agencies, and collaborators. Build in-house capability.</div>
+      </div>
+      <div class="service-card">
+        <div class="sc-icon">🌐</div>
+        <div class="sc-title">Free Website + Maps</div>
+        <div class="sc-desc">Free business website with Google Location Map and social connect links included in setup packages.</div>
+      </div>
+      <div class="service-card">
+        <div class="sc-icon">📋</div>
+        <div class="sc-title">Digital Product Catalogue</div>
+        <div class="sc-desc">Professional digital catalogues for Google and WhatsApp to showcase your products and services.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section class="pricing" id="pricing">
+  <div class="section-header">
+    <div class="section-tag">Investment</div>
+    <h2>Transparent <span>Pricing</span></h2>
+    <p class="section-desc">No hidden charges. Full documentation. 100% work delivery guaranteed.</p>
+  </div>
+
+  <div class="pricing-tabs">
+    <button class="tab-btn active" onclick="showTab('setup')">Digital Setup</button>
+    <button class="tab-btn" onclick="showTab('monthly')">Maintenance Packs</button>
+    <button class="tab-btn" onclick="showTab('community')">Community Pack</button>
+  </div>
+
+  <div class="pricing-grid pricing-set active" id="tab-setup">
+    <div class="price-card">
+      <div class="pc-header">
+        <div class="pc-name">Small Business Setup</div>
+        <div class="pc-price"><sub>₹</sub>4,499</div>
+        <div class="pc-type">One-time charge</div>
+      </div>
+      <div class="pc-body">
+        <div class="pc-feature">Google Business Profile Setup & Optimization</div>
+        <div class="pc-feature">Basic Social Connect (FB + Instagram)</div>
+        <div class="pc-feature">WhatsApp Business Integration</div>
+        <div class="pc-feature">Free Business Website with Map</div>
+        <div class="pc-feature">Digital Catalogue Setup</div>
+        <div class="pc-feature">Setup Duration: 4–5 Working Days</div>
+      </div>
+      <a href="https://wa.me/917799423794?text=Hi, I'm interested in the Small Business Setup package" class="pc-cta" target="_blank">Get Started →</a>
+    </div>
+
+    <div class="price-card featured">
+      <div class="pc-header">
+        <div class="pc-featured-tag">Most Popular</div>
+        <div class="pc-name">Medium Business Setup</div>
+        <div class="pc-price"><sub>₹</sub>7,499</div>
+        <div class="pc-type">One-time charge</div>
+      </div>
+      <div class="pc-body">
+        <div class="pc-feature">Complete GMB Optimization</div>
+        <div class="pc-feature">Full Social Connect (YT + Insta + FB + LinkedIn)</div>
+        <div class="pc-feature">WhatsApp + Digital Catalogue</div>
+        <div class="pc-feature">Review & Trust Management</div>
+        <div class="pc-feature">Offers & Updates Broadcasting Setup</div>
+        <div class="pc-feature">Free Business Website + Maps</div>
+        <div class="pc-feature">Local Ranking Monitoring (Initial)</div>
+      </div>
+      <a href="https://wa.me/917799423794?text=Hi, I'm interested in the Medium Business Setup package" class="pc-cta" target="_blank">Get Started →</a>
+    </div>
+
+    <div class="price-card">
+      <div class="pc-header">
+        <div class="pc-name">Premium Business Setup</div>
+        <div class="pc-price"><sub>₹</sub>9,999</div>
+        <div class="pc-type">One-time charge</div>
+      </div>
+      <div class="pc-body">
+        <div class="pc-feature">Everything in Medium Package</div>
+        <div class="pc-feature">360° Street View Photography & Publishing</div>
+        <div class="pc-feature">Live GMB Audit + Maps Issue Fix</div>
+        <div class="pc-feature">Complete Digital Product Catalogue</div>
+        <div class="pc-feature">Expert Local Search Ranking Support</div>
+        <div class="pc-feature">Performance Report & Improvement Plan</div>
+        <div class="pc-feature">Priority Support</div>
+      </div>
+      <a href="https://wa.me/917799423794?text=Hi, I'm interested in the Premium Business Setup package" class="pc-cta" target="_blank">Get Started →</a>
+    </div>
+  </div>
+
+  <div class="pricing-grid pricing-set" id="tab-monthly" style="grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));">
+    <div class="price-card">
+      <div class="pc-header">
+        <div class="pc-name">45-Day Pack</div>
+        <div class="pc-price"><sub>₹</sub>4,500</div>
+        <div class="pc-type">For 45 days</div>
+      </div>
+      <div class="pc-body">
+        <div class="pc-feature">Monthly monitoring & updates</div>
+        <div class="pc-feature">Performance report</div>
+        <div class="pc-feature">Ongoing optimization support</div>
+      </div>
+      <a href="https://wa.me/917799423794?text=Hi, I'm interested in the 45-Day Maintenance Pack" class="pc-cta" target="_blank">Book Now →</a>
+    </div>
+    <div class="price-card featured">
+      <div class="pc-header">
+        <div class="pc-featured-tag">Best Value</div>
+        <div class="pc-name">90-Day Pack</div>
+        <div class="pc-price"><sub>₹</sub>9,000</div>
+        <div class="pc-type">For 90 days</div>
+      </div>
+      <div class="pc-body">
+        <div class="pc-feature">Comprehensive monitoring</div>
+        <div class="pc-feature">Regular performance reports</div>
+        <div class="pc-feature">Ranking improvements</div>
+        <div class="pc-feature">Priority issue resolution</div>
+      </div>
+      <a href="https://wa.me/917799423794?text=Hi, I'm interested in the 90-Day Maintenance Pack" class="pc-cta" target="_blank">Book Now →</a>
+    </div>
+    <div class="price-card">
+      <div class="pc-header">
+        <div class="pc-name">180-Day Pack</div>
+        <div class="pc-price"><sub>₹</sub>11,999 <span class="strikethrough">₹18,000</span></div>
+        <div class="pc-type">For 180 days · Save ₹6,001</div>
+      </div>
+      <div class="pc-body">
+        <div class="pc-feature">Full 6-month support cycle</div>
+        <div class="pc-feature">Deep ranking monitoring</div>
+        <div class="pc-feature">All reports & improvements</div>
+        <div class="pc-feature">Maximum savings</div>
+      </div>
+      <a href="https://wa.me/917799423794?text=Hi, I'm interested in the 180-Day Maintenance Pack" class="pc-cta" target="_blank">Book Now →</a>
+    </div>
+  </div>
+
+  <div class="pricing-grid pricing-set" id="tab-community" style="grid-template-columns: 1fr 1fr; max-width: 700px; margin: 0 auto;">
+    <div class="price-card">
+      <div class="pc-header">
+        <div class="pc-name">Micro Business Setup</div>
+        <div class="pc-price" style="color: var(--cyan);">FREE</div>
+        <div class="pc-type">Community Support Pack</div>
+      </div>
+      <div class="pc-body">
+        <div class="pc-feature">Complete Digital Business Setup</div>
+        <div class="pc-feature">For truly micro-sized businesses</div>
+        <div class="pc-feature">Social impact initiative</div>
+      </div>
+      <a href="https://wa.me/917799423794?text=Hi, I need the Community Support Pack for my micro business" class="pc-cta" target="_blank">Enquire →</a>
+    </div>
+    <div class="price-card">
+      <div class="pc-header">
+        <div class="pc-name">Free Technical Audit</div>
+        <div class="pc-price" style="color: var(--cyan);">FREE</div>
+        <div class="pc-type">End-to-end audit & solution</div>
+      </div>
+      <div class="pc-body">
+        <div class="pc-feature">Complete technical audit</div>
+        <div class="pc-feature">Clear action plan provided</div>
+        <div class="pc-feature">No strings attached</div>
+      </div>
+      <a href="https://wa.me/917799423794?text=Hi, I want to book the Free Technical Audit" class="pc-cta" target="_blank">Book Free Audit →</a>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testimonials" id="testimonials">
+  <div class="testimonials-inner">
+    <div class="section-header">
+      <div class="section-tag">Social Proof</div>
+      <h2>What People <span>Say</span></h2>
+    </div>
+    <div class="testi-grid">
+      <div class="testi-card">
+        <div class="testi-stars">★★★★★</div>
+        <div class="testi-text">"The session helped us clearly understand what Google was showing about our business and what needed attention. Very practical and easy to follow."</div>
+        <div class="testi-author">Business Owner</div>
+        <div class="testi-role">Education Sector</div>
+      </div>
+      <div class="testi-card">
+        <div class="testi-stars">★★★★★</div>
+        <div class="testi-text">"Instead of selling services, he explained things calmly and helped us decide our next steps ourselves."</div>
+        <div class="testi-author">Local Business Owner</div>
+        <div class="testi-role">Retail Sector</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BOOKING -->
+<section class="booking" id="booking">
+  <div class="booking-card">
+    <div class="section-tag">Get In Touch</div>
+    <h2>Book a <span>Guidance Session</span></h2>
+    <p>Contact via Call or WhatsApp, choose a convenient time slot, and start your digital journey. Sessions are scheduled based on availability.</p>
+
+    <div class="contact-items">
+      <div class="contact-item">
+        <span class="icon">📞</span>
+        <span>Call / WhatsApp / GPay: <a href="tel:7799423794">7799423794</a></span>
+      </div>
+      <div class="contact-item">
+        <span class="icon">✉️</span>
+        <a href="/cdn-cgi/l/email-protection#04767477656a6e657d74657168446369656d682a676b69"><span class="__cf_email__" data-cfemail="b3c1c3c0d2ddd9d2cac3d2c6dff3d4ded2dadf9dd0dcde">[email&#160;protected]</span></a>
+      </div>
+    </div>
+
+    <a href="https://calendar.app.google/SoNVWrpURBiTUoKz5" class="btn-primary" target="_blank" style="display:inline-block;">📅 Book a Session</a>
+    &nbsp;&nbsp;
+    <a href="https://wa.me/917799423794?text=Hi Sanjay, I want to book a guidance session" class="btn-outline" target="_blank" style="display:inline-block; margin-top: 12px;">📲 WhatsApp Us</a>
+
+    <div class="social-links">
+      <a href="https://spdigitaljourney.blogspot.com/" class="social-link" target="_blank">📝 Blog</a>
+      <a href="https://youtube.com/@spdigitaljourney" class="social-link" target="_blank">▶ YouTube</a>
+      <a href="https://www.instagram.com/spdigitaljourney" class="social-link" target="_blank">📸 Instagram</a>
+      <a href="https://www.facebook.com/profile.php?id=61584622684344" class="social-link" target="_blank">👥 Facebook</a>
+      <a href="https://x.com/spdigitaljourne" class="social-link" target="_blank">𝕏 Twitter/X</a>
+      <a href="https://spdigitaljourney.github.io/" class="social-link" target="_blank">💻 GitHub</a>
+    </div>
+  </div>
+</section>
+
+<!-- TERMS -->
+<section class="terms">
+  <div class="terms-inner">
+    <div class="section-header">
+      <div class="section-tag">Transparency</div>
+      <h2>Terms & <span>Work Model</span></h2>
+      <p class="section-desc">Full documentation. No false commitments. End-to-end project delivery guaranteed.</p>
+    </div>
+    <div class="terms-grid">
+      <div class="term-item">
+        <div class="term-label">Project Start</div>
+        <div class="term-val">Immediate upon payment realization.</div>
+      </div>
+      <div class="term-item">
+        <div class="term-label">Setup Duration</div>
+        <div class="term-val">4–5 working days for technical setup.</div>
+      </div>
+      <div class="term-item">
+        <div class="term-label">Ranking Timeline</div>
+        <div class="term-val">Up to 45 days for Google indexing and algorithmic ranking improvements.</div>
+      </div>
+      <div class="term-item">
+        <div class="term-label">Payment Terms</div>
+        <div class="term-val">100% advance via UPI / Bank Transfer. PAN-based invoice available.</div>
+      </div>
+      <div class="term-item">
+        <div class="term-label">Refund Policy</div>
+        <div class="term-val">No refunds once work commences. Exceptions for technically unresolvable issues.</div>
+      </div>
+      <div class="term-item">
+        <div class="term-label">Confidentiality</div>
+        <div class="term-val">All client credentials and data remain 100% secure, used strictly for verification.</div>
+      </div>
+      <div class="term-item">
+        <div class="term-label">Documentation</div>
+        <div class="term-val">Proposal, progress report, and work accomplishment report all provided.</div>
+      </div>
+      <div class="term-item">
+        <div class="term-label">Commitment</div>
+        <div class="term-val">No false commitments. No false arguments. End-to-end delivery guaranteed.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p>© 2025 <strong>SPDigitalJourney</strong> · Govt. Registered MSME · Sanjay Paul</p>
+  <p style="margin-top: 6px;">📞 7799423794 · <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="fb898b889a95919a828b9a8e97bb9c969a9297d5989496">[email&#160;protected]</a> · Trusted Google Ecosystem Specialist since 2007</p>
+</footer>
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+  function showTab(id) {
+    document.querySelectorAll('.pricing-set').forEach(el => el.classList.remove('active'));
+    document.querySelectorAll('.tab-btn').forEach(el => el.classList.remove('active'));
+    document.getElementById('tab-' + id).classList.add('active');
+    event.target.classList.add('active');
+  }
+
+  // Scroll-triggered fade-in
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
