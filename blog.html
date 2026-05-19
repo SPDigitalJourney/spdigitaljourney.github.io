@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Local SEO Playbook | SP Digital Journey</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Plus+Jakarta+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --bg-dark: #0a0f1d;
+            --bg-card: #121829;
+            --accent-blue: #00f2fe;
+            --accent-green: #00ff87;
+            --text-main: #f3f4f6;
+            --text-muted: #9ca3af;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Header Style */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.5rem 5%;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            background: rgba(10, 15, 29, 0.8);
+            backdrop-filter: blur(12px);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .logo span { color: var(--accent-blue); }
+
+        nav a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-weight: 500;
+            margin-right: 1.5rem;
+            transition: color 0.3s;
+        }
+
+        nav a:hover, nav a.active { color: var(--accent-blue); }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 4rem 5%;
+        }
+
+        .intro {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .intro h1 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 2.2rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, #fff, var(--accent-blue));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .blog-tag {
+            color: var(--accent-green);
+            font-family: 'Orbitron', sans-serif;
+            font-size: 0.9rem;
+            letter-spacing: 2px;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        /* Dynamic Blog Feed Grid */
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+        }
+
+        .blog-card {
+            background: var(--bg-card);
+            border: 1px solid rgba(255,255,255,0.03);
+            border-radius: 14px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+            transition: transform 0.3s ease, border-color 0.3s ease;
+        }
+
+        .blog-card:hover {
+            transform: translateY(-4px);
+            border-color: rgba(0, 242, 254, 0.2);
+        }
+
+        .blog-content {
+            padding: 1.8rem;
+        }
+
+        .blog-date {
+            font-size: 0.8rem;
+            color: var(--accent-green);
+            font-family: 'Orbitron', sans-serif;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        .blog-title {
+            color: #fff;
+            font-size: 1.25rem;
+            margin-bottom: 0.8rem;
+            font-weight: 700;
+        }
+
+        .blog-snippet {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            margin-bottom: 1.5rem;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .read-more-btn {
+            color: var(--accent-blue);
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 0.9rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .read-more-btn:hover {
+            text-decoration: underline;
+        }
+
+        /* Loading / Error States */
+        #loading-indicator {
+            text-align: center;
+            grid-column: 1 / -1;
+            padding: 3rem;
+            color: var(--text-muted);
+            font-family: 'Orbitron', sans-serif;
+            letter-spacing: 1px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 3rem 5%;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            margin-top: 5rem;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header>
+        <a href="index.html" class="logo">SP <span>DIGITAL</span></a>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="services.html">Services</a>
+            <a href="portfolio.html">360° Lab</a>
+            <a href="about.html">About</a>
+            <a href="blog.html" class="active">Blog</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="intro">
+            <span class="blog-tag">The Local SEO Playbook</span>
+            <h1>Insider Strategic Matrix</h1>
+            <p style="color: var(--text-muted); max-width: 600px; margin: 0 auto;">Algorithmic breakdowns, diagnostic intelligence, and field logging updated straight from our active service desks.</p>
+        </div>
+
+        <!-- Dynamic Blog Feed Container -->
+        <div class="blog-grid" id="blogger-feed-container">
+            <div id="loading-indicator">INITIALIZING FEED SYNC...</div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 SP Digital Journey. All rights reserved. Managed legally under MSME Framework.</p>
+    </footer>
+
+    <!-- Script to Fetch and Render Blogger Content Automatically -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Converts Blogger's standard Atom RSS feed to JSON so your GitHub site can read it without database setups.
+            const bloggerRssUrl = "https://spdigitaljourney.blogspot.com/feeds/posts/default?alt=json";
+            const feedContainer = document.getElementById("blogger-feed-container");
+
+            fetch(bloggerRssUrl)
+                .then(response => response.json())
+                .then(data => {
+                    feedContainer.innerHTML = ""; // Clear loading text
+                    
+                    const entries = data.feed.entry;
+                    if (!entries || entries.length === 0) {
+                        feedContainer.innerHTML = "<div id='loading-indicator'>NO LOGS FOUND. CHECKS BACK SOON.</div>";
+                        return;
+                    }
+
+                    entries.forEach(entry => {
+                        // Extract Title
+                        const title = entry.title.$t;
+                        
+                        // Extract Published Date
+                        const rawDate = new Date(entry.published.$t);
+                        const formattedDate = rawDate.toLocaleDateString('en-US', {
+                            year: 'numeric', month: 'short', day: 'numeric'
+                        });
+
+                        // Extract Post Link
+                        let postLink = "";
+                        for (let i = 0; i < entry.link.length; i++) {
+                            if (entry.link[i].rel === "alternate") {
+                                postLink = entry.link[i].href;
+                                break;
+                            }
+                        }
+
+                        // Extract Snippet Text safely
+                        let content = entry.content ? entry.content.$t : (entry.summary ? entry.summary.$t : "");
+                        let tempDiv = document.createElement("div");
+                        tempDiv.innerHTML = content;
+                        let cleanSnippet = tempDiv.textContent || tempDiv.innerText || "";
+                        if (cleanSnippet.length > 140) {
+                            cleanSnippet = cleanSnippet.substring(0, 140) + "...";
+                        }
+
+                        // Create the clean HTML Card Layout
+                        const card = document.createElement("div");
+                        card.className = "blog-card";
+                        card.innerHTML = `
+                            <div class="blog-content">
+                                <span class="blog-date">${formattedDate.toUpperCase()}</span>
+                                <h3 class="blog-title">${title}</h3>
+                                <p class="blog-snippet">${cleanSnippet}</p>
+                            </div>
+                            <div style="padding: 0 1.8rem 1.8rem 1.8rem;">
+                                <a href="${postLink}" target="_blank" class="read-more-btn">
+                                    Analyze Playbook 
+                                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                                </a>
+                            </div>
+                        `;
+                        feedContainer.appendChild(card);
+                    });
+                })
+                .catch(error => {
+                    console.error("Error fetching Blogger feed:", error);
+                    feedContainer.innerHTML = "<div id='loading-indicator' style='color:#ff4a4a;'>FEED SYNC OFFLINE. CLICK 'BLOG' IN HEADER TO ACCESS DIRECTLY.</div>";
+                });
+        });
+    </script>
+</body>
+</html>
