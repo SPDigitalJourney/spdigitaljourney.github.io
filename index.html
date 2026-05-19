@@ -1,745 +1,474 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="SPDigitalJourney — Google Business Profile Setup, Verification & Local SEO by Sanjay Paul, Ex-Google Maps India (2007). Govt. Registered MSME. Bengaluru." />
-  <meta name="keywords" content="Google Business Profile, GMB Setup, Local SEO, Google Maps, Bengaluru, MSME, Sanjay Paul" />
-  <title>SPDigitalJourney | Google Business Profile Experts Since 2007</title>
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SP Digital Journey | Elite Google Maps Optimization & Local SEO</title>
+    <!-- Google Fonts for Modern Tech Aesthetic -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Plus+Jakarta+Sans:wght@400;500;700&display=swap" rel="family">
+    
+    <style>
+        :root {
+            --bg-dark: #0a0f1d;
+            --bg-card: #121829;
+            --accent-blue: #00f2fe;
+            --accent-green: #00ff87;
+            --text-main: #f3f4f6;
+            --text-muted: #9ca3af;
+            --google-blue: #4285F4;
+        }
 
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "name": "SPDigitalJourney",
-    "description": "Google Business Profile Setup, Verification, Optimization & Local SEO agency. Govt. Registered MSME founded by Sanjay Paul — Ex-Google Maps India Division (2007).",
-    "url": "https://spdigitaljourney.github.io/",
-    "telephone": "+91-7799423794",
-    "email": "rpsanjaypaul@gmail.com",
-    "founder": {
-      "@type": "Person",
-      "name": "Sanjay Paul"
-    },
-    "foundingDate": "2007",
-    "areaServed": "India",
-    "identifier": "UDYAM-KR-02-0117946",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "Achit Nagar, Soladevanahalli",
-      "addressLocality": "Bengaluru",
-      "addressRegion": "Karnataka",
-      "postalCode": "560107",
-      "addressCountry": "IN"
-    },
-    "geo": {
-      "@type": "GeoCoordinates",
-      "latitude": 13.0895676,
-      "longitude": 77.4830622
-    },
-    "sameAs": [
-      "https://www.instagram.com/spdigitaljourney/",
-      "https://www.facebook.com/people/SPDigitalJourney/61584622684344/",
-      "https://www.youtube.com/@spdigitaljourney",
-      "https://www.linkedin.com/company/spdigitaljourney/",
-      "https://x.com/spdigitaljourne",
-      "https://in.pinterest.com/SPDigitalJourney/"
-    ],
-    "hasMap": "https://www.google.com/maps/place/SPDigitalJourney",
-    "priceRange": "₹999 - ₹4999+",
-    "openingHours": "Mo-Sa 09:00-18:00",
-    "serviceType": [
-      "Google Business Profile Setup",
-      "Google Business Profile Verification",
-      "Local SEO",
-      "Google Ads Management",
-      "Website Creation",
-      "Digital Marketing Training"
-    ]
-  }
-  </script>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
 
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet" />
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Header Style */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.5rem 5%;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            background: rgba(10, 15, 29, 0.8);
+            backdrop-filter: blur(12px);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            color: #fff;
+        }
+
+        .logo span {
+            color: var(--accent-blue);
+        }
+
+        .verified-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(66, 133, 244, 0.1);
+            border: 1px solid var(--google-blue);
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            color: #fff;
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .verified-badge:hover {
+            background: var(--google-blue);
+            box-shadow: 0 0 15px rgba(66, 133, 244, 0.4);
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 6rem 5% 4rem 5%;
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            line-height: 1.3;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(135deg, #fff 40%, var(--accent-blue));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        @media (min-width: 768px) {
+            .hero h1 { font-size: 3.5rem; }
+        }
+
+        .hero p {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+            max-width: 800px;
+            margin: 0 auto 2.5rem auto;
+        }
+
+        .cta-group {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+            justify-content: center;
+        }
+
+        @media(min-width: 480px) {
+            .cta-group { flex-direction: row; }
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            font-weight: 700;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            text-align: center;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--accent-blue), #00b8ff);
+            color: #000;
+            box-shadow: 0 4px 20px rgba(0, 242, 254, 0.3);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 25px rgba(0, 242, 254, 0.5);
+        }
+
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.05);
+            color: #fff;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        /* Timed Fixes Section */
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.8rem;
+            letter-spacing: 1px;
+        }
+
+        .section-title span {
+            color: var(--accent-green);
+        }
+
+        .dashboard-container {
+            max-width: 1100px;
+            margin: 4rem auto;
+            padding: 0 5%;
+        }
+
+        .grid-dashboard {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .dash-card {
+            background-color: var(--bg-card);
+            border: 1px solid rgba(255, 255, 255, 0.03);
+            border-radius: 12px;
+            padding: 1.5rem;
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+
+        .dash-card:hover {
+            transform: translateY(-4px);
+            border-color: rgba(0, 255, 135, 0.2);
+        }
+
+        .dash-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background: var(--accent-green);
+        }
+
+        .dash-time {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.8rem;
+            color: var(--accent-green);
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .dash-card h3 {
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .dash-card p {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        /* Insider Section */
+        .insider-section {
+            background: linear-gradient(180deg, var(--bg-dark), var(--bg-card), var(--bg-dark));
+            padding: 5rem 5%;
+            margin-top: 4rem;
+        }
+
+        .insider-content {
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
+            border: 1px dashed rgba(0, 242, 254, 0.2);
+            padding: 3rem 2rem;
+            border-radius: 16px;
+            background: rgba(10, 15, 29, 0.6);
+        }
+
+        .insider-badge {
+            font-family: 'Orbitron', sans-serif;
+            color: var(--accent-blue);
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            letter-spacing: 2px;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .insider-content p {
+            font-size: 1.1rem;
+            color: #d1d5db;
+            margin-bottom: 1.5rem;
+            text-align: left;
+        }
+
+        /* Floating Interactive Lead Form Component */
+        .floating-form-toggle {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            background: #25D366;
+            color: white;
+            padding: 1rem 1.5rem;
+            border-radius: 50px;
+            font-weight: 700;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+            cursor: pointer;
+            z-index: 999;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            border: none;
+            font-family: inherit;
+        }
+
+        .form-overlay {
+            position: fixed;
+            bottom: 90px;
+            right: 25px;
+            width: 320px;
+            background: var(--bg-card);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 16px;
+            padding: 1.5rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            z-index: 999;
+            display: none;
+        }
+
+        .form-overlay.active {
+            display: block;
+        }
+
+        .form-overlay h4 {
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+            color: #fff;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+            padding-bottom: 0.5rem;
+        }
+
+        .form-group {
+            margin-bottom: 1rem;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            margin-bottom: 0.3rem;
+        }
+
+        .form-group input, .form-group textarea {
+            width: 100%;
+            background: rgba(255,255,255,0.03);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 6px;
+            padding: 0.6rem;
+            color: #fff;
+            font-family: inherit;
+            font-size: 0.9rem;
+        }
+
+        .form-group input:focus, .form-group textarea:focus {
+            outline: none;
+            border-color: var(--accent-blue);
+        }
+
+        .submit-wa-btn {
+            width: 100%;
+            background: #25D366;
+            color: #fff;
+            border: none;
+            padding: 0.75rem;
+            border-radius: 6px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .submit-wa-btn:hover {
+            background: #20ba5a;
+        }
+
+        footer {
+            text-align: center;
+            padding: 3rem 5%;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+        }
+    </style>
 </head>
-
 <body>
 
-  <!-- STICKY NAVIGATION -->
-  <nav class="navbar" id="navbar">
-    <div class="nav-inner">
-      <a href="#hero" class="nav-logo">
-        <span class="logo-sp">SP</span><span class="logo-dj">DigitalJourney</span>
-      </a>
-      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
-        <span></span><span></span><span></span>
-      </button>
-      <ul class="nav-links" id="navLinks">
-        <li><a href="#services">Services</a></li>
-        <li><a href="#story">Our Story</a></li>
-        <li><a href="#reviews">Reviews</a></li>
-        <li><a href="#blog">Blog</a></li>
-        <li><a href="#contact">Contact</a></li>
-        <li><a href="tel:+917799423794" class="btn btn-cta nav-cta">📞 Call Now</a></li>
-      </ul>
-    </div>
-  </nav>
-
-  <!-- HERO SECTION -->
-  <section class="hero" id="hero">
-    <div class="hero-bg-grid"></div>
-
-    <!-- POWER LOGO -->
-    <div class="hero-logo-wrap">
-      <div class="hero-logo-icon">
-        <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <path d="M32 4C21.5 4 13 12.5 13 23c0 14.5 19 37 19 37s19-22.5 19-37C51 12.5 42.5 4 32 4z" fill="#F4A012"/>
-          <circle cx="32" cy="23" r="8" fill="#0F1729"/>
-          <path d="M35.8 23h-4.6v1.8h2.7c-.3 1.4-1.5 2.4-2.9 2.4-1.8 0-3.2-1.5-3.2-3.2s1.4-3.2 3.2-3.2c.8 0 1.5.3 2.1.8l1.3-1.3C33.4 19.5 32.3 19 31 19c-2.8 0-5 2.2-5 5s2.2 5 5 5 5-2.2 5-5c0-.3 0-.7-.2-1z" fill="#F4A012"/>
-        </svg>
-      </div>
-      <div class="hero-logo-text">
-        <span class="hlg-sp">SP</span><span class="hlg-dj">Digital</span><span class="hlg-accent">Journey</span>
-        <span class="hlg-tagline">Google Veterans Since 2007</span>
-      </div>
-    </div>
-
-    <!-- DIGITAL CLOCK + DATE + VISITOR COUNTER -->
-    <div class="hero-live-bar">
-      <div class="live-clock" id="liveClock">00:00:00</div>
-      <div class="live-sep">|</div>
-      <div class="live-date" id="liveDate">--</div>
-      <div class="live-sep">|</div>
-      <div class="live-visitors">
-        <span class="live-dot"></span>
-        <span id="visitorCount">0</span> visitors online
-      </div>
-    </div>
-
-    <div class="hero-content">
-      <div class="hero-badge">
-        <span class="badge-dot"></span>
-        Govt. Registered MSME · UDYAM-KR-02-0117946
-      </div>
-
-      <h1 class="hero-title">
-        Bridging Businesses<br />
-        <span class="hero-accent">&amp; Google</span><br />
-        Since 2007
-      </h1>
-
-      <p class="hero-subtitle">
-        Founded by <strong>Sanjay Paul</strong> — Ex-Google Maps India Division (2007 Pilot Batch).<br />
-        We help businesses get <em>found</em>, <em>trusted</em>, and <em>chosen</em> on Google.
-      </p>
-
-      <div class="hero-ctas">
-        <a href="tel:+917799423794" class="btn btn-primary pulse">📞 Call Now</a>
-        <a href="https://lnkd.in/gC463tqg" target="_blank" rel="noopener" class="btn btn-secondary">🔍 Free GBP Audit</a>
-      </div>
-
-      <div class="hero-stats">
-        <div class="stat">
-          <span class="stat-num">15+</span>
-          <span class="stat-label">Years Experience</span>
-        </div>
-        <div class="stat">
-          <span class="stat-num">5000+</span>
-          <span class="stat-label">Individuals Guided</span>
-        </div>
-        <div class="stat">
-          <span class="stat-num">2000+</span>
-          <span class="stat-label">Businesses Scanned</span>
-        </div>
-        <div class="stat">
-          <span class="stat-num">7+</span>
-          <span class="stat-label">States Covered</span>
-        </div>
-      </div>
-
-      <div class="msme-badge">
-        <span class="msme-icon">🏛️</span>
-        <span>GOVT. REGISTERED MSME</span>
-      </div>
-    </div>
-
-    <div class="hero-directory">
-      <a href="https://www.justdial.com/Bangalore/S-P-Digital-Journey-Behind-Acharya-Institute-Of-Graduate-Studies-Achitnagar/080PXX80-XX80-251222200406-M9K1_BZDET"
-         target="_blank" rel="noopener">
-        📒 View on JustDial Directory →
-      </a>
-    </div>
-  </section>
-
-  <!-- FREE AUDIT CTA BANNER -->
-  <section class="audit-banner" id="audit">
-    <div class="container">
-      <div class="audit-inner">
-        <div class="audit-text">
-          <h2>🔍 FREE Google Business Profile Audit</h2>
-          <p>Not sure how your business appears on Google Maps? Let me show you — <strong>live, in 30 minutes, at zero cost.</strong></p>
-          <ul class="audit-checklist">
-            <li>✅ Exactly what Google shows about your business right now</li>
-            <li>✅ Errors, gaps, or ranking issues identified</li>
-            <li>✅ A clear, documented action plan</li>
-          </ul>
-          <p class="audit-note">No sales pitch. No commitment. Just facts.</p>
-        </div>
-        <div class="audit-action">
-          <a href="https://lnkd.in/gC463tqg" target="_blank" rel="noopener" class="btn btn-primary pulse">📅 Book Free Audit</a>
-          <a href="https://wa.me/917799423794" target="_blank" rel="noopener" class="btn btn-whatsapp">💬 WhatsApp Us</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- SERVICES SECTION -->
-  <section class="services" id="services">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-tag">What We Do</span>
-        <h2 class="section-title">Our Services</h2>
-        <p class="section-sub">Everything your business needs to dominate local Google search.</p>
-      </div>
-
-      <div class="services-grid">
-
-        <div class="service-card featured">
-          <div class="service-icon">📍</div>
-          <h3>Google Business Profile Setup &amp; Verification</h3>
-          <p>Full GBP setup and verification from scratch — properly configured, categorized, and optimized for Google's algorithm.</p>
-          <div class="service-price">Starts ₹4,999</div>
-        </div>
-
-        <div class="service-card">
-          <div class="service-icon">⚙️</div>
-          <h3>Google Profile Optimization</h3>
-          <p>Audit and optimize your existing Google Business Profile — photos, attributes, posts, Q&amp;A, and ranking signals.</p>
-          <div class="service-price">Custom Quote</div>
-        </div>
-
-        <div class="service-card">
-          <div class="service-icon">🎓</div>
-          <h3>Training &amp; Workshops</h3>
-          <p>Workshops for businesses, students, and agencies on Google Business Profile, Local SEO, and digital presence — taught by an insider.</p>
-          <div class="service-price">Custom Quote</div>
-        </div>
-
-        <div class="service-card">
-          <div class="service-icon">📢</div>
-          <h3>Google Ads / PPC Management</h3>
-          <p>Get your business to the top of Google Search with targeted ad campaigns — call ads, local campaigns, and search ads.</p>
-          <div class="service-price">Starts ₹2,999</div>
-        </div>
-
-        <div class="service-card">
-          <div class="service-icon">🌐</div>
-          <h3>Website Creation</h3>
-          <p>Professional, mobile-ready websites for local businesses — fast, SEO-friendly, and linked to your Google profile.</p>
-          <div class="service-price">Starts ₹1,999</div>
-        </div>
-
-        <div class="service-card">
-          <div class="service-icon">🔧</div>
-          <h3>Live Technical Issue Fixing</h3>
-          <p>Immediate resolution of Google Maps, GMB suspension, listing errors, and technical issues — live, documented, and explained.</p>
-          <div class="service-price">Starts ₹999</div>
-        </div>
-
-      </div>
-
-      <div class="payment-cta">
-        <a href="https://razorpay.me/@SPDigitalJourney" target="_blank" rel="noopener" class="btn btn-primary">💳 Pay via Razorpay</a>
-        <span class="payment-note">100% Secure · UPI / Bank Transfer / Cards</span>
-      </div>
-    </div>
-  </section>
-
-  <!-- OUR STORY / PORTFOLIO SECTION -->
-  <section class="story" id="story">
-    <div class="container">
-      <div class="section-header light">
-        <span class="section-tag">Portfolio &amp; Our Story</span>
-        <h2 class="section-title">Not Just a Digital Agency — An Insider.</h2>
-      </div>
-
-      <div class="story-grid">
-        <div class="story-text">
-          <p class="story-lead">
-            Most businesses are ON Google — but not <strong>FOUND</strong> on Google.
-            SPDigitalJourney exists to close that gap through clear, documented, expert guidance.
-            Not dependency. <strong>Empowerment.</strong>
-          </p>
-          <p>
-            Sanjay Paul was part of the <strong>Google Maps India Division in Hyderabad during the 2007 Pilot Batch</strong>
-            — contributing to digitising India's roads, Street View, and local address infrastructure.
-            Today, that insider knowledge goes directly to businesses across India.
-          </p>
-          <p>
-            Travelled and executed <strong>Google 360 Photoshoot across 7 states and 100+ cities.</strong>
-          </p>
-          <div class="commitments">
-            <h4>SPDigital Commitments</h4>
-            <p>We are committed to providing clear, honest, and actionable guidance that helps you understand Google's systems.
-            No confusing jargon, no hidden agendas — just straightforward help that puts you in control of your business's online presence.</p>
-          </div>
-        </div>
-
-        <div class="story-map">
-          <p class="map-label">📍 Our Field Coverage — 7 States, 100+ Cities</p>
-          <div class="iframe-wrap">
-            <iframe
-              src="https://www.google.com/maps/d/u/0/embed?mid=1Bfgv9RzRxYnNIPAEP4o8l-cEyifbp3k&ehbc=2E312F"
-              title="SPDigitalJourney coverage map"
-              loading="lazy"
-              allowfullscreen>
-            </iframe>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- CUSTOMER REVIEWS SECTION -->
-  <section class="reviews" id="reviews">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-tag">What Clients Say</span>
-        <h2 class="section-title">Customer Reviews</h2>
-        <p class="section-sub">Real results from real businesses across India.</p>
-      </div>
-
-      <!-- Feedback / Review CTA Banner -->
-      <div class="review-feedback-banner">
-        <div class="rfb-inner">
-          <div class="rfb-stars">⭐⭐⭐⭐⭐</div>
-          <div class="rfb-text">
-            <strong>Happy with our service?</strong>
-            <p>Your review helps other businesses find and trust us on Google. It takes just 30 seconds!</p>
-          </div>
-          <a href="https://g.page/r/CdRrLmhaPARzEBM/review" target="_blank" rel="noopener" class="btn btn-review-cta pulse">
-            <svg width="20" height="20" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path fill="#EA4335" d="M24 9.5c3.9 0 6.6 1.7 8.1 3.1l6-5.8C34.3 3.5 29.6 1 24 1 14.8 1 7 6.7 3.7 14.7l7 5.4C12.4 13.9 17.7 9.5 24 9.5z"/><path fill="#4285F4" d="M46.1 24.5c0-1.7-.2-3.3-.4-4.9H24v9.3h12.4c-.5 2.9-2.2 5.3-4.6 6.9l7.1 5.5c4.2-3.9 6.6-9.6 6.6-16.8z"/><path fill="#FBBC05" d="M10.7 28.5c-.5-1.5-.8-3.1-.8-4.8s.3-3.3.8-4.8l-7-5.4C2.3 16.5 1 20.1 1 24s1.3 7.5 3.6 10.5l6.1-6z"/><path fill="#34A853" d="M24 47c5.6 0 10.3-1.9 13.7-5.1l-7.1-5.5c-1.9 1.3-4.3 2-6.6 2-6.3 0-11.6-4.3-13.5-10.1l-6.1 6C7 41.3 14.8 47 24 47z"/></svg>
-            Provide Feedback &amp; Review on Google
-          </a>
-        </div>
-      </div>
-
-      <!-- Static Review Cards -->
-      <div class="review-cards">
-        <div class="review-card">
-          <div class="review-stars">⭐⭐⭐⭐⭐</div>
-          <p>"Sanjay ji helped us get our business verified on Google Maps within days. His knowledge is unmatched — truly an insider!"</p>
-          <div class="reviewer">— Rajesh K., Bengaluru</div>
-        </div>
-        <div class="review-card">
-          <div class="review-stars">⭐⭐⭐⭐⭐</div>
-          <p>"The workshop was incredibly practical. We finally understand how Google ranks local businesses. Worth every rupee."</p>
-          <div class="reviewer">— Priya M., Chennai</div>
-        </div>
-        <div class="review-card">
-          <div class="review-stars">⭐⭐⭐⭐⭐</div>
-          <p>"Our Google Business Profile calls tripled in 45 days after Sanjay's optimization. Best investment for our salon."</p>
-          <div class="reviewer">— Anita R., Hyderabad</div>
-        </div>
-      </div>
-
-      <div class="review-cta">
-        <a href="https://g.page/r/CdRrLmhaPARzEBM/review" target="_blank" rel="noopener" class="btn btn-outline">
-          ⭐ Leave a Google Review
+    <!-- Header Navigation -->
+    <header>
+        <div class="logo">SP <span>DIGITAL</span></div>
+        <a href="https://share.google/dxlYQg51vMAbVU5p5" target="_blank" class="verified-badge">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+            Verified Google Profile
         </a>
-      </div>
-    </div>
-  </section>
+    </header>
 
-  <!-- COMMUNITY SUPPORT SECTION -->
-  <section class="community" id="community">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-tag">Community</span>
-        <h2 class="section-title">Community Support</h2>
-        <p class="section-sub">Sharing knowledge freely — because empowerment is our mission.</p>
-      </div>
-      <div class="video-wrap">
-        <div class="iframe-wrap video-16-9">
-          <iframe
-            src="https://www.youtube.com/embed/J6dT9bN-JB0?si=thUGnqUlBS8FuC11"
-            title="SPDigitalJourney Community Support Video"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            referrerpolicy="strict-origin-when-cross-origin"
-            allowfullscreen
-            loading="lazy">
-          </iframe>
+    <!-- Hero Framework Section -->
+    <section class="hero">
+        <h1>Do you know your AI & Google profile is more than enough to be number 1 on Google Search?</h1>
+        <p>Stop burning budgets on outdated marketing consultants. Unlock the secret of lightning-fast local map conversions engineered directly by an engineering division veteran.</p>
+        
+        <div class="cta-group">
+            <a href="https://calendar.app.google/ex2dxF7Cc9sGknS58" target="_blank" class="btn btn-primary">Book Free Presence Audit</a>
+            <a href="https://spdigitaljourney.blogspot.com/" target="_blank" class="btn btn-secondary">Read Our Playbook</a>
         </div>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- BLOG SECTION -->
-  <section class="blog" id="blog">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-tag">Insights</span>
-        <h2 class="section-title">Latest from the Blog</h2>
-        <p class="section-sub">Practical tips to help your business grow on Google.</p>
-      </div>
-
-      <div class="blog-grid">
-        <div class="blog-post-wrap">
-          <p class="map-label">📝 Latest Article</p>
-          <div class="iframe-wrap blog-iframe">
-            <iframe
-              src="https://spdigitaljourney.blogspot.com/2026/01/how-regular-google-business-posts.html"
-              title="Latest Blog Post — SPDigitalJourney"
-              loading="lazy"
-              sandbox="allow-scripts allow-same-origin">
-            </iframe>
-          </div>
-        </div>
-
-        <div class="blog-cta-box">
-          <div class="blog-icon">✍️</div>
-          <h3>More Expert Insights</h3>
-          <p>Dive into our full library of articles covering Google Business Profile, Local SEO, Google Ads, and digital transformation for Indian businesses.</p>
-          <a href="https://spdigitaljourney.blogspot.com/" target="_blank" rel="noopener" class="btn btn-primary">
-            📖 Visit Full Blog →
-          </a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- SOCIAL / YOUTUBE SECTION -->
-  <section class="social-section" id="social">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-tag">Connect With Us</span>
-        <h2 class="section-title">Follow SPDigitalJourney</h2>
-        <p class="section-sub">Stay updated with tips, workshops, and local SEO insights.</p>
-      </div>
-
-      <div class="video-wrap">
-        <div class="iframe-wrap video-16-9">
-          <iframe
-            src="https://www.youtube.com/embed/SiQuegDtuos?si=l0wT7wNwHbTzKOdx"
-            title="SPDigitalJourney YouTube"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            referrerpolicy="strict-origin-when-cross-origin"
-            allowfullscreen
-            loading="lazy">
-          </iframe>
-        </div>
-      </div>
-
-      <div class="social-links">
-        <a href="https://www.youtube.com/@spdigitaljourney" target="_blank" rel="noopener" class="social-link youtube">
-          <span class="social-icon">▶</span> YouTube
-        </a>
-        <a href="https://www.instagram.com/spdigitaljourney/" target="_blank" rel="noopener" class="social-link instagram">
-          <span class="social-icon">📸</span> Instagram
-        </a>
-        <a href="https://www.facebook.com/people/SPDigitalJourney/61584622684344/" target="_blank" rel="noopener" class="social-link facebook">
-          <span class="social-icon">f</span> Facebook
-        </a>
-        <a href="https://www.linkedin.com/company/spdigitaljourney/" target="_blank" rel="noopener" class="social-link linkedin">
-          <span class="social-icon">in</span> LinkedIn
-        </a>
-        <a href="https://x.com/spdigitaljourne" target="_blank" rel="noopener" class="social-link twitter">
-          <span class="social-icon">𝕏</span> X / Twitter
-        </a>
-        <a href="https://in.pinterest.com/SPDigitalJourney/" target="_blank" rel="noopener" class="social-link pinterest">
-          <span class="social-icon">📌</span> Pinterest
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- CONTACT SECTION -->
-  <section class="contact" id="contact">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-tag">Get in Touch</span>
-        <h2 class="section-title">Contact Us</h2>
-        <p class="section-sub">We're based in Bengaluru and serve businesses across India.</p>
-      </div>
-
-      <div class="contact-grid">
-        <div class="contact-info">
-          <div class="contact-detail">
-            <span class="contact-icon">🏢</span>
-            <div>
-              <strong>SPDigitalJourney</strong><br />
-              Proprietor: Sanjay Paul<br />
-              MSME: UDYAM-KR-02-0117946
+    <!-- Timed Fixes Dashboard Section -->
+    <div class="dashboard-container">
+        <h2 class="section-title">Guaranteed <span>Timed Fixes</span></h2>
+        <div class="grid-dashboard">
+            <div class="dash-card">
+                <div class="dash-time">30 MINS</div>
+                <h3>Profile Fixes & Wrong Location</h3>
+                <p>Instant algorithmic corrections for immediate map adjustments and address errors.</p>
             </div>
-          </div>
-          <div class="contact-detail">
-            <span class="contact-icon">📍</span>
-            <div>Achit Nagar, Bengaluru,<br />Soladevanahalli, Karnataka 560107</div>
-          </div>
-          <div class="contact-detail">
-            <span class="contact-icon">📞</span>
-            <div><a href="tel:+917799423794">+91 7799423794</a></div>
-          </div>
-          <div class="contact-detail">
-            <span class="contact-icon">📧</span>
-            <div><a href="mailto:rpsanjaypaul@gmail.com">rpsanjaypaul@gmail.com</a></div>
-          </div>
-          <div class="contact-detail">
-            <span class="contact-icon">📅</span>
-            <div><a href="https://calendar.app.google/FCjCApQLhBLYwyDT6" target="_blank" rel="noopener">Book a Calendar Appointment</a></div>
-          </div>
-
-          <div class="contact-actions">
-            <a href="tel:+917799423794" class="btn btn-primary pulse">📞 Call Now</a>
-            <a href="https://wa.me/917799423794" target="_blank" rel="noopener" class="btn btn-whatsapp">💬 WhatsApp</a>
-            <a href="https://forms.gle/fdC7m47wWxyEfr3z5" target="_blank" rel="noopener" class="btn btn-outline">📝 Quick Form</a>
-          </div>
-
-          <div class="iframe-wrap maps-embed" style="margin-top:2rem;">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.1517476575555!2d77.48306219999999!3d13.0895676!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae2300102b8b41%3A0x73043c5a682e6bd4!2sSPDigitalJourney!5e0!3m2!1sen!2sin!4v1778962931949!5m2!1sen!2sin"
-              title="SPDigitalJourney location map"
-              style="border:0;"
-              allowfullscreen
-              loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade">
-            </iframe>
-          </div>
+            <div class="dash-card">
+                <div class="dash-time">60 MINS</div>
+                <h3>Profile Optimization</h3>
+                <p>Complete algorithmic optimization structured to trigger immediate indexing & live local rank growth.</p>
+            </div>
+            <div class="dash-card">
+                <div class="dash-time">120 MINS</div>
+                <h3>Self-Management Training</h3>
+                <p>One-on-one interactive blueprint masterclass to handle your own map data dashboard effectively.</p>
+            </div>
+            <div class="dash-card">
+                <div class="dash-time">180 MINS</div>
+                <h3>AI Site & Ads Launch</h3>
+                <p>Full deployment of independent automated lead web panels plus Meta & Google ad layers.</p>
+            </div>
+            <div class="dash-card">
+                <div class="dash-time">72 HOURS</div>
+                <h3>360° Street View</h3>
+                <p>Complete HD spatial photography layout rendering and property structural mapping.</p>
+            </div>
+            <div class="dash-card">
+                <div class="dash-time">4-5 DAYS</div>
+                <h3>Missing Number & Verification</h3>
+                <p>Deep operational technical clearance to retrieve missing contact numbers and secure verified stamps.</p>
+            </div>
         </div>
-
-        <div class="contact-form-wrap">
-          <h3>Send Us a Message</h3>
-          <div class="iframe-wrap gform-wrap">
-            <iframe
-              src="https://docs.google.com/forms/d/e/1FAIpQLSdd5-TJtlb2D5vFcU57jh_LN2ikyaJBwVO4mQp_jRMIXTGYpw/viewform?embedded=true"
-              title="SPDigitalJourney Contact Form"
-              frameborder="0"
-              marginheight="0"
-              marginwidth="0"
-              loading="lazy">
-              Loading…
-            </iframe>
-          </div>
-        </div>
-      </div>
     </div>
-  </section>
 
-  <!-- TERMS & CONDITIONS SECTION -->
-  <section class="terms" id="terms">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-tag">Legal</span>
-        <h2 class="section-title">Terms &amp; Conditions</h2>
-      </div>
-
-      <div class="terms-summary">
-        <div class="term-item">⏱️ <strong>Project Start:</strong> Immediate upon payment.</div>
-        <div class="term-item">📅 <strong>Setup Duration:</strong> 4–5 Working Days.</div>
-        <div class="term-item">📈 <strong>Ranking Timeline:</strong> Google indexing for "Top 10" typically takes up to 45 days.</div>
-        <div class="term-item">💳 <strong>Payment Terms:</strong> 100% Advance via UPI/Bank Transfer to lock in the slot.</div>
-        <div class="term-item">🔒 <strong>Refund Policy:</strong> No refunds once work commences, except in unavoidable technical circumstances.</div>
-        <div class="term-item">🔐 <strong>Confidentiality:</strong> All client data is secure and used strictly for verification purposes.</div>
-      </div>
-
-      <details class="terms-full">
-        <summary>Read Full Terms &amp; Conditions / Privacy Policy</summary>
-        <div class="terms-content">
-          <p>For the purpose of these Terms and Conditions, the term "we", "us", "our" shall mean <strong>SPDigitalJourney</strong>, whose registered/operational office is 1665, Pragati Nagar, Hyderabad, TELANGANA 500090. "you", "your", "user", "visitor" shall mean any natural or legal person visiting our website and/or agreed to purchase from us.</p>
-
-          <h4>General Terms</h4>
-          <ul>
-            <li>The content of the pages of this website is subject to change without notice.</li>
-            <li>Neither we nor any third parties provide any warranty or guarantee as to the accuracy, timeliness, performance, completeness or suitability of the information and materials found or offered on this website for any particular purpose.</li>
-            <li>Your use of any information or materials on our website is entirely at your own risk.</li>
-            <li>Our website contains material which is owned by or licensed to us. Reproduction is prohibited other than in accordance with the copyright notice.</li>
-            <li>Unauthorized use of information provided by us shall give rise to a claim for damages and/or be a criminal offense.</li>
-            <li>Any dispute arising out of use of our website and/or purchase with us is subject to the laws of India.</li>
-          </ul>
-
-          <h4>Cancellation &amp; Refund Policy</h4>
-          <ul>
-            <li>Cancellations will be considered only if the request is made within 16–30 days of placing the order.</li>
-            <li>Cancellation requests may not be entertained if work has already been communicated to vendors/merchants.</li>
-            <li>In case of receipt of damaged or defective items please report the same to our Customer Service team within 16–30 days.</li>
-            <li>If you feel that the product received is not as shown on the site, bring it to notice of our customer service within 16–30 days.</li>
-            <li>In case of any Refunds approved by SPDigitalJourney, it'll take 3–5 days for the refund to be processed.</li>
-          </ul>
-
-          <h4>Privacy Policy</h4>
-          <p>SPDigitalJourney is committed to ensuring that your privacy is protected. We may collect: Name, Contact information including email address, Demographic information such as postcode, preferences and interests.</p>
-          <p>We use this information for internal record keeping, to improve our products and services, and to send periodic promotional emails. We are committed to ensuring your information is secure and will not sell, distribute, or lease your personal information to third parties unless required by law.</p>
-
-          <h4>Scope of Work</h4>
-          <ul>
-            <li>Only services marked/ticked in the Scope of Work are included in this agreement. Any additional services will be quoted separately.</li>
-            <li>Full payment is required before commencement of work unless otherwise agreed in writing.</li>
-            <li>Turnaround times may vary based on Google's review and approval processes, which are outside the service provider's direct control.</li>
-            <li>The client agrees to provide timely access, content, and approvals required for service delivery.</li>
-            <li>Disputes, if any, shall be subject to the jurisdiction of Bengaluru courts.</li>
-          </ul>
+    <!-- Insider Background Section -->
+    <section class="insider-section">
+        <div class="insider-content">
+            <span class="insider-badge">Google Maps India Hyderabad Division Insider</span>
+            <p>Our operational blueprint isn't derived from public blogs or generic guesswork. Built directly on hands-on experience starting from the 2007 structural shift from physical paper maps to the digital mapping matrix.</p>
+            <p>From executing road networks, structural street alignments, regional postal configurations, to driving across 100+ cities deploying Street View scans for over 2,000+ commercial properties—we deploy exact insider logic to maximize local rankings.</p>
+            <a href="https://calendar.app.google/ex2dxF7Cc9sGknS58" target="_blank" class="btn btn-primary" style="margin-top:1rem;">Claim Your Search Secret</a>
         </div>
-      </details>
+    </section>
+
+    <!-- Floating Interactive WhatsApp Form Layout -->
+    <button class="floating-form-toggle" onclick="toggleForm()">
+        <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.513 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.713-1.457L0 24zm6.59-4.846c1.6.95 3.488 1.449 5.412 1.451 5.428 0 9.845-4.414 9.848-9.844.002-2.63-1.023-5.101-2.885-6.963C17.16 1.936 14.693.91 12.009.91c-5.432 0-9.851 4.415-9.854 9.846-.001 1.927.501 3.812 1.455 5.419l-.995 3.639 3.732-.979zm11.367-7.469c-.3-.15-1.776-.877-2.047-.975-.27-.099-.467-.148-.663.15-.197.297-.761.975-.933 1.173-.171.197-.343.223-.643.074-.3-.15-1.268-.467-2.417-1.493-.893-.797-1.496-1.783-1.671-2.08-.175-.299-.019-.461.13-.609.135-.133.3-.349.45-.523.15-.174.2-.298.3-.497.1-.198.05-.372-.025-.521-.075-.149-.663-1.597-.909-2.192-.239-.574-.483-.497-.663-.505-.17-.008-.367-.01-.563-.01-.197 0-.518.074-.789.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.776-.726 2.025-1.424.249-.699.249-1.299.175-1.424-.075-.125-.27-.199-.57-.349z"/></svg>
+        Fix Profile Now
+    </button>
+
+    <div class="form-overlay" id="leadForm">
+        <h4>Instant WhatsApp Inquiry</h4>
+        <div class="form-group">
+            <label for="bizName">Business Name</label>
+            <input type="text" id="bizName" placeholder="Your business name">
+        </div>
+        <div class="form-group">
+            <label for="contactName">Your Name</label>
+            <input type="text" id="contactName" placeholder="Your name">
+        </div>
+        <div class="form-group">
+            <label for="issue">Describe Map Issue</label>
+            <textarea id="issue" rows="3" placeholder="Suspension, missing number, wrong location?"></textarea>
+        </div>
+        <button class="submit-wa-btn" onclick="sendWhatsApp()">Launch Fix over WhatsApp</button>
     </div>
-  </section>
 
-  <!-- FOOTER -->
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-grid">
-        <div class="footer-brand">
-          <div class="footer-logo"><span class="logo-sp">SP</span><span class="logo-dj">DigitalJourney</span></div>
-          <p>Bridging Businesses &amp; Google Since 2007.<br />Govt. Registered MSME · UDYAM-KR-02-0117946</p>
-          <p>Founded by <strong>Sanjay Paul</strong><br />Ex-Google Maps India Division (2007)</p>
-        </div>
-        <div class="footer-links">
-          <h4>Quick Links</h4>
-          <ul>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#story">Our Story</a></li>
-            <li><a href="#reviews">Reviews</a></li>
-            <li><a href="#blog">Blog</a></li>
-            <li><a href="#contact">Contact</a></li>
-            <li><a href="#terms">Terms &amp; Conditions</a></li>
-          </ul>
-        </div>
-        <div class="footer-contact">
-          <h4>Contact</h4>
-          <p>📞 <a href="tel:+917799423794">+91 7799423794</a></p>
-          <p>📧 <a href="mailto:rpsanjaypaul@gmail.com">rpsanjaypaul@gmail.com</a></p>
-          <p>📍 Achit Nagar, Bengaluru 560107</p>
-          <a href="https://g.page/r/CdRrLmhaPARzEBM/review" target="_blank" rel="noopener" class="btn btn-outline btn-sm">⭐ Review on Google</a>
-        </div>
-        <div class="footer-social">
-          <h4>Follow Us</h4>
-          <div class="footer-social-links">
-            <a href="https://www.youtube.com/@spdigitaljourney" target="_blank" rel="noopener" aria-label="YouTube">▶ YouTube</a>
-            <a href="https://www.instagram.com/spdigitaljourney/" target="_blank" rel="noopener" aria-label="Instagram">📸 Instagram</a>
-            <a href="https://www.facebook.com/people/SPDigitalJourney/61584622684344/" target="_blank" rel="noopener" aria-label="Facebook">f Facebook</a>
-            <a href="https://www.linkedin.com/company/spdigitaljourney/" target="_blank" rel="noopener" aria-label="LinkedIn">in LinkedIn</a>
-            <a href="https://x.com/spdigitaljourne" target="_blank" rel="noopener" aria-label="X Twitter">𝕏 Twitter</a>
-            <a href="https://in.pinterest.com/SPDigitalJourney/" target="_blank" rel="noopener" aria-label="Pinterest">📌 Pinterest</a>
-          </div>
-          <div class="footer-pay" style="margin-top:1rem;">
-            <a href="https://razorpay.me/@SPDigitalJourney" target="_blank" rel="noopener" class="btn btn-primary btn-sm">💳 Pay Online</a>
-          </div>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <p>© 2007–2026 SPDigitalJourney. All Rights Reserved. | Proprietor: Sanjay Paul | MSME: UDYAM-KR-02-0117946</p>
-        <p><a href="https://spdigitaljourney.blogspot.com/" target="_blank" rel="noopener">Blog</a> · <a href="#terms">Terms</a> · <a href="https://www.justdial.com/Bangalore/S-P-Digital-Journey-Behind-Acharya-Institute-Of-Graduate-Studies-Achitnagar/080PXX80-XX80-251222200406-M9K1_BZDET" target="_blank" rel="noopener">JustDial</a></p>
-      </div>
-    </div>
-  </footer>
+    <footer>
+        <p>&copy; 2026 SP Digital Journey. All rights reserved. Managed legally under MSME Framework.</p>
+    </footer>
 
-  <!-- FLOATING CALL NOW BUTTON -->
-  <a href="tel:+917799423794" class="floating-call pulse" aria-label="Call Now">
-    📞 Call Now
-  </a>
+    <!-- Interactive Logic Script -->
+    <script>
+        function toggleForm() {
+            var form = document.getElementById('leadForm');
+            form.classList.toggle('active');
+        }
 
-  <!-- FLOATING WHATSAPP BUTTON -->
-  <a href="https://wa.me/917799423794?text=Hi%20Sanjay%2C%20I%20found%20your%20website%20and%20would%20like%20to%20know%20more%20about%20your%20Google%20Business%20Profile%20services."
-     target="_blank" rel="noopener"
-     class="floating-whatsapp"
-     aria-label="Chat on WhatsApp">
-    <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" width="28" height="28" aria-hidden="true">
-      <path fill="#fff" d="M16 2C8.3 2 2 8.3 2 16c0 2.5.7 4.8 1.8 6.8L2 30l7.5-1.8C11.4 29.4 13.6 30 16 30c7.7 0 14-6.3 14-14S23.7 2 16 2zm7.5 19.3c-.3.9-1.7 1.6-2.4 1.7-.6.1-1.4.1-2.3-.1-.5-.1-1.2-.3-2-.7-3.6-1.5-5.9-5.2-6.1-5.4-.2-.2-1.4-1.9-1.4-3.6 0-1.7.9-2.5 1.2-2.9.3-.3.7-.4 1-.4.1 0 .2 0 .3 0 .3 0 .5.1.7.5.3.6.9 2.1 1 2.3.1.2.1.4 0 .6-.1.2-.2.4-.3.5-.1.1-.3.3-.4.5-.1.2-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.4 2.4 1.5.3.1.5.1.7-.1.2-.2.7-.8 1-1.1.2-.3.4-.2.7-.1.3.1 1.8.9 2.1 1 .3.2.5.3.6.4.1.4-.2 1.5-.5 2.1z"/>
-    </svg>
-    <span>WhatsApp</span>
-  </a>
-
-  <!-- LEAD CAPTURE MODAL — Free GBP Audit -->
-  <div class="audit-modal-overlay" id="auditModal" role="dialog" aria-modal="true" aria-labelledby="auditModalTitle">
-    <div class="audit-modal">
-      <button class="audit-modal-close" id="auditModalClose" aria-label="Close">&times;</button>
-      <div class="audit-modal-badge">🔍 FREE OFFER</div>
-      <h2 id="auditModalTitle">Claim Your Free<br /><span>Google Business Audit</span></h2>
-      <p>Find out exactly how your business appears on Google Maps — live, in 30 minutes, at zero cost. Led by an Ex-Google Maps India insider.</p>
-      <ul class="audit-modal-list">
-        <li>✅ Ranking gaps identified</li>
-        <li>✅ Documented action plan</li>
-        <li>✅ No sales pressure, ever</li>
-      </ul>
-      <a href="https://lnkd.in/gC463tqg" target="_blank" rel="noopener" class="btn btn-primary pulse audit-modal-btn">📅 Book My Free Audit Now</a>
-      <a href="https://wa.me/917799423794?text=Hi%20Sanjay%2C%20I%20want%20a%20free%20GBP%20audit." target="_blank" rel="noopener" class="btn btn-whatsapp audit-modal-btn">💬 WhatsApp to Book</a>
-      <p class="audit-modal-note">Or call: <a href="tel:+917799423794">+91 7799423794</a></p>
-      <label class="audit-modal-dismiss">
-        <input type="checkbox" id="auditDismissCheck" /> Don't show this again
-      </label>
-    </div>
-  </div>
-
-  <!-- JAVASCRIPT -->
-  <script>
-    const toggle = document.getElementById('navToggle');
-    const navLinks = document.getElementById('navLinks');
-    toggle.addEventListener('click', () => {
-      navLinks.classList.toggle('open');
-      toggle.classList.toggle('active');
-    });
-    navLinks.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', () => {
-        navLinks.classList.remove('open');
-        toggle.classList.remove('active');
-      });
-    });
-
-    window.addEventListener('scroll', () => {
-      const navbar = document.getElementById('navbar');
-      navbar.classList.toggle('scrolled', window.scrollY > 60);
-    });
-
-    const revealEls = document.querySelectorAll(
-      '.service-card, .stat, .review-card, .story-text, .story-map, .contact-detail, .social-link'
-    );
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(e => {
-        if (e.isIntersecting) { e.target.classList.add('revealed'); observer.unobserve(e.target); }
-      });
-    }, { threshold: 0.1 });
-    revealEls.forEach(el => observer.observe(el));
-
-    function updateClock() {
-      const now = new Date();
-      const hh = String(now.getHours()).padStart(2,'0');
-      const mm = String(now.getMinutes()).padStart(2,'0');
-      const ss = String(now.getSeconds()).padStart(2,'0');
-      document.getElementById('liveClock').textContent = `${hh}:${mm}:${ss}`;
-      const days = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
-      const months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
-      document.getElementById('liveDate').textContent =
-        `${days[now.getDay()]}, ${now.getDate()} ${months[now.getMonth()]} ${now.getFullYear()}`;
-    }
-    updateClock();
-    setInterval(updateClock, 1000);
-
-    const vcEl = document.getElementById('visitorCount');
-    if (vcEl) {
-      vcEl.textContent = 12 + Math.floor(Math.random() * 8);
-      setInterval(() => {
-        const current = parseInt(vcEl.textContent);
-        const next = Math.max(8, Math.min(25, current + (Math.random() > 0.5 ? 1 : -1)));
-        vcEl.textContent = next;
-      }, 4500);
-    }
-
-    const modal = document.getElementById('auditModal');
-    const modalClose = document.getElementById('auditModalClose');
-    const dismissCheck = document.getElementById('auditDismissCheck');
-    function showModal() { if (!sessionStorage.getItem('auditModalDismissed')) modal.classList.add('open'); }
-    function hideModal() {
-      modal.classList.remove('open');
-      if (dismissCheck && dismissCheck.checked) sessionStorage.setItem('auditModalDismissed', '1');
-    }
-    setTimeout(showModal, 8000);
-    if (modalClose) modalClose.addEventListener('click', hideModal);
-    if (modal) modal.addEventListener('click', (e) => { if (e.target === modal) hideModal(); });
-    document.addEventListener('keydown', (e) => { if (e.key === 'Escape') hideModal(); });
-  </script>
-
+        function sendWhatsApp() {
+            var biz = document.getElementById('bizName').value;
+            var name = document.getElementById('contactName').value;
+            var issue = document.getElementById('issue').value;
+            
+            var textMessage = "Hello SP Digital Journey, I would like to fix my profile.%0A%0A" + 
+                              "*Business Name:* " + encodeURIComponent(biz) + "%0A" + 
+                              "*Contact Person:* " + encodeURIComponent(name) + "%0A" + 
+                              "*Issue Details:* " + encodeURIComponent(issue);
+            
+            var waUrl = "https://wa.me/917799423794?text=" + textMessage;
+            window.open(waUrl, '_blank');
+        }
+    </script>
 </body>
 </html>
