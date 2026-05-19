@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact & Technical Support | SP Digital Journey</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Plus+Jakarta+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --bg-dark: #0a0f1d;
+            --bg-card: #121829;
+            --accent-blue: #00f2fe;
+            --accent-green: #00ff87;
+            --text-main: #f3f4f6;
+            --text-muted: #9ca3af;
+            --google-blue: #4285F4;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Header Style */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.5rem 5%;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            background: rgba(10, 15, 29, 0.8);
+            backdrop-filter: blur(12px);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .logo span { color: var(--accent-blue); }
+
+        nav a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-weight: 500;
+            margin-right: 1.5rem;
+            transition: color 0.3s;
+        }
+
+        nav a:hover, nav a.active { color: var(--accent-blue); }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 4rem 5%;
+        }
+
+        .intro {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .intro h1 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 2.2rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, #fff, var(--accent-blue));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .contact-tag {
+            color: var(--accent-green);
+            font-family: 'Orbitron', sans-serif;
+            font-size: 0.9rem;
+            letter-spacing: 2px;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        /* Two Column Layout */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 3rem;
+            align-items: start;
+        }
+
+        /* Left Side Info Hub */
+        .info-panel {
+            background: var(--bg-card);
+            border: 1px solid rgba(255,255,255,0.03);
+            border-radius: 16px;
+            padding: 2.5rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        .info-panel h2 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.4rem;
+            margin-bottom: 1.5rem;
+            color: #fff;
+        }
+
+        .contact-method {
+            margin-bottom: 2rem;
+        }
+
+        .contact-method h4 {
+            color: var(--accent-blue);
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 0.4rem;
+        }
+
+        .contact-method p, .contact-method a {
+            color: var(--text-main);
+            font-size: 1.05rem;
+            text-decoration: none;
+            word-break: break-all;
+        }
+
+        .contact-method a:hover {
+            color: var(--accent-green);
+        }
+
+        /* Embedded Map Card */
+        .map-card {
+            background: var(--bg-card);
+            border: 1px solid rgba(255,255,255,0.03);
+            border-radius: 16px;
+            overflow: hidden;
+            margin-top: 2rem;
+            height: 250px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        .map-card iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        /* Right Side Form Panel */
+        .form-panel {
+            background: linear-gradient(145deg, #161f38, #121829);
+            border: 1px solid rgba(0, 242, 254, 0.1);
+            border-radius: 16px;
+            padding: 2.5rem;
+            box-shadow: 0 12px 40px rgba(0,0,0,0.4);
+        }
+
+        .form-panel h2 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.4rem;
+            margin-bottom: 1.5rem;
+            color: #fff;
+        }
+
+        .input-group {
+            margin-bottom: 1.25rem;
+        }
+
+        .input-group label {
+            display: block;
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            margin-bottom: 0.4rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .input-group input, .input-group textarea, .input-group select {
+            width: 100%;
+            background: rgba(255,255,255,0.03);
+            border: 1px solid rgba(255,255,255,0.08);
+            border-radius: 8px;
+            padding: 0.8rem;
+            color: #fff;
+            font-family: inherit;
+            font-size: 0.95rem;
+            transition: border-color 0.3s;
+        }
+
+        .input-group input:focus, .input-group textarea:focus, .input-group select:focus {
+            outline: none;
+            border-color: var(--accent-blue);
+        }
+
+        .submit-btn {
+            width: 100%;
+            background: linear-gradient(135deg, var(--accent-green), #00d972);
+            color: #000;
+            border: none;
+            padding: 1rem;
+            border-radius: 8px;
+            font-weight: 700;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.3s;
+            font-family: inherit;
+            margin-top: 0.5rem;
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 5px 20px rgba(0, 255, 135, 0.4);
+        }
+
+        .btn-audit {
+            display: block;
+            text-align: center;
+            background: rgba(66, 133, 244, 0.1);
+            border: 1px solid var(--google-blue);
+            color: #fff;
+            text-decoration: none;
+            padding: 0.8rem;
+            border-radius: 8px;
+            font-weight: 700;
+            font-size: 0.95rem;
+            margin-top: 1.5rem;
+            transition: all 0.3s;
+        }
+
+        .btn-audit:hover {
+            background: var(--google-blue);
+            box-shadow: 0 0 15px rgba(66, 133, 244, 0.3);
+        }
+
+        footer {
+            text-align: center;
+            padding: 3rem 5%;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            margin-top: 5rem;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header>
+        <a href="index.html" class="logo">SP <span>DIGITAL</span></a>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="services.html">Services</a>
+            <a href="portfolio.html">360° Lab</a>
+            <a href="about.html">About</a>
+            <a href="blog.html">Blog</a>
+            <a href="contact.html" class="active">Contact</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="intro">
+            <span class="contact-tag">Secure Technical Node</span>
+            <h1>Initialize Technical Contact</h1>
+            <p style="color: var(--text-muted); max-width: 600px; margin: 0 auto;">Connect directly with our engineering grid to audit or recover your local search properties.</p>
+        </div>
+
+        <div class="contact-grid">
+            
+            <!-- Left Info Panel -->
+            <div>
+                <div class="info-panel">
+                    <h2>Operational Hub</h2>
+                    
+                    <div class="contact-method">
+                        <h4>Direct Signal Routing</h4>
+                        <p><a href="tel:+917799423794">+91 7799423794</a></p>
+                    </div>
+
+                    <div class="contact-method">
+                        <h4>E-Mail Gateway</h4>
+                        <p>spdigitaljourney@gmail.com</p>
+                    </div>
+
+                    <div class="contact-method">
+                        <h4>Corporate Authority Links</h4>
+                        <a href="https://share.google/dxlYQg51vMAbVU5p5" target="_blank" style="color: var(--accent-blue); font-size: 0.95rem; font-weight: 700; display: block; margin-bottom: 0.5rem;">
+                            View Verified Google Profile →
+                        </a>
+                        <a href="https://calendar.app.google/ex2dxF7Cc9sGknS58" target="_blank" class="btn-audit">
+                            Launch Automated Calendar Audit Link
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Live Map Card Frame -->
+                <div class="map-card">
+                    <!-- Features a high-quality global satellite matrix navigation container. Can be pointed directly to your exact localized map pin later! -->
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d243647.3169861616!2d78.2679590740925!3d17.412299801454536!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb99daeaebd2c7%3A0xae93b78392bafbc2!2sHyderabad%2C%20Telangana!5e0!3m2!1sen!2sin!4v1650000000001!5m2!1sen!2sin" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+
+            <!-- Right Form Panel -->
+            <div class="form-panel">
+                <h2>Operational Clearance Ticket</h2>
+                
+                <div class="input-group">
+                    <label for="clientBiz">Business Legal Identity</label>
+                    <input type="text" id="clientBiz" placeholder="Company or Listing Title">
+                </div>
+
+                <div class="input-group">
+                    <label for="clientName">Authorized Representative</label>
+                    <input type="text" id="clientName" placeholder="Your Name">
+                </div>
+
+                <div class="input-group">
+                    <label for="serviceSelect">Target Operation System</label>
+                    <select id="serviceSelect">
+                        <option value="Google Map Verification / Fix">Google Map Verification & Error Fix</option>
+                        <option value="Local SEO Search Engine Management">Local SEO Growth Maintenance</option>
+                        <option value="360 Spatial Scanning">360° Property Spatial Scanning</option>
+                        <option value="AI Storefront Web Architecture">AI Independent Web Storefront</option>
+                        <option value="Emergency Ticket Resolution">Emergency System Profile Suspension</option>
+                    </select>
+                </div>
+
+                <div class="input-group">
+                    <label for="clientNotes">Operational Log / Bug Details</label>
+                    <textarea id="clientNotes" rows="4" placeholder="Describe the current map suspension, verification issue, or growth objective..."></textarea>
+                </div>
+
+                <button class="submit-btn" onclick="routeContactTicket()">Route Ticket to WhatsApp Desk</button>
+            </div>
+
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 SP Digital Journey. All rights reserved. Managed legally under MSME Framework.</p>
+    </footer>
+
+    <!-- Form Routing Script -->
+    <script>
+        function routeContactTicket() {
+            var biz = document.getElementById('clientBiz').value;
+            var name = document.getElementById('clientName').value;
+            var system = document.getElementById('serviceSelect').value;
+            var logs = document.getElementById('clientNotes').value;
+
+            var waMessage = "Hello SP Digital Journey Technical Desk,%0A%0A" +
+                            "I am launching a support clearance ticket from your contact hub:%0A%0A" +
+                            "*Business Identity:* " + encodeURIComponent(biz) + "%0A" +
+                            "*Authorized Officer:* " + encodeURIComponent(name) + "%0A" +
+                            "*Selected System Node:* " + encodeURIComponent(system) + "%0A" +
+                            "*Operational Notes:* " + encodeURIComponent(logs);
+
+            var waUrl = "https://wa.me/917799423794?text=" + waMessage;
+            window.open(waUrl, '_blank');
+        }
+    </script>
+</body>
+</html>
