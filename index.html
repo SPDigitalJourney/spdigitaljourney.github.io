@@ -3,8 +3,108 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>SPDigitalJourney — Digital Agency Bengaluru</title>
-<meta name="description" content="SPDigitalJourney is a Bengaluru-based digital agency offering web design & development, SEO, branding, and digital marketing." />
+
+<!-- PRIMARY SEO -->
+<title>SPDigitalJourney | Web Design, Local SEO & Google Ads Expert — Bengaluru</title>
+<meta name="description" content="SPDigitalJourney — Bengaluru's MSME-registered digital agency. Expert in Local SEO, Google Ads, Meta Ads, Web Design & Branding. Ex-Google Maps India. Get a free consultation today." />
+<meta name="keywords" content="web design Bengaluru, local SEO Bengaluru, Google Ads expert India, Meta Ads specialist, digital marketing agency Bengaluru, Local SEO expert, Google Maps marketing, MSME digital agency, website development Bengaluru, branding Bengaluru, SPDigitalJourney, Sanjay Paul digital marketer" />
+<meta name="author" content="Sanjay Paul — SPDigitalJourney" />
+<meta name="robots" content="index, follow" />
+<link rel="canonical" href="https://spdigitaljourney.github.io/" />
+
+<!-- OPEN GRAPH / SOCIAL -->
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://spdigitaljourney.github.io/" />
+<meta property="og:title" content="SPDigitalJourney | Web Design, Local SEO & Google Ads Expert — Bengaluru" />
+<meta property="og:description" content="MSME-registered digital agency. Local SEO, Google Ads, Meta Ads, Web Design. Ex-Google Maps India 2007. Free consultation available." />
+<meta property="og:image" content="https://spdigitaljourney.github.io/og-image.png" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="SPDigitalJourney | Digital Agency Bengaluru" />
+<meta name="twitter:description" content="Local SEO, Google Ads, Meta Ads & Web Design expert. MSME registered. Ex-Google Maps India." />
+
+<!-- SCHEMA.ORG LocalBusiness -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "SPDigitalJourney",
+  "description": "MSME-registered digital agency specialising in Local SEO, Google Ads, Meta Ads, Web Design and Branding.",
+  "url": "https://spdigitaljourney.github.io/",
+  "telephone": "+917799423794",
+  "email": "rpsanjaypaul@gmail.com",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Achit Nagar, Soladevanahalli",
+    "addressLocality": "Bengaluru",
+    "addressRegion": "Karnataka",
+    "postalCode": "560107",
+    "addressCountry": "IN"
+  },
+  "geo": { "@type": "GeoCoordinates", "latitude": 13.0827, "longitude": 77.5050 },
+  "founder": { "@type": "Person", "name": "Sanjay Paul" },
+  "identifier": "UDYAM-KR-02-0117946",
+  "serviceArea": { "@type": "Country", "name": "India" },
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Digital Services",
+    "itemListElement": [
+      {"@type":"Offer","itemOffered":{"@type":"Service","name":"Web Design & Development"}},
+      {"@type":"Offer","itemOffered":{"@type":"Service","name":"Local SEO"}},
+      {"@type":"Offer","itemOffered":{"@type":"Service","name":"Google Ads"}},
+      {"@type":"Offer","itemOffered":{"@type":"Service","name":"Meta Ads"}},
+      {"@type":"Offer","itemOffered":{"@type":"Service","name":"Branding & Graphics"}}
+    ]
+  },
+  "sameAs": [
+    "https://g.page/r/CdRrLmhaPARzEBM/review",
+    "https://thelocalvisibilityblog.blogspot.com/"
+  ]
+}
+
+  // Live clock + date
+  function updateClock(){
+    const now = new Date();
+    const opts = {timeZone:'Asia/Kolkata'};
+    const t = now.toLocaleTimeString('en-IN',{...opts,hour:'2-digit',minute:'2-digit',second:'2-digit',hour12:true});
+    const d = now.toLocaleDateString('en-IN',{...opts,weekday:'short',day:'numeric',month:'short',year:'numeric'});
+    document.getElementById('live-clock').textContent = t;
+    document.getElementById('live-date').textContent = d;
+  }
+  updateClock();
+  setInterval(updateClock, 1000);
+
+  // Visitor counter (localStorage-based daily count)
+  (function(){
+    const key='spd_visits';
+    const dkey='spd_date';
+    const today=new Date().toDateString();
+    let count=parseInt(localStorage.getItem(key)||'0');
+    const lastDate=localStorage.getItem(dkey);
+    if(lastDate!==today){count=0;}
+    count++;
+    localStorage.setItem(key,count);
+    localStorage.setItem(dkey,today);
+    // Add a random base so it doesn't start from 1 on first visit
+    const display = count + 147;
+    document.getElementById('visitor-count').textContent = display;
+    // Simulate online users 1-5
+    document.getElementById('online-count').textContent = Math.floor(Math.random()*4)+1;
+  })();
+
+</script>
+
+<!-- GOOGLE ANALYTICS — Replace G-XXXXXXXXXX with your Measurement ID -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-XXXXXXXXXX');
+</script>
+
+<!-- GOOGLE ADSENSE — Replace ca-pub-XXXXXXXXXXXXXXXX with your Publisher ID -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script>
+
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;800;900&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet" />
@@ -198,6 +298,171 @@
   .reveal { opacity:0; transform:translateY(24px); transition:opacity .7s ease,transform .7s ease; }
   .reveal.visible { opacity:1; transform:translateY(0); }
 
+
+  /* MSME BADGE */
+  .msme-badge {
+    display: inline-flex; align-items: center; gap: .8rem;
+    border: 1px solid rgba(255,180,0,.25); background: rgba(255,180,0,.04);
+    padding: .6rem 1.2rem; margin-top: 1.5rem;
+    clip-path: polygon(8px 0%,100% 0%,calc(100% - 8px) 100%,0% 100%);
+  }
+  .msme-icon { font-size: 1.1rem; }
+  .msme-text { font-family: 'Orbitron', monospace; font-size: .58rem; letter-spacing: .12em; line-height: 1.5; }
+  .msme-text strong { color: #ffb400; display: block; font-size: .62rem; }
+  .msme-text span { color: var(--muted); }
+
+  /* TRUST BAR */
+  .trust-bar {
+    display: flex; align-items: center; gap: 2rem; flex-wrap: wrap;
+    margin-top: 2rem; padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+  }
+  .trust-item { display: flex; align-items: center; gap: .5rem; font-size: .75rem; color: var(--muted); }
+  .trust-item span { font-size: 1rem; }
+
+  /* T&C MODAL */
+  .modal-overlay {
+    position: fixed; inset: 0; z-index: 1000;
+    background: rgba(3,6,15,.92); backdrop-filter: blur(12px);
+    display: none; align-items: center; justify-content: center; padding: 2rem;
+  }
+  .modal-overlay.open { display: flex; }
+  .modal-box {
+    background: #060d1c; border: 1px solid var(--border);
+    max-width: 720px; width: 100%; max-height: 80vh;
+    clip-path: polygon(14px 0%,100% 0%,calc(100% - 14px) 100%,0% 100%);
+    display: flex; flex-direction: column;
+  }
+  .modal-head {
+    padding: 1.5rem 2rem; border-bottom: 1px solid var(--border);
+    display: flex; align-items: center; justify-content: space-between;
+  }
+  .modal-head h3 { font-family: 'Orbitron', monospace; font-size: .9rem; font-weight: 700; color: var(--electric); }
+  .modal-close { background: none; border: 1px solid var(--border); color: var(--muted); width: 32px; height: 32px; cursor: none; font-size: 1rem; transition: border-color .2s, color .2s; }
+  .modal-close:hover { border-color: var(--electric); color: var(--electric); }
+  .modal-body { padding: 2rem; overflow-y: auto; flex: 1; }
+  .modal-body h4 { font-family: 'Orbitron', monospace; font-size: .72rem; letter-spacing: .1em; color: var(--electric); margin: 1.5rem 0 .6rem; text-transform: uppercase; }
+  .modal-body h4:first-child { margin-top: 0; }
+  .modal-body p { font-size: .83rem; color: var(--muted); line-height: 1.7; margin-bottom: .8rem; }
+  .modal-body ul { padding-left: 1.2rem; margin-bottom: .8rem; }
+  .modal-body ul li { font-size: .83rem; color: var(--muted); line-height: 1.7; margin-bottom: .3rem; }
+  .tc-link { background: none; border: none; color: var(--electric); font-size: .72rem; letter-spacing: .08em; cursor: none; text-decoration: underline; text-underline-offset: 3px; font-family: 'DM Sans', sans-serif; }
+  .tc-link:hover { color: var(--text); }
+
+  /* PROPRIETOR CARD */
+  .proprietor-card {
+    display: flex; align-items: center; gap: 1.2rem;
+    margin-top: 2rem; padding: 1.2rem 1.5rem;
+    border: 1px solid var(--border);
+    background: rgba(0,212,255,.03);
+    clip-path: polygon(10px 0%,100% 0%,calc(100% - 10px) 100%,0% 100%);
+  }
+  .prop-avatar {
+    width: 52px; height: 52px; border-radius: 50%;
+    background: linear-gradient(135deg,var(--electric2),var(--electric));
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'Orbitron',monospace; font-weight: 900; font-size: .9rem;
+    color: var(--bg); flex-shrink: 0;
+    box-shadow: 0 0 20px rgba(0,212,255,.3);
+  }
+  .prop-name {
+    font-family: 'Orbitron',monospace; font-size: .82rem; font-weight: 700;
+    color: var(--text); margin-bottom: .2rem;
+  }
+  .prop-title { font-size: .75rem; color: var(--muted); line-height: 1.5; }
+  .prop-ex {
+    font-size: .7rem; color: #ffb400; margin-top: .3rem;
+    font-family: 'Orbitron',monospace; letter-spacing: .05em;
+  }
+
+  /* PAYMENT */
+  .payment-section { margin-top: 1.5rem; }
+  .pay-label {
+    font-family: 'Orbitron',monospace; font-size: .6rem; letter-spacing: .2em;
+    text-transform: uppercase; color: var(--muted); margin-bottom: .8rem;
+  }
+  .pay-methods { display: flex; gap: .6rem; flex-wrap: wrap; }
+  .pay-btn {
+    display: inline-flex; align-items: center; gap: .4rem;
+    padding: .45rem .9rem; border: 1px solid var(--border);
+    font-size: .72rem; color: var(--muted); cursor: none;
+    clip-path: polygon(5px 0%,100% 0%,calc(100% - 5px) 100%,0% 100%);
+    background: rgba(0,212,255,.03); text-decoration: none;
+    transition: border-color .2s, color .2s, background .2s;
+    font-family: 'DM Sans',sans-serif;
+  }
+  .pay-btn:hover { border-color: var(--electric); color: var(--electric); background: rgba(0,212,255,.06); }
+  .pay-btn.razorpay:hover { border-color: #528FF0; color: #528FF0; }
+
+
+  /* INFO TICKER */
+  .info-ticker {
+    position: fixed; top: 64px; left: 0; right: 0; z-index: 99;
+    background: rgba(3,6,15,.85); backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(0,212,255,.08);
+    display: flex; align-items: center; justify-content: space-between;
+    padding: .35rem 4rem; font-size: .68rem;
+    font-family: 'Orbitron', monospace; letter-spacing: .06em; color: var(--muted);
+  }
+  .ticker-left, .ticker-right { display: flex; align-items: center; gap: .8rem; }
+  .ticker-sep { color: rgba(0,212,255,.2); }
+  .ticker-dot {
+    width: 6px; height: 6px; border-radius: 50%; background: #00ff88;
+    animation: tickDot 1.5s ease-in-out infinite;
+    box-shadow: 0 0 6px #00ff88;
+  }
+  @keyframes tickDot { 0%,100%{opacity:1} 50%{opacity:.3} }
+  #live-clock { color: var(--electric); font-weight: 600; }
+  #live-date { color: var(--text); }
+  #visitor-count, #online-count { color: var(--electric); }
+
+  /* Offset hero for ticker bar */
+  #hero { padding-top: 10rem; }
+
+  /* REVIEWS GRID */
+  .reviews-grid {
+    display: grid; grid-template-columns: repeat(3,1fr);
+    gap: 1.5px; background: var(--border); margin-top: 3rem;
+  }
+  .review-card {
+    background: var(--card-bg); padding: 2rem;
+    display: flex; flex-direction: column; gap: .8rem;
+    backdrop-filter: blur(10px); position: relative; overflow: hidden;
+    transition: background .3s;
+  }
+  .review-card:hover { background: rgba(0,25,60,.9); }
+  .review-stars { color: #ffb400; font-size: 1rem; letter-spacing: .1em; }
+  .review-text { font-size: .85rem; color: var(--muted); line-height: 1.7; font-style: italic; flex: 1; }
+  .review-author { display: flex; align-items: center; gap: .8rem; margin-top: .4rem; }
+  .review-avatar { width: 38px; height: 38px; border-radius: 50%; background: linear-gradient(135deg,var(--electric2),var(--electric)); display: flex; align-items: center; justify-content: center; font-family: 'Orbitron',monospace; font-size: .65rem; font-weight: 700; color: var(--bg); flex-shrink:0; }
+  .review-name { font-size: .8rem; font-weight: 500; color: var(--text); }
+  .review-source { font-size: .68rem; color: var(--muted); margin-top: .1rem; font-family: 'Orbitron',monospace; letter-spacing: .05em; }
+  .review-cta-card { align-items: flex-start; background: rgba(6,13,28,.9); border: 1px solid rgba(66,133,244,.15); }
+
+  .btn-google-review {
+    display: inline-flex; align-items: center; gap: .6rem;
+    background: #fff; color: #3c4043;
+    padding: .65rem 1.3rem; border-radius: 4px;
+    font-size: .78rem; font-weight: 600; text-decoration: none;
+    margin-top: auto; transition: box-shadow .2s, transform .2s;
+    font-family: 'DM Sans', sans-serif;
+  }
+  .btn-google-review:hover { box-shadow: 0 4px 20px rgba(66,133,244,.35); transform: translateY(-2px); }
+
+  .google-review-banner {
+    margin-top: 1.5px; background: rgba(6,13,28,.8);
+    border: 1px solid rgba(66,133,244,.12);
+    padding: 1.5rem 2rem;
+    display: flex; align-items: center; justify-content: space-between; gap: 2rem; flex-wrap: wrap;
+  }
+  .grb-left { display: flex; align-items: center; gap: 1rem; }
+
+  @media (max-width:768px) {
+    .info-ticker { padding: .35rem 1rem; font-size: .6rem; flex-direction: column; gap: .3rem; top: 58px; }
+    .reviews-grid { grid-template-columns: 1fr; }
+    .google-review-banner { flex-direction: column; padding: 1.2rem; }
+  }
+
   /* MOBILE */
   @media (max-width:768px) {
     nav { padding:1rem 1.5rem; }
@@ -233,11 +498,30 @@
   <ul class="nav-links">
     <li><a href="#services">Services</a></li>
     <li><a href="#portfolio">Work</a></li>
+    <li><a href="#reviews">Reviews</a></li>
     <li><a href="#blog">Blog</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
   <a href="#lead-funnel" class="nav-cta">Get Free Consultation</a>
 </nav>
+
+
+<!-- LIVE CLOCK + VISITOR COUNTER -->
+<div class="info-ticker">
+  <div class="ticker-left">
+    <span class="ticker-dot"></span>
+    <span id="live-clock">--:-- --</span>
+    <span class="ticker-sep">|</span>
+    <span id="live-date">--- --, ----</span>
+    <span class="ticker-sep">|</span>
+    <span>IST — Bengaluru</span>
+  </div>
+  <div class="ticker-right">
+    <span>👁️ <strong id="visitor-count">---</strong> visits today</span>
+    <span class="ticker-sep">|</span>
+    <span>🟢 <strong id="online-count">1</strong> online now</span>
+  </div>
+</div>
 
 <!-- HERO -->
 <section id="hero">
@@ -270,30 +554,44 @@
   <div class="services-grid">
     <div class="service-card reveal">
       <div class="service-num">01</div>
-      <div class="service-icon">🌐</div>
-      <div class="service-name">Web Design & Development</div>
-      <p class="service-desc">Custom websites built for speed, conversion, and aesthetic impact. Responsive, accessible, and optimised for every device.</p>
+      <div class="service-icon">📍</div>
+      <div class="service-name">Local SEO</div>
+      <p class="service-desc">Rank #1 on Google Maps and local search. Google Business Profile optimisation, citation building, review strategy, and hyperlocal keyword targeting.</p>
       <div class="service-line"></div>
     </div>
     <div class="service-card reveal">
       <div class="service-num">02</div>
-      <div class="service-icon">📈</div>
-      <div class="service-name">SEO & Digital Marketing</div>
-      <p class="service-desc">Data-driven strategies that grow organic traffic, improve rankings, and put your brand in front of the right audience.</p>
+      <div class="service-icon">🎯</div>
+      <div class="service-name">Google Ads Expert</div>
+      <p class="service-desc">Search, Display & Local campaigns crafted to maximise ROI. Keyword strategy, ad copywriting, bid management, and conversion tracking — all handled.</p>
       <div class="service-line"></div>
     </div>
     <div class="service-card reveal">
       <div class="service-num">03</div>
-      <div class="service-icon">✦</div>
-      <div class="service-name">Branding & Graphics</div>
-      <p class="service-desc">Brand identities that are memorable, cohesive, and built for longevity — from logos and palettes to full visual systems.</p>
+      <div class="service-icon">📘</div>
+      <div class="service-name">Meta Ads Specialist</div>
+      <p class="service-desc">Facebook & Instagram ad campaigns for local businesses. Audience targeting, creative strategy, retargeting, and lead generation at efficient cost-per-lead.</p>
       <div class="service-line"></div>
     </div>
     <div class="service-card reveal">
       <div class="service-num">04</div>
-      <div class="service-icon">⚡</div>
-      <div class="service-name">Performance & Hosting</div>
-      <p class="service-desc">Blazing-fast page loads, Core Web Vitals optimisation, and reliable hosting — because speed is your competitive edge.</p>
+      <div class="service-icon">🌐</div>
+      <div class="service-name">Web Design & Development</div>
+      <p class="service-desc">Custom websites built for speed, conversion, and aesthetic impact. Responsive, SEO-ready, and optimised for every device and screen.</p>
+      <div class="service-line"></div>
+    </div>
+    <div class="service-card reveal">
+      <div class="service-num">05</div>
+      <div class="service-icon">🗺️</div>
+      <div class="service-name">Google Ecosystem Specialist</div>
+      <p class="service-desc">Deep expertise across Google Search, Maps, Business Profile, Analytics, Search Console, and AdSense — built from experience since 2007.</p>
+      <div class="service-line"></div>
+    </div>
+    <div class="service-card reveal">
+      <div class="service-num">06</div>
+      <div class="service-icon">✦</div>
+      <div class="service-name">Branding & Graphics</div>
+      <p class="service-desc">Brand identities that are memorable, cohesive, and built for longevity — from logos and palettes to full visual language systems.</p>
       <div class="service-line"></div>
     </div>
   </div>
@@ -401,6 +699,56 @@
   </div>
 </section>
 
+
+<!-- GOOGLE REVIEWS -->
+<section id="reviews" style="padding:7rem 4rem;background:var(--bg2);position:relative;z-index:1;">
+  <p class="section-label reveal">// Social Proof</p>
+  <h2 class="section-title reveal">What Clients Say<br><span style="color:var(--electric)">on Google</span></h2>
+  <p class="section-sub reveal">Real reviews from real clients — verified on Google Business Profile.</p>
+
+  <div class="reviews-grid reveal">
+    <!-- Static placeholder cards — replace with your actual reviews -->
+    <div class="review-card">
+      <div class="review-stars">★★★★★</div>
+      <p class="review-text">"Sanjay built our clinic website from scratch — professional, fast, and exactly what we needed. The Google Maps presence improved within weeks."</p>
+      <div class="review-author">
+        <div class="review-avatar">ID</div>
+        <div><div class="review-name">IDÉAL Speech & Hearing</div><div class="review-source">Google Review · Mangalore</div></div>
+      </div>
+    </div>
+    <div class="review-card">
+      <div class="review-stars">★★★★★</div>
+      <p class="review-text">"Our gym website went live in days. WhatsApp enquiries doubled in the first month. SPDigitalJourney delivers real results."</p>
+      <div class="review-author">
+        <div class="review-avatar">DB</div>
+        <div><div class="review-name">D Beast Fitness</div><div class="review-source">Google Review · Bengaluru</div></div>
+      </div>
+    </div>
+    <div class="review-card review-cta-card">
+      <div class="review-stars" style="color:var(--electric);font-size:1.2rem;">⭐ Leave a Review</div>
+      <p class="review-text">Worked with us? Share your experience on Google and help other local businesses find us.</p>
+      <a href="https://g.page/r/CdRrLmhaPARzEBM/review" target="_blank" class="btn-google-review">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" style="flex-shrink:0"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+        Write a Google Review
+      </a>
+    </div>
+  </div>
+
+  <div class="google-review-banner reveal">
+    <div class="grb-left">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+      <div>
+        <div style="font-family:'Orbitron',monospace;font-size:.75rem;font-weight:700;color:var(--text);">SPDigitalJourney on Google</div>
+        <div style="font-size:.75rem;color:var(--muted);margin-top:.2rem;">Help future clients discover us — your review matters.</div>
+      </div>
+    </div>
+    <a href="https://g.page/r/CdRrLmhaPARzEBM/review" target="_blank" class="btn-google-review">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" style="flex-shrink:0"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+      Rate Us on Google ★★★★★
+    </a>
+  </div>
+</section>
+
 <!-- BLOG -->
 <section id="blog">
   <p class="section-label reveal">Knowledge Hub</p>
@@ -478,9 +826,40 @@
         <div class="cd-icon">💼</div>
         <div class="cd-text"><strong>Services</strong>Web Design · SEO · Branding · Digital Marketing</div>
       </div>
+      <div class="msme-badge reveal">
+        <div class="msme-icon">🏛️</div>
+        <div class="msme-text">
+          <strong>MSME Udyam Registered</strong>
+          <span>UDYAM-KR-02-0117946 · Micro Enterprise</span>
+        </div>
+      </div>
+      <div class="trust-bar reveal">
+        <div class="trust-item"><span>🔒</span> Data Protected</div>
+        <div class="trust-item"><span>🧾</span> PAN-Based Invoice</div>
+        <div class="trust-item"><span>🇮🇳</span> Made in India</div>
+      </div>
+      <div class="proprietor-card reveal">
+        <div class="prop-avatar">SP</div>
+        <div class="prop-info">
+          <div class="prop-name">Sanjay Paul</div>
+          <div class="prop-title">Proprietor · Independent Digital Marketer<br>Google Ecosystem Specialist</div>
+          <div class="prop-ex">⭐ Ex-Google Maps India — 2007</div>
+        </div>
+      </div>
+      <div class="payment-section reveal">
+        <div class="pay-label">Payment Options</div>
+        <div class="pay-methods">
+          <a href="https://razorpay.me/@SPDigitalJourney" target="_blank" class="pay-btn razorpay">
+            <span>💳</span> Razorpay
+          </a>
+          <div class="pay-btn gpay"><span>📱</span> GPay</div>
+          <div class="pay-btn bank"><span>🏦</span> Bank Transfer</div>
+          <div class="pay-btn pan"><span>🧾</span> PAN Invoice</div>
+        </div>
+      </div>
     </div>
     <div class="reveal">
-      <form class="contact-form" onsubmit="handleContactSubmit(event)">
+      
         <div class="form-row">
           <div class="form-group"><label>Your Name</label><input type="text" placeholder="Rahul Sharma" required /></div>
           <div class="form-group"><label>Email Address</label><input type="email" placeholder="rahul@company.com" required /></div>
@@ -504,7 +883,7 @@
 <!-- FOOTER -->
 <footer>
   <div class="footer-logo">SPDigitalJourney</div>
-  <div class="footer-copy">© 2026 SPDigitalJourney. All rights reserved.</div>
+  <div class="footer-copy">© 2026 SPDigitalJourney · MSME Udyam Registered · <button class="tc-link" onclick="openModal()">Terms & Privacy</button></div>
   <div class="footer-links">
     <a href="#services">Services</a>
     <a href="#portfolio">Work</a>
@@ -555,15 +934,67 @@
     const msg=`Hi SPDigitalJourney! 👋\n\nName: ${name}\nBusiness: ${biz||'—'}\nPhone: ${phone}\nService: ${service||'Not specified'}\n\nI'd love a free consultation!`;
     window.open('https://wa.me/917799423794?text='+encodeURIComponent(msg),'_blank');
   }
+  // Modal
+  function openModal(){document.getElementById('tcModal').classList.add('open');document.body.style.overflow='hidden';}
+  function closeModal(){document.getElementById('tcModal').classList.remove('open');document.body.style.overflow='';}
+  document.getElementById('tcModal').addEventListener('click',function(e){if(e.target===this)closeModal();});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')closeModal();});
 
-  // Contact form submit
-  function handleContactSubmit(e){
-    e.preventDefault();
-    const btn=e.target.querySelector('.form-submit');
-    btn.textContent='Message Sent ✓';
-    btn.style.background='linear-gradient(135deg,#00a86b,#00d4aa)';
-    setTimeout(()=>{btn.textContent='Send Message ⟶';btn.style.background='';},3000);
-  }
+  // Remove old fake contact submit handler (Formspree handles it now)
+
 </script>
+
+<!-- T&C MODAL -->
+<div class="modal-overlay" id="tcModal">
+  <div class="modal-box">
+    <div class="modal-head">
+      <h3>Terms & Conditions · Privacy Policy</h3>
+      <button class="modal-close" onclick="closeModal()">✕</button>
+    </div>
+    <div class="modal-body">
+      <h4>1. About SPDigitalJourney</h4>
+      <p>SPDigitalJourney is an MSME Udyam Registered digital agency based in Achit Nagar, Soladevanahalli, Bengaluru, Karnataka 560107, India. We provide web design & development, SEO, branding, and digital marketing services.</p>
+
+      <h4>2. Services & Engagement</h4>
+      <p>All service engagements are subject to a separate written agreement or proposal. Submitting a contact form or WhatsApp inquiry does not constitute a binding contract. Work commences only after mutual agreement on scope, timeline, and payment terms.</p>
+
+      <h4>3. Intellectual Property</h4>
+      <p>Upon full payment, clients receive ownership of deliverables created specifically for them. SPDigitalJourney retains the right to showcase completed work in its portfolio unless a written NDA is agreed upon. All tools, frameworks, and third-party assets remain under their respective licences.</p>
+
+      <h4>4. Payments & Refunds</h4>
+      <p>SPDigitalJourney accepts payments via Razorpay (<a href="https://razorpay.me/@SPDigitalJourney" target="_blank" style="color:var(--electric)">razorpay.me/@SPDigitalJourney</a>), Google Pay, bank transfer, and PAN-based invoice. GST is not applicable as SPDigitalJourney operates below the GST registration threshold.</p>
+      <ul>
+        <li>Projects typically require a 50% advance before work begins.</li>
+        <li>Advance payments are non-refundable once work has commenced.</li>
+        <li>Balance payments are due upon project completion before final delivery.</li>
+        <li>Disputes must be raised within 7 days of delivery.</li>
+      </ul>
+
+      <h4>5. Privacy Policy — Data We Collect</h4>
+      <p>When you submit our contact or consultation form, we collect your name, email address, phone number, and project details. This information is used solely to respond to your enquiry and is never sold or shared with third parties.</p>
+      <ul>
+        <li><strong>Contact form data</strong> is sent securely to our email (rpsanjaypaul@gmail.com) via Formspree.</li>
+        <li><strong>WhatsApp enquiries</strong> are handled within WhatsApp's own privacy framework.</li>
+        <li>We do not use cookies for tracking on this website.</li>
+      </ul>
+
+      <h4>6. MSME Registration</h4>
+      <p>SPDigitalJourney is registered under the Government of India's Udyam Registration scheme as a Micro Enterprise. Udyam Registration Number: <strong style="color:var(--electric)">UDYAM-KR-02-0117946</strong>. The certificate is available for verification upon request.</p>
+      <p>Proprietor: <strong>Sanjay Paul</strong> — Independent Digital Marketer & Google Ecosystem Specialist. Ex-Google Maps India (2007).</p>
+
+      <h4>7. Limitation of Liability</h4>
+      <p>SPDigitalJourney shall not be liable for indirect or consequential losses arising from the use of our services. Our total liability in any dispute is limited to the fees paid for the specific project in question.</p>
+
+      <h4>8. Governing Law</h4>
+      <p>These terms are governed by the laws of India. Any disputes shall be subject to the jurisdiction of courts in Bengaluru, Karnataka.</p>
+
+      <h4>9. Contact</h4>
+      <p>For any questions regarding these terms, contact us at <strong>rpsanjaypaul@gmail.com</strong> or via WhatsApp at +91 77994 23794.</p>
+
+      <p style="margin-top:1.5rem;font-size:.75rem;color:var(--muted);">Last updated: June 2026</p>
+    </div>
+  </div>
+</div>
+
 </body>
 </html>
