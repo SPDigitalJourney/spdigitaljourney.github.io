@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>GBP Audit Tool — SPDigitalJourney</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: 'Inter', sans-serif; background: #f7f7f5; color: #222; min-height: 100vh; }
+
+.page-header {
+  background: #111;
+  padding: 14px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.page-header .logo { color: #E8580A; font-size: 16px; font-weight: 700; letter-spacing: -0.02em; }
+.page-header .logo span { color: #fff; }
+.page-header a { color: #888; font-size: 12px; text-decoration: none; }
+.page-header a:hover { color: #E8580A; }
+
+.container { max-width: 720px; margin: 0 auto; padding: 24px 16px 60px; }
+
+.card { background: #fff; border-radius: 12px; border: 0.5px solid #e5e5e5; padding: 20px 24px; margin-bottom: 16px; }
+
+.card-title { font-size: 11px; font-weight: 600; color: #888; text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 14px; display: flex; align-items: center; gap: 6px; }
+
+.biz-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+@media (max-width: 480px) { .biz-grid { grid-template-columns: 1fr; } }
+
+.fg { display: flex; flex-direction: column; gap: 4px; }
+.fg label { font-size: 11px; color: #888; text-transform: uppercase; letter-spacing: 0.04em; }
+.fg input { border: 0.5px solid #ddd; border-radius: 8px; padding: 9px 12px; font-size: 14px; font-family: 'Inter', sans-serif; color: #222; background: #fff; outline: none; }
+.fg input:focus { border-color: #E8580A; }
+
+.check-row { display: flex; align-items: flex-start; gap: 10px; padding: 11px 12px; border-radius: 8px; margin-bottom: 6px; background: #f9f9f7; border: 0.5px solid transparent; transition: background 0.1s; }
+.check-row:hover { background: #f3f3f0; }
+.check-row.s-ok { background: #f0fae8; border-color: #c0dd97; }
+.check-row.s-fix { background: #fff5f5; border-color: #f09595; }
+
+.ci { flex: 1; min-width: 0; }
+.ci .lbl { font-size: 14px; font-weight: 500; color: #222; margin-bottom: 2px; }
+.ci .hint { font-size: 12px; color: #888; margin-bottom: 5px; }
+.ci .note-input { width: 100%; border: 0.5px solid #e0e0e0; border-radius: 6px; padding: 5px 9px; font-size: 12px; font-family: 'Inter', sans-serif; color: #333; background: #fff; outline: none; }
+.ci .note-input:focus { border-color: #E8580A; }
+
+.sbts { display: flex; gap: 5px; flex-shrink: 0; margin-top: 2px; }
+.sb { border: 0.5px solid #ddd; border-radius: 20px; padding: 4px 12px; font-size: 12px; cursor: pointer; background: #fff; color: #888; font-family: 'Inter', sans-serif; white-space: nowrap; transition: all 0.1s; }
+.sb:hover { background: #f3f3f0; }
+.sb.ok { background: #EAF3DE; color: #3B6D11; border-color: #97C459; }
+.sb.fix { background: #FCEBEB; color: #A32D2D; border-color: #F09595; }
+.sb.na { background: #f0f0f0; color: #aaa; border-color: #ddd; }
+
+.summary-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; }
+@media (max-width: 480px) { .summary-row { grid-template-columns: repeat(2, 1fr); } }
+
+.sc { border-radius: 10px; padding: 14px; text-align: center; }
+.sc .n { font-size: 26px; font-weight: 700; }
+.sc .l { font-size: 11px; margin-top: 3px; }
+.sc.ok { background: #EAF3DE; } .sc.ok .n { color: #3B6D11; } .sc.ok .l { color: #639922; }
+.sc.fix { background: #FCEBEB; } .sc.fix .n { color: #A32D2D; } .sc.fix .l { color: #E24B4A; }
+.sc.na { background: #f5f5f5; } .sc.na .n,.sc.na .l { color: #aaa; }
+.sc.score { background: #E6F1FB; } .sc.score .n { color: #185FA5; } .sc.score .l { color: #378ADD; }
+
+.score-bar-bg { height: 8px; background: #eee; border-radius: 4px; overflow: hidden; margin: 12px 0 6px; }
+.score-bar-fill { height: 100%; border-radius: 4px; background: #185FA5; transition: width 0.4s, background 0.4s; }
+.score-label { font-size: 12px; color: #888; }
+
+.offer-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
+@media (max-width: 480px) { .offer-grid { grid-template-columns: 1fr; } }
+
+.offer-card { border: 0.5px solid #e0e0e0; border-radius: 10px; padding: 12px 14px; cursor: pointer; background: #fff; transition: all 0.15s; }
+.offer-card:hover { background: #f9f9f7; border-color: #ccc; }
+.offer-card.selected { border-color: #E8580A; background: #fff8f5; }
+.offer-card .price { font-size: 18px; font-weight: 700; color: #222; }
+.offer-card .desc { font-size: 12px; color: #888; margin-top: 3px; }
+
+.tabs { display: flex; border-bottom: 0.5px solid #e5e5e5; margin-bottom: 16px; }
+.tab { padding: 9px 18px; font-size: 13px; cursor: pointer; color: #888; border-bottom: 2px solid transparent; margin-bottom: -1px; font-family: 'Inter', sans-serif; }
+.tab.active { color: #E8580A; border-bottom-color: #E8580A; font-weight: 600; }
+
+.tab-pane { display: none; }
+.tab-pane.active { display: block; }
+
+.wa-box { border: 0.5px solid #e5e5e5; border-radius: 10px; padding: 16px 18px; background: #f9f9f7; min-height: 120px; }
+.wa-text { font-size: 13px; line-height: 1.8; color: #333; white-space: pre-wrap; word-break: break-word; }
+
+.btn-row { display: flex; gap: 8px; margin-top: 12px; flex-wrap: wrap; }
+.btn { display: inline-flex; align-items: center; gap: 6px; border: 0.5px solid #ddd; border-radius: 8px; padding: 9px 16px; font-size: 13px; font-family: 'Inter', sans-serif; font-weight: 500; cursor: pointer; background: #fff; color: #333; text-decoration: none; transition: all 0.15s; }
+.btn:hover { background: #f3f3f0; }
+.btn.primary { background: #E8580A; color: #fff; border-color: #E8580A; }
+.btn.primary:hover { background: #c94a08; }
+.btn.green { background: #EAF3DE; color: #3B6D11; border-color: #97C459; }
+.btn.green:hover { background: #c0dd97; }
+.btn.reset { color: #888; }
+
+.pdf-hint { font-size: 13px; color: #666; background: #f5f5f5; border-radius: 8px; padding: 12px 14px; margin-bottom: 14px; line-height: 1.6; }
+.pdf-hint strong { color: #333; }
+
+.page-title { font-size: 22px; font-weight: 700; color: #222; margin-bottom: 4px; }
+.page-sub { font-size: 13px; color: #888; margin-bottom: 24px; }
+
+@media print {
+  body { background: white; }
+  .page-header, .container { display: none; }
+  .print-doc { display: block !important; }
+}
+.print-doc { display: none; }
+</style>
+</head>
+<body>
+
+<div class="page-header">
+  <div class="logo">SPDJ<span> Audit</span></div>
+  <a href="https://spdigitaljourney.github.io" target="_blank">← Back to site</a>
+</div>
+
+<div class="container">
+  <p class="page-title">GBP Audit Tool</p>
+  <p class="page-sub">Fill in client details → mark each checkpoint → copy WhatsApp message or generate PDF report.</p>
+
+  <!-- Client Details -->
+  <div class="card">
+    <div class="card-title">📋 Client details</div>
+    <div class="biz-grid">
+      <div class="fg"><label>Business name</label><input type="text" id="biz-name" placeholder="e.g. Royal Salon" oninput="update()" /></div>
+      <div class="fg"><label>Area / locality</label><input type="text" id="biz-area" placeholder="e.g. Rajajinagar, Bengaluru" oninput="update()" /></div>
+      <div class="fg"><label>Owner / contact name</label><input type="text" id="biz-contact" placeholder="e.g. Ramesh" oninput="update()" /></div>
+      <div class="fg"><label>Phone</label><input type="text" id="biz-phone" placeholder="e.g. 9876543210" oninput="update()" /></div>
+      <div class="fg"><label>Business type</label><input type="text" id="biz-type" placeholder="e.g. Salon, Restaurant, Clinic" oninput="update()" /></div>
+      <div class="fg"><label>Date</label><input type="text" id="biz-date" oninput="update()" /></div>
+    </div>
+  </div>
+
+  <!-- Checklist -->
+  <div class="card">
+    <div class="card-title">✅ Audit checklist</div>
+    <div id="checks-wrap"></div>
+  </div>
+
+  <!-- Summary -->
+  <div class="card">
+    <div class="card-title">📊 Health summary</div>
+    <div class="summary-row">
+      <div class="sc ok"><div class="n" id="cnt-ok">0</div><div class="l">✓ Good</div></div>
+      <div class="sc fix"><div class="n" id="cnt-fix">0</div><div class="l">✗ Needs fix</div></div>
+      <div class="sc na"><div class="n" id="cnt-na">0</div><div class="l">— Skipped</div></div>
+      <div class="sc score"><div class="n" id="cnt-score">—</div><div class="l">Health score</div></div>
+    </div>
+    <div class="score-bar-bg"><div class="score-bar-fill" id="score-bar" style="width:0%"></div></div>
+    <div class="score-label" id="score-label">Mark at least one item to see the health score.</div>
+  </div>
+
+  <!-- Quote -->
+  <div class="card">
+    <div class="card-title">💰 Quote offer</div>
+    <div class="offer-grid">
+      <div class="offer-card" id="offer-500" onclick="selectOffer(500,'Single fix — 30 min')">
+        <div class="price">₹500</div>
+        <div class="desc">Single fix — 30 min</div>
+      </div>
+      <div class="offer-card" id="offer-1000" onclick="selectOffer(1000,'Photo + profile refresh')">
+        <div class="price">₹1,000</div>
+        <div class="desc">Photo + profile refresh</div>
+      </div>
+      <div class="offer-card" id="offer-1500" onclick="selectOffer(1500,'Full cleanup — same day')">
+        <div class="price">₹1,500</div>
+        <div class="desc">Full cleanup — same day</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Output -->
+  <div class="card">
+    <div class="card-title">📤 Output</div>
+    <div class="tabs">
+      <div class="tab active" id="tab-wa" onclick="showTab('wa')">WhatsApp message</div>
+      <div class="tab" id="tab-pdf" onclick="showTab('pdf')">PDF report</div>
+    </div>
+
+    <div class="tab-pane active" id="tp-wa">
+      <div class="wa-box">
+        <div class="wa-text" id="wa-text">Fill in business name above to generate message.</div>
+      </div>
+      <div class="btn-row">
+        <button class="btn green" onclick="copyWA()">📋 Copy message</button>
+        <button class="btn reset" onclick="resetAll()">↺ Reset form</button>
+      </div>
+    </div>
+
+    <div class="tab-pane" id="tp-pdf">
+      <div class="pdf-hint">
+        Click <strong>Open PDF Report</strong> — a branded report opens in a new tab.<br />
+        Then press <strong>Ctrl+P</strong> (PC) or <strong>Cmd+P</strong> (Mac) → <strong>Save as PDF</strong>.<br />
+        On mobile: tap <strong>Share → Print → Save as PDF</strong>. Then send via WhatsApp.
+      </div>
+      <div class="btn-row">
+        <button class="btn primary" onclick="generatePDF()">📄 Open PDF report</button>
+        <button class="btn reset" onclick="resetAll()">↺ Reset form</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+const CHECKS = [
+  { id:"verified", lbl:"Listing claimed & verified", hint:"Blue checkmark on Google Maps — unverified = low visibility", note:false },
+  { id:"hours", lbl:"Business hours correct", hint:"Does 'Open now' match actual current status?", note:true, np:"e.g. Shows closed but actually open" },
+  { id:"photos", lbl:"Photos — quantity & freshness", hint:"Google favors listings with recent, quality photos", note:true, np:"e.g. 3 photos, last updated 2021" },
+  { id:"category", lbl:"Primary category correct", hint:"Wrong category = appearing for irrelevant searches", note:true, np:"e.g. Shows 'Retail' — should be 'Salon'" },
+  { id:"description", lbl:"Business description filled", hint:"Free keyword space most listings leave blank", note:false },
+  { id:"website", lbl:"Website link present & working", hint:"Missing or broken links hurt trust and ranking", note:false },
+  { id:"reviews", lbl:"Reviews — count, rating & replies", hint:"Unanswered negative reviews damage conversions", note:true, np:"e.g. 4.1★ 12 reviews, 3 unanswered" },
+  { id:"ranking", lbl:"Ranking vs. competitors", hint:"Search [category + area] — what position are they?", note:true, np:"e.g. Position 4, competitor X is 1st" },
+  { id:"posts", lbl:"Google Posts — last published", hint:"Posts older than 30 days = missed ranking signal", note:true, np:"e.g. Last post January 2023" },
+  { id:"qa", lbl:"Q&A section answered", hint:"Unanswered customer questions lower trust", note:false },
+  { id:"products", lbl:"Products / services listed", hint:"Many businesses leave this section completely empty", note:false },
+  { id:"phone", lbl:"Phone number correct", hint:"Cross-check with shopfront / JustDial", note:false },
+];
+
+const state = {};
+CHECKS.forEach(c => { state[c.id] = { s: null, note: "" }; });
+let offerPrice = null, offerDesc = "";
+
+function renderChecks() {
+  let html = "";
+  CHECKS.forEach(c => {
+    html += `<div class="check-row" id="cr-${c.id}">
+      <div class="ci">
+        <div class="lbl">${c.lbl}</div>
+        <div class="hint">${c.hint}</div>
+        ${c.note ? `<input class="note-input" type="text" placeholder="${c.np}" id="note-${c.id}" oninput="setNote('${c.id}',this.value)" />` : ""}
+      </div>
+      <div class="sbts">
+        <button class="sb" id="ok-${c.id}" onclick="setStatus('${c.id}','ok')">✓ OK</button>
+        <button class="sb" id="fix-${c.id}" onclick="setStatus('${c.id}','fix')">✗ Fix</button>
+        <button class="sb" id="na-${c.id}" onclick="setStatus('${c.id}','na')">— N/A</button>
+      </div>
+    </div>`;
+  });
+  document.getElementById("checks-wrap").innerHTML = html;
+}
+
+function setStatus(id, s) {
+  state[id].s = s;
+  ["ok","fix","na"].forEach(x => {
+    document.getElementById(`${x}-${id}`).className = "sb" + (x===s ? " "+x : "");
+  });
+  const cr = document.getElementById(`cr-${id}`);
+  cr.className = "check-row" + (s==="ok"?" s-ok":s==="fix"?" s-fix":"");
+  update();
+}
+
+function setNote(id, v) { state[id].note = v; update(); }
+
+function selectOffer(price, desc) {
+  offerPrice = price; offerDesc = desc;
+  [500,1000,1500].forEach(p => {
+    document.getElementById(`offer-${p}`).className = "offer-card" + (p===price?" selected":"");
+  });
+  update();
+}
+
+function getV(id) { return (document.getElementById(id)||{}).value||""; }
+
+function update() {
+  let ok=0, fix=0, na=0;
+  CHECKS.forEach(c => {
+    if (state[c.id].s==="ok") ok++;
+    else if (state[c.id].s==="fix") fix++;
+    else if (state[c.id].s==="na") na++;
+  });
+  document.getElementById("cnt-ok").textContent = ok;
+  document.getElementById("cnt-fix").textContent = fix;
+  document.getElementById("cnt-na").textContent = na;
+  const checked = ok + fix;
+  if (checked > 0) {
+    const pct = Math.round((ok/checked)*100);
+    document.getElementById("cnt-score").textContent = pct+"%";
+    document.getElementById("score-bar").style.width = pct+"%";
+    document.getElementById("score-bar").style.background = pct>=70?"#639922":pct>=40?"#BA7517":"#A32D2D";
+    const lbl = pct>=70?"Good — minor improvements possible":pct>=40?"Average — several fixes needed":"Poor — significant fixes required";
+    document.getElementById("score-label").textContent = `Health score: ${pct}% — ${lbl}`;
+  } else {
+    document.getElementById("cnt-score").textContent = "—";
+    document.getElementById("score-bar").style.width = "0%";
+    document.getElementById("score-bar").style.background = "#185FA5";
+    document.getElementById("score-label").textContent = "Mark at least one item to see the health score.";
+  }
+  buildWA();
+}
+
+function buildWA() {
+  const name=getV("biz-name"), contact=getV("biz-contact"), area=getV("biz-area"), date=getV("biz-date");
+  if (!name) { document.getElementById("wa-text").textContent="Fill in business name above to generate message."; return; }
+  const fixes=CHECKS.filter(c=>state[c.id].s==="fix");
+  const goods=CHECKS.filter(c=>state[c.id].s==="ok");
+  let msg=`*Google Listing Audit — ${name}*\n`;
+  if (area) msg+=`📍 ${area}\n`;
+  if (date) msg+=`📅 ${date}\n`;
+  msg+=`\nHi ${contact||"there"}, I checked your Google Business Profile and here's what I found:\n`;
+  if (fixes.length) {
+    msg+=`\n*Issues found (${fixes.length}):*\n`;
+    fixes.forEach(c => { msg+=`❌ ${c.lbl}${state[c.id].note?" — "+state[c.id].note:""}\n`; });
+  }
+  if (goods.length) {
+    msg+=`\n*Looking good (${goods.length}):*\n`;
+    goods.forEach(c => { msg+=`✅ ${c.lbl}\n`; });
+  }
+  if (fixes.length) {
+    msg+=`\nI can fix the ${fixes.length} issue${fixes.length>1?"s":""} today itself`;
+    if (offerPrice) msg+=` — ₹${offerPrice} (${offerDesc}), UPI payment`;
+    msg+=`. Want me to go ahead?\n`;
+  } else if (goods.length) {
+    msg+=`\nYour listing is in good shape! Let me know if you need help maintaining or improving it.\n`;
+  }
+  msg+=`\n— Sanjay Paul\nSPDigitalJourney | spdigitaljourney.github.io\nMSME Registered · JustDial Verified`;
+  document.getElementById("wa-text").textContent = msg;
+}
+
+function copyWA() {
+  const t = document.getElementById("wa-text").textContent;
+  navigator.clipboard.writeText(t).then(() => {
+    const b = document.querySelector(".btn.green");
+    const orig = b.textContent;
+    b.textContent = "✓ Copied!";
+    setTimeout(() => { b.textContent = "📋 Copy message"; }, 2000);
+  });
+}
+
+function showTab(t) {
+  ["wa","pdf"].forEach(x => {
+    document.getElementById(`tab-${x}`).className="tab"+(x===t?" active":"");
+    document.getElementById(`tp-${x}`).className="tab-pane"+(x===t?" active":"");
+  });
+}
+
+function generatePDF() {
+  const name=getV("biz-name")||"Business", area=getV("biz-area"), contact=getV("biz-contact");
+  const phone=getV("biz-phone"), type=getV("biz-type"), date=getV("biz-date");
+  const fixes=CHECKS.filter(c=>state[c.id].s==="fix");
+  const goods=CHECKS.filter(c=>state[c.id].s==="ok");
+  const nas=CHECKS.filter(c=>state[c.id].s==="na");
+  const checked=fixes.length+goods.length;
+  const score=checked>0?Math.round((goods.length/checked)*100):null;
+  const sColor=score===null?"#888":score>=70?"#3B6D11":score>=40?"#BA7517":"#A32D2D";
+  const sLabel=score===null?"N/A":score>=70?"Good":score>=40?"Average":"Poor";
+
+  const fixRows=fixes.map(c=>`
+    <tr>
+      <td style="padding:8px 10px;border-bottom:1px solid #f0f0f0;color:#A32D2D;font-size:14px;width:28px;">✗</td>
+      <td style="padding:8px 10px;border-bottom:1px solid #f0f0f0;font-size:13px;font-weight:600;color:#222;">${c.lbl}</td>
+      <td style="padding:8px 10px;border-bottom:1px solid #f0f0f0;font-size:12px;color:#666;">${state[c.id].note||"—"}</td>
+    </tr>`).join("");
+
+  const okRows=goods.map(c=>`
+    <tr>
+      <td style="padding:7px 10px;border-bottom:1px solid #f5f5f5;color:#3B6D11;font-size:13px;width:28px;">✓</td>
+      <td style="padding:7px 10px;border-bottom:1px solid #f5f5f5;font-size:13px;color:#444;" colspan="2">${c.lbl}</td>
+    </tr>`).join("");
+
+  const offerHtml=offerPrice?`
+    <div style="background:#FFF8F5;border-left:4px solid #E8580A;border-radius:6px;padding:16px 20px;margin-top:28px;">
+      <div style="font-size:11px;font-weight:700;color:#E8580A;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:6px;">Recommended fix package</div>
+      <div style="font-size:26px;font-weight:700;color:#E8580A;">₹${offerPrice}</div>
+      <div style="font-size:13px;color:#444;margin-top:4px;">${offerDesc} · Payment via UPI · Completed same day</div>
+    </div>`:"";
+
+  const scoreBarHtml=score!==null?`
+    <div style="height:8px;background:#eee;border-radius:4px;overflow:hidden;margin:10px 0 4px;">
+      <div style="height:100%;width:${score}%;background:${sColor};border-radius:4px;"></div>
+    </div>
+    <div style="font-size:12px;color:#888;">${sLabel} — ${score}% of checked items are in good shape</div>`:"";
+
+  const html=`<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<title>GBP Audit — ${name}</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+<style>
+*{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:'Inter',sans-serif;background:#fff;color:#222;padding:48px;max-width:780px;margin:auto;}
+@media print{.no-print{display:none!important;}body{padding:24px;}}
+table{width:100%;border-collapse:collapse;}
+</style>
+</head>
+<body>
+
+<div class="no-print" style="background:#f5f5f5;border-radius:8px;padding:14px 18px;margin-bottom:28px;font-size:13px;color:#555;line-height:1.6;">
+  <strong>To save as PDF:</strong> Press <strong>Ctrl+P</strong> (Windows) or <strong>Cmd+P</strong> (Mac) → Destination: <strong>Save as PDF</strong> → Save.<br/>
+  On mobile: tap <strong>Share → Print → Save as PDF</strong>.
+</div>
+
+<div style="display:flex;align-items:flex-start;justify-content:space-between;padding-bottom:20px;border-bottom:3px solid #E8580A;margin-bottom:28px;">
+  <div>
+    <div style="font-size:24px;font-weight:700;color:#E8580A;letter-spacing:-0.02em;">SPDigitalJourney</div>
+    <div style="font-size:12px;color:#999;margin-top:3px;">spdigitaljourney.github.io</div>
+    <div style="font-size:12px;color:#999;">MSME Registered · JustDial Verified · Google Maps India Specialist since 2007</div>
+  </div>
+  <div style="text-align:right;">
+    <div style="font-size:11px;color:#bbb;text-transform:uppercase;letter-spacing:0.05em;">GBP Audit Report</div>
+    <div style="font-size:13px;color:#666;margin-top:3px;">${date||""}</div>
+  </div>
+</div>
+
+<div style="margin-bottom:28px;">
+  <div style="font-size:22px;font-weight:700;color:#111;margin-bottom:6px;">Google Business Profile Audit</div>
+  <div style="font-size:16px;font-weight:600;color:#333;">${name}${type?" · "+type:""}</div>
+  ${area?`<div style="font-size:13px;color:#666;margin-top:4px;">📍 ${area}</div>`:""}
+  ${contact?`<div style="font-size:13px;color:#666;margin-top:2px;">👤 ${contact}${phone?" · "+phone:""}</div>`:""}
+</div>
+
+<div style="display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:24px;">
+  <div style="background:#FCEBEB;border-radius:10px;padding:14px;text-align:center;">
+    <div style="font-size:28px;font-weight:700;color:#A32D2D;">${fixes.length}</div>
+    <div style="font-size:11px;color:#E24B4A;margin-top:3px;">Issues found</div>
+  </div>
+  <div style="background:#EAF3DE;border-radius:10px;padding:14px;text-align:center;">
+    <div style="font-size:28px;font-weight:700;color:#3B6D11;">${goods.length}</div>
+    <div style="font-size:11px;color:#639922;margin-top:3px;">Looking good</div>
+  </div>
+  <div style="background:#f5f5f5;border-radius:10px;padding:14px;text-align:center;">
+    <div style="font-size:28px;font-weight:700;color:#aaa;">${nas.length}</div>
+    <div style="font-size:11px;color:#bbb;margin-top:3px;">Not checked</div>
+  </div>
+  <div style="background:#E6F1FB;border-radius:10px;padding:14px;text-align:center;">
+    <div style="font-size:28px;font-weight:700;color:${sColor};">${score!==null?score+"%":"—"}</div>
+    <div style="font-size:11px;color:${sColor};margin-top:3px;">${sLabel}</div>
+  </div>
+</div>
+
+${scoreBarHtml}
+
+${fixes.length?`
+<div style="margin-top:28px;">
+  <div style="font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;color:#A32D2D;margin-bottom:10px;">Issues requiring fix (${fixes.length})</div>
+  <table>
+    <thead>
+      <tr style="background:#fff5f5;">
+        <th style="padding:8px 10px;text-align:left;font-size:11px;color:#A32D2D;text-transform:uppercase;letter-spacing:0.04em;"></th>
+        <th style="padding:8px 10px;text-align:left;font-size:11px;color:#A32D2D;text-transform:uppercase;letter-spacing:0.04em;">Check point</th>
+        <th style="padding:8px 10px;text-align:left;font-size:11px;color:#A32D2D;text-transform:uppercase;letter-spacing:0.04em;">Notes</th>
+      </tr>
+    </thead>
+    <tbody>${fixRows}</tbody>
+  </table>
+</div>`:""}
+
+${goods.length?`
+<div style="margin-top:24px;">
+  <div style="font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;color:#3B6D11;margin-bottom:10px;">What's working (${goods.length})</div>
+  <table><tbody>${okRows}</tbody></table>
+</div>`:""}
+
+${offerHtml}
+
+<div style="margin-top:40px;padding-top:20px;border-top:1px solid #eee;display:flex;justify-content:space-between;align-items:flex-end;">
+  <div>
+    <div style="font-size:14px;font-weight:700;color:#222;">Sanjay Paul</div>
+    <div style="font-size:12px;color:#888;margin-top:2px;">Founder, SPDigitalJourney</div>
+    <div style="font-size:12px;color:#888;">Google Maps India Specialist · 2,000+ businesses · 100+ cities</div>
+  </div>
+  <div style="text-align:right;">
+    <div style="font-size:13px;color:#E8580A;font-weight:600;">spdigitaljourney.github.io</div>
+    <div style="font-size:11px;color:#bbb;margin-top:2px;">MSME Registered · JustDial Verified</div>
+  </div>
+</div>
+
+</body>
+</html>`;
+
+  const w=window.open("","_blank");
+  if(w){w.document.write(html);w.document.close();}
+  else{alert("Please allow popups in your browser to open the PDF report.");}
+}
+
+function resetAll() {
+  CHECKS.forEach(c => {
+    state[c.id]={s:null,note:""};
+    ["ok","fix","na"].forEach(x=>{const b=document.getElementById(`${x}-${c.id}`);if(b)b.className="sb";});
+    const cr=document.getElementById(`cr-${c.id}`);if(cr)cr.className="check-row";
+    const ni=document.getElementById(`note-${c.id}`);if(ni)ni.value="";
+  });
+  ["biz-name","biz-area","biz-contact","biz-phone","biz-type"].forEach(id=>{
+    const el=document.getElementById(id);if(el)el.value="";
+  });
+  offerPrice=null;offerDesc="";
+  [500,1000,1500].forEach(p=>{const el=document.getElementById(`offer-${p}`);if(el)el.className="offer-card";});
+  setToday();update();
+}
+
+function setToday() {
+  const d=new Date();
+  const el=document.getElementById("biz-date");
+  if(el)el.value=d.toLocaleDateString("en-IN",{day:"2-digit",month:"short",year:"numeric"});
+}
+
+renderChecks();
+setToday();
+update();
+</script>
+</body>
+</html>
