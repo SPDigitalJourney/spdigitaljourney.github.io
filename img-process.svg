@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 380" width="100%" height="100%">
+<rect x="0" y="0" width="680" height="380" rx="20" fill="#0A1640"/>
+<circle cx="600" cy="60" r="90" fill="#00D4FF" opacity="0.07"/>
+<circle cx="60" cy="320" r="100" fill="#00D4FF" opacity="0.05"/>
+<line x1="120" y1="170" x2="560" y2="170" stroke="#1B2D5C" stroke-width="2" stroke-dasharray="6 6"/>
+<g>
+<circle cx="120" cy="170" r="42" fill="#142a66" stroke="#00D4FF" stroke-width="1.5"/>
+<rect x="100" y="150" width="40" height="40" rx="6" fill="none" stroke="#00D4FF" stroke-width="2"/>
+<line x1="100" y1="162" x2="140" y2="162" stroke="#00D4FF" stroke-width="2"/>
+<circle cx="110" cy="156" r="1.5" fill="#00D4FF"/>
+<circle cx="120" cy="156" r="1.5" fill="#00D4FF"/>
+<text x="120" y="240" font-family="Arial,sans-serif" font-size="13" fill="#fff" font-weight="700" text-anchor="middle">Book</text>
+<text x="120" y="258" font-family="Arial,sans-serif" font-size="10.5" fill="#5A6B8C" text-anchor="middle">Pick slot</text>
+</g>
+<g>
+<circle cx="280" cy="170" r="42" fill="#142a66" stroke="#00D4FF" stroke-width="1.5"/>
+<path d="M262 170l12 12 24-24" stroke="#00C781" stroke-width="3.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="280" y="240" font-family="Arial,sans-serif" font-size="13" fill="#fff" font-weight="700" text-anchor="middle">Confirm</text>
+<text x="280" y="258" font-family="Arial,sans-serif" font-size="10.5" fill="#5A6B8C" text-anchor="middle">Pay, 60 sec</text>
+</g>
+<g>
+<circle cx="440" cy="170" r="42" fill="#142a66" stroke="#00D4FF" stroke-width="1.5"/>
+<circle cx="440" cy="170" r="16" fill="none" stroke="#00D4FF" stroke-width="2.5"/>
+<line x1="440" y1="170" x2="440" y2="158" stroke="#00D4FF" stroke-width="2.5" stroke-linecap="round"/>
+<line x1="440" y1="170" x2="449" y2="174" stroke="#00D4FF" stroke-width="2.5" stroke-linecap="round"/>
+<text x="440" y="240" font-family="Arial,sans-serif" font-size="13" fill="#fff" font-weight="700" text-anchor="middle">Execute</text>
+<text x="440" y="258" font-family="Arial,sans-serif" font-size="10.5" fill="#5A6B8C" text-anchor="middle">Work begins</text>
+</g>
+<g>
+<circle cx="560" cy="170" r="42" fill="#00D4FF" stroke="#00D4FF" stroke-width="1.5"/>
+<path d="M542 170l12 12 24-24" stroke="#0A1640" stroke-width="3.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="560" y="240" font-family="Arial,sans-serif" font-size="13" fill="#fff" font-weight="700" text-anchor="middle">Deliver</text>
+<text x="560" y="258" font-family="Arial,sans-serif" font-size="10.5" fill="#5A6B8C" text-anchor="middle">Same day</text>
+</g>
+<text x="340" y="320" font-family="Arial,sans-serif" font-size="13" fill="#9FB4DD" text-anchor="middle" font-weight="600">Brief to live — no waiting rooms</text>
+</svg>

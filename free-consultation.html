@@ -2,506 +2,327 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
 <title>Free Digital Consultation — SPDigitalJourney | Google Maps Expert Bengaluru</title>
-<meta name="description" content="Get a free 30-minute digital strategy session with SPDigitalJourney. Local SEO, GBP optimisation, website, Meta Ads & Google Ads for local businesses across India. Respond within 2 hours."/>
-<meta name="robots" content="index, follow"/>
+<meta name="description" content="Get a free 30-minute digital strategy session with SPDigitalJourney. Local SEO, GBP optimisation, website, Meta Ads &amp; Google Ads for local businesses across India. Respond within 2 hours."/>
+<meta name="robots" content="index,follow"/>
 <link rel="canonical" href="https://spdigitaljourney.github.io/free-consultation.html"/>
 <meta property="og:title" content="Free Digital Consultation — SPDigitalJourney"/>
 <meta property="og:description" content="Tell us your problem. We'll send a custom strategy in 24 hours. By a Google Maps India insider."/>
 <meta property="og:url" content="https://spdigitaljourney.github.io/free-consultation.html"/>
 <meta property="og:type" content="website"/>
+<link rel="icon" type="image/png" href="sp-logo.png"/>
 
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;800;900&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/>
 
 <style>
-:root {
-  --bg:#03060f; --bg2:#060d1c; --electric:#00d4ff; --electric2:#0066ff;
-  --electric3:#7b2fff; --green:#00ff88; --orange:#ff8c00;
-  --text:#e8f0ff; --muted:#5a6a8a; --border:rgba(0,212,255,.12);
-  --card:rgba(10,22,50,.8);
+:root{
+  --navy:#0A1640;--navy2:#0F1E52;--cyan:#00D4FF;--cyan-dim:#0AA8CC;
+  --green:#00C781;--green-light:#E5FBF3;
+  --ink:#0A1640;--muted:#5A6B8C;--muted2:#8A97B8;
+  --bg:#FFFFFF;--bg2:#F4F7FC;--border:#E3E9F5;--border2:#CCD7EC;
+  --font-display:'Space Grotesk',sans-serif;--font-body:Inter,sans-serif;
 }
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
-html{scroll-behavior:smooth;}
-body{background:var(--bg);color:var(--text);font-family:'DM Sans',sans-serif;font-weight:300;overflow-x:hidden;min-height:100vh;}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font-family:var(--font-body);font-size:15px;line-height:1.65;min-height:100vh}
 
-/* GRID */
-body::before{content:'';position:fixed;inset:0;z-index:0;
-  background-image:linear-gradient(rgba(0,212,255,.025) 1px,transparent 1px),
-  linear-gradient(90deg,rgba(0,212,255,.025) 1px,transparent 1px);
-  background-size:50px 50px;pointer-events:none;}
+nav{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.95);backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--border);padding:.8rem 2rem;display:flex;align-items:center;justify-content:space-between}
+.nav-brand{display:flex;align-items:center;gap:.6rem;text-decoration:none}
+.nav-logo-img{width:34px;height:34px;border-radius:50%}
+.nav-name{font-family:var(--font-display);font-weight:700;font-size:.95rem;color:var(--navy)}
+.nav-back{font-size:.78rem;color:var(--muted);text-decoration:none;font-weight:600}
+.nav-back:hover{color:var(--cyan-dim)}
+.nav-right{display:flex;align-items:center;gap:.7rem}
+.nav-pay{font-family:var(--font-display);font-size:.78rem;font-weight:700;color:var(--cyan-dim);text-decoration:none}
+.nav-wa{display:flex;align-items:center;gap:.5rem;background:#25D366;color:#fff;padding:.5rem 1.1rem;
+  font-family:var(--font-display);font-size:.78rem;font-weight:700;border-radius:7px;text-decoration:none}
 
-/* NAV */
-nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;
-  justify-content:space-between;padding:1rem 3rem;
-  background:rgba(3,6,15,.85);backdrop-filter:blur(20px);border-bottom:1px solid var(--border);}
-.nav-logo{font-family:'Orbitron',monospace;font-weight:800;font-size:.95rem;
-  color:var(--electric);text-decoration:none;letter-spacing:.04em;
-  text-shadow:0 0 16px rgba(0,212,255,.4);}
-.nav-logo span{color:var(--text);}
-.nav-back{font-family:'Orbitron',monospace;font-size:.62rem;letter-spacing:.12em;
-  color:var(--muted);text-decoration:none;text-transform:uppercase;transition:color .2s;
-  display:flex;align-items:center;gap:.4rem;}
-.nav-back:hover{color:var(--electric);}
-.nav-wa{display:flex;align-items:center;gap:.5rem;background:#25D366;color:#fff;
-  padding:.45rem 1rem;font-family:'Orbitron',monospace;font-size:.62rem;letter-spacing:.1em;
-  text-transform:uppercase;font-weight:700;text-decoration:none;
-  clip-path:polygon(7px 0%,100% 0%,calc(100% - 7px) 100%,0% 100%);
-  transition:box-shadow .3s;}
-.nav-wa:hover{box-shadow:0 0 20px rgba(37,211,102,.4);}
+section{position:relative}
+.reveal{opacity:0;transform:translateY(16px);transition:opacity .6s ease,transform .6s ease}
+.reveal.visible{opacity:1;transform:none}
 
-section{position:relative;z-index:1;}
+#hero{padding:3.5rem 2rem;max-width:1180px;margin:0 auto;display:grid;grid-template-columns:1.05fr .95fr;gap:3.5rem;align-items:start}
+.pitch-tag{display:inline-flex;align-items:center;gap:.5rem;font-family:var(--font-display);font-size:.74rem;
+  font-weight:700;color:#fff;background:var(--navy);padding:.4rem .9rem;border-radius:18px;margin-bottom:1.5rem}
+.pitch h1{font-family:var(--font-display);font-weight:700;font-size:clamp(2rem,4.2vw,2.9rem);
+  line-height:1.15;color:var(--navy);margin-bottom:1.2rem;letter-spacing:-.01em}
+.pitch h1 em{font-style:normal;color:var(--cyan-dim)}
+.pitch-sub{font-size:.96rem;color:var(--muted);line-height:1.75;max-width:480px;margin-bottom:2rem}
+.pitch-sub strong{color:var(--navy);font-weight:600}
 
-/* ── HERO STRIP ── */
-#hero{padding:7rem 3rem 3rem;display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;min-height:100vh;}
+.trust-pills{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:1.8rem}
+.pill{font-family:var(--font-display);font-size:.66rem;font-weight:600;padding:.35rem .8rem;border-radius:14px;border:1px solid var(--border2)}
+.p-green{background:var(--green-light);color:#0a8a5c;border-color:#9FE8CC}
+.p-blue{background:#E5F8FC;color:var(--cyan-dim);border-color:#9FE0F0}
 
-.orb{position:absolute;border-radius:50%;filter:blur(80px);pointer-events:none;}
-.o1{width:500px;height:500px;background:rgba(0,102,255,.1);top:-60px;right:-60px;animation:of 9s ease-in-out infinite;}
-.o2{width:280px;height:280px;background:rgba(0,255,136,.06);bottom:5%;left:3%;animation:of 13s ease-in-out infinite reverse;}
-@keyframes of{0%,100%{transform:translate(0,0)}50%{transform:translate(16px,-22px)}}
+.urgency{display:flex;align-items:center;gap:.9rem;padding:.9rem 1.1rem;background:var(--green-light);
+  border:1px solid #9FE8CC;border-radius:10px;margin-bottom:1.8rem}
+.urgency-dot{width:8px;height:8px;border-radius:50%;background:var(--green);animation:pulse 1.6s infinite;flex-shrink:0}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.4}}
+.urgency-text{font-size:.82rem;color:#0a6e48}
+.urgency-text strong{color:#0a8a5c}
 
-/* LEFT — pitch */
-.pitch{position:relative;z-index:1;}
-.pitch-tag{font-family:'Orbitron',monospace;font-size:.6rem;letter-spacing:.3em;
-  text-transform:uppercase;color:var(--electric);margin-bottom:1.2rem;
-  display:flex;align-items:center;gap:.7rem;opacity:0;animation:fu .7s .1s forwards;}
-.pitch-tag::before{content:'//';opacity:.5;}
-.pitch h1{font-family:'Orbitron',monospace;font-size:clamp(2rem,4vw,3.4rem);
-  font-weight:900;line-height:1.08;margin-bottom:1.2rem;
-  opacity:0;animation:fu .7s .25s forwards;}
-.pitch h1 em{font-style:normal;color:var(--electric);text-shadow:0 0 30px rgba(0,212,255,.35);}
-.pitch h1 .stroke{color:transparent;-webkit-text-stroke:1px rgba(0,212,255,.45);}
-.pitch-sub{font-size:.95rem;color:var(--muted);line-height:1.75;max-width:460px;
-  margin-bottom:2rem;opacity:0;animation:fu .7s .4s forwards;}
-.pitch-sub strong{color:var(--text);}
+.proof-strip{display:flex;gap:1.8rem;flex-wrap:wrap;padding-top:1.6rem;border-top:1px solid var(--border)}
+.proof-item{display:flex;flex-direction:column;gap:.2rem}
+.proof-num{font-family:var(--font-display);font-size:1.35rem;font-weight:700;color:var(--navy)}
+.proof-label{font-size:.7rem;color:var(--muted)}
 
-/* TRUST PILLS */
-.trust-pills{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:2.5rem;
-  opacity:0;animation:fu .7s .55s forwards;}
-.pill{font-family:'Orbitron',monospace;font-size:.55rem;letter-spacing:.1em;
-  padding:.35rem .8rem;border:1px solid;
-  clip-path:polygon(5px 0%,100% 0%,calc(100% - 5px) 100%,0% 100%);}
-.p-blue{border-color:rgba(0,212,255,.3);color:var(--electric);background:rgba(0,212,255,.04);}
-.p-green{border-color:rgba(0,255,136,.3);color:var(--green);background:rgba(0,255,136,.04);}
-.p-orange{border-color:rgba(255,140,0,.3);color:var(--orange);background:rgba(255,140,0,.04);}
+.steps-bar{display:flex;align-items:center;margin-bottom:1.8rem}
+.step-ind{display:flex;flex-direction:column;align-items:center;gap:.3rem;flex:1;position:relative}
+.step-ind::after{content:'';position:absolute;top:14px;left:50%;width:100%;height:1px;background:var(--border2);z-index:0}
+.step-ind:last-child::after{display:none}
+.step-circle{width:28px;height:28px;border-radius:50%;border:1px solid var(--border2);
+  display:flex;align-items:center;justify-content:center;font-family:var(--font-display);font-size:.66rem;
+  font-weight:700;background:#fff;position:relative;z-index:1;transition:all .25s;color:var(--muted)}
+.step-circle.active{border-color:var(--cyan);color:var(--cyan-dim);box-shadow:0 0 0 4px rgba(0,212,255,.12)}
+.step-circle.done{background:var(--green);color:#fff;border-color:var(--green)}
+.step-label{font-family:var(--font-display);font-size:.6rem;font-weight:600;color:var(--muted2);text-transform:uppercase}
+.step-label.active-label{color:var(--cyan-dim)}
 
-/* URGENCY BAR */
-.urgency{display:flex;align-items:center;gap:1rem;padding:1rem 1.2rem;
-  background:rgba(0,255,136,.04);border:1px solid rgba(0,255,136,.2);
-  clip-path:polygon(8px 0%,100% 0%,calc(100% - 8px) 100%,0% 100%);
-  opacity:0;animation:fu .7s .7s forwards;}
-.urgency-dot{width:8px;height:8px;background:var(--green);border-radius:50%;
-  box-shadow:0 0 8px var(--green);animation:blink 1.5s ease-in-out infinite;flex-shrink:0;}
-@keyframes blink{0%,100%{opacity:1}50%{opacity:.3}}
-.urgency-text{font-size:.8rem;color:var(--muted);}
-.urgency-text strong{color:var(--green);}
+.form-card{background:#fff;border:1px solid var(--border);border-radius:16px;padding:2rem;
+  box-shadow:0 16px 40px -16px rgba(10,22,64,.16)}
+.form-card-title{font-family:var(--font-display);font-size:.92rem;font-weight:700;color:var(--navy);margin-bottom:.3rem}
+.form-card-sub{font-size:.82rem;color:var(--muted);margin-bottom:1.6rem}
 
-/* SOCIAL PROOF STRIP */
-.proof-strip{margin-top:2rem;display:flex;gap:2rem;flex-wrap:wrap;
-  opacity:0;animation:fu .7s .85s forwards;}
-.proof-item{display:flex;flex-direction:column;gap:.2rem;}
-.proof-num{font-family:'Orbitron',monospace;font-size:1.4rem;font-weight:900;
-  color:var(--electric);line-height:1;}
-.proof-label{font-size:.7rem;color:var(--muted);letter-spacing:.08em;text-transform:uppercase;}
+.step-panel{display:none;flex-direction:column;gap:.9rem}
+.step-panel.active{display:flex}
 
-/* ── FUNNEL FORM ── */
-.funnel-box{position:relative;z-index:1;}
+.fgroup{display:flex;flex-direction:column;gap:.35rem}
+.fgroup label{font-family:var(--font-display);font-size:.66rem;font-weight:700;color:var(--muted2);text-transform:uppercase}
+.fgroup input,.fgroup select,.fgroup textarea{background:var(--bg2);border:1px solid var(--border2);color:var(--navy);
+  padding:.8rem 1rem;font-family:var(--font-body);font-size:.88rem;border-radius:8px;outline:none;width:100%;transition:border-color .15s}
+.fgroup input:focus,.fgroup select:focus,.fgroup textarea:focus{border-color:var(--cyan)}
+.fgroup select option{background:#fff}
+.fgroup textarea{min-height:80px;resize:none}
+.frow{display:grid;grid-template-columns:1fr 1fr;gap:.9rem}
 
-/* Step indicator */
-.steps-bar{display:flex;align-items:center;gap:0;margin-bottom:2rem;}
-.step-ind{display:flex;flex-direction:column;align-items:center;gap:.3rem;flex:1;position:relative;}
-.step-ind::after{content:'';position:absolute;top:14px;left:50%;width:100%;height:1px;
-  background:var(--border);z-index:0;}
-.step-ind:last-child::after{display:none;}
-.step-circle{width:28px;height:28px;border-radius:50%;border:1px solid var(--border);
-  display:flex;align-items:center;justify-content:center;
-  font-family:'Orbitron',monospace;font-size:.6rem;font-weight:800;
-  background:var(--bg);position:relative;z-index:1;transition:all .3s;color:var(--muted);}
-.step-circle.active{border-color:var(--electric);color:var(--electric);
-  box-shadow:0 0 12px rgba(0,212,255,.3);}
-.step-circle.done{background:var(--electric);color:var(--bg);border-color:var(--electric);}
-.step-label{font-family:'Orbitron',monospace;font-size:.5rem;letter-spacing:.1em;
-  color:var(--muted);text-transform:uppercase;white-space:nowrap;}
-.step-label.active-label{color:var(--electric);}
+.budget-grid{display:grid;grid-template-columns:1fr 1fr;gap:.6rem}
+.budget-pill{padding:.75rem 1rem;border:1px solid var(--border2);background:var(--bg2);cursor:pointer;
+  text-align:center;transition:all .2s;border-radius:8px}
+.budget-pill:hover{border-color:var(--cyan)}
+.budget-pill.selected{border-color:var(--cyan);background:#E5F8FC;box-shadow:0 0 0 3px rgba(0,212,255,.12)}
+.budget-pill-label{font-family:var(--font-display);font-size:.72rem;font-weight:700;color:var(--navy);display:block;margin-bottom:.2rem}
+.budget-pill-sub{font-size:.68rem;color:var(--muted)}
 
-/* Form card */
-.form-card{background:var(--card);border:1px solid var(--border);
-  backdrop-filter:blur(20px);padding:2.2rem;
-  clip-path:polygon(14px 0%,100% 0%,calc(100% - 14px) 100%,0% 100%);}
-.form-card-title{font-family:'Orbitron',monospace;font-size:.78rem;font-weight:700;
-  color:var(--electric);margin-bottom:.3rem;letter-spacing:.05em;}
-.form-card-sub{font-size:.8rem;color:var(--muted);margin-bottom:1.6rem;line-height:1.5;}
+.service-checks{display:grid;grid-template-columns:1fr 1fr;gap:.5rem}
+.scheck{display:flex;align-items:center;gap:.6rem;padding:.65rem .8rem;border:1px solid var(--border2);
+  background:var(--bg2);cursor:pointer;transition:all .2s;border-radius:8px}
+.scheck:hover{border-color:var(--cyan)}
+.scheck.checked{border-color:var(--cyan);background:#E5F8FC}
+.scheck input{display:none}
+.scheck-box{width:15px;height:15px;border:1px solid var(--muted2);flex-shrink:0;border-radius:3px;
+  display:flex;align-items:center;justify-content:center;font-size:.6rem;transition:all .2s;background:#fff}
+.scheck.checked .scheck-box{background:var(--cyan);border-color:var(--cyan);color:var(--navy)}
+.scheck-label{font-size:.8rem;color:var(--muted)}
+.scheck.checked .scheck-label{color:var(--navy);font-weight:600}
 
-/* Step panels */
-.step-panel{display:none;flex-direction:column;gap:.9rem;}
-.step-panel.active{display:flex;}
+.btn-next{width:100%;background:var(--navy);border:none;color:#fff;padding:.95rem;font-family:var(--font-display);
+  font-size:.84rem;font-weight:700;border-radius:9px;cursor:pointer;margin-top:.4rem;transition:background .15s}
+.btn-next:hover{background:var(--navy2)}
+.btn-prev{background:transparent;border:1px solid var(--border2);color:var(--muted);padding:.6rem 1.2rem;
+  font-family:var(--font-display);font-size:.74rem;font-weight:600;cursor:pointer;border-radius:8px;transition:all .15s}
+.btn-prev:hover{border-color:var(--cyan);color:var(--cyan-dim)}
+.btn-row{display:flex;gap:.8rem;align-items:center}
+.btn-wa{width:100%;background:#25D366;border:none;color:#fff;padding:.95rem;font-family:var(--font-display);
+  font-size:.84rem;font-weight:700;border-radius:9px;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:.6rem;transition:opacity .15s}
+.btn-wa:hover{opacity:.9}
+.privacy-note{font-size:.7rem;color:var(--muted2);text-align:center;margin-top:.8rem;line-height:1.5}
+.privacy-note a{color:var(--muted2)}
 
-/* Inputs */
-.fgroup{display:flex;flex-direction:column;gap:.35rem;}
-.fgroup label{font-family:'Orbitron',monospace;font-size:.58rem;letter-spacing:.18em;
-  text-transform:uppercase;color:var(--muted);}
-.fgroup input,.fgroup select,.fgroup textarea{
-  background:rgba(10,22,50,.7);border:1px solid var(--border);
-  color:var(--text);padding:.8rem 1rem;font-family:'DM Sans',sans-serif;
-  font-size:.88rem;outline:none;width:100%;transition:border-color .2s,box-shadow .2s;
-  clip-path:polygon(6px 0%,100% 0%,calc(100% - 6px) 100%,0% 100%);}
-.fgroup input:focus,.fgroup select:focus,.fgroup textarea:focus{
-  border-color:rgba(0,212,255,.45);box-shadow:0 0 16px rgba(0,212,255,.08);}
-.fgroup select option{background:#0a1628;}
-.fgroup textarea{min-height:80px;resize:none;}
-.frow{display:grid;grid-template-columns:1fr 1fr;gap:.9rem;}
+.success-state{display:none;flex-direction:column;align-items:center;text-align:center;padding:1.5rem 0;gap:1.2rem}
+.success-state.show{display:flex}
+.success-icon{width:60px;height:60px;border-radius:50%;background:var(--green-light);border:1px solid #9FE8CC;
+  display:flex;align-items:center;justify-content:center;font-size:1.7rem;color:var(--green)}
+.success-title{font-family:var(--font-display);font-size:1rem;font-weight:700;color:var(--navy)}
+.success-sub{font-size:.84rem;color:var(--muted);line-height:1.7;max-width:340px}
+.success-actions{display:flex;flex-direction:column;gap:.7rem;width:100%}
+.success-wa{display:flex;align-items:center;justify-content:center;gap:.6rem;background:#25D366;color:#fff;
+  padding:.9rem;font-family:var(--font-display);font-size:.78rem;font-weight:700;text-decoration:none;border-radius:9px}
+.success-back{font-family:var(--font-display);font-size:.72rem;font-weight:600;color:var(--muted);text-decoration:none}
 
-/* Budget pills */
-.budget-grid{display:grid;grid-template-columns:1fr 1fr;gap:.6rem;}
-.budget-pill{padding:.75rem 1rem;border:1px solid var(--border);
-  background:rgba(10,22,50,.5);cursor:pointer;text-align:center;
-  transition:all .25s;clip-path:polygon(6px 0%,100% 0%,calc(100% - 6px) 100%,0% 100%);}
-.budget-pill:hover{border-color:rgba(0,212,255,.4);background:rgba(0,212,255,.05);}
-.budget-pill.selected{border-color:var(--electric);background:rgba(0,212,255,.1);
-  box-shadow:0 0 14px rgba(0,212,255,.15);}
-.budget-pill-label{font-family:'Orbitron',monospace;font-size:.65rem;font-weight:700;
-  color:var(--electric);display:block;margin-bottom:.2rem;}
-.budget-pill-sub{font-size:.7rem;color:var(--muted);}
+#why{padding:4rem 2rem;background:var(--bg2);border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+.why-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;max-width:1180px;margin:0 auto}
+.why-item{background:#fff;border:1px solid var(--border);border-radius:12px;padding:1.6rem;text-align:center}
+.why-icon{font-size:1.5rem;display:block;margin-bottom:.8rem}
+.why-title{font-family:var(--font-display);font-size:.82rem;font-weight:700;color:var(--navy);margin-bottom:.5rem}
+.why-desc{font-size:.78rem;color:var(--muted);line-height:1.6}
 
-/* Service checkboxes */
-.service-checks{display:grid;grid-template-columns:1fr 1fr;gap:.5rem;}
-.scheck{display:flex;align-items:center;gap:.6rem;padding:.6rem .8rem;
-  border:1px solid var(--border);background:rgba(10,22,50,.4);
-  cursor:pointer;transition:all .2s;
-  clip-path:polygon(5px 0%,100% 0%,calc(100% - 5px) 100%,0% 100%);}
-.scheck:hover{border-color:rgba(0,212,255,.3);}
-.scheck.checked{border-color:var(--electric);background:rgba(0,212,255,.07);}
-.scheck input{display:none;}
-.scheck-box{width:14px;height:14px;border:1px solid var(--muted);flex-shrink:0;
-  display:flex;align-items:center;justify-content:center;font-size:.6rem;
-  transition:all .2s;background:transparent;}
-.scheck.checked .scheck-box{background:var(--electric);border-color:var(--electric);color:var(--bg);}
-.scheck-label{font-size:.78rem;color:var(--muted);transition:color .2s;}
-.scheck.checked .scheck-label{color:var(--text);}
+#testimonials{padding:4.5rem 2rem;max-width:1180px;margin:0 auto}
+.test-label{font-family:var(--font-display);font-size:.74rem;font-weight:700;color:var(--cyan-dim);
+  text-transform:uppercase;margin-bottom:.7rem}
+.test-title{font-family:var(--font-display);font-size:clamp(1.4rem,3vw,2rem);font-weight:700;color:var(--navy);margin-bottom:2.2rem}
+.test-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
+.test-card{background:#fff;border:1px solid var(--border);border-radius:12px;padding:1.6rem}
+.test-stars{color:#FFB800;font-size:.85rem;margin-bottom:.8rem}
+.test-quote{font-size:.85rem;color:var(--ink);line-height:1.7;margin-bottom:1rem;font-style:italic}
+.test-author{display:flex;align-items:center;gap:.7rem}
+.test-avatar{width:34px;height:34px;border-radius:50%;background:var(--navy);
+  display:flex;align-items:center;justify-content:center;font-family:var(--font-display);font-size:.66rem;font-weight:700;color:var(--cyan)}
+.test-name{font-family:var(--font-display);font-size:.74rem;font-weight:700;color:var(--navy)}
+.test-biz{font-size:.7rem;color:var(--muted)}
 
-/* Buttons */
-.btn-next{width:100%;background:linear-gradient(135deg,var(--electric2),var(--electric));
-  border:none;color:var(--bg);padding:1rem;font-family:'Orbitron',monospace;
-  font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;font-weight:700;
-  cursor:pointer;clip-path:polygon(10px 0%,100% 0%,calc(100% - 10px) 100%,0% 100%);
-  transition:box-shadow .3s,transform .2s;margin-top:.4rem;}
-.btn-next:hover{box-shadow:0 0 30px rgba(0,212,255,.4);transform:translateY(-2px);}
-.btn-prev{background:transparent;border:1px solid var(--border);color:var(--muted);
-  padding:.6rem 1.2rem;font-family:'Orbitron',monospace;font-size:.65rem;
-  letter-spacing:.1em;text-transform:uppercase;cursor:pointer;
-  clip-path:polygon(6px 0%,100% 0%,calc(100% - 6px) 100%,0% 100%);
-  transition:border-color .2s,color .2s;}
-.btn-prev:hover{border-color:var(--electric);color:var(--electric);}
-.btn-row{display:flex;gap:.8rem;align-items:center;}
-.btn-wa{width:100%;background:#25D366;border:none;color:#fff;padding:1rem;
-  font-family:'Orbitron',monospace;font-size:.72rem;letter-spacing:.1em;
-  text-transform:uppercase;font-weight:700;cursor:pointer;
-  clip-path:polygon(10px 0%,100% 0%,calc(100% - 10px) 100%,0% 100%);
-  transition:box-shadow .3s,transform .2s;display:flex;align-items:center;
-  justify-content:center;gap:.6rem;}
-.btn-wa:hover{box-shadow:0 0 30px rgba(37,211,102,.4);transform:translateY(-2px);}
+#guarantee{padding:4rem 2rem;background:var(--bg2)}
+.guarantee-box{max-width:680px;margin:0 auto;text-align:center;padding:2.5rem;background:#fff;
+  border:1px solid var(--border);border-radius:16px}
+.guarantee-icon{font-size:2.2rem;display:block;margin-bottom:1rem}
+.guarantee-title{font-family:var(--font-display);font-size:1.05rem;font-weight:700;color:var(--navy);margin-bottom:.8rem}
+.guarantee-text{font-size:.86rem;color:var(--muted);line-height:1.75;margin-bottom:1.5rem}
+.guarantee-cta{display:inline-flex;align-items:center;gap:.6rem;background:var(--navy);color:#fff;padding:.85rem 1.8rem;
+  font-family:var(--font-display);font-size:.8rem;font-weight:700;border-radius:9px;text-decoration:none}
 
-/* Privacy note */
-.privacy-note{font-size:.68rem;color:var(--muted);text-align:center;margin-top:.8rem;line-height:1.5;}
-.privacy-note a{color:var(--muted);text-decoration:underline;}
+#pay{padding:4.5rem 2rem;background:var(--bg2);border-top:1px solid var(--border)}
+#pay-head{text-align:center;max-width:600px;margin:0 auto 2.5rem}
+#pay-head .test-label{justify-content:center;display:flex}
+#pay-head h2{font-family:var(--font-display);font-size:clamp(1.4rem,3vw,2rem);font-weight:700;color:var(--navy);margin-bottom:.8rem}
+#pay-head p{color:var(--muted);line-height:1.7;font-size:.9rem}
+.pay-pkg-row{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;max-width:1180px;margin:0 auto 2.5rem}
+.pay-pkg-card{background:#fff;border:1px solid var(--border);border-radius:12px;padding:1.5rem;display:flex;flex-direction:column;gap:.5rem;position:relative;overflow:hidden}
+.pay-pkg-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--cyan)}
+.pay-pkg-tag2{font-family:var(--font-display);font-size:.6rem;font-weight:700;color:var(--muted2);letter-spacing:.08em}
+.pay-pkg-name2{font-family:var(--font-display);font-size:.84rem;font-weight:700;color:var(--navy);line-height:1.3}
+.pay-pkg-price2{font-family:var(--font-display);font-size:1.3rem;font-weight:700;color:var(--cyan-dim)}
+.pay-pkg-desc2{font-size:.76rem;color:var(--muted);line-height:1.55;flex:1}
+.pay-pkg-link{font-family:var(--font-display);font-size:.68rem;font-weight:700;color:var(--cyan-dim);text-decoration:none;margin-top:.4rem}
+.pay-embed{max-width:680px;margin:0 auto}
+.pay-live2{display:flex;align-items:center;gap:.6rem;font-family:var(--font-display);font-size:.74rem;font-weight:700;color:var(--green);margin-bottom:.8rem}
+.pay-live2 .dot{width:8px;height:8px;border-radius:50%;background:var(--green);animation:pulse 1.6s infinite}
+.pay-iframe-wrap2{border:1px solid var(--border);border-radius:12px;overflow:hidden;background:#fff}
+.pay-trust-row2{display:flex;flex-wrap:wrap;gap:.6rem;justify-content:center;margin-top:.8rem;font-size:.72rem;color:var(--muted)}
+.pay-note{text-align:center;font-size:.78rem;color:var(--muted);margin-top:1rem}
+.pay-note a{color:var(--cyan-dim);text-decoration:none}
 
-/* ── SUCCESS STATE ── */
-.success-state{display:none;flex-direction:column;align-items:center;
-  text-align:center;padding:2rem 1rem;gap:1.2rem;}
-.success-state.show{display:flex;}
-.success-icon{width:64px;height:64px;background:rgba(0,255,136,.1);
-  border:1px solid rgba(0,255,136,.3);border-radius:50%;
-  display:flex;align-items:center;justify-content:center;font-size:1.8rem;
-  animation:popIn .5s cubic-bezier(.34,1.56,.64,1) forwards;}
-@keyframes popIn{from{transform:scale(0);opacity:0}to{transform:scale(1);opacity:1}}
-.success-title{font-family:'Orbitron',monospace;font-size:1rem;font-weight:800;color:var(--green);}
-.success-sub{font-size:.85rem;color:var(--muted);line-height:1.7;max-width:340px;}
-.success-actions{display:flex;flex-direction:column;gap:.7rem;width:100%;}
-.success-wa{display:flex;align-items:center;justify-content:center;gap:.6rem;
-  background:#25D366;color:#fff;padding:.85rem;font-family:'Orbitron',monospace;
-  font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;font-weight:700;
-  text-decoration:none;clip-path:polygon(8px 0%,100% 0%,calc(100% - 8px) 100%,0% 100%);
-  transition:box-shadow .3s;}
-.success-wa:hover{box-shadow:0 0 20px rgba(37,211,102,.4);}
-.success-back{font-family:'Orbitron',monospace;font-size:.62rem;letter-spacing:.1em;
-  color:var(--muted);text-decoration:none;text-transform:uppercase;transition:color .2s;}
-.success-back:hover{color:var(--electric);}
+footer{border-top:1px solid var(--border);padding:2rem;background:var(--navy)}
+.foot-inner{max-width:1180px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem}
+.foot-logo{font-family:var(--font-display);font-size:.9rem;font-weight:700;color:#fff;display:flex;align-items:center;gap:.6rem}
+.foot-logo img{width:28px;height:28px;border-radius:50%}
+.foot-copy{font-size:.74rem;color:rgba(255,255,255,.5)}
+.foot-links{display:flex;gap:1.3rem;flex-wrap:wrap}
+.foot-links a{font-size:.76rem;color:rgba(255,255,255,.6);text-decoration:none}
+.foot-links a:hover{color:var(--cyan)}
+.footer-disclaimer{font-size:.66rem;color:rgba(255,255,255,.32);line-height:1.6;margin-top:1.2rem;max-width:1180px;margin-left:auto;margin-right:auto}
+.footer-disclaimer a{color:rgba(255,255,255,.45)}
 
-/* ── WHY US STRIP ── */
-#why{padding:4rem 3rem;border-top:1px solid var(--border);border-bottom:1px solid var(--border);
-  background:rgba(6,13,28,.6);}
-.why-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.5px;background:var(--border);}
-.why-item{background:var(--card);padding:1.8rem 1.5rem;text-align:center;
-  backdrop-filter:blur(10px);}
-.why-icon{font-size:1.5rem;display:block;margin-bottom:.8rem;}
-.why-title{font-family:'Orbitron',monospace;font-size:.68rem;font-weight:700;
-  color:var(--electric);margin-bottom:.4rem;letter-spacing:.04em;}
-.why-desc{font-size:.78rem;color:var(--muted);line-height:1.6;}
+.wa-float{position:fixed;bottom:1.5rem;right:1.5rem;z-index:200;display:flex;flex-direction:column;align-items:flex-end;gap:.5rem}
+.wa-bubble{background:#25D366;color:#fff;width:52px;height:52px;border-radius:50%;display:flex;align-items:center;justify-content:center;
+  font-size:1.4rem;text-decoration:none;box-shadow:0 4px 16px rgba(37,211,102,.4)}
+.wa-tip{background:#fff;border:1px solid var(--border2);color:var(--navy);padding:.3rem .75rem;border-radius:7px;font-size:.7rem;white-space:nowrap}
 
-/* ── TESTIMONIALS ── */
-#testimonials{padding:5rem 3rem;}
-.test-label{font-family:'Orbitron',monospace;font-size:.62rem;letter-spacing:.3em;
-  text-transform:uppercase;color:var(--electric);margin-bottom:.8rem;
-  display:flex;align-items:center;gap:.7rem;}
-.test-label::before{content:'//';opacity:.5;}
-.test-title{font-family:'Orbitron',monospace;font-size:clamp(1.4rem,3vw,2rem);
-  font-weight:800;margin-bottom:2.5rem;}
-.test-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5px;background:var(--border);}
-.test-card{background:var(--card);padding:2rem;backdrop-filter:blur(10px);}
-.test-stars{color:#fbbf24;font-size:.85rem;margin-bottom:.8rem;letter-spacing:.1em;}
-.test-quote{font-size:.85rem;color:var(--text);line-height:1.7;margin-bottom:1rem;font-style:italic;}
-.test-author{display:flex;align-items:center;gap:.8rem;}
-.test-avatar{width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,var(--electric2),var(--electric3));
-  display:flex;align-items:center;justify-content:center;font-family:'Orbitron',monospace;
-  font-size:.65rem;font-weight:800;color:#fff;flex-shrink:0;}
-.test-name{font-family:'Orbitron',monospace;font-size:.65rem;font-weight:700;color:var(--text);}
-.test-biz{font-size:.72rem;color:var(--muted);}
-
-/* ── GUARANTEE ── */
-#guarantee{padding:4rem 3rem;background:var(--bg2);}
-.guarantee-box{max-width:700px;margin:0 auto;text-align:center;padding:3rem;
-  background:rgba(0,212,255,.03);border:1px solid rgba(0,212,255,.15);
-  clip-path:polygon(16px 0%,100% 0%,calc(100% - 16px) 100%,0% 100%);}
-.guarantee-icon{font-size:2.5rem;display:block;margin-bottom:1rem;}
-.guarantee-title{font-family:'Orbitron',monospace;font-size:1.1rem;font-weight:800;
-  color:var(--electric);margin-bottom:.8rem;}
-.guarantee-text{font-size:.88rem;color:var(--muted);line-height:1.75;margin-bottom:1.5rem;}
-.guarantee-cta{display:inline-flex;align-items:center;gap:.6rem;
-  background:linear-gradient(135deg,var(--electric2),var(--electric));
-  color:var(--bg);padding:.85rem 2rem;font-family:'Orbitron',monospace;
-  font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;font-weight:700;
-  text-decoration:none;clip-path:polygon(10px 0%,100% 0%,calc(100% - 10px) 100%,0% 100%);
-  transition:box-shadow .3s,transform .2s;}
-.guarantee-cta:hover{box-shadow:0 0 30px rgba(0,212,255,.4);transform:translateY(-2px);}
-
-/* ── FOOTER ── */
-footer{padding:1.5rem 3rem;border-top:1px solid var(--border);
-  display:flex;align-items:center;justify-content:space-between;
-  flex-wrap:wrap;gap:1rem;background:rgba(3,6,15,.8);}
-.foot-logo{font-family:'Orbitron',monospace;font-size:.85rem;font-weight:800;
-  color:var(--electric);text-shadow:0 0 12px rgba(0,212,255,.3);}
-.foot-copy{font-size:.7rem;color:var(--muted);}
-.foot-links{display:flex;gap:1.2rem;flex-wrap:wrap;}
-.foot-links a{font-size:.65rem;color:var(--muted);text-decoration:none;
-  letter-spacing:.1em;text-transform:uppercase;transition:color .2s;}
-.foot-links a:hover{color:var(--electric);}
-
-/* WA FLOAT */
-.wa-float{position:fixed;bottom:1.5rem;right:1.5rem;z-index:200;
-  display:flex;flex-direction:column;align-items:flex-end;gap:.5rem;}
-.wa-bubble{background:#25D366;color:#fff;width:52px;height:52px;border-radius:50%;
-  display:flex;align-items:center;justify-content:center;font-size:1.4rem;
-  text-decoration:none;animation:wap 2.5s ease-in-out infinite;transition:transform .2s;}
-.wa-bubble:hover{transform:scale(1.1);}
-@keyframes wap{0%,100%{box-shadow:0 4px 20px rgba(37,211,102,.4),0 0 0 0 rgba(37,211,102,.25)}50%{box-shadow:0 4px 20px rgba(37,211,102,.4),0 0 0 10px rgba(37,211,102,0)}}
-.wa-tip{background:rgba(3,6,15,.9);border:1px solid rgba(37,211,102,.3);color:#25D366;
-  padding:.3rem .75rem;font-family:'Orbitron',monospace;font-size:.54rem;
-  letter-spacing:.1em;white-space:nowrap;backdrop-filter:blur(10px);
-  clip-path:polygon(5px 0%,100% 0%,calc(100% - 5px) 100%,0% 100%);}
-
-/* ANIM */
-@keyframes fu{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
-.reveal{opacity:0;transform:translateY(18px);transition:opacity .65s ease,transform .65s ease;}
-.reveal.visible{opacity:1;transform:none;}
-
-/* PAY SECTION MOBILE */
+@media(max-width:980px){
+  #hero{grid-template-columns:1fr;gap:2.5rem}
+  .why-grid,.test-grid{grid-template-columns:1fr 1fr}
+  .pay-pkg-row{grid-template-columns:1fr 1fr}
+}
 @media(max-width:768px){
-  #pay > div[style*="grid-template-columns:repeat(4"]{grid-template-columns:1fr 1fr!important;}
-  #pay{padding:4rem 1.2rem!important;}
-}
-@media(max-width:480px){
-  #pay > div[style*="grid-template-columns:repeat(4"]{grid-template-columns:1fr!important;}
-}
-
-/* ── MOBILE ── */
-@media(max-width:768px){
-  nav{padding:.8rem 1.2rem;}
-  .nav-back{display:none;}
-  #hero{grid-template-columns:1fr;padding:5.5rem 1.2rem 3rem;gap:2.5rem;min-height:auto;}
-  .pitch h1{font-size:clamp(1.8rem,8vw,2.5rem);}
-  .frow{grid-template-columns:1fr;}
-  .budget-grid,.service-checks{grid-template-columns:1fr;}
-  .why-grid{grid-template-columns:1fr 1fr;}
-  .test-grid{grid-template-columns:1fr;}
-  #why,#testimonials,#guarantee{padding:3rem 1.2rem;}
-  footer{flex-direction:column;align-items:flex-start;padding:1.5rem 1.2rem;}
-  .proof-strip{gap:1.2rem;}
-  .wa-float{bottom:1rem;right:1rem;}
-  .wa-tip{display:none;}
+  body{font-size:14px}
+  nav{padding:.7rem 1rem}
+  .nav-back{display:none}
+  #hero{padding:1.6rem 1rem 2rem;gap:2rem}
+  .pitch h1{font-size:1.6rem}
+  .pitch-sub{font-size:.86rem}
+  .frow,.budget-grid,.service-checks{grid-template-columns:1fr}
+  .why-grid,.test-grid,.pay-pkg-row{grid-template-columns:1fr}
+  #why,#testimonials,#guarantee,#pay{padding:2.6rem 1rem}
+  .form-card{padding:1.4rem}
+  .proof-strip{gap:1rem}
+  .proof-num{font-size:1.1rem}
+  .wa-float{bottom:.9rem;right:.9rem}
+  .wa-tip{display:none}
+  .step-label{display:none}
+  .foot-inner{flex-direction:column;align-items:flex-start}
 }
 @media(max-width:400px){
-  .why-grid{grid-template-columns:1fr;}
-  .steps-bar .step-label{display:none;}
+  .why-grid{grid-template-columns:1fr}
 }
 </style>
 </head>
 <body>
 
-<!-- WA FLOAT -->
 <div class="wa-float">
   <div class="wa-tip">Skip form — chat directly</div>
   <a class="wa-bubble" href="https://wa.me/917799423794?text=Hi%20SPDigitalJourney%2C%20I%20want%20a%20free%20consultation!" target="_blank">💬</a>
 </div>
 
-<!-- NAV -->
 <nav>
-  <a href="index.html" class="nav-logo">SP<span>Digital</span>Journey</a>
-  <a href="index.html" class="nav-back">← Back to Site</a>
-  <div style="display:flex;align-items:center;gap:.8rem;">
-    <a href="#pay" style="font-family:'Orbitron',monospace;font-size:.62rem;letter-spacing:.1em;color:var(--electric);text-decoration:none;text-transform:uppercase;">💳 Pay</a>
-    <a href="https://wa.me/917799423794?text=Hi%2C%20I%20need%20a%20free%20consultation!" target="_blank" class="nav-wa">💬 WhatsApp Us</a>
+  <a href="index.html" class="nav-brand">
+    <img src="sp-logo.png" alt="SPDigitalJourney" class="nav-logo-img"/>
+    <span class="nav-name">SPDigitalJourney</span>
+  </a>
+  <a href="index.html" class="nav-back">← Back to site</a>
+  <div class="nav-right">
+    <a href="#pay" class="nav-pay">💳 Pay</a>
+    <a href="https://wa.me/917799423794?text=Hi%2C%20I%20need%20a%20free%20consultation!" target="_blank" class="nav-wa">💬 WhatsApp us</a>
   </div>
 </nav>
 
-<!-- HERO + FORM -->
 <section id="hero">
-  <div class="orb o1"></div>
-  <div class="orb o2"></div>
-
-  <!-- LEFT PITCH -->
   <div class="pitch">
-    <div class="pitch-tag">Free · No Obligation · 24-Hour Response</div>
-    <h1>Get Your<br><em>Free Digital</em><br><span class="stroke">Strategy Session</span></h1>
-    <p class="pitch-sub">Tell us about your business in 60 seconds. We'll send a <strong>custom growth plan within 24 hours</strong> — and follow up on WhatsApp to discuss it personally. Built by a <strong>Google Maps India insider since 2007.</strong></p>
+    <div class="pitch-tag">✦ Free · No obligation · 24-hour response</div>
+    <h1>Get your<br><em>free digital</em><br>strategy session</h1>
+    <p class="pitch-sub">Tell us about your business in 60 seconds. We'll send a <strong>custom growth plan within 24 hours</strong> — and follow up on WhatsApp personally. AI-assisted, backed by a Google Maps India insider since 2007.</p>
 
     <div class="trust-pills">
-      <span class="pill p-green">⚡ Response in &lt; 2 Hours</span>
+      <span class="pill p-green">⚡ Response in &lt; 2 hours</span>
       <span class="pill p-blue">🗺️ Google Maps Expert 2007</span>
-      <span class="pill p-blue">📍 2000+ Businesses Helped</span>
-      <span class="pill p-orange">🏛️ MSME Registered</span>
-      <span class="pill p-green">✦ JustDial Verified</span>
-      <span class="pill p-blue">🇮🇳 Made for India</span>
+      <span class="pill p-blue">📍 2,000+ Businesses Helped</span>
+      <span class="pill p-green">🏛️ MSME Registered</span>
+      <span class="pill p-blue">✦ JustDial Verified</span>
     </div>
 
     <div class="urgency">
       <div class="urgency-dot"></div>
-      <div class="urgency-text"><strong>Sanjay is available now.</strong> We respond to most enquiries within 2 hours on business days — and same day even on weekends.</div>
+      <div class="urgency-text"><strong>Sanjay is available now.</strong> Most enquiries answered within 2 hours on business days — same day even on weekends.</div>
     </div>
 
     <div class="proof-strip">
-      <div class="proof-item">
-        <span class="proof-num">50+</span>
-        <span class="proof-label">Projects Done</span>
-      </div>
-      <div class="proof-item">
-        <span class="proof-num">30+</span>
-        <span class="proof-label">Happy Clients</span>
-      </div>
-      <div class="proof-item">
-        <span class="proof-num">100+</span>
-        <span class="proof-label">Cities Covered</span>
-      </div>
-      <div class="proof-item">
-        <span class="proof-num">24/7</span>
-        <span class="proof-label">Support</span>
-      </div>
+      <div class="proof-item"><span class="proof-num">50+</span><span class="proof-label">Projects done</span></div>
+      <div class="proof-item"><span class="proof-num">30+</span><span class="proof-label">Happy clients</span></div>
+      <div class="proof-item"><span class="proof-num">100+</span><span class="proof-label">Cities covered</span></div>
+      <div class="proof-item"><span class="proof-num">24/7</span><span class="proof-label">Support</span></div>
     </div>
   </div>
 
-  <!-- RIGHT FORM -->
   <div class="funnel-box">
-
-    <!-- Step Indicator -->
     <div class="steps-bar" id="stepsBar">
-      <div class="step-ind">
-        <div class="step-circle active" id="sc1">1</div>
-        <div class="step-label active-label" id="sl1">About You</div>
-      </div>
-      <div class="step-ind">
-        <div class="step-circle" id="sc2">2</div>
-        <div class="step-label" id="sl2">Services</div>
-      </div>
-      <div class="step-ind">
-        <div class="step-circle" id="sc3">3</div>
-        <div class="step-label" id="sl3">Budget</div>
-      </div>
-      <div class="step-ind">
-        <div class="step-circle" id="sc4">4</div>
-        <div class="step-label" id="sl4">Send</div>
-      </div>
+      <div class="step-ind"><div class="step-circle active" id="sc1">1</div><div class="step-label active-label" id="sl1">About you</div></div>
+      <div class="step-ind"><div class="step-circle" id="sc2">2</div><div class="step-label" id="sl2">Services</div></div>
+      <div class="step-ind"><div class="step-circle" id="sc3">3</div><div class="step-label" id="sl3">Budget</div></div>
+      <div class="step-ind"><div class="step-circle" id="sc4">4</div><div class="step-label" id="sl4">Send</div></div>
     </div>
 
     <div class="form-card">
       <div id="formTitle" class="form-card-title">Step 1 of 4 — Tell us about you</div>
       <div id="formSub" class="form-card-sub">Takes less than 60 seconds. No spam, ever.</div>
 
-      <!-- STEP 1: Contact -->
       <div class="step-panel active" id="step1">
         <div class="frow">
-          <div class="fgroup">
-            <label>Your Name *</label>
-            <input type="text" id="f_name" placeholder="Rahul Sharma" autocomplete="name"/>
-          </div>
-          <div class="fgroup">
-            <label>WhatsApp Number *</label>
-            <input type="tel" id="f_phone" placeholder="9876543210" autocomplete="tel"/>
-          </div>
+          <div class="fgroup"><label>Your name *</label><input type="text" id="f_name" placeholder="Rahul Sharma" autocomplete="name"/></div>
+          <div class="fgroup"><label>WhatsApp number *</label><input type="tel" id="f_phone" placeholder="9876543210" autocomplete="tel"/></div>
         </div>
-        <div class="fgroup">
-          <label>Email Address *</label>
-          <input type="email" id="f_email" placeholder="rahul@yourbusiness.com" autocomplete="email"/>
-        </div>
+        <div class="fgroup"><label>Email address *</label><input type="email" id="f_email" placeholder="rahul@yourbusiness.com" autocomplete="email"/></div>
         <div class="frow">
-          <div class="fgroup">
-            <label>Business Name</label>
-            <input type="text" id="f_biz" placeholder="My Business Pvt Ltd"/>
-          </div>
-          <div class="fgroup">
-            <label>City / Location</label>
-            <input type="text" id="f_city" placeholder="Bengaluru"/>
-          </div>
+          <div class="fgroup"><label>Business name</label><input type="text" id="f_biz" placeholder="My Business Pvt Ltd"/></div>
+          <div class="fgroup"><label>City / location</label><input type="text" id="f_city" placeholder="Bengaluru"/></div>
         </div>
         <button class="btn-next" onclick="goStep(2)">Continue → Services</button>
         <p class="privacy-note">🔒 Your details are private and never shared.</p>
       </div>
 
-      <!-- STEP 2: Services -->
       <div class="step-panel" id="step2">
         <div class="fgroup">
           <label>What do you need? (select all that apply)</label>
           <div class="service-checks">
-            <label class="scheck" onclick="toggleCheck(this)">
-              <input type="checkbox" value="Local SEO & Google Maps"/>
-              <div class="scheck-box">✓</div>
-              <span class="scheck-label">📍 Local SEO & Google Maps</span>
-            </label>
-            <label class="scheck" onclick="toggleCheck(this)">
-              <input type="checkbox" value="Google Business Profile Fix/Optimisation"/>
-              <div class="scheck-box">✓</div>
-              <span class="scheck-label">🔧 GBP Fix / Optimisation</span>
-            </label>
-            <label class="scheck" onclick="toggleCheck(this)">
-              <input type="checkbox" value="Website Design & Development"/>
-              <div class="scheck-box">✓</div>
-              <span class="scheck-label">🌐 Website Design & Dev</span>
-            </label>
-            <label class="scheck" onclick="toggleCheck(this)">
-              <input type="checkbox" value="Meta Ads (Facebook & Instagram)"/>
-              <div class="scheck-box">✓</div>
-              <span class="scheck-label">📘 Meta Ads</span>
-            </label>
-            <label class="scheck" onclick="toggleCheck(this)">
-              <input type="checkbox" value="Google Ads"/>
-              <div class="scheck-box">✓</div>
-              <span class="scheck-label">🎯 Google Ads</span>
-            </label>
-            <label class="scheck" onclick="toggleCheck(this)">
-              <input type="checkbox" value="Branding & Graphics"/>
-              <div class="scheck-box">✓</div>
-              <span class="scheck-label">✦ Branding & Graphics</span>
-            </label>
-            <label class="scheck" onclick="toggleCheck(this)">
-              <input type="checkbox" value="360° Street View"/>
-              <div class="scheck-box">✓</div>
-              <span class="scheck-label">🔄 360° Street View</span>
-            </label>
-            <label class="scheck" onclick="toggleCheck(this)">
-              <input type="checkbox" value="Not sure — need advice"/>
-              <div class="scheck-box">✓</div>
-              <span class="scheck-label">🤔 Not sure — need advice</span>
-            </label>
+            <label class="scheck" onclick="toggleCheck(this)"><input type="checkbox" value="Local SEO & Google Maps"/><div class="scheck-box">✓</div><span class="scheck-label">📍 Local SEO &amp; Maps</span></label>
+            <label class="scheck" onclick="toggleCheck(this)"><input type="checkbox" value="Google Business Profile Fix/Optimisation"/><div class="scheck-box">✓</div><span class="scheck-label">🔧 GBP Fix / Optimisation</span></label>
+            <label class="scheck" onclick="toggleCheck(this)"><input type="checkbox" value="Website Design & Development"/><div class="scheck-box">✓</div><span class="scheck-label">🌐 Website Design &amp; Dev</span></label>
+            <label class="scheck" onclick="toggleCheck(this)"><input type="checkbox" value="Meta Ads (Facebook & Instagram)"/><div class="scheck-box">✓</div><span class="scheck-label">📘 Meta Ads</span></label>
+            <label class="scheck" onclick="toggleCheck(this)"><input type="checkbox" value="Google Ads"/><div class="scheck-box">✓</div><span class="scheck-label">🎯 Google Ads</span></label>
+            <label class="scheck" onclick="toggleCheck(this)"><input type="checkbox" value="Branding & Graphics"/><div class="scheck-box">✓</div><span class="scheck-label">✦ Branding &amp; Graphics</span></label>
+            <label class="scheck" onclick="toggleCheck(this)"><input type="checkbox" value="360° Street View"/><div class="scheck-box">✓</div><span class="scheck-label">🔄 360° Street View</span></label>
+            <label class="scheck" onclick="toggleCheck(this)"><input type="checkbox" value="Not sure — need advice"/><div class="scheck-box">✓</div><span class="scheck-label">🤔 Not sure — need advice</span></label>
           </div>
         </div>
         <div class="btn-row">
@@ -510,39 +331,19 @@ footer{padding:1.5rem 3rem;border-top:1px solid var(--border);
         </div>
       </div>
 
-      <!-- STEP 3: Budget -->
       <div class="step-panel" id="step3">
         <div class="fgroup">
-          <label>Monthly Budget Range *</label>
+          <label>Monthly budget range *</label>
           <div class="budget-grid" id="budgetGrid">
-            <div class="budget-pill" onclick="selectBudget(this, 'Under ₹5,000/month')">
-              <span class="budget-pill-label">Under ₹5,000</span>
-              <span class="budget-pill-sub">/ month</span>
-            </div>
-            <div class="budget-pill" onclick="selectBudget(this, '₹5,000 – ₹15,000/month')">
-              <span class="budget-pill-label">₹5K – ₹15K</span>
-              <span class="budget-pill-sub">/ month</span>
-            </div>
-            <div class="budget-pill" onclick="selectBudget(this, '₹15,000 – ₹30,000/month')">
-              <span class="budget-pill-label">₹15K – ₹30K</span>
-              <span class="budget-pill-sub">/ month</span>
-            </div>
-            <div class="budget-pill" onclick="selectBudget(this, '₹30,000+ / month')">
-              <span class="budget-pill-label">₹30,000+</span>
-              <span class="budget-pill-sub">/ month</span>
-            </div>
-            <div class="budget-pill" onclick="selectBudget(this, 'One-time project budget')">
-              <span class="budget-pill-label">One-Time</span>
-              <span class="budget-pill-sub">Project budget</span>
-            </div>
-            <div class="budget-pill" onclick="selectBudget(this, 'Flexible — open to discussion')">
-              <span class="budget-pill-label">Flexible</span>
-              <span class="budget-pill-sub">Open to discuss</span>
-            </div>
+            <div class="budget-pill" onclick="selectBudget(this, 'Under ₹5,000/month')"><span class="budget-pill-label">Under ₹5,000</span><span class="budget-pill-sub">/ month</span></div>
+            <div class="budget-pill" onclick="selectBudget(this, '₹5,000 – ₹15,000/month')"><span class="budget-pill-label">₹5K – ₹15K</span><span class="budget-pill-sub">/ month</span></div>
+            <div class="budget-pill" onclick="selectBudget(this, '₹15,000 – ₹30,000/month')"><span class="budget-pill-label">₹15K – ₹30K</span><span class="budget-pill-sub">/ month</span></div>
+            <div class="budget-pill" onclick="selectBudget(this, '₹30,000+ / month')"><span class="budget-pill-label">₹30,000+</span><span class="budget-pill-sub">/ month</span></div>
+            <div class="budget-pill" onclick="selectBudget(this, 'One-time project budget')"><span class="budget-pill-label">One-time</span><span class="budget-pill-sub">Project budget</span></div>
+            <div class="budget-pill" onclick="selectBudget(this, 'Flexible — open to discussion')"><span class="budget-pill-label">Flexible</span><span class="budget-pill-sub">Open to discuss</span></div>
           </div>
         </div>
-        <div class="fgroup">
-          <label>Timeline</label>
+        <div class="fgroup"><label>Timeline</label>
           <select id="f_timeline">
             <option value="">How soon do you need this?</option>
             <option>ASAP — within this week</option>
@@ -553,358 +354,224 @@ footer{padding:1.5rem 3rem;border-top:1px solid var(--border);
         </div>
         <div class="btn-row">
           <button class="btn-prev" onclick="goStep(2)">← Back</button>
-          <button class="btn-next" style="flex:1" onclick="goStep(4)">Continue → Review & Send</button>
+          <button class="btn-next" style="flex:1" onclick="goStep(4)">Continue → Review &amp; send</button>
         </div>
       </div>
 
-      <!-- STEP 4: Review & Submit -->
       <div class="step-panel" id="step4">
-        <div class="fgroup">
-          <label>Anything specific you'd like us to know?</label>
-          <textarea id="f_msg" placeholder="My business is a clinic in Bengaluru. We're not showing on Google Maps and want more patient enquiries..."></textarea>
-        </div>
-
-        <!-- Summary box -->
-        <div id="summaryBox" style="background:rgba(0,212,255,.04);border:1px solid rgba(0,212,255,.1);padding:1rem;font-size:.78rem;color:var(--muted);line-height:1.7;clip-path:polygon(5px 0%,100% 0%,calc(100% - 5px) 100%,0% 100%);"></div>
-
-        <button class="btn-wa" onclick="submitToWhatsApp()">
-          💬 Send via WhatsApp
-        </button>
-        <button class="btn-next" onclick="submitToEmail()" style="background:linear-gradient(135deg,#333,#555);margin-top:.4rem;">
-          📧 Send via Email Instead
-        </button>
-        <div class="btn-row" style="justify-content:center;margin-top:.4rem;">
-          <button class="btn-prev" onclick="goStep(3)">← Back</button>
-        </div>
-        <p class="privacy-note">By submitting you agree to be contacted about your enquiry. <a href="index.html#contact">Privacy policy</a>.</p>
+        <div class="fgroup"><label>Anything specific you'd like us to know?</label><textarea id="f_msg" placeholder="My business is a clinic in Bengaluru. We're not showing on Google Maps and want more patient enquiries..."></textarea></div>
+        <div id="summaryBox" style="background:var(--bg2);border:1px solid var(--border2);padding:1rem;font-size:.78rem;color:var(--muted);line-height:1.7;border-radius:8px"></div>
+        <button class="btn-wa" onclick="submitToWhatsApp()">💬 Send via WhatsApp</button>
+        <button class="btn-next" onclick="submitToEmail()" style="background:#555;margin-top:.4rem">📧 Send via email instead</button>
+        <div class="btn-row" style="justify-content:center;margin-top:.4rem"><button class="btn-prev" onclick="goStep(3)">← Back</button></div>
+        <p class="privacy-note">By submitting you agree to be contacted about your enquiry. <a href="terms.html">Terms &amp; Conditions</a>.</p>
       </div>
 
-      <!-- SUCCESS STATE -->
-      <div class="success-state" id="successState">
-        <div class="success-icon">✅</div>
-        <div class="success-title">Message Sent!</div>
-        <p class="success-sub">Thank you! Sanjay will review your details and respond on WhatsApp within <strong style="color:var(--green);">2 hours</strong> on business days.</p>
-        <div class="success-actions">
-          <a href="https://wa.me/917799423794?text=Hi%2C%20I%20just%20submitted%20the%20consultation%20form!" target="_blank" class="success-wa">💬 Open WhatsApp to Chat Now</a>
-          <a href="index.html" class="success-back">← Back to SPDigitalJourney</a>
+      <div class="step-panel" id="successState">
+        <div class="success-state" id="successInner">
+          <div class="success-icon">✓</div>
+          <div class="success-title">Message sent!</div>
+          <p class="success-sub">Thank you! Sanjay will review your details and respond on WhatsApp within <strong style="color:var(--green)">2 hours</strong> on business days.</p>
+          <div class="success-actions">
+            <a href="https://wa.me/917799423794?text=Hi%2C%20I%20just%20submitted%20the%20consultation%20form!" target="_blank" class="success-wa">💬 Open WhatsApp to chat now</a>
+            <a href="index.html" class="success-back">← Back to SPDigitalJourney</a>
+          </div>
         </div>
       </div>
-
-    </div><!-- /form-card -->
-  </div><!-- /funnel-box -->
+    </div>
+  </div>
 </section>
 
-<!-- WHY US -->
 <section id="why">
   <div class="why-grid">
-    <div class="why-item reveal">
-      <span class="why-icon">🗺️</span>
-      <div class="why-title">Google Maps Insider</div>
-      <p class="why-desc">Part of the Google Maps India team since 2007 — paper-to-digital transition, highway mapping, Street View. We know Google from the inside.</p>
-    </div>
-    <div class="why-item reveal">
-      <span class="why-icon">⚡</span>
-      <div class="why-title">Lightning Fast</div>
-      <p class="why-desc">Most agencies take 2–4 weeks to onboard. We activate within 72 hours. GBP issues fixed in 30 minutes. Website in 180 minutes.</p>
-    </div>
-    <div class="why-item reveal">
-      <span class="why-icon">📍</span>
-      <div class="why-title">India-First Strategy</div>
-      <p class="why-desc">100+ cities, 7+ states, 2000+ businesses scanned personally. We know how Indian local search works — and what actually drives customers through your door.</p>
-    </div>
-    <div class="why-item reveal">
-      <span class="why-icon">💬</span>
-      <div class="why-title">24x7 Support</div>
-      <p class="why-desc">WhatsApp-first, ticket-based support every day of the year. No email chains. No waiting rooms. Real-time help when you need it.</p>
-    </div>
+    <div class="why-item reveal"><span class="why-icon">🗺️</span><div class="why-title">Google Maps insider</div><p class="why-desc">Part of the Google Maps India team since 2007 — paper-to-digital, highway mapping, Street View. We know Google from the inside.</p></div>
+    <div class="why-item reveal"><span class="why-icon">⚡</span><div class="why-title">Lightning fast</div><p class="why-desc">Most agencies take 2–4 weeks to onboard. We activate within 72 hours. GBP issues fixed in 30 minutes.</p></div>
+    <div class="why-item reveal"><span class="why-icon">📍</span><div class="why-title">India-first strategy</div><p class="why-desc">100+ cities, 7+ states, 2,000+ businesses scanned personally. We know what drives customers through your door.</p></div>
+    <div class="why-item reveal"><span class="why-icon">💬</span><div class="why-title">24x7 support</div><p class="why-desc">WhatsApp-first, ticket-based support every day of the year. No email chains. No waiting rooms.</p></div>
   </div>
 </section>
 
-<!-- TESTIMONIALS -->
 <section id="testimonials">
   <div class="test-label reveal">// Client Results</div>
-  <h2 class="test-title reveal">What Clients Say</h2>
+  <h2 class="test-title reveal">What clients say</h2>
   <div class="test-grid">
-    <div class="test-card reveal">
-      <div class="test-stars">★★★★★</div>
-      <p class="test-quote">"Sanjay built our clinic website from scratch — professional, fast, and exactly what we needed. The Google Maps presence improved within weeks."</p>
-      <div class="test-author">
-        <div class="test-avatar">ID</div>
-        <div>
-          <div class="test-name">IDÉAL Speech & Hearing</div>
-          <div class="test-biz">Healthcare · Mangalore</div>
-        </div>
-      </div>
-    </div>
-    <div class="test-card reveal">
-      <div class="test-stars">★★★★★</div>
-      <p class="test-quote">"Our gym website went live in days. WhatsApp enquiries doubled in the first month. SPDigitalJourney delivers real results."</p>
-      <div class="test-author">
-        <div class="test-avatar">DB</div>
-        <div>
-          <div class="test-name">D Beast Fitness</div>
-          <div class="test-biz">Fitness · Bengaluru</div>
-        </div>
-      </div>
-    </div>
-    <div class="test-card reveal">
-      <div class="test-stars">★★★★★</div>
-      <p class="test-quote">"Fixed our Google Business Profile suspension in under an hour. We were losing customers every day — Sanjay got us back online fast."</p>
-      <div class="test-author">
-        <div class="test-avatar">LC</div>
-        <div>
-          <div class="test-name">Local Business Client</div>
-          <div class="test-biz">Retail · Bengaluru</div>
-        </div>
-      </div>
-    </div>
+    <div class="test-card reveal"><div class="test-stars">★★★★★</div><p class="test-quote">"Sanjay built our clinic website from scratch — professional, fast, and exactly what we needed."</p><div class="test-author"><div class="test-avatar">ID</div><div><div class="test-name">IDÉAL Speech &amp; Hearing</div><div class="test-biz">Healthcare · Mangalore</div></div></div></div>
+    <div class="test-card reveal"><div class="test-stars">★★★★★</div><p class="test-quote">"Our gym website went live in days. WhatsApp enquiries doubled in the first month."</p><div class="test-author"><div class="test-avatar">DB</div><div><div class="test-name">D Beast Fitness</div><div class="test-biz">Fitness · Bengaluru</div></div></div></div>
+    <div class="test-card reveal"><div class="test-stars">★★★★★</div><p class="test-quote">"Fixed our Google Business Profile suspension in under an hour. Sanjay got us back online fast."</p><div class="test-author"><div class="test-avatar">LC</div><div><div class="test-name">Local Business Client</div><div class="test-biz">Retail · Bengaluru</div></div></div></div>
   </div>
 </section>
 
-<!-- GUARANTEE -->
 <section id="guarantee">
   <div class="guarantee-box reveal">
     <span class="guarantee-icon">🛡️</span>
-    <div class="guarantee-title">Our Commitment to You</div>
-    <p class="guarantee-text">We respond to every consultation request within <strong style="color:var(--text);">2 hours on business days.</strong> You'll receive a personalised strategy — not a template. If we can't help you, we'll tell you honestly and point you in the right direction. No hard sell. Ever.</p>
-    <a href="#hero" class="guarantee-cta">Start Your Free Consultation ↑</a>
+    <div class="guarantee-title">Our commitment to you</div>
+    <p class="guarantee-text">We respond to every consultation request within <strong style="color:var(--navy)">2 hours on business days.</strong> You'll receive a personalised strategy — not a template. If we can't help you, we'll tell you honestly and point you in the right direction.</p>
+    <a href="#hero" class="guarantee-cta">Start your free consultation ↑</a>
   </div>
 </section>
 
-<!-- PAY ONLINE -->
-<section id="pay" style="padding:6rem 3rem;background:var(--bg2);position:relative;z-index:1;">
-  <div style="position:absolute;inset:0;background:radial-gradient(ellipse at 40% 50%,rgba(0,212,255,.05),transparent 65%);pointer-events:none;"></div>
-
-  <div style="text-align:center;margin-bottom:3rem;" class="reveal">
-    <div style="font-family:'Orbitron',monospace;font-size:.62rem;letter-spacing:.32em;text-transform:uppercase;color:var(--electric);margin-bottom:.8rem;display:flex;align-items:center;justify-content:center;gap:.7rem;"><span style="opacity:.5;">//</span> Ready to Get Started?</div>
-    <h2 style="font-family:'Orbitron',monospace;font-size:clamp(1.6rem,3vw,2.2rem);font-weight:800;line-height:1.2;margin-bottom:.8rem;">Choose a Plan &amp; <span style="color:var(--electric);">Pay Securely</span></h2>
-    <p style="color:var(--muted);max-width:500px;margin:0 auto;line-height:1.75;font-size:.92rem;">Pay via UPI, Card, Net Banking or Wallet — powered by Razorpay. Instant confirmation on WhatsApp after payment.</p>
+<section id="pay">
+  <div id="pay-head">
+    <div class="test-label">// Ready to Get Started?</div>
+    <h2>Choose a plan &amp; pay securely</h2>
+    <p>Pay via UPI, Card, Net Banking or Wallet — powered by Razorpay. Instant confirmation on WhatsApp after payment.</p>
   </div>
 
-  <!-- PACKAGES ROW -->
-  <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:1.5px;background:var(--border);margin-bottom:3rem;" class="reveal">
-
-    <div style="background:var(--card-bg);padding:2rem 1.5rem;backdrop-filter:blur(10px);display:flex;flex-direction:column;gap:.5rem;position:relative;overflow:hidden;">
-      <div style="position:absolute;top:0;left:0;right:0;height:2px;background:var(--electric);"></div>
-      <div style="font-family:'Orbitron',monospace;font-size:.55rem;letter-spacing:.18em;color:var(--muted);">STARTER</div>
-      <div style="font-family:'Orbitron',monospace;font-size:.78rem;font-weight:700;color:var(--text);line-height:1.3;">Express GBP Fix</div>
-      <div style="font-family:'Orbitron',monospace;font-size:1.4rem;font-weight:900;color:var(--electric);">₹999</div>
-      <p style="font-size:.75rem;color:var(--muted);line-height:1.5;flex:1;">Single issue — wrong info, phone, location, or policy flag. Fixed same day.</p>
-      <a href="https://razorpay.me/@SPDigitalJourney" target="_blank" style="font-family:'Orbitron',monospace;font-size:.6rem;letter-spacing:.1em;color:var(--electric);text-decoration:none;text-transform:uppercase;margin-top:.5rem;">Pay Now →</a>
+  <div class="pay-pkg-row reveal">
+    <div class="pay-pkg-card">
+      <div class="pay-pkg-tag2">STARTER</div>
+      <div class="pay-pkg-name2">Express GBP Fix</div>
+      <div class="pay-pkg-price2">₹999</div>
+      <p class="pay-pkg-desc2">Single issue — wrong info, phone, location, or policy flag. Fixed same day.</p>
+      <a href="https://razorpay.me/@SPDigitalJourney" target="_blank" class="pay-pkg-link">Pay now →</a>
     </div>
-
-    <div style="background:var(--card-bg);padding:2rem 1.5rem;backdrop-filter:blur(10px);display:flex;flex-direction:column;gap:.5rem;position:relative;overflow:hidden;">
-      <div style="position:absolute;top:0;left:0;right:0;height:2px;background:#00ff88;"></div>
-      <div style="font-family:'Orbitron',monospace;font-size:.55rem;letter-spacing:.18em;color:#00ff88;">POPULAR</div>
-      <div style="font-family:'Orbitron',monospace;font-size:.78rem;font-weight:700;color:var(--text);line-height:1.3;">GBP Optimisation + Rank Report</div>
-      <div style="font-family:'Orbitron',monospace;font-size:1.4rem;font-weight:900;color:#00ff88;">₹2,499</div>
-      <p style="font-size:.75rem;color:var(--muted);line-height:1.5;flex:1;">Full audit, optimisation, rank check + competitor snapshot in 60 min.</p>
-      <a href="https://razorpay.me/@SPDigitalJourney" target="_blank" style="font-family:'Orbitron',monospace;font-size:.6rem;letter-spacing:.1em;color:#00ff88;text-decoration:none;text-transform:uppercase;margin-top:.5rem;">Pay Now →</a>
+    <div class="pay-pkg-card">
+      <div class="pay-pkg-tag2" style="color:var(--green)">POPULAR</div>
+      <div class="pay-pkg-name2">GBP Optimisation + Rank Report</div>
+      <div class="pay-pkg-price2" style="color:var(--green)">₹2,499</div>
+      <p class="pay-pkg-desc2">Full audit, optimisation, rank check + competitor snapshot in 60 min.</p>
+      <a href="https://razorpay.me/@SPDigitalJourney" target="_blank" class="pay-pkg-link" style="color:var(--green)">Pay now →</a>
     </div>
-
-    <div style="background:var(--card-bg);padding:2rem 1.5rem;backdrop-filter:blur(10px);display:flex;flex-direction:column;gap:.5rem;position:relative;overflow:hidden;">
-      <div style="position:absolute;top:0;left:0;right:0;height:2px;background:var(--electric2);"></div>
-      <div style="font-family:'Orbitron',monospace;font-size:.55rem;letter-spacing:.18em;color:var(--muted);">GROWTH · 40% OFF</div>
-      <div style="font-family:'Orbitron',monospace;font-size:.78rem;font-weight:700;color:var(--text);line-height:1.3;">Local SEO Growth · 6 Months</div>
-      <div style="font-family:'Orbitron',monospace;font-size:1.4rem;font-weight:900;color:var(--electric2);">₹18,000 <span style="font-size:.65rem;color:var(--muted);text-decoration:line-through;font-weight:300;">₹30K</span></div>
-      <p style="font-size:.75rem;color:var(--muted);line-height:1.5;flex:1;">GBP, citations, reviews, ranking — full local SEO for 6 months.</p>
-      <a href="https://razorpay.me/@SPDigitalJourney" target="_blank" style="font-family:'Orbitron',monospace;font-size:.6rem;letter-spacing:.1em;color:var(--electric2);text-decoration:none;text-transform:uppercase;margin-top:.5rem;">Pay Now →</a>
+    <div class="pay-pkg-card">
+      <div class="pay-pkg-tag2">GROWTH · 40% OFF</div>
+      <div class="pay-pkg-name2">Local SEO Growth · 6 Months</div>
+      <div class="pay-pkg-price2">₹18,000 <span style="font-size:.65rem;color:var(--muted2);text-decoration:line-through;font-weight:400">₹30K</span></div>
+      <p class="pay-pkg-desc2">GBP, citations, reviews, ranking — full local SEO for 6 months.</p>
+      <a href="https://razorpay.me/@SPDigitalJourney" target="_blank" class="pay-pkg-link">Pay now →</a>
     </div>
-
-    <div style="background:rgba(0,18,50,.9);padding:2rem 1.5rem;backdrop-filter:blur(10px);display:flex;flex-direction:column;gap:.5rem;position:relative;overflow:hidden;border:1px solid rgba(0,212,255,.2);">
-      <div style="position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--electric2),var(--electric));"></div>
-      <div style="font-family:'Orbitron',monospace;font-size:.55rem;letter-spacing:.18em;color:var(--electric);">★ BEST VALUE · 40% OFF</div>
-      <div style="font-family:'Orbitron',monospace;font-size:.78rem;font-weight:700;color:var(--text);line-height:1.3;">Local SEO Growth · 12 Months</div>
-      <div style="font-family:'Orbitron',monospace;font-size:1.4rem;font-weight:900;color:var(--electric);">₹36,000 <span style="font-size:.65rem;color:var(--muted);text-decoration:line-through;font-weight:300;">₹60K</span></div>
-      <p style="font-size:.75rem;color:var(--muted);line-height:1.5;flex:1;">Full year — Ads integration, quarterly strategy + priority 24x7 support.</p>
-      <a href="https://razorpay.me/@SPDigitalJourney" target="_blank" style="font-family:'Orbitron',monospace;font-size:.6rem;letter-spacing:.1em;color:var(--electric);text-decoration:none;text-transform:uppercase;margin-top:.5rem;">Pay Now →</a>
+    <div class="pay-pkg-card" style="background:var(--navy)">
+      <div class="pay-pkg-tag2" style="color:var(--cyan)">★ BEST VALUE · 40% OFF</div>
+      <div class="pay-pkg-name2" style="color:#fff">Local SEO Growth · 12 Months</div>
+      <div class="pay-pkg-price2">₹36,000 <span style="font-size:.65rem;color:rgba(255,255,255,.5);text-decoration:line-through;font-weight:400">₹60K</span></div>
+      <p class="pay-pkg-desc2" style="color:rgba(255,255,255,.7)">Full year — Ads integration option + priority 24x7 support.</p>
+      <a href="https://razorpay.me/@SPDigitalJourney" target="_blank" class="pay-pkg-link">Pay now →</a>
     </div>
-
   </div>
 
-  <!-- RAZORPAY EMBED -->
-  <div style="max-width:680px;margin:0 auto;" class="reveal">
-    <div style="font-family:'Orbitron',monospace;font-size:.65rem;font-weight:700;color:var(--electric);letter-spacing:.1em;display:flex;align-items:center;gap:.6rem;margin-bottom:.8rem;">
-      <span style="width:8px;height:8px;background:var(--green);border-radius:50%;box-shadow:0 0 8px var(--green);display:inline-block;animation:rp-blink 1.5s infinite;"></span>
-      SECURE PAYMENT — POWERED BY RAZORPAY
+  <div class="pay-embed reveal">
+    <div class="pay-live2"><div class="dot"></div>Secure payment — powered by Razorpay</div>
+    <div class="pay-iframe-wrap2">
+      <iframe src="https://razorpay.me/@SPDigitalJourney" width="100%" height="560" style="border:none;display:block" allow="payment" sandbox="allow-scripts allow-same-origin allow-forms allow-popups" title="Pay SPDigitalJourney securely via Razorpay"></iframe>
     </div>
-    <div style="border:1px solid var(--border);overflow:hidden;background:rgba(10,22,50,.5);">
-      <iframe
-        src="https://razorpay.me/@SPDigitalJourney"
-        width="100%"
-        height="580px"
-        style="border:none;display:block;"
-        allow="payment"
-        sandbox="allow-scripts allow-same-origin allow-forms allow-popups"
-        title="Pay SPDigitalJourney securely via Razorpay">
-      </iframe>
-    </div>
-    <div style="display:flex;flex-wrap:wrap;gap:.8rem;justify-content:center;margin-top:.8rem;">
-      <span style="font-size:.65rem;color:var(--muted);">🔒 256-bit SSL Encrypted</span>
-      <span style="font-size:.65rem;color:var(--muted);">·</span>
-      <span style="font-size:.65rem;color:var(--muted);">UPI · Cards · Net Banking · Wallets</span>
-      <span style="font-size:.65rem;color:var(--muted);">·</span>
-      <span style="font-size:.65rem;color:var(--muted);">WhatsApp confirmation after payment</span>
-    </div>
-    <p style="text-align:center;font-size:.75rem;color:var(--muted);margin-top:1rem;">
-      Not sure which plan? <a href="https://wa.me/917799423794?text=Hi%2C%20I%20want%20to%20discuss%20plans%20before%20paying." target="_blank" style="color:var(--electric);text-decoration:none;">WhatsApp us first →</a>
-    </p>
+    <div class="pay-trust-row2"><span>🔒 256-bit SSL Encrypted</span><span>·</span><span>UPI · Cards · Net Banking · Wallets</span><span>·</span><span>WhatsApp confirmation after payment</span></div>
+    <p class="pay-note">Not sure which plan? <a href="https://wa.me/917799423794?text=Hi%2C%20I%20want%20to%20discuss%20plans%20before%20paying." target="_blank">WhatsApp us first →</a></p>
   </div>
-  <style>@keyframes rp-blink{0%,100%{opacity:1}50%{opacity:.3}}</style>
 </section>
 
-<!-- FOOTER -->
 <footer>
-  <div class="foot-logo">SPDigitalJourney</div>
-  <div class="foot-copy">© 2026 SPDigitalJourney · Bengaluru · +91 77994 23794</div>
-  <div class="foot-links">
-    <a href="index.html">Home</a>
-    <a href="tech-solutions.html">Tech Solutions</a>
-    <a href="#pay" style="color:var(--electric);">💳 Pay Online</a>
-    <a href="index.html#blog">Blog</a>
-    <a href="https://share.google/A1sMICveK1Oo0RMsF" target="_blank">Google Reviews</a>
-    <a href="https://jsdl.in/DT-15PAIS817IE" target="_blank">JustDial</a>
+  <div class="foot-inner">
+    <div class="foot-logo"><img src="sp-logo.png" alt="SPDigitalJourney"/>SPDigitalJourney</div>
+    <div class="foot-copy">© 2026 SPDigitalJourney · Bengaluru · +91 77994 23794</div>
+    <div class="foot-links">
+      <a href="index.html">Home</a>
+      <a href="tech-solutions.html">Tech Solutions</a>
+      <a href="index.html#blog">Blog</a>
+      <a href="terms.html">Terms &amp; Conditions</a>
+      <a href="https://g.page/r/CdRrLmhaPARzEBM/review" target="_blank">Google Reviews</a>
+      <a href="https://jsdl.in/DT-15PAIS817IE" target="_blank">JustDial</a>
+    </div>
   </div>
+  <p class="footer-disclaimer">SPDigitalJourney is an independent, MSME-registered digital services provider and is not affiliated with, endorsed by, or an official partner of Google LLC or Meta Platforms. Results and timelines are estimates and not guaranteed — see <a href="terms.html">Terms &amp; Conditions</a>.</p>
 </footer>
 
 <script>
-// ── STEP MANAGEMENT ──
-let currentStep = 1;
-let selectedBudget = '';
+let currentStep=1;let selectedBudget='';
 
-const stepTitles = {
-  1: ['Step 1 of 4 — Tell us about you', 'Takes less than 60 seconds. No spam, ever.'],
-  2: ['Step 2 of 4 — What do you need?', 'Select all that apply — the more detail, the better your plan.'],
-  3: ['Step 3 of 4 — Budget & Timeline', 'This helps us tailor the right strategy for your business.'],
-  4: ['Step 4 of 4 — Review & Send', 'Almost done! Add any final details before we send.']
+const stepTitles={
+  1:['Step 1 of 4 — Tell us about you','Takes less than 60 seconds. No spam, ever.'],
+  2:['Step 2 of 4 — What do you need?','Select all that apply — the more detail, the better your plan.'],
+  3:['Step 3 of 4 — Budget & timeline','This helps us tailor the right strategy for your business.'],
+  4:['Step 4 of 4 — Review & send','Almost done! Add any final details before we send.']
 };
 
-function goStep(n) {
-  // Validate step 1
-  if (n > 1 && currentStep === 1) {
-    const name = document.getElementById('f_name').value.trim();
-    const phone = document.getElementById('f_phone').value.trim();
-    const email = document.getElementById('f_email').value.trim();
-    if (!name || !phone) { alert('Please enter your name and WhatsApp number.'); return; }
-    if (email && !email.includes('@')) { alert('Please enter a valid email address.'); return; }
+function goStep(n){
+  if(n>1&&currentStep===1){
+    const name=document.getElementById('f_name').value.trim();
+    const phone=document.getElementById('f_phone').value.trim();
+    const email=document.getElementById('f_email').value.trim();
+    if(!name||!phone){alert('Please enter your name and WhatsApp number.');return;}
+    if(email&&!email.includes('@')){alert('Please enter a valid email address.');return;}
   }
-  // Validate step 3
-  if (n > 3 && currentStep === 3 && !selectedBudget) {
-    alert('Please select a budget range.'); return;
-  }
+  if(n>3&&currentStep===3&&!selectedBudget){alert('Please select a budget range.');return;}
 
-  document.getElementById('step' + currentStep).classList.remove('active');
-  document.getElementById('step' + n).classList.add('active');
+  document.getElementById('step'+currentStep).classList.remove('active');
+  document.getElementById('step'+n).classList.add('active');
 
-  // Update step circles
-  for (let i = 1; i <= 4; i++) {
-    const sc = document.getElementById('sc' + i);
-    const sl = document.getElementById('sl' + i);
-    sc.classList.remove('active', 'done');
-    sl.classList.remove('active-label');
-    if (i < n) { sc.classList.add('done'); sc.textContent = '✓'; }
-    else if (i === n) { sc.classList.add('active'); sc.textContent = i; sl.classList.add('active-label'); }
-    else { sc.textContent = i; }
+  for(let i=1;i<=4;i++){
+    const sc=document.getElementById('sc'+i);const sl=document.getElementById('sl'+i);
+    sc.classList.remove('active','done');sl.classList.remove('active-label');
+    if(i<n){sc.classList.add('done');sc.textContent='✓';}
+    else if(i===n){sc.classList.add('active');sc.textContent=i;sl.classList.add('active-label');}
+    else{sc.textContent=i;}
   }
 
-  document.getElementById('formTitle').textContent = stepTitles[n][0];
-  document.getElementById('formSub').textContent = stepTitles[n][1];
-
-  if (n === 4) buildSummary();
-  currentStep = n;
-  document.querySelector('.funnel-box').scrollIntoView({behavior:'smooth', block:'nearest'});
+  document.getElementById('formTitle').textContent=stepTitles[n][0];
+  document.getElementById('formSub').textContent=stepTitles[n][1];
+  if(n===4)buildSummary();
+  currentStep=n;
 }
 
-function toggleCheck(el) {
-  el.classList.toggle('checked');
+function toggleCheck(el){el.classList.toggle('checked');}
+function selectBudget(el,val){document.querySelectorAll('.budget-pill').forEach(p=>p.classList.remove('selected'));el.classList.add('selected');selectedBudget=val;}
+function getSelectedServices(){return Array.from(document.querySelectorAll('.scheck.checked input')).map(i=>i.value);}
+
+function buildSummary(){
+  const name=document.getElementById('f_name').value;
+  const phone=document.getElementById('f_phone').value;
+  const email=document.getElementById('f_email').value;
+  const biz=document.getElementById('f_biz').value||'—';
+  const city=document.getElementById('f_city').value||'—';
+  const services=getSelectedServices();
+  const timeline=document.getElementById('f_timeline').value||'—';
+  document.getElementById('summaryBox').innerHTML=`
+    <strong style="color:var(--navy);font-family:'Space Grotesk',sans-serif;font-size:.7rem">📋 YOUR ENQUIRY SUMMARY</strong><br><br>
+    👤 <strong style="color:var(--navy)">Name:</strong> ${name}<br>
+    📱 <strong style="color:var(--navy)">WhatsApp:</strong> ${phone}<br>
+    📧 <strong style="color:var(--navy)">Email:</strong> ${email||'—'}<br>
+    🏢 <strong style="color:var(--navy)">Business:</strong> ${biz} · ${city}<br>
+    🛠️ <strong style="color:var(--navy)">Services:</strong> ${services.length?services.join(', '):'—'}<br>
+    💰 <strong style="color:var(--navy)">Budget:</strong> ${selectedBudget||'—'}<br>
+    ⏱️ <strong style="color:var(--navy)">Timeline:</strong> ${timeline}`;
 }
 
-function selectBudget(el, val) {
-  document.querySelectorAll('.budget-pill').forEach(p => p.classList.remove('selected'));
-  el.classList.add('selected');
-  selectedBudget = val;
+function buildMessage(){
+  const name=document.getElementById('f_name').value;
+  const phone=document.getElementById('f_phone').value;
+  const email=document.getElementById('f_email').value;
+  const biz=document.getElementById('f_biz').value||'—';
+  const city=document.getElementById('f_city').value||'—';
+  const services=getSelectedServices();
+  const timeline=document.getElementById('f_timeline').value||'—';
+  const msg=document.getElementById('f_msg').value||'—';
+  return `Hi SPDigitalJourney! 👋 I'd like a FREE consultation.\n\n👤 Name: ${name}\n📱 WhatsApp: ${phone}\n📧 Email: ${email||'—'}\n🏢 Business: ${biz} | City: ${city}\n🛠️ Services Needed: ${services.length?services.join(', '):'—'}\n💰 Budget: ${selectedBudget||'—'}\n⏱️ Timeline: ${timeline}\n💬 Message: ${msg}\n\nSent from: spdigitaljourney.github.io/free-consultation.html`;
 }
 
-function getSelectedServices() {
-  return Array.from(document.querySelectorAll('.scheck.checked input')).map(i => i.value);
-}
-
-function buildSummary() {
-  const name = document.getElementById('f_name').value;
-  const phone = document.getElementById('f_phone').value;
-  const email = document.getElementById('f_email').value;
-  const biz = document.getElementById('f_biz').value || '—';
-  const city = document.getElementById('f_city').value || '—';
-  const services = getSelectedServices();
-  const timeline = document.getElementById('f_timeline').value || '—';
-  const box = document.getElementById('summaryBox');
-  box.innerHTML = `
-    <strong style="color:var(--text);font-family:'Orbitron',monospace;font-size:.65rem;">📋 YOUR ENQUIRY SUMMARY</strong><br><br>
-    👤 <strong style="color:var(--text);">Name:</strong> ${name}<br>
-    📱 <strong style="color:var(--text);">WhatsApp:</strong> ${phone}<br>
-    📧 <strong style="color:var(--text);">Email:</strong> ${email || '—'}<br>
-    🏢 <strong style="color:var(--text);">Business:</strong> ${biz} · ${city}<br>
-    🛠️ <strong style="color:var(--text);">Services:</strong> ${services.length ? services.join(', ') : '—'}<br>
-    💰 <strong style="color:var(--text);">Budget:</strong> ${selectedBudget || '—'}<br>
-    ⏱️ <strong style="color:var(--text);">Timeline:</strong> ${timeline}
-  `;
-}
-
-function buildMessage() {
-  const name = document.getElementById('f_name').value;
-  const phone = document.getElementById('f_phone').value;
-  const email = document.getElementById('f_email').value;
-  const biz = document.getElementById('f_biz').value || '—';
-  const city = document.getElementById('f_city').value || '—';
-  const services = getSelectedServices();
-  const timeline = document.getElementById('f_timeline').value || '—';
-  const msg = document.getElementById('f_msg').value || '—';
-  return `Hi SPDigitalJourney! 👋 I'd like a FREE consultation.
-
-👤 Name: ${name}
-📱 WhatsApp: ${phone}
-📧 Email: ${email || '—'}
-🏢 Business: ${biz} | City: ${city}
-🛠️ Services Needed: ${services.length ? services.join(', ') : '—'}
-💰 Budget: ${selectedBudget || '—'}
-⏱️ Timeline: ${timeline}
-💬 Message: ${msg}
-
-Sent from: spdigitaljourney.github.io/free-consultation.html`;
-}
-
-function submitToWhatsApp() {
-  const name = document.getElementById('f_name').value.trim();
-  if (!name) { alert('Please go back and fill in your name.'); return; }
-  const message = buildMessage();
-  window.open('https://wa.me/917799423794?text=' + encodeURIComponent(message), '_blank');
+function submitToWhatsApp(){
+  const name=document.getElementById('f_name').value.trim();
+  if(!name){alert('Please go back and fill in your name.');return;}
+  window.open('https://wa.me/917799423794?text='+encodeURIComponent(buildMessage()),'_blank');
   showSuccess();
 }
-
-function submitToEmail() {
-  const name = document.getElementById('f_name').value.trim();
-  if (!name) { alert('Please go back and fill in your name.'); return; }
-  const message = buildMessage();
-  const subject = 'Free Consultation Request — ' + (document.getElementById('f_biz').value || document.getElementById('f_name').value);
-  window.location.href = 'mailto:rpsanjaypaul@gmail.com?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(message);
+function submitToEmail(){
+  const name=document.getElementById('f_name').value.trim();
+  if(!name){alert('Please go back and fill in your name.');return;}
+  const subject='Free Consultation Request — '+(document.getElementById('f_biz').value||name);
+  window.location.href='mailto:rpsanjaypaul@gmail.com?subject='+encodeURIComponent(subject)+'&body='+encodeURIComponent(buildMessage());
   showSuccess();
 }
-
-function showSuccess() {
-  document.getElementById('stepsBar').style.display = 'none';
-  document.getElementById('formTitle').textContent = '🎉 Consultation Request Sent!';
-  document.getElementById('formSub').textContent = 'You\'ll hear from us within 2 hours.';
-  ['step1','step2','step3','step4'].forEach(s => document.getElementById(s).classList.remove('active'));
-  document.getElementById('successState').classList.add('show');
+function showSuccess(){
+  document.getElementById('stepsBar').style.display='none';
+  document.querySelectorAll('.step-panel').forEach(p=>p.classList.remove('active'));
+  document.getElementById('successState').classList.add('active');
+  document.getElementById('successInner').classList.add('show');
+  document.getElementById('formTitle').textContent='🎉 Consultation request sent!';
+  document.getElementById('formSub').textContent="You'll hear from us within 2 hours.";
 }
 
-// ── SCROLL REVEAL ──
-const obs = new IntersectionObserver(entries => {
-  entries.forEach((e, i) => {
-    if (e.isIntersecting) { setTimeout(() => e.target.classList.add('visible'), i * 80); obs.unobserve(e.target); }
-  });
-}, { threshold: .1 });
-document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+const obs=new IntersectionObserver(entries=>{
+  entries.forEach((e,i)=>{if(e.isIntersecting){setTimeout(()=>e.target.classList.add('visible'),i*60);obs.unobserve(e.target);}});
+},{threshold:.08});
+document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
 </script>
 </body>
 </html>
