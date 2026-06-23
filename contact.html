@@ -74,8 +74,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:cen
 .sec-h{font-family:'Sora',sans-serif;font-size:clamp(1.4rem,2.5vw,1.9rem);font-weight:800;letter-spacing:-.03em;color:var(--ink);line-height:1.2;margin-bottom:.65rem;}
 .sec-sub{font-size:.88rem;color:var(--g3);line-height:1.7;max-width:500px;margin-bottom:2rem;}
 
-/* MAP GRID */
-.map-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.25rem;margin-bottom:1.25rem;}
+/* MAP BLOCK */
 .map-block{border:1px solid var(--g2);border-radius:12px;overflow:hidden;background:#fff;}
 .map-hdr{padding:.85rem 1.1rem;border-bottom:1px solid var(--g2);display:flex;align-items:center;gap:.55rem;}
 .map-dot{width:7px;height:7px;border-radius:50%;background:var(--blue);flex-shrink:0;}
@@ -155,7 +154,6 @@ footer{background:var(--ink);padding:1.75rem 5vw;color:rgba(255,255,255,.35);}
 
 /* RESPONSIVE */
 @media(max-width:860px){
-  .map-grid{grid-template-columns:1fr;}
   .reach-grid{grid-template-columns:1fr;}
   .cb-inner{grid-template-columns:1fr 1fr;}
   .cb-item:nth-child(2){border-right:none;}
@@ -263,54 +261,33 @@ footer{background:var(--ink);padding:1.75rem 5vw;color:rgba(255,255,255,.35);}
 <section class="sec" id="maps">
   <div class="sec-inner">
     <div class="eyebrow">Find Us on Google Maps</div>
-    <h2 class="sec-h">SPDigitalJourney — Bengaluru</h2>
-    <p class="sec-sub">Business location at Achit Nagar, Soladevanahalli, Bengaluru. Click "Open in Maps" to get directions.</p>
+    <h2 class="sec-h">SPDigitalJourney — Achit Nagar, Bengaluru</h2>
+    <p class="sec-sub">Click "View Larger Map" or "Open in Maps" to get directions, see reviews, and view the full Google Business Profile.</p>
 
-    <div class="map-grid">
-
-      <!-- MAP 1: Achit Nagar / Soladevanahalli area -->
-      <div class="map-block">
-        <div class="map-hdr">
-          <div class="map-dot"></div>
-          <h2>Business Location</h2>
-          <span>Achit Nagar, Bengaluru</span>
+    <!-- SINGLE MAP — SPDigitalJourney actual GBP listing via CID -->
+    <div class="map-block" style="margin-bottom:0;">
+      <div class="map-hdr">
+        <div class="map-dot"></div>
+        <h2>SPDigitalJourney — Google Business Profile</h2>
+        <span>Achit Nagar, Soladevanahalli, Bengaluru 560107</span>
+      </div>
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.189!2d77.5061!3d13.0606!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae2300102b8b41%3A0x73043c5a682e6bd4!2sSPDigitalJourney!5e0!3m2!1sen!2sin!4v1750700000099!5m2!1sen!2sin"
+        width="100%" height="420" style="border:0;display:block;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+        title="SPDigitalJourney Google Maps — Achit Nagar, Soladevanahalli, Bengaluru">
+      </iframe>
+      <div class="map-ftr">
+        <div class="map-ftr-txt">
+          <strong>SPDigitalJourney</strong>
+          <span>Achit Nagar, Soladevanahalli, Bengaluru, Karnataka 560107</span>
         </div>
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.1890309019866!2d77.50613!3d13.06056!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae3d03d2ef4ee7%3A0x72040af31aa86bd4!2sAchit%20Nagar%2C%20Bengaluru%2C%20Karnataka%20560107!5e0!3m2!1sen!2sin!4v1750700000000!5m2!1sen!2sin"
-          width="100%" height="290" style="border:0;display:block;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
-          title="SPDigitalJourney location — Achit Nagar, Bengaluru">
-        </iframe>
-        <div class="map-ftr">
-          <div class="map-ftr-txt">
-            <strong>SPDigitalJourney</strong>
-            <span>Achit Nagar, Soladevanahalli, Bengaluru 560107</span>
-          </div>
-          <a class="map-lnk" href="https://share.google/zrFWN4WmHa318EVgB" target="_blank" rel="noopener">Open in Maps →</a>
+        <div style="display:flex;gap:.6rem;flex-wrap:wrap;">
+          <a class="map-lnk" href="https://maps.app.goo.gl/H2sf9d6hEyS2YBAa8" target="_blank" rel="noopener">📍 Open in Maps →</a>
+          <a class="map-lnk" href="https://g.page/r/CdRrLmhaPARzEBM/review" target="_blank" rel="noopener" style="background:var(--amber);color:var(--ink);border-color:var(--amber);">⭐ Leave a Review →</a>
         </div>
       </div>
-
-      <!-- MAP 2: GBP Profile / Review link -->
-      <div class="map-block">
-        <div class="map-hdr">
-          <div class="map-dot" style="background:var(--amber)"></div>
-          <h2>Google Business Profile</h2>
-          <span>Reviews · Hours · Services</span>
-        </div>
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15548.761276038792!2d77.49612!3d13.06056!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae3d03d2ef4ee7%3A0x72040af31aa86bd4!2sAchit%20Nagar%2C%20Bengaluru%2C%20Karnataka%20560107!5e0!3m2!1sen!2sin!4v1750700000001!5m2!1sen!2sin"
-          width="100%" height="290" style="border:0;display:block;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
-          title="SPDigitalJourney Google Business Profile area map">
-        </iframe>
-        <div class="map-ftr">
-          <div class="map-ftr-txt">
-            <strong>⭐ Leave a Google Review</strong>
-            <span>Help other businesses find SPDigitalJourney</span>
-          </div>
-          <a class="map-lnk" href="https://g.page/r/CdRrLmhaPARzEBM/review" target="_blank" rel="noopener" style="background:var(--amber);color:var(--ink);border-color:var(--amber);">⭐ Review Us →</a>
-        </div>
-      </div>
-
     </div>
+
   </div>
 </section>
 
