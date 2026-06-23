@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Contact & Find Us — SPDigitalJourney | Bengaluru</title>
+<meta name="description" content="Contact SPDigitalJourney. Call, WhatsApp, or email. Find us on Google Maps. View our 360° Street View coverage map."/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{font-size:16px;scroll-behavior:smooth;}
+:root{
+  --ink:#0D1B2A;--blue:#1A56DB;--blue-dk:#1240A8;
+  --amber:#F59E0B;--green:#25D366;
+  --white:#FFFFFF;--grey-1:#F7F9FC;--grey-2:#E8EDF5;--grey-3:#8A99B0;--text:#1C2B3A;
+}
+body{font-family:'Inter',sans-serif;color:var(--text);background:var(--white);-webkit-font-smoothing:antialiased;}
+
+/* ── NAV ── */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:0 6vw;height:64px;background:rgba(255,255,255,0.97);backdrop-filter:blur(8px);border-bottom:1px solid var(--grey-2);}
+.nav-logo{font-family:'Sora',sans-serif;font-weight:800;font-size:1.05rem;color:var(--ink);text-decoration:none;letter-spacing:-0.02em;}
+.nav-logo span{color:var(--blue);}
+.nav-links{display:flex;gap:1.75rem;list-style:none;}
+.nav-links a{font-size:0.85rem;font-weight:500;color:var(--grey-3);text-decoration:none;transition:color .2s;}
+.nav-links a:hover,.nav-links a.active{color:var(--blue);}
+.nav-cta{background:var(--blue);color:var(--white);font-family:'Sora',sans-serif;font-size:0.82rem;font-weight:600;padding:0.5rem 1.25rem;border-radius:6px;text-decoration:none;transition:background .2s;}
+.nav-cta:hover{background:var(--blue-dk);}
+
+/* ── HERO STRIP ── */
+.page-hero{background:var(--ink);padding:108px 6vw 56px;position:relative;overflow:hidden;}
+.page-hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 30% 100%,rgba(26,86,219,0.22) 0%,transparent 65%);}
+.hero-inner{max-width:1100px;margin:0 auto;position:relative;display:grid;grid-template-columns:1fr auto;align-items:end;gap:2rem;}
+.breadcrumb{font-size:0.75rem;color:rgba(255,255,255,0.35);margin-bottom:0.85rem;}
+.breadcrumb a{color:rgba(255,255,255,0.35);text-decoration:none;}
+.page-hero h1{font-family:'Sora',sans-serif;font-size:clamp(1.8rem,3.5vw,2.8rem);font-weight:800;color:var(--white);letter-spacing:-0.03em;line-height:1.12;margin-bottom:0.6rem;}
+.page-hero p{font-size:0.92rem;color:rgba(255,255,255,0.5);max-width:440px;line-height:1.6;}
+.hero-cta-strip{display:flex;gap:0.75rem;flex-wrap:wrap;}
+.btn-call{display:inline-flex;align-items:center;gap:0.5rem;background:var(--white);color:var(--ink);font-family:'Sora',sans-serif;font-size:0.85rem;font-weight:700;padding:0.7rem 1.4rem;border-radius:8px;text-decoration:none;transition:transform .15s,box-shadow .2s;box-shadow:0 4px 16px rgba(0,0,0,0.2);}
+.btn-call:hover{transform:translateY(-2px);box-shadow:0 6px 24px rgba(0,0,0,0.25);}
+.btn-wa{display:inline-flex;align-items:center;gap:0.5rem;background:var(--green);color:var(--white);font-family:'Sora',sans-serif;font-size:0.85rem;font-weight:700;padding:0.7rem 1.4rem;border-radius:8px;text-decoration:none;transition:transform .15s,box-shadow .2s;box-shadow:0 4px 16px rgba(37,211,102,0.3);}
+.btn-wa:hover{transform:translateY(-2px);box-shadow:0 6px 24px rgba(37,211,102,0.4);}
+
+/* ── CONTACT CARDS ROW ── */
+.contact-bar{background:var(--grey-1);border-bottom:1px solid var(--grey-2);}
+.contact-bar-inner{max-width:1100px;margin:0 auto;padding:0 6vw;display:grid;grid-template-columns:repeat(4,1fr);}
+.contact-card-item{padding:1.5rem 1.25rem;border-right:1px solid var(--grey-2);display:flex;align-items:flex-start;gap:0.85rem;}
+.contact-card-item:last-child{border-right:none;}
+.cc-icon{width:40px;height:40px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:1.1rem;flex-shrink:0;}
+.cc-blue{background:rgba(26,86,219,0.1);}
+.cc-green{background:rgba(37,211,102,0.1);}
+.cc-amber{background:rgba(245,158,11,0.1);}
+.cc-ink{background:rgba(13,27,42,0.08);}
+.cc-text{}
+.cc-label{font-size:0.68rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--grey-3);margin-bottom:0.2rem;}
+.cc-value{font-family:'Sora',sans-serif;font-size:0.9rem;font-weight:700;color:var(--ink);}
+.cc-value a{color:var(--ink);text-decoration:none;transition:color .2s;}
+.cc-value a:hover{color:var(--blue);}
+.cc-sub{font-size:0.72rem;color:var(--grey-3);margin-top:0.1rem;}
+
+/* ── SECTION WRAPPER ── */
+.section{padding:72px 6vw;}
+.section-inner{max-width:1100px;margin:0 auto;}
+.section-eyebrow{font-size:0.72rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--blue);margin-bottom:0.6rem;}
+.section-heading{font-family:'Sora',sans-serif;font-size:clamp(1.5rem,2.5vw,2rem);font-weight:800;letter-spacing:-0.03em;color:var(--ink);line-height:1.2;margin-bottom:0.75rem;}
+.section-sub{font-size:0.9rem;color:var(--grey-3);line-height:1.7;max-width:500px;margin-bottom:2.5rem;}
+
+/* ── MAP GRID ── */
+.map-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;}
+.map-block{border:1px solid var(--grey-2);border-radius:14px;overflow:hidden;background:var(--white);}
+.map-block-header{padding:1rem 1.25rem;border-bottom:1px solid var(--grey-2);display:flex;align-items:center;gap:0.6rem;}
+.map-block-header .dot{width:8px;height:8px;border-radius:50%;background:var(--blue);}
+.map-block-header h3{font-family:'Sora',sans-serif;font-size:0.88rem;font-weight:700;color:var(--ink);}
+.map-block-header span{font-size:0.75rem;color:var(--grey-3);margin-left:auto;}
+.map-frame{width:100%;height:320px;border:none;display:block;}
+.map-block-footer{padding:0.85rem 1.25rem;background:var(--grey-1);border-top:1px solid var(--grey-2);display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap;}
+.map-footer-text{font-size:0.78rem;color:var(--grey-3);line-height:1.4;}
+.map-footer-text strong{color:var(--ink);display:block;}
+.btn-map-link{display:inline-flex;align-items:center;gap:0.4rem;font-family:'Sora',sans-serif;font-size:0.78rem;font-weight:600;color:var(--blue);text-decoration:none;padding:0.4rem 0.85rem;border:1.5px solid rgba(26,86,219,0.2);border-radius:6px;transition:all .2s;white-space:nowrap;}
+.btn-map-link:hover{background:var(--blue);color:var(--white);border-color:var(--blue);}
+
+/* ── STREET VIEW FULL ── */
+.sv-block{border:1px solid var(--grey-2);border-radius:14px;overflow:hidden;background:var(--white);}
+.sv-block-header{padding:1rem 1.25rem;border-bottom:1px solid var(--grey-2);display:flex;align-items:center;gap:0.75rem;flex-wrap:wrap;}
+.sv-badge{background:rgba(26,86,219,0.08);border:1px solid rgba(26,86,219,0.15);color:var(--blue);font-size:0.7rem;font-weight:700;padding:0.2rem 0.65rem;border-radius:100px;letter-spacing:0.05em;text-transform:uppercase;}
+.sv-frame{width:100%;height:420px;border:none;display:block;}
+.sv-footer{padding:1rem 1.25rem;background:var(--grey-1);border-top:1px solid var(--grey-2);display:flex;gap:2rem;flex-wrap:wrap;align-items:center;}
+.sv-stat strong{font-family:'Sora',sans-serif;font-size:1.2rem;font-weight:800;color:var(--ink);display:block;letter-spacing:-0.03em;}
+.sv-stat span{font-size:0.72rem;color:var(--grey-3);}
+
+/* ── REACH OUT SECTION ── */
+.reach-section{background:var(--grey-1);}
+.reach-grid{display:grid;grid-template-columns:1fr 1fr;gap:2rem;align-items:start;}
+.reach-card{background:var(--white);border:1px solid var(--grey-2);border-radius:14px;padding:1.75rem;}
+.reach-card h3{font-family:'Sora',sans-serif;font-size:1rem;font-weight:700;color:var(--ink);margin-bottom:0.35rem;letter-spacing:-0.01em;}
+.reach-card .sub{font-size:0.82rem;color:var(--grey-3);margin-bottom:1.5rem;line-height:1.5;}
+.action-list{display:flex;flex-direction:column;gap:0.75rem;}
+.action-btn{display:flex;align-items:center;gap:0.85rem;padding:0.9rem 1.1rem;border-radius:10px;text-decoration:none;font-family:'Sora',sans-serif;font-size:0.88rem;font-weight:700;transition:transform .15s,box-shadow .2s;border:none;cursor:pointer;width:100%;}
+.action-btn-wa{background:var(--green);color:var(--white);box-shadow:0 4px 16px rgba(37,211,102,0.25);}
+.action-btn-wa:hover{transform:translateY(-2px);box-shadow:0 6px 24px rgba(37,211,102,0.35);}
+.action-btn-call{background:var(--blue);color:var(--white);box-shadow:0 4px 16px rgba(26,86,219,0.2);}
+.action-btn-call:hover{transform:translateY(-2px);box-shadow:0 6px 24px rgba(26,86,219,0.3);}
+.action-btn-email{background:var(--grey-1);color:var(--ink);border:1.5px solid var(--grey-2);}
+.action-btn-email:hover{border-color:var(--blue);color:var(--blue);}
+.action-btn-pay{background:var(--ink);color:var(--white);box-shadow:0 4px 16px rgba(13,27,42,0.15);}
+.action-btn-pay:hover{transform:translateY(-2px);}
+.action-icon{width:34px;height:34px;border-radius:8px;background:rgba(255,255,255,0.15);display:flex;align-items:center;justify-content:center;font-size:1rem;flex-shrink:0;}
+.action-icon-dark{background:rgba(255,255,255,0.08);}
+.action-icon-light{background:rgba(26,86,219,0.08);}
+.action-text{text-align:left;}
+.action-text strong{display:block;font-size:0.88rem;}
+.action-text span{font-size:0.75rem;opacity:0.7;font-weight:500;}
+
+/* Info card */
+.info-card{background:var(--ink);border-radius:14px;padding:1.75rem;color:var(--white);}
+.info-card h3{font-family:'Sora',sans-serif;font-size:1rem;font-weight:700;color:var(--white);margin-bottom:1.25rem;letter-spacing:-0.01em;}
+.info-row{display:flex;gap:0.85rem;align-items:flex-start;margin-bottom:1rem;font-size:0.85rem;color:rgba(255,255,255,0.65);line-height:1.5;}
+.info-row:last-child{margin-bottom:0;}
+.info-row .info-icon{font-size:1rem;flex-shrink:0;margin-top:0px;}
+.info-row a{color:rgba(255,255,255,0.85);text-decoration:none;}
+.info-row a:hover{color:var(--white);}
+.hours-grid{display:grid;grid-template-columns:auto 1fr;gap:0.3rem 1rem;font-size:0.82rem;color:rgba(255,255,255,0.6);margin-top:0.5rem;}
+.hours-grid .day{color:rgba(255,255,255,0.45);}
+.hours-grid .time{color:rgba(255,255,255,0.8);}
+.msme-tag{display:inline-flex;align-items:center;gap:0.4rem;background:rgba(245,158,11,0.15);border:1px solid rgba(245,158,11,0.25);color:var(--amber);font-size:0.7rem;font-weight:600;padding:0.3rem 0.75rem;border-radius:6px;margin-top:1.25rem;letter-spacing:0.04em;}
+
+/* ── FOOTER ── */
+footer{background:var(--ink);padding:2.5rem 6vw;color:rgba(255,255,255,0.4);}
+.footer-bottom{max-width:1100px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;font-size:0.75rem;flex-wrap:wrap;gap:1rem;}
+.footer-udyam{font-family:monospace;font-size:0.72rem;color:rgba(255,255,255,0.3);background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.08);padding:0.3rem 0.75rem;border-radius:4px;}
+.footer-nav{display:flex;gap:1.5rem;}
+.footer-nav a{font-size:0.78rem;color:rgba(255,255,255,0.4);text-decoration:none;transition:color .2s;}
+.footer-nav a:hover{color:var(--white);}
+
+/* ── RESPONSIVE ── */
+@media(max-width:900px){
+  .map-grid{grid-template-columns:1fr;}
+  .reach-grid{grid-template-columns:1fr;}
+  .contact-bar-inner{grid-template-columns:1fr 1fr;}
+  .contact-card-item:nth-child(2){border-right:none;}
+  .contact-card-item:nth-child(3){border-top:1px solid var(--grey-2);}
+  .hero-inner{grid-template-columns:1fr;}
+  .nav-links{display:none;}
+}
+@media(max-width:600px){
+  .contact-bar-inner{grid-template-columns:1fr;}
+  .contact-card-item{border-right:none;border-bottom:1px solid var(--grey-2);}
+  .sv-footer{gap:1rem;}
+}
+@media(prefers-reduced-motion:reduce){*,::before,::after{animation-duration:0.01ms!important;}}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a class="nav-logo" href="index.html"><span>SP</span>DigitalJourney</a>
+  <ul class="nav-links">
+    <li><a href="index.html#system">The System</a></li>
+    <li><a href="index.html#pricing">Pricing</a></li>
+    <li><a href="contact.html" class="active">Contact</a></li>
+  </ul>
+  <a class="nav-cta" href="audit.html">Free Audit</a>
+</nav>
+
+<!-- PAGE HERO -->
+<div class="page-hero">
+  <div class="hero-inner">
+    <div>
+      <div class="breadcrumb"><a href="index.html">Home</a> / Contact &amp; Find Us</div>
+      <h1>Call, WhatsApp,<br/>or find us on Maps.</h1>
+      <p>SPDigitalJourney is based in Bengaluru. Reach out via any channel — WhatsApp gets the fastest response.</p>
+    </div>
+    <div class="hero-cta-strip">
+      <a class="btn-call" href="tel:+917799423794">
+        📞 Call Now
+      </a>
+      <a class="btn-wa" href="https://wa.me/917799423794?text=Hi%2C%20I%20found%20you%20on%20your%20website%20and%20want%20to%20know%20more%20about%20your%20services" target="_blank" rel="noopener">
+        💬 WhatsApp
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- CONTACT BAR -->
+<div class="contact-bar">
+  <div class="contact-bar-inner">
+    <div class="contact-card-item">
+      <div class="cc-icon cc-blue">📞</div>
+      <div class="cc-text">
+        <div class="cc-label">Call</div>
+        <div class="cc-value"><a href="tel:+917799423794">+91 77994 23794</a></div>
+        <div class="cc-sub">Mon–Sat · 9 AM – 7 PM IST</div>
+      </div>
+    </div>
+    <div class="contact-card-item">
+      <div class="cc-icon cc-green">💬</div>
+      <div class="cc-text">
+        <div class="cc-label">WhatsApp</div>
+        <div class="cc-value"><a href="https://wa.me/917799423794" target="_blank" rel="noopener">+91 77994 23794</a></div>
+        <div class="cc-sub">Fastest response · Usually within 2 hrs</div>
+      </div>
+    </div>
+    <div class="contact-card-item">
+      <div class="cc-icon cc-amber">✉️</div>
+      <div class="cc-text">
+        <div class="cc-label">Email</div>
+        <div class="cc-value"><a href="mailto:rpsanjaypaul@gmail.com">rpsanjaypaul@gmail.com</a></div>
+        <div class="cc-sub">Response within 24 hours</div>
+      </div>
+    </div>
+    <div class="contact-card-item">
+      <div class="cc-icon cc-ink">📍</div>
+      <div class="cc-text">
+        <div class="cc-label">Location</div>
+        <div class="cc-value">Achit Nagar, Bengaluru</div>
+        <div class="cc-sub">Karnataka 560107 · MSME Registered</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- MAPS SECTION -->
+<section class="section" id="maps">
+  <div class="section-inner">
+    <div class="section-eyebrow">Find Us</div>
+    <h2 class="section-heading">SPDigitalJourney on Google Maps</h2>
+    <p class="section-sub">View the business location and the 360° Street View coverage map showing areas served across Bengaluru and beyond.</p>
+
+    <div class="map-grid">
+      <!-- Business Location Map -->
+      <div class="map-block">
+        <div class="map-block-header">
+          <div class="dot"></div>
+          <h3>Business Location</h3>
+          <span>Achit Nagar, Bengaluru</span>
+        </div>
+        <iframe
+          class="map-frame"
+          title="SPDigitalJourney office location — Achit Nagar, Bengaluru"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.3!2d77.5245!3d13.0827!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTPCsDA0JzU3LjciTiA3N8KwMzEnMjguMiJF!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin&q=Achit+Nagar+Soladevanahalli+Bengaluru+Karnataka+560107"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+        <div class="map-block-footer">
+          <div class="map-footer-text">
+            <strong>SPDigitalJourney</strong>
+            Achit Nagar, Soladevanahalli, Bengaluru, Karnataka 560107
+          </div>
+          <a class="btn-map-link" href="https://share.google/zrFWN4WmHa318EVgB" target="_blank" rel="noopener">
+            Open in Google Maps →
+          </a>
+        </div>
+      </div>
+
+      <!-- Google Business Profile embed -->
+      <div class="map-block">
+        <div class="map-block-header">
+          <div class="dot" style="background:var(--amber)"></div>
+          <h3>Google Business Profile</h3>
+          <span>Reviews · Hours · Services</span>
+        </div>
+        <iframe
+          class="map-frame"
+          title="SPDigitalJourney Google Business Profile"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.3!2d77.5245!3d13.0827!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae3d3f3f3f3f3f%3A0x0!2sSPDigitalJourney!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+        <div class="map-block-footer">
+          <div class="map-footer-text">
+            <strong>Leave a Google Review</strong>
+            Your review helps more local businesses find SPDigitalJourney
+          </div>
+          <a class="btn-map-link" href="https://share.google/zrFWN4WmHa318EVgB" target="_blank" rel="noopener">
+            View Profile →
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STREET VIEW SECTION -->
+<section class="section" id="streetview" style="background:var(--grey-1);padding-top:0;padding-bottom:72px;">
+  <div class="section-inner">
+    <div class="section-eyebrow">360° Street View Coverage</div>
+    <h2 class="section-heading">Areas covered across India</h2>
+    <p class="section-sub">SPDigitalJourney has mapped 2,000+ business locations across 100+ cities since the Google Maps India pilot in 2007. The map below shows 360° Street View coverage added to Google Maps.</p>
+
+    <div class="sv-block">
+      <div class="sv-block-header">
+        <div class="dot" style="background:var(--green)"></div>
+        <h3 style="font-family:'Sora',sans-serif;font-size:0.88rem;font-weight:700;color:var(--ink);">360° Street View Coverage Map</h3>
+        <span class="sv-badge">Google Trusted</span>
+        <span style="font-size:0.75rem;color:var(--grey-3);margin-left:auto;">Contributed to Google Maps · India</span>
+      </div>
+      <!-- My Maps Street View coverage embed -->
+      <iframe
+        class="sv-frame"
+        title="SPDigitalJourney 360° Street View coverage map across India"
+        src="https://www.google.com/maps/d/embed?mid=1Bfgv9RzRxYnNIPAEP4o8l-cEyifbp3k&ehbc=2E312F"
+        allowfullscreen=""
+        loading="lazy">
+      </iframe>
+      <div class="sv-footer">
+        <div class="sv-stat">
+          <strong>2,000+</strong>
+          <span>Business locations mapped</span>
+        </div>
+        <div class="sv-stat">
+          <strong>100+</strong>
+          <span>Cities across India</span>
+        </div>
+        <div class="sv-stat">
+          <strong>7+ states</strong>
+          <span>Field coverage</span>
+        </div>
+        <div class="sv-stat">
+          <strong>Since 2007</strong>
+          <span>Google Maps India ecosystem</span>
+        </div>
+        <a class="btn-map-link" href="https://www.google.com/maps/d/viewer?mid=1Bfgv9RzRxYnNIPAEP4o8l-cEyifbp3k" target="_blank" rel="noopener" style="margin-left:auto;">Open Full Map →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- REACH OUT -->
+<section class="section reach-section" id="reach">
+  <div class="section-inner">
+    <div class="section-eyebrow">Get In Touch</div>
+    <h2 class="section-heading">How to reach SPDigitalJourney</h2>
+    <p class="section-sub">Pick the channel that works best. WhatsApp is monitored 7 days a week and gets the fastest response.</p>
+
+    <div class="reach-grid">
+      <!-- Actions -->
+      <div class="reach-card">
+        <h3>Contact channels</h3>
+        <div class="sub">All messages are handled directly by Sanjay Paul — no bots, no junior staff.</div>
+        <div class="action-list">
+          <a class="action-btn action-btn-wa" href="https://wa.me/917799423794?text=Hi%20SPDigitalJourney%2C%20I%27d%20like%20to%20discuss%20Google%20Maps%20visibility%20for%20my%20bus
