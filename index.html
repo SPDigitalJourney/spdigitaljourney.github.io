@@ -310,21 +310,35 @@ footer{background:var(--ink);padding:3rem 6vw 2rem;}
   .map-card{max-width:340px;}
   .problem-grid,.system-grid,.pricing-grid{grid-template-columns:1fr;}
   .nav-links{display:none;}
-  .footer-top{flex-direction:column;}
-  .footer-links{gap:2rem;}
+  .footer-top{flex-direction:column;gap:1.5rem;}
+  .footer-links{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;}
+  .footer-col a{font-size:.78rem;margin-bottom:.35rem;}
+  .footer-col h4{font-size:.62rem;}
   .cta-contact{flex-direction:column;gap:.85rem;align-items:center;}
   .nav-clock{display:none;}
   #float-call{display:flex;}
-  #float-wa span.wa-label{display:none;}
+  #float-wa .wa-label{display:none;}
   #float-wa{padding:13px;border-radius:50%;}
+  /* Show clock in a mobile bar under nav */
+  .mobile-clock-bar{display:flex;}
 }
 @media(max-width:600px){
   .hero-trust{flex-wrap:wrap;gap:1.25rem;}
   .auth-stats{grid-template-columns:1fr 1fr;}
-  .proof-strip{gap:1.25rem;}
-  .proof-items{gap:1.25rem;}
+  .proof-strip{gap:1.25rem;padding:1rem 4vw;}
+  .proof-items{gap:1rem;flex-wrap:wrap;}
+  .proof-item span{font-size:.72rem;}
   #review-badge{max-width:190px;}
+  .footer-brand p{font-size:.74rem;}
+  .footer-bottom{font-size:.68rem;}
+  .review-strip-inner{flex-direction:column;gap:1rem;align-items:flex-start;}
 }
+/* ── MOBILE CLOCK BAR — shows under nav on small screens ── */
+.mobile-clock-bar{display:none;background:var(--ink);padding:.45rem 4vw;align-items:center;justify-content:space-between;border-bottom:1px solid rgba(255,255,255,.08);position:sticky;top:68px;z-index:190;}
+.mobile-clock-bar .mc-time{font-family:'Sora',sans-serif;font-size:.82rem;font-weight:700;color:var(--white);letter-spacing:.06em;}
+.mobile-clock-bar .mc-date{font-size:.65rem;font-weight:600;color:rgba(255,255,255,.45);letter-spacing:.06em;text-transform:uppercase;}
+.mobile-clock-bar .mc-badge{background:rgba(26,86,219,.3);border:1px solid rgba(26,86,219,.4);color:rgba(255,255,255,.7);font-size:.6rem;font-weight:700;padding:.18rem .55rem;border-radius:100px;letter-spacing:.06em;text-transform:uppercase;}
+
 /* ── REVIEW STRIP ── */
 .review-strip{background:#fff;border-top:2px solid #F59E0B;border-bottom:1px solid var(--grey-2);padding:1.1rem 6vw;}
 .review-strip-inner{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:1.5rem;flex-wrap:wrap;}
@@ -415,7 +429,7 @@ footer{background:var(--ink);padding:3rem 6vw 2rem;}
   <ul class="nav-links" role="list">
     <li><a href="#system">The System</a></li>
     <li><a href="#pricing">Pricing</a></li>
-    <li><a href="contact.html">Contact &amp; Maps</a></li>
+    <li><a href="contact.html">Contact</a></li>
   </ul>
 
   <!-- Live Digital Clock -->
@@ -426,6 +440,15 @@ footer{background:var(--ink);padding:3rem 6vw 2rem;}
 
   <a class="nav-cta" href="https://wa.me/917799423794?text=Hi%2C%20I%27d%20like%20a%20free%20Google%20Visibility%20Audit" target="_blank" rel="noopener" aria-label="Get free Google Maps audit on WhatsApp">Free Audit →</a>
 </nav>
+
+<!-- ══ MOBILE CLOCK BAR — visible only on small screens ══ -->
+<div class="mobile-clock-bar" role="timer" aria-label="Current date and time">
+  <div>
+    <div class="mc-time" id="m-clock-time">--:--:-- --</div>
+    <div class="mc-date" id="m-clock-date">---, -- --- ----</div>
+  </div>
+  <span class="mc-badge">IST · Bengaluru</span>
+</div>
 
 <!-- ══ HERO ══ -->
 <main>
@@ -655,7 +678,7 @@ footer{background:var(--ink);padding:3rem 6vw 2rem;}
       </div>
       <div class="footer-col">
         <h4>Company</h4>
-        <a href="contact.html">Contact &amp; Maps</a>
+        <a href="contact.html">Contact Us</a>
         <a href="#pricing">Pricing</a>
         <a href="https://spdigitaljourney.blogspot.com" target="_blank" rel="noopener">Blog</a>
         <a href="https://wa.me/917799423794" target="_blank" rel="noopener">WhatsApp</a>
@@ -681,10 +704,16 @@ footer{background:var(--ink);padding:3rem 6vw 2rem;}
     var ap=h>=12?'PM':'AM'; h=h%12||12;
     var t=(h<10?'0'+h:h)+':'+(m<10?'0'+m:m)+':'+(s<10?'0'+s:s)+' '+ap;
     var d=D[n.getDay()]+', '+n.getDate()+' '+M[n.getMonth()]+' '+n.getFullYear();
+    // Nav clock (desktop)
     var ct=document.getElementById('clock-time');
     var cd=document.getElementById('clock-date');
     if(ct)ct.textContent=t;
     if(cd)cd.textContent=d;
+    // Mobile clock bar
+    var mt=document.getElementById('m-clock-time');
+    var md=document.getElementById('m-clock-date');
+    if(mt)mt.textContent=t;
+    if(md)md.textContent=d;
   }
   tick();
   setInterval(tick,1000);
