@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Privacy Policy — SPDigitalJourney</title>
+<meta name="description" content="Privacy Policy for SPDigitalJourney — how client data is collected, used, stored, and protected."/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{font-size:16px;}
+:root{--ink:#0D1B2A;--blue:#1A56DB;--blue-dk:#1240A8;--amber:#F59E0B;--white:#FFFFFF;--grey-1:#F7F9FC;--grey-2:#E8EDF5;--grey-3:#8A99B0;--text:#1C2B3A;}
+body{font-family:'Inter',sans-serif;color:var(--text);background:var(--white);-webkit-font-smoothing:antialiased;}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:0 6vw;height:64px;background:rgba(255,255,255,0.95);backdrop-filter:blur(8px);border-bottom:1px solid var(--grey-2);}
+.nav-logo{font-family:'Sora',sans-serif;font-weight:800;font-size:1.05rem;color:var(--ink);text-decoration:none;letter-spacing:-0.02em;}
+.nav-logo span{color:var(--blue);}
+.nav-cta{background:var(--blue);color:var(--white);font-family:'Sora',sans-serif;font-size:0.82rem;font-weight:600;padding:0.5rem 1.25rem;border-radius:6px;text-decoration:none;}
+.page-header{background:var(--ink);padding:120px 6vw 60px;position:relative;overflow:hidden;}
+.page-header::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 100% 50%,rgba(26,86,219,0.2) 0%,transparent 60%);}
+.breadcrumb{font-size:0.75rem;color:rgba(255,255,255,0.4);margin-bottom:1rem;position:relative;}
+.breadcrumb a{color:rgba(255,255,255,0.4);text-decoration:none;}
+.page-header h1{font-family:'Sora',sans-serif;font-size:clamp(1.8rem,3.5vw,2.8rem);font-weight:800;color:var(--white);letter-spacing:-0.03em;line-height:1.15;margin-bottom:0.75rem;position:relative;}
+.page-meta{display:flex;gap:2rem;flex-wrap:wrap;position:relative;}
+.page-meta span{font-size:0.8rem;color:rgba(255,255,255,0.45);}
+.page-meta strong{color:rgba(255,255,255,0.7);}
+.legal-body{max-width:780px;margin:0 auto;padding:70px 6vw 100px;}
+.toc{background:var(--grey-1);border:1px solid var(--grey-2);border-radius:12px;padding:1.5rem 2rem;margin-bottom:3rem;}
+.toc-title{font-family:'Sora',sans-serif;font-size:0.75rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--grey-3);margin-bottom:1rem;}
+.toc ol{padding-left:1.25rem;display:flex;flex-direction:column;gap:0.4rem;}
+.toc li a{font-size:0.85rem;color:var(--blue);text-decoration:none;line-height:1.5;}
+.toc li a:hover{text-decoration:underline;}
+.legal-section{margin-bottom:3rem;scroll-margin-top:80px;}
+.legal-section h2{font-family:'Sora',sans-serif;font-size:1.15rem;font-weight:800;color:var(--ink);letter-spacing:-0.02em;margin-bottom:1rem;padding-bottom:0.75rem;border-bottom:2px solid var(--grey-2);display:flex;align-items:center;gap:0.6rem;}
+.sec-num{display:inline-flex;align-items:center;justify-content:center;width:28px;height:28px;background:var(--blue);color:var(--white);border-radius:6px;font-size:0.7rem;font-weight:800;flex-shrink:0;}
+.legal-section p{font-size:0.9rem;line-height:1.8;color:var(--text);margin-bottom:1rem;}
+.legal-section p:last-child{margin-bottom:0;}
+.legal-section ul{padding-left:1.4rem;margin-bottom:1rem;}
+.legal-section li{font-size:0.88rem;line-height:1.7;color:var(--text);margin-bottom:0.35rem;}
+.legal-section strong{color:var(--ink);font-weight:600;}
+.highlight-box{background:rgba(26,86,219,0.05);border-left:3px solid var(--blue);border-radius:0 8px 8px 0;padding:1rem 1.25rem;margin:1rem 0;font-size:0.88rem;line-height:1.7;color:var(--text);}
+.data-table{width:100%;border-collapse:collapse;margin:1rem 0;font-size:0.85rem;}
+.data-table th{text-align:left;padding:0.75rem 1rem;background:var(--grey-1);border:1px solid var(--grey-2);font-family:'Sora',sans-serif;font-size:0.75rem;font-weight:700;color:var(--grey-3);letter-spacing:0.05em;text-transform:uppercase;}
+.data-table td{padding:0.75rem 1rem;border:1px solid var(--grey-2);vertical-align:top;line-height:1.6;}
+.data-table tr:hover td{background:var(--grey-1);}
+.contact-card{background:var(--grey-1);border:1px solid var(--grey-2);border-radius:12px;padding:1.5rem;margin-top:2rem;}
+.contact-card h3{font-family:'Sora',sans-serif;font-size:0.9rem;font-weight:700;color:var(--ink);margin-bottom:0.75rem;}
+.contact-row{display:flex;align-items:center;gap:0.6rem;font-size:0.85rem;color:var(--text);margin-bottom:0.5rem;}
+.contact-row a{color:var(--blue);text-decoration:none;font-weight:500;}
+footer{background:var(--ink);padding:2rem 6vw;color:rgba(255,255,255,0.4);}
+.footer-bottom{display:flex;justify-content:space-between;align-items:center;font-size:0.75rem;flex-wrap:wrap;gap:1rem;}
+.footer-udyam{font-family:monospace;font-size:0.72rem;color:rgba(255,255,255,0.3);background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.08);padding:0.3rem 0.75rem;border-radius:4px;}
+.footer-nav{display:flex;gap:1.5rem;}
+.footer-nav a{font-size:0.78rem;color:rgba(255,255,255,0.4);text-decoration:none;transition:color .2s;}
+.footer-nav a:hover{color:var(--white);}
+@media(max-width:600px){.data-table{font-size:0.78rem;}.data-table th,.data-table td{padding:0.5rem 0.75rem;}}
+</style>
+</head>
+<body>
+
+<nav>
+  <a class="nav-logo" href="index.html"><span>SP</span>DigitalJourney</a>
+  <a class="nav-cta" href="https://wa.me/917799423794" target="_blank" rel="noopener">WhatsApp Us</a>
+</nav>
+
+<div class="page-header">
+  <div class="breadcrumb"><a href="index.html">Home</a> / Privacy Policy</div>
+  <h1>Privacy Policy</h1>
+  <div class="page-meta">
+    <span><strong>Effective:</strong> 1 January 2025</span>
+    <span><strong>Last updated:</strong> 24 June 2025</span>
+    <span><strong>Scope:</strong> All SPDigitalJourney services</span>
+  </div>
+</div>
+
+<div class="legal-body">
+
+  <div class="toc">
+    <div class="toc-title">Table of Contents</div>
+    <ol>
+      <li><a href="#p1">Who We Are</a></li>
+      <li><a href="#p2">What Data We Collect</a></li>
+      <li><a href="#p3">How We Collect Data</a></li>
+      <li><a href="#p4">How We Use Your Data</a></li>
+      <li><a href="#p5">Legal Basis for Processing</a></li>
+      <li><a href="#p6">Data Sharing and Third Parties</a></li>
+      <li><a href="#p7">Data Retention</a></li>
+      <li><a href="#p8">Data Security</a></li>
+      <li><a href="#p9">Your Rights</a></li>
+      <li><a href="#p10">Cookies and Website Analytics</a></li>
+      <li><a href="#p11">WhatsApp Communication</a></li>
+      <li><a href="#p12">Children's Privacy</a></li>
+      <li><a href="#p13">Changes to This Policy</a></li>
+      <li><a href="#p14">Contact the Data Controller</a></li>
+    </ol>
+  </div>
+
+  <div class="highlight-box">
+    SPDigitalJourney is committed to protecting the privacy of its clients and website visitors. This Policy explains what personal data is collected, why it is collected, how it is used, and what rights you have over your data. It complies with the Information Technology Act, 2000 and the Digital Personal Data Protection Act, 2023 (DPDPA) of India.
+  </div>
+
+  <div class="legal-section" id="p1">
+    <h2><span class="sec-num">1</span> Who We Are</h2>
+    <p><strong>Data Controller:</strong> SPDigitalJourney, a sole proprietorship registered under MSME Udyam No. UDYAM-KR-02-0117946, operated by Sanjay Paul, Achit Nagar, Soladevanahalli, Bengaluru, Karnataka 560107, India.</p>
+    <p>Contact for privacy matters: <strong>rpsanjaypaul@gmail.com</strong> | WhatsApp: <strong>+91 77994 23794</strong></p>
+  </div>
+
+  <div class="legal-section" id="p2">
+    <h2><span class="sec-num">2</span> What Data We Collect</h2>
+    <table class="data-table">
+      <thead>
+        <tr><th>Category</th><th>Data Points</th><th>Source</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><strong>Identity data</strong></td><td>Full name, business name, owner/contact name</td><td>Provided by you</td></tr>
+        <tr><td><strong>Contact data</strong></td><td>WhatsApp number, phone number, email address</td><td>Provided by you</td></tr>
+        <tr><td><strong>Business data</strong></td><td>Business category, city, Google Maps URL, JustDial URL, website URL</td><td>Provided by you or publicly available</td></tr>
+        <tr><td><strong>Financial data</strong></td><td>Payment confirmation details (Razorpay transaction IDs); no card/bank data is stored by SPDigitalJourney</td><td>Razorpay payment gateway</td></tr>
+        <tr><td><strong>Platform access</strong></td><td>Google Business Profile login (managed access only), Google Ads account, Meta Business Manager access — temporarily held during engagement</td><td>Provided by you</td></tr>
+        <tr><td><strong>Communication data</strong></td><td>WhatsApp chat threads, email threads, audit request forms</td><td>Your interactions with SPDigitalJourney</td></tr>
+        <tr><td><strong>Usage data</strong></td><td>Website visit logs (page views, referrer, browser type) via GitHub Pages — no cookies are set by SPDigitalJourney</td><td>Automatic</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="legal-section" id="p3">
+    <h2><span class="sec-num">3</span> How We Collect Data</h2>
+    <ul>
+      <li><strong>Audit request forms</strong> on this website (spdigitaljourney.github.io/audit.html)</li>
+      <li><strong>WhatsApp conversations</strong> initiated by you at +91 77994 23794</li>
+      <li><strong>Email correspondence</strong> to rpsanjaypaul@gmail.com</li>
+      <li><strong>Work orders and proposals</strong> accepted by you</li>
+      <li><strong>Razorpay payment gateway</strong> — transaction confirmation only</li>
+      <li><strong>Public sources</strong> — Google Maps, JustDial, business websites, for the purpose of conducting visibility audits</li>
+    </ul>
+  </div>
+
+  <div class="legal-section" id="p4">
+    <h2><span class="sec-num">4</span> How We Use Your Data</h2>
+    <ul>
+      <li>To deliver the services you have engaged SPDigitalJourney for</li>
+      <li>To conduct Google Business Profile audits and local visibility analysis</li>
+      <li>To communicate with you about your project, invoices, and reports</li>
+      <li>To process payments and maintain financial records as required by Indian law</li>
+      <li>To send service updates, monthly performance reports, and renewal reminders</li>
+      <li>To improve SPDigitalJourney's services using aggregated, anonymised data</li>
+      <li>To comply with legal obligations</li>
+    </ul>
+    <p>SPDigitalJourney does <strong>not</strong> use your data for third-party advertising, sell data to any party, or send unsolicited promotional messages.</p>
+  </div>
+
+  <div class="legal-section" id="p5">
+    <h2><span class="sec-num">5</span> Legal Basis for Processing</h2>
+    <p>Under India's Digital Personal Data Protection Act, 2023, SPDigitalJourney processes your personal data on the following bases:</p>
+    <ul>
+      <li><strong>Consent:</strong> Submitting the audit form or initiating contact constitutes consent to process your data for the stated purposes.</li>
+      <li><strong>Contract performance:</strong> Processing is necessary to deliver services you have engaged SPDigitalJourney for.</li>
+      <li><strong>Legal obligation:</strong> Financial records are retained as required under the Income Tax Act and GST law.</li>
+      <li><strong>Legitimate interest:</strong> Anonymised performance data used to improve services, with no impact on individual rights.</li>
+    </ul>
+  </div>
+
+  <div class="legal-section" id="p6">
+    <h2><span class="sec-num">6</span> Data Sharing and Third Parties</h2>
+    <p>SPDigitalJourney does not sell, rent, or trade personal data. Data is shared only in the following circumstances:</p>
+    <ul>
+      <li><strong>Razorpay</strong> — payment processing. Governed by Razorpay's Privacy Policy.</li>
+      <li><strong>Google LLC</strong> — when working on your Google Business Profile or Google Ads account on your behalf. Governed by Google's Privacy Policy.</li>
+      <li><strong>Meta Platforms</strong> — when managing Meta Ads on your behalf. Governed by Meta's Data Policy.</li>
+      <li><strong>WhatsApp (Meta)</strong> — for client communication. Governed by WhatsApp's Privacy Policy.</li>
+      <li><strong>Legal authorities</strong> — if required by court order, law enforcement, or statutory obligation under Indian law.</li>
+    </ul>
+    <p>All third-party platforms used by SPDigitalJourney are subject to their own privacy policies. SPDigitalJourney is not responsible for third-party data practices.</p>
+  </div>
+
+  <div class="legal-section" id="p7">
+    <h2><span class="sec-num">7</span> Data Retention</h2>
+    <ul>
+      <li><strong>Active client data:</strong> Retained for the duration of the engagement plus 3 years.</li>
+      <li><strong>Financial records:</strong> Retained for 7 years as required by Indian tax law.</li>
+      <li><strong>Audit request data:</strong> Retained for 1 year from the date of the audit request.</li>
+      <li><strong>WhatsApp communications:</strong> Retained for the duration of the engagement plus 1 year, then deleted.</li>
+      <li><strong>Platform access credentials:</strong> Deleted or access removed within 5 business days of engagement termination.</li>
+    </ul>
+    <p>You may request deletion of your data at any time (see Section 9). Deletion requests will be processed within 30 days, subject to legal retention obligations.</p>
+  </div>
+
+  <div class="legal-section" id="p8">
+    <h2><span class="sec-num">8</span> Data Security</h2>
+    <p>SPDigitalJourney takes reasonable technical and organisational measures to protect personal data, including:</p>
+    <ul>
+      <li>Password-protected access to all client files and records</li>
+      <li>Platform access granted only on a need-to-perform basis and revoked upon project completion</li>
+      <li>No storage of client login credentials in plain text</li>
+      <li>Encrypted communication channels (WhatsApp end-to-end encryption, HTTPS for the website)</li>
+    </ul>
+    <p>No method of transmission over the internet is 100% secure. SPDigitalJourney cannot guarantee absolute security but commits to notifying affected clients of any data breach within 72 hours of becoming aware of it.</p>
+  </div>
+
+  <div class="legal-section" id="p9">
+    <h2><span class="sec-num">9</span> Your Rights</h2>
+    <p>Under India's DPDPA 2023, you have the following rights regarding your personal data:</p>
+    <ul>
+      <li><strong>Right to access:</strong> Request a copy of the personal data SPDigitalJourney holds about you.</li>
+      <li><strong>Right to correction:</strong> Request correction of inaccurate or incomplete data.</li>
+      <li><strong>Right to erasure:</strong> Request deletion of your data, subject to legal retention obligations.</li>
+      <li><strong>Right to withdraw consent:</strong> Withdraw consent for processing at any time. This does not affect processing carried out before withdrawal.</li>
+      <li><strong>Right to grievance redressal:</strong> Raise a complaint with SPDigitalJourney directly; if unresolved, with the Data Protection Board of India.</li>
+    </ul>
+    <div class="highlight-box">To exercise any of these rights, contact SPDigitalJourney via WhatsApp (+91 77994 23794) or email (rpsanjaypaul@gmail.com). Requests will be acknowledged within 72 hours and resolved within 30 days.</div>
+  </div>
+
+  <div class="legal-section" id="p10">
+    <h2><span class="sec-num">10</span> Cookies and Website Analytics</h2>
+    <p>The SPDigitalJourney website (spdigitaljourney.github.io) is hosted on GitHub Pages. SPDigitalJourney does not use cookies, tracking pixels, or third-party analytics scripts on this website. GitHub Pages may collect standard server logs (IP address, browser type, page requests) as part of its infrastructure operation — this is governed by GitHub's Privacy Statement.</p>
+    <p>The audit form on audit.html processes form inputs locally in the browser — no data is transmitted to SPDigitalJourney's servers without your explicit WhatsApp action.</p>
+  </div>
+
+  <div class="legal-section" id="p11">
+    <h2><span class="sec-num">11</span> WhatsApp Communication</h2>
+    <p>SPDigitalJourney uses WhatsApp Business (+91 77994 23794) as a primary communication and support channel. By initiating contact on WhatsApp, you consent to receiving project-related messages, audit reports, invoices, and service updates via WhatsApp.</p>
+    <p>SPDigitalJourney does not send unsolicited broadcast messages without your prior engagement. You may opt out of WhatsApp communication at any time by sending "STOP" or requesting removal via email.</p>
+  </div>
+
+  <div class="legal-section" id="p12">
+    <h2><span class="sec-num">12</span> Children's Privacy</h2>
+    <p>SPDigitalJourney's services are intended for business owners and professionals. SPDigitalJourney does not knowingly collect personal data from individuals under 18 years of age. If such data is inadvertently collected, it will be deleted upon notification.</p>
+  </div>
+
+  <div class="legal-section" id="p13">
+    <h2><span class="sec-num">13</span> Changes to This Policy</h2>
+    <p>SPDigitalJourney may update this Privacy Policy from time to time. The updated version will be published at <strong>spdigitaljourney.github.io/policy.html</strong> with a revised "Last updated" date. Material changes will be communicated to active clients via WhatsApp at least 14 days before taking effect.</p>
+  </div>
+
+  <div class="legal-section" id="p14">
+    <h2><span class="sec-num">14</span> Contact the Data Controller</h2>
+    <p>For any privacy-related queries, access requests, or complaints:</p>
+    <div class="contact-card">
+      <h3>SPDigitalJourney — Data Controller</h3>
+      <div class="contact-row">📍 Achit Nagar, Soladevanahalli, Bengaluru, Karnataka 560107</div>
+      <div class="contact-row">📱 WhatsApp / Phone: <a href="https://wa.me/917799423794" target="_blank" rel="noopener">+91 77994 23794</a></div>
+      <div class="contact-row">✉️ Email: <a href="mailto:rpsanjaypaul@gmail.com">rpsanjaypaul@gmail.com</a></div>
+      <div class="contact-row">🌐 Website: <a href="https://spdigitaljourney.github.io" target="_blank" rel="noopener">spdigitaljourney.github.io</a></div>
+      <div class="contact-row">🔖 MSME Udyam: UDYAM-KR-02-0117946</div>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  <div class="footer-bottom">
+    <span>© 2025 SPDigitalJourney · Achit Nagar, Bengaluru, Karnataka 560107</span>
+    <div class="footer-nav">
+      <a href="index.html">Home</a>
+      <a href="terms.html">Terms</a>
+      <a href="policy.html">Privacy</a>
+      <a href="audit.html">Free Audit</a>
+    </div>
+    <span class="footer-udyam">UDYAM-KR-02-0117946</span>
+  </div>
+</footer>
+</body>
+    </html>
