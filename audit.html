@@ -1,508 +1,386 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>GBP Audit Tool — SPDigitalJourney</title>
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Free Google Visibility Audit — SPDigitalJourney</title>
+<meta name="description" content="Get a free Google Business Profile audit from SPDigitalJourney. Find out exactly why your business isn't ranking on Google Maps."/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/>
 <style>
-* { box-sizing: border-box; margin: 0; padding: 0; }
-body { font-family: 'Inter', sans-serif; background: #f7f7f5; color: #222; min-height: 100vh; }
-
-.page-header {
-  background: #111;
-  padding: 14px 24px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{font-size:16px;scroll-behavior:smooth;}
+:root{
+  --ink:#0D1B2A;--blue:#1A56DB;--blue-dk:#1240A8;
+  --amber:#F59E0B;--white:#FFFFFF;
+  --grey-1:#F7F9FC;--grey-2:#E8EDF5;--grey-3:#8A99B0;--text:#1C2B3A;
 }
-.page-header .logo { color: #E8580A; font-size: 16px; font-weight: 700; letter-spacing: -0.02em; }
-.page-header .logo span { color: #fff; }
-.page-header a { color: #888; font-size: 12px; text-decoration: none; }
-.page-header a:hover { color: #E8580A; }
+body{font-family:'Inter',sans-serif;color:var(--text);background:var(--white);-webkit-font-smoothing:antialiased;}
 
-.container { max-width: 720px; margin: 0 auto; padding: 24px 16px 60px; }
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:0 6vw;height:64px;background:rgba(255,255,255,0.95);backdrop-filter:blur(8px);border-bottom:1px solid var(--grey-2);}
+.nav-logo{font-family:'Sora',sans-serif;font-weight:800;font-size:1.05rem;color:var(--ink);text-decoration:none;letter-spacing:-0.02em;}
+.nav-logo span{color:var(--blue);}
+.nav-cta{background:var(--blue);color:var(--white);font-family:'Sora',sans-serif;font-size:0.82rem;font-weight:600;padding:0.5rem 1.25rem;border-radius:6px;text-decoration:none;transition:background .2s;}
+.nav-cta:hover{background:var(--blue-dk);}
 
-.card { background: #fff; border-radius: 12px; border: 0.5px solid #e5e5e5; padding: 20px 24px; margin-bottom: 16px; }
+/* PAGE HEADER */
+.page-header{background:var(--ink);padding:120px 6vw 80px;text-align:center;position:relative;overflow:hidden;}
+.page-header::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 50% 0%,rgba(26,86,219,0.25) 0%,transparent 65%);}
+.header-eyebrow{display:inline-flex;align-items:center;gap:0.5rem;background:rgba(245,158,11,0.15);color:var(--amber);border:1px solid rgba(245,158,11,0.25);font-size:0.72rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;padding:0.35rem 0.9rem;border-radius:100px;margin-bottom:1.5rem;position:relative;}
+.header-eyebrow::before{content:'';width:6px;height:6px;background:var(--amber);border-radius:50%;animation:blink 1.8s infinite;}
+@keyframes blink{0%,100%{opacity:1;}50%{opacity:0.3;}}
+.page-header h1{font-family:'Sora',sans-serif;font-size:clamp(2rem,4.5vw,3.2rem);font-weight:800;color:var(--white);letter-spacing:-0.03em;line-height:1.1;margin-bottom:1rem;position:relative;}
+.page-header h1 em{font-style:normal;color:var(--amber);}
+.page-header p{font-size:1rem;color:rgba(255,255,255,0.6);max-width:520px;margin:0 auto;line-height:1.7;position:relative;}
 
-.card-title { font-size: 11px; font-weight: 600; color: #888; text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 14px; display: flex; align-items: center; gap: 6px; }
+/* AUDIT FORM SECTION */
+.audit-section{padding:80px 6vw;background:var(--grey-1);}
+.audit-wrapper{max-width:900px;margin:0 auto;display:grid;grid-template-columns:1fr 1.4fr;gap:3rem;align-items:start;}
 
-.biz-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
-@media (max-width: 480px) { .biz-grid { grid-template-columns: 1fr; } }
+/* LEFT — WHAT YOU GET */
+.audit-left h2{font-family:'Sora',sans-serif;font-size:1.4rem;font-weight:800;color:var(--ink);letter-spacing:-0.03em;margin-bottom:0.5rem;}
+.audit-left .sub{font-size:0.88rem;color:var(--grey-3);line-height:1.6;margin-bottom:2rem;}
+.checklist{list-style:none;display:flex;flex-direction:column;gap:0.85rem;margin-bottom:2.5rem;}
+.checklist li{display:flex;align-items:flex-start;gap:0.75rem;font-size:0.88rem;color:var(--text);line-height:1.5;}
+.cl-icon{width:22px;height:22px;border-radius:6px;background:rgba(26,86,219,0.1);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:0.7rem;color:var(--blue);margin-top:1px;font-weight:700;}
+.audit-trust{background:var(--white);border:1px solid var(--grey-2);border-radius:12px;padding:1.25rem;}
+.audit-trust-title{font-family:'Sora',sans-serif;font-size:0.72rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--grey-3);margin-bottom:1rem;}
+.trust-row{display:flex;align-items:center;gap:0.6rem;font-size:0.8rem;color:var(--text);margin-bottom:0.6rem;}
+.trust-row:last-child{margin-bottom:0;}
+.trust-dot{width:8px;height:8px;border-radius:50%;background:var(--amber);flex-shrink:0;}
 
-.fg { display: flex; flex-direction: column; gap: 4px; }
-.fg label { font-size: 11px; color: #888; text-transform: uppercase; letter-spacing: 0.04em; }
-.fg input { border: 0.5px solid #ddd; border-radius: 8px; padding: 9px 12px; font-size: 14px; font-family: 'Inter', sans-serif; color: #222; background: #fff; outline: none; }
-.fg input:focus { border-color: #E8580A; }
+/* RIGHT — FORM */
+.audit-form-card{background:var(--white);border:1px solid var(--grey-2);border-radius:16px;padding:2rem;box-shadow:0 8px 40px rgba(13,27,42,0.07);}
+.form-title{font-family:'Sora',sans-serif;font-size:1.1rem;font-weight:800;color:var(--ink);margin-bottom:0.35rem;letter-spacing:-0.02em;}
+.form-sub{font-size:0.82rem;color:var(--grey-3);margin-bottom:1.5rem;}
+.form-group{margin-bottom:1.1rem;}
+label{display:block;font-size:0.78rem;font-weight:600;color:var(--ink);margin-bottom:0.4rem;letter-spacing:0.01em;}
+label span{color:var(--blue);}
+input,select,textarea{width:100%;padding:0.7rem 0.9rem;border:1.5px solid var(--grey-2);border-radius:8px;font-family:'Inter',sans-serif;font-size:0.88rem;color:var(--ink);background:var(--grey-1);transition:border-color .2s,background .2s;outline:none;}
+input:focus,select:focus,textarea:focus{border-color:var(--blue);background:var(--white);}
+select{cursor:pointer;}
+textarea{resize:vertical;min-height:80px;}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem;}
+.radio-group{display:flex;flex-wrap:wrap;gap:0.5rem;}
+.radio-btn input{display:none;}
+.radio-btn label{display:inline-flex;align-items:center;gap:0.4rem;padding:0.45rem 0.85rem;border:1.5px solid var(--grey-2);border-radius:100px;font-size:0.8rem;font-weight:500;color:var(--grey-3);cursor:pointer;transition:all .2s;background:var(--grey-1);}
+.radio-btn input:checked+label{border-color:var(--blue);color:var(--blue);background:rgba(26,86,219,0.06);font-weight:600;}
+.radio-btn label:hover{border-color:var(--blue);color:var(--blue);}
+.btn-submit{width:100%;background:var(--blue);color:var(--white);font-family:'Sora',sans-serif;font-size:0.95rem;font-weight:700;padding:0.9rem;border-radius:8px;border:none;cursor:pointer;margin-top:0.5rem;transition:background .2s,transform .15s,box-shadow .2s;box-shadow:0 4px 20px rgba(26,86,219,0.25);}
+.btn-submit:hover{background:var(--blue-dk);transform:translateY(-1px);box-shadow:0 6px 28px rgba(26,86,219,0.35);}
+.form-note{text-align:center;font-size:0.73rem;color:var(--grey-3);margin-top:0.85rem;line-height:1.5;}
+.form-note a{color:var(--blue);text-decoration:none;}
 
-.check-row { display: flex; align-items: flex-start; gap: 10px; padding: 11px 12px; border-radius: 8px; margin-bottom: 6px; background: #f9f9f7; border: 0.5px solid transparent; transition: background 0.1s; }
-.check-row:hover { background: #f3f3f0; }
-.check-row.s-ok { background: #f0fae8; border-color: #c0dd97; }
-.check-row.s-fix { background: #fff5f5; border-color: #f09595; }
+/* SCORE DISPLAY (shown after submit) */
+.score-card{display:none;background:var(--white);border:1px solid var(--grey-2);border-radius:16px;padding:2rem;box-shadow:0 8px 40px rgba(13,27,42,0.07);}
+.score-card.visible{display:block;}
+.score-header{text-align:center;margin-bottom:2rem;}
+.score-ring{width:100px;height:100px;border-radius:50%;margin:0 auto 1rem;position:relative;display:flex;align-items:center;justify-content:center;}
+.score-ring svg{position:absolute;top:0;left:0;transform:rotate(-90deg);}
+.score-num{font-family:'Sora',sans-serif;font-size:2rem;font-weight:800;color:var(--ink);position:relative;z-index:1;}
+.score-label{font-size:0.82rem;color:var(--grey-3);}
+.score-title{font-family:'Sora',sans-serif;font-size:1.1rem;font-weight:700;color:var(--ink);margin:0.5rem 0 0.25rem;}
+.score-verdict{font-size:0.88rem;color:var(--grey-3);}
+.issues-list{margin:1.5rem 0;display:flex;flex-direction:column;gap:0.75rem;}
+.issue-item{display:flex;align-items:flex-start;gap:0.75rem;padding:0.85rem;border-radius:10px;background:var(--grey-1);}
+.issue-sev{width:28px;height:28px;border-radius:6px;font-size:0.65rem;font-weight:800;display:flex;align-items:center;justify-content:center;flex-shrink:0;letter-spacing:0.04em;}
+.sev-high{background:rgba(239,68,68,0.1);color:#EF4444;}
+.sev-mid{background:rgba(245,158,11,0.1);color:var(--amber);}
+.sev-low{background:rgba(26,86,219,0.1);color:var(--blue);}
+.issue-text strong{display:block;font-size:0.85rem;font-weight:600;color:var(--ink);margin-bottom:2px;}
+.issue-text span{font-size:0.78rem;color:var(--grey-3);}
+.score-cta{background:var(--blue);color:var(--white);font-family:'Sora',sans-serif;font-size:0.9rem;font-weight:700;padding:0.85rem 1.5rem;border-radius:8px;border:none;cursor:pointer;width:100%;display:block;text-align:center;text-decoration:none;transition:background .2s;margin-top:1rem;}
+.score-cta:hover{background:var(--blue-dk);}
 
-.ci { flex: 1; min-width: 0; }
-.ci .lbl { font-size: 14px; font-weight: 500; color: #222; margin-bottom: 2px; }
-.ci .hint { font-size: 12px; color: #888; margin-bottom: 5px; }
-.ci .note-input { width: 100%; border: 0.5px solid #e0e0e0; border-radius: 6px; padding: 5px 9px; font-size: 12px; font-family: 'Inter', sans-serif; color: #333; background: #fff; outline: none; }
-.ci .note-input:focus { border-color: #E8580A; }
+/* HOW IT WORKS */
+.how-section{padding:80px 6vw;background:var(--white);}
+.how-inner{max-width:900px;margin:0 auto;}
+.section-eyebrow{font-size:0.72rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--blue);margin-bottom:0.75rem;}
+.section-heading{font-family:'Sora',sans-serif;font-size:clamp(1.6rem,3vw,2.2rem);font-weight:800;letter-spacing:-0.03em;color:var(--ink);line-height:1.15;margin-bottom:2.5rem;}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem;}
+.step{position:relative;}
+.step-connector{display:none;}
+.step-num{font-family:'Sora',sans-serif;font-size:0.65rem;font-weight:800;letter-spacing:0.08em;text-transform:uppercase;color:rgba(26,86,219,0.4);margin-bottom:0.75rem;}
+.step-icon{width:48px;height:48px;background:var(--grey-1);border:1px solid var(--grey-2);border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:1.4rem;margin-bottom:1rem;}
+.step h3{font-family:'Sora',sans-serif;font-size:0.95rem;font-weight:700;color:var(--ink);margin-bottom:0.5rem;letter-spacing:-0.01em;}
+.step p{font-size:0.82rem;color:var(--grey-3);line-height:1.6;}
 
-.sbts { display: flex; gap: 5px; flex-shrink: 0; margin-top: 2px; }
-.sb { border: 0.5px solid #ddd; border-radius: 20px; padding: 4px 12px; font-size: 12px; cursor: pointer; background: #fff; color: #888; font-family: 'Inter', sans-serif; white-space: nowrap; transition: all 0.1s; }
-.sb:hover { background: #f3f3f0; }
-.sb.ok { background: #EAF3DE; color: #3B6D11; border-color: #97C459; }
-.sb.fix { background: #FCEBEB; color: #A32D2D; border-color: #F09595; }
-.sb.na { background: #f0f0f0; color: #aaa; border-color: #ddd; }
+/* FOOTER */
+footer{background:var(--ink);padding:2.5rem 6vw;color:rgba(255,255,255,0.4);}
+.footer-bottom{display:flex;justify-content:space-between;align-items:center;font-size:0.75rem;flex-wrap:wrap;gap:1rem;}
+.footer-udyam{font-family:monospace;font-size:0.72rem;color:rgba(255,255,255,0.3);background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.08);padding:0.3rem 0.75rem;border-radius:4px;}
+.footer-nav{display:flex;gap:1.5rem;}
+.footer-nav a{font-size:0.78rem;color:rgba(255,255,255,0.4);text-decoration:none;transition:color .2s;}
+.footer-nav a:hover{color:var(--white);}
 
-.summary-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; }
-@media (max-width: 480px) { .summary-row { grid-template-columns: repeat(2, 1fr); } }
-
-.sc { border-radius: 10px; padding: 14px; text-align: center; }
-.sc .n { font-size: 26px; font-weight: 700; }
-.sc .l { font-size: 11px; margin-top: 3px; }
-.sc.ok { background: #EAF3DE; } .sc.ok .n { color: #3B6D11; } .sc.ok .l { color: #639922; }
-.sc.fix { background: #FCEBEB; } .sc.fix .n { color: #A32D2D; } .sc.fix .l { color: #E24B4A; }
-.sc.na { background: #f5f5f5; } .sc.na .n,.sc.na .l { color: #aaa; }
-.sc.score { background: #E6F1FB; } .sc.score .n { color: #185FA5; } .sc.score .l { color: #378ADD; }
-
-.score-bar-bg { height: 8px; background: #eee; border-radius: 4px; overflow: hidden; margin: 12px 0 6px; }
-.score-bar-fill { height: 100%; border-radius: 4px; background: #185FA5; transition: width 0.4s, background 0.4s; }
-.score-label { font-size: 12px; color: #888; }
-
-.offer-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
-@media (max-width: 480px) { .offer-grid { grid-template-columns: 1fr; } }
-
-.offer-card { border: 0.5px solid #e0e0e0; border-radius: 10px; padding: 12px 14px; cursor: pointer; background: #fff; transition: all 0.15s; }
-.offer-card:hover { background: #f9f9f7; border-color: #ccc; }
-.offer-card.selected { border-color: #E8580A; background: #fff8f5; }
-.offer-card .price { font-size: 18px; font-weight: 700; color: #222; }
-.offer-card .desc { font-size: 12px; color: #888; margin-top: 3px; }
-
-.tabs { display: flex; border-bottom: 0.5px solid #e5e5e5; margin-bottom: 16px; }
-.tab { padding: 9px 18px; font-size: 13px; cursor: pointer; color: #888; border-bottom: 2px solid transparent; margin-bottom: -1px; font-family: 'Inter', sans-serif; }
-.tab.active { color: #E8580A; border-bottom-color: #E8580A; font-weight: 600; }
-
-.tab-pane { display: none; }
-.tab-pane.active { display: block; }
-
-.wa-box { border: 0.5px solid #e5e5e5; border-radius: 10px; padding: 16px 18px; background: #f9f9f7; min-height: 120px; }
-.wa-text { font-size: 13px; line-height: 1.8; color: #333; white-space: pre-wrap; word-break: break-word; }
-
-.btn-row { display: flex; gap: 8px; margin-top: 12px; flex-wrap: wrap; }
-.btn { display: inline-flex; align-items: center; gap: 6px; border: 0.5px solid #ddd; border-radius: 8px; padding: 9px 16px; font-size: 13px; font-family: 'Inter', sans-serif; font-weight: 500; cursor: pointer; background: #fff; color: #333; text-decoration: none; transition: all 0.15s; }
-.btn:hover { background: #f3f3f0; }
-.btn.primary { background: #E8580A; color: #fff; border-color: #E8580A; }
-.btn.primary:hover { background: #c94a08; }
-.btn.green { background: #EAF3DE; color: #3B6D11; border-color: #97C459; }
-.btn.green:hover { background: #c0dd97; }
-.btn.reset { color: #888; }
-
-.pdf-hint { font-size: 13px; color: #666; background: #f5f5f5; border-radius: 8px; padding: 12px 14px; margin-bottom: 14px; line-height: 1.6; }
-.pdf-hint strong { color: #333; }
-
-.page-title { font-size: 22px; font-weight: 700; color: #222; margin-bottom: 4px; }
-.page-sub { font-size: 13px; color: #888; margin-bottom: 24px; }
-
-@media print {
-  body { background: white; }
-  .page-header, .container { display: none; }
-  .print-doc { display: block !important; }
+@media(max-width:768px){
+  .audit-wrapper{grid-template-columns:1fr;}
+  .form-row{grid-template-columns:1fr;}
+  .steps{grid-template-columns:1fr;}
+  .footer-bottom{flex-direction:column;align-items:flex-start;}
 }
-.print-doc { display: none; }
+@media(prefers-reduced-motion:reduce){*,::before,::after{animation-duration:0.01ms!important;}}
 </style>
 </head>
 <body>
+
+<nav>
+  <a class="nav-logo" href="index.html"><span>SP</span>DigitalJourney</a>
+  <a class="nav-cta" href="https://wa.me/917799423794?text=Hi%2C%20I'd%20like%20to%20discuss%20the%20audit" target="_blank" rel="noopener">WhatsApp Us</a>
+</nav>
 
 <div class="page-header">
-  <div class="logo">SPDJ<span> Audit</span></div>
-  <a href="https://spdigitaljourney.github.io" target="_blank">← Back to site</a>
+  <div class="header-eyebrow">Free · No Obligation · 3 Business Days</div>
+  <h1>Is your business <em>actually visible</em><br/>on Google Maps?</h1>
+  <p>Fill in the form below. SPDigitalJourney will audit your Google Business Profile and send back a prioritised fix list — at no cost.</p>
 </div>
 
-<div class="container">
-  <p class="page-title">GBP Audit Tool</p>
-  <p class="page-sub">Fill in client details → mark each checkpoint → copy WhatsApp message or generate PDF report.</p>
+<section class="audit-section">
+  <div class="audit-wrapper">
 
-  <!-- Client Details -->
-  <div class="card">
-    <div class="card-title">📋 Client details</div>
-    <div class="biz-grid">
-      <div class="fg"><label>Business name</label><input type="text" id="biz-name" placeholder="e.g. Royal Salon" oninput="update()" /></div>
-      <div class="fg"><label>Area / locality</label><input type="text" id="biz-area" placeholder="e.g. Rajajinagar, Bengaluru" oninput="update()" /></div>
-      <div class="fg"><label>Owner / contact name</label><input type="text" id="biz-contact" placeholder="e.g. Ramesh" oninput="update()" /></div>
-      <div class="fg"><label>Phone</label><input type="text" id="biz-phone" placeholder="e.g. 9876543210" oninput="update()" /></div>
-      <div class="fg"><label>Business type</label><input type="text" id="biz-type" placeholder="e.g. Salon, Restaurant, Clinic" oninput="update()" /></div>
-      <div class="fg"><label>Date</label><input type="text" id="biz-date" oninput="update()" /></div>
+    <!-- LEFT -->
+    <div class="audit-left">
+      <h2>What the audit covers</h2>
+      <p class="sub">A real diagnosis, not a generic score. Every audit is reviewed manually before delivery.</p>
+      <ul class="checklist">
+        <li><span class="cl-icon">✓</span>Primary & secondary category accuracy check</li>
+        <li><span class="cl-icon">✓</span>Keyword presence in description & services</li>
+        <li><span class="cl-icon">✓</span>Review volume, velocity & response quality</li>
+        <li><span class="cl-icon">✓</span>Photos — count, quality, and engagement signals</li>
+        <li><span class="cl-icon">✓</span>Local Pack ranking for your top 3 keywords</li>
+        <li><span class="cl-icon">✓</span>Competitor gap analysis (top 3 rivals in your area)</li>
+        <li><span class="cl-icon">✓</span>Call & conversion path review</li>
+        <li><span class="cl-icon">✓</span>Prioritised written fix roadmap</li>
+        <li><span class="cl-icon">✓</span>30-min WhatsApp walkthrough (optional)</li>
+      </ul>
+      <div class="audit-trust">
+        <div class="audit-trust-title">Why trust SPDigitalJourney</div>
+        <div class="trust-row"><span class="trust-dot"></span>Google Maps India field work since 2007 — Hyderabad Division pilot</div>
+        <div class="trust-row"><span class="trust-dot"></span>2,000+ business locations mapped across 7+ states</div>
+        <div class="trust-row"><span class="trust-dot"></span>MSME Udyam Registered · UDYAM-KR-02-0117946</div>
+        <div class="trust-row"><span class="trust-dot"></span>360° Street View · Google Trusted Photographer</div>
+        <div class="trust-row"><span class="trust-dot"></span>JustDial Verified · Bengaluru</div>
+      </div>
+    </div>
+
+    <!-- RIGHT — FORM -->
+    <div>
+      <div class="audit-form-card" id="formCard">
+        <div class="form-title">Request Your Free Audit</div>
+        <div class="form-sub">Delivered within 3 business days. Zero spam, zero sales pressure.</div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label>Your Name <span>*</span></label>
+            <input type="text" id="ownerName" placeholder="Rajesh Kumar" required/>
+          </div>
+          <div class="form-group">
+            <label>WhatsApp Number <span>*</span></label>
+            <input type="tel" id="phone" placeholder="+91 98765 43210" required/>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>Business Name <span>*</span></label>
+          <input type="text" id="bizName" placeholder="Krishna Dental Clinic" required/>
+        </div>
+
+        <div class="form-group">
+          <label>Google Maps Profile URL <span>*</span></label>
+          <input type="url" id="gbpUrl" placeholder="https://maps.google.com/..." required/>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label>Business City <span>*</span></label>
+            <input type="text" id="city" placeholder="Bengaluru" required/>
+          </div>
+          <div class="form-group">
+            <label>Business Category <span>*</span></label>
+            <select id="category">
+              <option value="">Select category</option>
+              <option>Dental Clinic</option>
+              <option>Hospital / Clinic</option>
+              <option>Salon / Spa</option>
+              <option>Restaurant / Cafe</option>
+              <option>Real Estate Agent</option>
+              <option>Fitness / Gym</option>
+              <option>Retail Shop</option>
+              <option>Education / Coaching</option>
+              <option>Automobile / Service</option>
+              <option>Legal / CA / Consultancy</option>
+              <option>Other</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>Current monthly calls from Google Maps (approx.)</label>
+          <div class="radio-group">
+            <div class="radio-btn"><input type="radio" name="calls" id="c0" value="0-5"/><label for="c0">0–5</label></div>
+            <div class="radio-btn"><input type="radio" name="calls" id="c1" value="5-20"/><label for="c1">5–20</label></div>
+            <div class="radio-btn"><input type="radio" name="calls" id="c2" value="20-50"/><label for="c2">20–50</label></div>
+            <div class="radio-btn"><input type="radio" name="calls" id="c3" value="50+"/><label for="c3">50+</label></div>
+            <div class="radio-btn"><input type="radio" name="calls" id="c4" value="unknown"/><label for="c4">Not sure</label></div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>Biggest visibility challenge (optional)</label>
+          <textarea id="challenge" placeholder="e.g. Not showing in 'near me' searches, low reviews, competitors ranking above us…"></textarea>
+        </div>
+
+        <button class="btn-submit" onclick="submitAudit()">Send My Free Audit Request →</button>
+        <div class="form-note">By submitting, you agree to SPDigitalJourney's <a href="terms.html">Terms</a> and <a href="policy.html">Privacy Policy</a>. No spam — your details are used only to deliver the audit.</div>
+      </div>
+
+      <!-- SCORE CARD (shown after submit) -->
+      <div class="score-card" id="scoreCard">
+        <div class="score-header">
+          <div class="score-ring">
+            <svg width="100" height="100" viewBox="0 0 100 100">
+              <circle cx="50" cy="50" r="42" fill="none" stroke="#E8EDF5" stroke-width="8"/>
+              <circle cx="50" cy="50" r="42" fill="none" stroke="#1A56DB" stroke-width="8"
+                stroke-dasharray="264" stroke-dashoffset="145" stroke-linecap="round"
+                id="scoreCircle"/>
+            </svg>
+            <span class="score-num" id="scoreNum">—</span>
+          </div>
+          <div class="score-label">Visibility Score</div>
+          <div class="score-title" id="scoreTitle">Audit request received</div>
+          <div class="score-verdict" id="scoreVerdict"></div>
+        </div>
+        <div class="issues-list" id="issuesList"></div>
+        <a class="score-cta" id="scoreWA" href="#" target="_blank" rel="noopener">
+          Discuss Results on WhatsApp →
+        </a>
+        <div class="form-note" style="margin-top:0.75rem;">Full written audit will be delivered to your WhatsApp within 3 business days.</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="how-section">
+  <div class="how-inner">
+    <div class="section-eyebrow">How It Works</div>
+    <h2 class="section-heading">Three steps to your audit</h2>
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">Step 01</div>
+        <div class="step-icon">📋</div>
+        <h3>Submit the form</h3>
+        <p>Fill in your business name, Google Maps URL, and city. Takes under 2 minutes.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">Step 02</div>
+        <div class="step-icon">🔍</div>
+        <h3>Manual audit</h3>
+        <p>SPDigitalJourney audits your profile across 8 ranking factors and compares you against your top 3 competitors.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">Step 03</div>
+        <div class="step-icon">📱</div>
+        <h3>Receive your report</h3>
+        <p>A prioritised fix list arrives on WhatsApp within 3 business days. A walkthrough call is available on request.</p>
+      </div>
     </div>
   </div>
+</section>
 
-  <!-- Checklist -->
-  <div class="card">
-    <div class="card-title">✅ Audit checklist</div>
-    <div id="checks-wrap"></div>
+<footer>
+  <div class="footer-bottom">
+    <span>© 2025 SPDigitalJourney · Achit Nagar, Bengaluru, Karnataka 560107</span>
+    <div class="footer-nav">
+      <a href="index.html">Home</a>
+      <a href="terms.html">Terms</a>
+      <a href="policy.html">Privacy</a>
+    </div>
+    <span class="footer-udyam">UDYAM-KR-02-0117946</span>
   </div>
-
-  <!-- Summary -->
-  <div class="card">
-    <div class="card-title">📊 Health summary</div>
-    <div class="summary-row">
-      <div class="sc ok"><div class="n" id="cnt-ok">0</div><div class="l">✓ Good</div></div>
-      <div class="sc fix"><div class="n" id="cnt-fix">0</div><div class="l">✗ Needs fix</div></div>
-      <div class="sc na"><div class="n" id="cnt-na">0</div><div class="l">— Skipped</div></div>
-      <div class="sc score"><div class="n" id="cnt-score">—</div><div class="l">Health score</div></div>
-    </div>
-    <div class="score-bar-bg"><div class="score-bar-fill" id="score-bar" style="width:0%"></div></div>
-    <div class="score-label" id="score-label">Mark at least one item to see the health score.</div>
-  </div>
-
-  <!-- Quote -->
-  <div class="card">
-    <div class="card-title">💰 Quote offer</div>
-    <div class="offer-grid">
-      <div class="offer-card" id="offer-500" onclick="selectOffer(500,'Single fix — 30 min')">
-        <div class="price">₹500</div>
-        <div class="desc">Single fix — 30 min</div>
-      </div>
-      <div class="offer-card" id="offer-1000" onclick="selectOffer(1000,'Photo + profile refresh')">
-        <div class="price">₹1,000</div>
-        <div class="desc">Photo + profile refresh</div>
-      </div>
-      <div class="offer-card" id="offer-1500" onclick="selectOffer(1500,'Full cleanup — same day')">
-        <div class="price">₹1,500</div>
-        <div class="desc">Full cleanup — same day</div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Output -->
-  <div class="card">
-    <div class="card-title">📤 Output</div>
-    <div class="tabs">
-      <div class="tab active" id="tab-wa" onclick="showTab('wa')">WhatsApp message</div>
-      <div class="tab" id="tab-pdf" onclick="showTab('pdf')">PDF report</div>
-    </div>
-
-    <div class="tab-pane active" id="tp-wa">
-      <div class="wa-box">
-        <div class="wa-text" id="wa-text">Fill in business name above to generate message.</div>
-      </div>
-      <div class="btn-row">
-        <button class="btn green" onclick="copyWA()">📋 Copy message</button>
-        <button class="btn reset" onclick="resetAll()">↺ Reset form</button>
-      </div>
-    </div>
-
-    <div class="tab-pane" id="tp-pdf">
-      <div class="pdf-hint">
-        Click <strong>Open PDF Report</strong> — a branded report opens in a new tab.<br />
-        Then press <strong>Ctrl+P</strong> (PC) or <strong>Cmd+P</strong> (Mac) → <strong>Save as PDF</strong>.<br />
-        On mobile: tap <strong>Share → Print → Save as PDF</strong>. Then send via WhatsApp.
-      </div>
-      <div class="btn-row">
-        <button class="btn primary" onclick="generatePDF()">📄 Open PDF report</button>
-        <button class="btn reset" onclick="resetAll()">↺ Reset form</button>
-      </div>
-    </div>
-  </div>
-</div>
+</footer>
 
 <script>
-const CHECKS = [
-  { id:"verified", lbl:"Listing claimed & verified", hint:"Blue checkmark on Google Maps — unverified = low visibility", note:false },
-  { id:"hours", lbl:"Business hours correct", hint:"Does 'Open now' match actual current status?", note:true, np:"e.g. Shows closed but actually open" },
-  { id:"photos", lbl:"Photos — quantity & freshness", hint:"Google favors listings with recent, quality photos", note:true, np:"e.g. 3 photos, last updated 2021" },
-  { id:"category", lbl:"Primary category correct", hint:"Wrong category = appearing for irrelevant searches", note:true, np:"e.g. Shows 'Retail' — should be 'Salon'" },
-  { id:"description", lbl:"Business description filled", hint:"Free keyword space most listings leave blank", note:false },
-  { id:"website", lbl:"Website link present & working", hint:"Missing or broken links hurt trust and ranking", note:false },
-  { id:"reviews", lbl:"Reviews — count, rating & replies", hint:"Unanswered negative reviews damage conversions", note:true, np:"e.g. 4.1★ 12 reviews, 3 unanswered" },
-  { id:"ranking", lbl:"Ranking vs. competitors", hint:"Search [category + area] — what position are they?", note:true, np:"e.g. Position 4, competitor X is 1st" },
-  { id:"posts", lbl:"Google Posts — last published", hint:"Posts older than 30 days = missed ranking signal", note:true, np:"e.g. Last post January 2023" },
-  { id:"qa", lbl:"Q&A section answered", hint:"Unanswered customer questions lower trust", note:false },
-  { id:"products", lbl:"Products / services listed", hint:"Many businesses leave this section completely empty", note:false },
-  { id:"phone", lbl:"Phone number correct", hint:"Cross-check with shopfront / JustDial", note:false },
-];
+function submitAudit() {
+  const name = document.getElementById('ownerName').value.trim();
+  const phone = document.getElementById('phone').value.trim();
+  const biz  = document.getElementById('bizName').value.trim();
+  const url  = document.getElementById('gbpUrl').value.trim();
+  const city = document.getElementById('city').value.trim();
+  const cat  = document.getElementById('category').value;
 
-const state = {};
-CHECKS.forEach(c => { state[c.id] = { s: null, note: "" }; });
-let offerPrice = null, offerDesc = "";
+  if (!name || !phone || !biz || !url || !city || !cat) {
+    alert('Please fill in all required fields (marked with *).');
+    return;
+  }
 
-function renderChecks() {
-  let html = "";
-  CHECKS.forEach(c => {
-    html += `<div class="check-row" id="cr-${c.id}">
-      <div class="ci">
-        <div class="lbl">${c.lbl}</div>
-        <div class="hint">${c.hint}</div>
-        ${c.note ? `<input class="note-input" type="text" placeholder="${c.np}" id="note-${c.id}" oninput="setNote('${c.id}',this.value)" />` : ""}
-      </div>
-      <div class="sbts">
-        <button class="sb" id="ok-${c.id}" onclick="setStatus('${c.id}','ok')">✓ OK</button>
-        <button class="sb" id="fix-${c.id}" onclick="setStatus('${c.id}','fix')">✗ Fix</button>
-        <button class="sb" id="na-${c.id}" onclick="setStatus('${c.id}','na')">— N/A</button>
-      </div>
+  // Simple scoring logic based on filled fields
+  const challenge = document.getElementById('challenge').value.trim();
+  const calls = document.querySelector('input[name="calls"]:checked');
+  const callVal = calls ? calls.value : 'unknown';
+
+  let score = 45; // baseline for unknown profile
+  let issues = [];
+
+  if (callVal === '0-5') { score -= 15; issues.push({sev:'high', title:'Very low call volume', desc:'0–5 calls/month from Google Maps indicates serious ranking or conversion issues.'}); }
+  else if (callVal === '5-20') { score -= 5; issues.push({sev:'mid', title:'Below-average call volume', desc:'5–20 calls/month — room for significant improvement with proper optimisation.'}); }
+  else if (callVal === '20-50') { score += 10; }
+  else if (callVal === '50+') { score += 20; }
+
+  if (challenge.toLowerCase().includes('review') || challenge.toLowerCase().includes('rating')) {
+    issues.push({sev:'high', title:'Review signals flagged', desc:'Low or stagnant reviews are one of the top 3 ranking factors on Google Maps.'});
+    score -= 8;
+  }
+  if (challenge.toLowerCase().includes('near me') || challenge.toLowerCase().includes('not showing')) {
+    issues.push({sev:'high', title:'Local Pack visibility gap', desc:'Not appearing in "near me" searches usually points to category misconfiguration or proximity issues.'});
+    score -= 10;
+  }
+  if (challenge.toLowerCase().includes('competitor')) {
+    issues.push({sev:'mid', title:'Competitor outranking you', desc:'A gap analysis will identify exactly what signals competitors have that you currently lack.'});
+    score -= 5;
+  }
+
+  // Always add standard potential issues
+  issues.push({sev:'mid', title:'GBP attribute completeness unknown', desc:'Missing attributes (e.g. parking, accessibility, payment methods) reduce ranking relevance.'});
+  issues.push({sev:'low', title:'Photo engagement not assessed', desc:'Profile photo count and recency directly influence listing click-through rates.'});
+
+  score = Math.min(Math.max(score, 18), 78); // cap for unknown profile
+
+  // Animate to score card
+  document.getElementById('formCard').style.display = 'none';
+  const scoreCard = document.getElementById('scoreCard');
+  scoreCard.classList.add('visible');
+
+  // Set score
+  document.getElementById('scoreNum').textContent = score + '/100';
+  const offset = 264 - (264 * score / 100);
+  document.getElementById('scoreCircle').style.strokeDashoffset = offset;
+  document.getElementById('scoreCircle').style.stroke = score < 40 ? '#EF4444' : score < 60 ? '#F59E0B' : '#1A56DB';
+
+  let verdict = score < 40
+    ? 'Critical visibility gaps detected. Immediate optimisation needed.'
+    : score < 60
+    ? 'Moderate visibility. Structured improvements will drive significant growth.'
+    : 'Good baseline — targeted fixes can push you to the #1 spot.';
+  document.getElementById('scoreTitle').textContent = biz + ' · Preliminary Scan';
+  document.getElementById('scoreVerdict').textContent = verdict;
+
+  // Render issues
+  const il = document.getElementById('issuesList');
+  il.innerHTML = '';
+  issues.slice(0, 4).forEach(i => {
+    il.innerHTML += `<div class="issue-item">
+      <div class="issue-sev sev-${i.sev === 'high' ? 'high' : i.sev === 'mid' ? 'mid' : 'low'}">${i.sev.toUpperCase()}</div>
+      <div class="issue-text"><strong>${i.title}</strong><span>${i.desc}</span></div>
     </div>`;
   });
-  document.getElementById("checks-wrap").innerHTML = html;
+
+  // WA link
+  const msg = encodeURIComponent(`Hi SPDigitalJourney, I just submitted a Google Visibility Audit request for *${biz}* (${city}). My phone: ${phone}. Preliminary score: ${score}/100. Please send the full audit.`);
+  document.getElementById('scoreWA').href = `https://wa.me/917799423794?text=${msg}`;
 }
-
-function setStatus(id, s) {
-  state[id].s = s;
-  ["ok","fix","na"].forEach(x => {
-    document.getElementById(`${x}-${id}`).className = "sb" + (x===s ? " "+x : "");
-  });
-  const cr = document.getElementById(`cr-${id}`);
-  cr.className = "check-row" + (s==="ok"?" s-ok":s==="fix"?" s-fix":"");
-  update();
-}
-
-function setNote(id, v) { state[id].note = v; update(); }
-
-function selectOffer(price, desc) {
-  offerPrice = price; offerDesc = desc;
-  [500,1000,1500].forEach(p => {
-    document.getElementById(`offer-${p}`).className = "offer-card" + (p===price?" selected":"");
-  });
-  update();
-}
-
-function getV(id) { return (document.getElementById(id)||{}).value||""; }
-
-function update() {
-  let ok=0, fix=0, na=0;
-  CHECKS.forEach(c => {
-    if (state[c.id].s==="ok") ok++;
-    else if (state[c.id].s==="fix") fix++;
-    else if (state[c.id].s==="na") na++;
-  });
-  document.getElementById("cnt-ok").textContent = ok;
-  document.getElementById("cnt-fix").textContent = fix;
-  document.getElementById("cnt-na").textContent = na;
-  const checked = ok + fix;
-  if (checked > 0) {
-    const pct = Math.round((ok/checked)*100);
-    document.getElementById("cnt-score").textContent = pct+"%";
-    document.getElementById("score-bar").style.width = pct+"%";
-    document.getElementById("score-bar").style.background = pct>=70?"#639922":pct>=40?"#BA7517":"#A32D2D";
-    const lbl = pct>=70?"Good — minor improvements possible":pct>=40?"Average — several fixes needed":"Poor — significant fixes required";
-    document.getElementById("score-label").textContent = `Health score: ${pct}% — ${lbl}`;
-  } else {
-    document.getElementById("cnt-score").textContent = "—";
-    document.getElementById("score-bar").style.width = "0%";
-    document.getElementById("score-bar").style.background = "#185FA5";
-    document.getElementById("score-label").textContent = "Mark at least one item to see the health score.";
-  }
-  buildWA();
-}
-
-function buildWA() {
-  const name=getV("biz-name"), contact=getV("biz-contact"), area=getV("biz-area"), date=getV("biz-date");
-  if (!name) { document.getElementById("wa-text").textContent="Fill in business name above to generate message."; return; }
-  const fixes=CHECKS.filter(c=>state[c.id].s==="fix");
-  const goods=CHECKS.filter(c=>state[c.id].s==="ok");
-  let msg=`*Google Listing Audit — ${name}*\n`;
-  if (area) msg+=`📍 ${area}\n`;
-  if (date) msg+=`📅 ${date}\n`;
-  msg+=`\nHi ${contact||"there"}, I checked your Google Business Profile and here's what I found:\n`;
-  if (fixes.length) {
-    msg+=`\n*Issues found (${fixes.length}):*\n`;
-    fixes.forEach(c => { msg+=`❌ ${c.lbl}${state[c.id].note?" — "+state[c.id].note:""}\n`; });
-  }
-  if (goods.length) {
-    msg+=`\n*Looking good (${goods.length}):*\n`;
-    goods.forEach(c => { msg+=`✅ ${c.lbl}\n`; });
-  }
-  if (fixes.length) {
-    msg+=`\nI can fix the ${fixes.length} issue${fixes.length>1?"s":""} today itself`;
-    if (offerPrice) msg+=` — ₹${offerPrice} (${offerDesc}), UPI payment`;
-    msg+=`. Want me to go ahead?\n`;
-  } else if (goods.length) {
-    msg+=`\nYour listing is in good shape! Let me know if you need help maintaining or improving it.\n`;
-  }
-  msg+=`\n— Sanjay Paul\nSPDigitalJourney | spdigitaljourney.github.io\nMSME Registered · JustDial Verified`;
-  document.getElementById("wa-text").textContent = msg;
-}
-
-function copyWA() {
-  const t = document.getElementById("wa-text").textContent;
-  navigator.clipboard.writeText(t).then(() => {
-    const b = document.querySelector(".btn.green");
-    const orig = b.textContent;
-    b.textContent = "✓ Copied!";
-    setTimeout(() => { b.textContent = "📋 Copy message"; }, 2000);
-  });
-}
-
-function showTab(t) {
-  ["wa","pdf"].forEach(x => {
-    document.getElementById(`tab-${x}`).className="tab"+(x===t?" active":"");
-    document.getElementById(`tp-${x}`).className="tab-pane"+(x===t?" active":"");
-  });
-}
-
-function generatePDF() {
-  const name=getV("biz-name")||"Business", area=getV("biz-area"), contact=getV("biz-contact");
-  const phone=getV("biz-phone"), type=getV("biz-type"), date=getV("biz-date");
-  const fixes=CHECKS.filter(c=>state[c.id].s==="fix");
-  const goods=CHECKS.filter(c=>state[c.id].s==="ok");
-  const nas=CHECKS.filter(c=>state[c.id].s==="na");
-  const checked=fixes.length+goods.length;
-  const score=checked>0?Math.round((goods.length/checked)*100):null;
-  const sColor=score===null?"#888":score>=70?"#3B6D11":score>=40?"#BA7517":"#A32D2D";
-  const sLabel=score===null?"N/A":score>=70?"Good":score>=40?"Average":"Poor";
-
-  const fixRows=fixes.map(c=>`
-    <tr>
-      <td style="padding:8px 10px;border-bottom:1px solid #f0f0f0;color:#A32D2D;font-size:14px;width:28px;">✗</td>
-      <td style="padding:8px 10px;border-bottom:1px solid #f0f0f0;font-size:13px;font-weight:600;color:#222;">${c.lbl}</td>
-      <td style="padding:8px 10px;border-bottom:1px solid #f0f0f0;font-size:12px;color:#666;">${state[c.id].note||"—"}</td>
-    </tr>`).join("");
-
-  const okRows=goods.map(c=>`
-    <tr>
-      <td style="padding:7px 10px;border-bottom:1px solid #f5f5f5;color:#3B6D11;font-size:13px;width:28px;">✓</td>
-      <td style="padding:7px 10px;border-bottom:1px solid #f5f5f5;font-size:13px;color:#444;" colspan="2">${c.lbl}</td>
-    </tr>`).join("");
-
-  const offerHtml=offerPrice?`
-    <div style="background:#FFF8F5;border-left:4px solid #E8580A;border-radius:6px;padding:16px 20px;margin-top:28px;">
-      <div style="font-size:11px;font-weight:700;color:#E8580A;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:6px;">Recommended fix package</div>
-      <div style="font-size:26px;font-weight:700;color:#E8580A;">₹${offerPrice}</div>
-      <div style="font-size:13px;color:#444;margin-top:4px;">${offerDesc} · Payment via UPI · Completed same day</div>
-    </div>`:"";
-
-  const scoreBarHtml=score!==null?`
-    <div style="height:8px;background:#eee;border-radius:4px;overflow:hidden;margin:10px 0 4px;">
-      <div style="height:100%;width:${score}%;background:${sColor};border-radius:4px;"></div>
-    </div>
-    <div style="font-size:12px;color:#888;">${sLabel} — ${score}% of checked items are in good shape</div>`:"";
-
-  const html=`<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8"/>
-<title>GBP Audit — ${name}</title>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"/>
-<style>
-*{box-sizing:border-box;margin:0;padding:0;}
-body{font-family:'Inter',sans-serif;background:#fff;color:#222;padding:48px;max-width:780px;margin:auto;}
-@media print{.no-print{display:none!important;}body{padding:24px;}}
-table{width:100%;border-collapse:collapse;}
-</style>
-</head>
-<body>
-
-<div class="no-print" style="background:#f5f5f5;border-radius:8px;padding:14px 18px;margin-bottom:28px;font-size:13px;color:#555;line-height:1.6;">
-  <strong>To save as PDF:</strong> Press <strong>Ctrl+P</strong> (Windows) or <strong>Cmd+P</strong> (Mac) → Destination: <strong>Save as PDF</strong> → Save.<br/>
-  On mobile: tap <strong>Share → Print → Save as PDF</strong>.
-</div>
-
-<div style="display:flex;align-items:flex-start;justify-content:space-between;padding-bottom:20px;border-bottom:3px solid #E8580A;margin-bottom:28px;">
-  <div>
-    <div style="font-size:24px;font-weight:700;color:#E8580A;letter-spacing:-0.02em;">SPDigitalJourney</div>
-    <div style="font-size:12px;color:#999;margin-top:3px;">spdigitaljourney.github.io</div>
-    <div style="font-size:12px;color:#999;">MSME Registered · JustDial Verified · Google Maps India Specialist since 2007</div>
-  </div>
-  <div style="text-align:right;">
-    <div style="font-size:11px;color:#bbb;text-transform:uppercase;letter-spacing:0.05em;">GBP Audit Report</div>
-    <div style="font-size:13px;color:#666;margin-top:3px;">${date||""}</div>
-  </div>
-</div>
-
-<div style="margin-bottom:28px;">
-  <div style="font-size:22px;font-weight:700;color:#111;margin-bottom:6px;">Google Business Profile Audit</div>
-  <div style="font-size:16px;font-weight:600;color:#333;">${name}${type?" · "+type:""}</div>
-  ${area?`<div style="font-size:13px;color:#666;margin-top:4px;">📍 ${area}</div>`:""}
-  ${contact?`<div style="font-size:13px;color:#666;margin-top:2px;">👤 ${contact}${phone?" · "+phone:""}</div>`:""}
-</div>
-
-<div style="display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:24px;">
-  <div style="background:#FCEBEB;border-radius:10px;padding:14px;text-align:center;">
-    <div style="font-size:28px;font-weight:700;color:#A32D2D;">${fixes.length}</div>
-    <div style="font-size:11px;color:#E24B4A;margin-top:3px;">Issues found</div>
-  </div>
-  <div style="background:#EAF3DE;border-radius:10px;padding:14px;text-align:center;">
-    <div style="font-size:28px;font-weight:700;color:#3B6D11;">${goods.length}</div>
-    <div style="font-size:11px;color:#639922;margin-top:3px;">Looking good</div>
-  </div>
-  <div style="background:#f5f5f5;border-radius:10px;padding:14px;text-align:center;">
-    <div style="font-size:28px;font-weight:700;color:#aaa;">${nas.length}</div>
-    <div style="font-size:11px;color:#bbb;margin-top:3px;">Not checked</div>
-  </div>
-  <div style="background:#E6F1FB;border-radius:10px;padding:14px;text-align:center;">
-    <div style="font-size:28px;font-weight:700;color:${sColor};">${score!==null?score+"%":"—"}</div>
-    <div style="font-size:11px;color:${sColor};margin-top:3px;">${sLabel}</div>
-  </div>
-</div>
-
-${scoreBarHtml}
-
-${fixes.length?`
-<div style="margin-top:28px;">
-  <div style="font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;color:#A32D2D;margin-bottom:10px;">Issues requiring fix (${fixes.length})</div>
-  <table>
-    <thead>
-      <tr style="background:#fff5f5;">
-        <th style="padding:8px 10px;text-align:left;font-size:11px;color:#A32D2D;text-transform:uppercase;letter-spacing:0.04em;"></th>
-        <th style="padding:8px 10px;text-align:left;font-size:11px;color:#A32D2D;text-transform:uppercase;letter-spacing:0.04em;">Check point</th>
-        <th style="padding:8px 10px;text-align:left;font-size:11px;color:#A32D2D;text-transform:uppercase;letter-spacing:0.04em;">Notes</th>
-      </tr>
-    </thead>
-    <tbody>${fixRows}</tbody>
-  </table>
-</div>`:""}
-
-${goods.length?`
-<div style="margin-top:24px;">
-  <div style="font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;color:#3B6D11;margin-bottom:10px;">What's working (${goods.length})</div>
-  <table><tbody>${okRows}</tbody></table>
-</div>`:""}
-
-${offerHtml}
-
-<div style="margin-top:40px;padding-top:20px;border-top:1px solid #eee;display:flex;justify-content:space-between;align-items:flex-end;">
-  <div>
-    <div style="font-size:14px;font-weight:700;color:#222;">Sanjay Paul</div>
-    <div style="font-size:12px;color:#888;margin-top:2px;">Founder, SPDigitalJourney</div>
-    <div style="font-size:12px;color:#888;">Google Maps India Specialist · 2,000+ businesses · 100+ cities</div>
-  </div>
-  <div style="text-align:right;">
-    <div style="font-size:13px;color:#E8580A;font-weight:600;">spdigitaljourney.github.io</div>
-    <div style="font-size:11px;color:#bbb;margin-top:2px;">MSME Registered · JustDial Verified</div>
-  </div>
-</div>
-
-</body>
-</html>`;
-
-  const w=window.open("","_blank");
-  if(w){w.document.write(html);w.document.close();}
-  else{alert("Please allow popups in your browser to open the PDF report.");}
-}
-
-function resetAll() {
-  CHECKS.forEach(c => {
-    state[c.id]={s:null,note:""};
-    ["ok","fix","na"].forEach(x=>{const b=document.getElementById(`${x}-${c.id}`);if(b)b.className="sb";});
-    const cr=document.getElementById(`cr-${c.id}`);if(cr)cr.className="check-row";
-    const ni=document.getElementById(`note-${c.id}`);if(ni)ni.value="";
-  });
-  ["biz-name","biz-area","biz-contact","biz-phone","biz-type"].forEach(id=>{
-    const el=document.getElementById(id);if(el)el.value="";
-  });
-  offerPrice=null;offerDesc="";
-  [500,1000,1500].forEach(p=>{const el=document.getElementById(`offer-${p}`);if(el)el.className="offer-card";});
-  setToday();update();
-}
-
-function setToday() {
-  const d=new Date();
-  const el=document.getElementById("biz-date");
-  if(el)el.value=d.toLocaleDateString("en-IN",{day:"2-digit",month:"short",year:"numeric"});
-}
-
-renderChecks();
-setToday();
-update();
 </script>
 </body>
 </html>
