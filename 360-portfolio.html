@@ -3,362 +3,462 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-<title>360° Virtual Tour Portfolio | SPDigitalJourney — Google Street View Photography Bengaluru</title>
-<meta name="description" content="22 live 360° Google Street View tours across automotive, jewellery, fitness, education, petroleum and retail businesses in Karnataka. By a certified Google Street View photographer since 2007."/>
+<title>360&#xB0; Street View Portfolio | 500+ Live Tours | SPDigitalJourney — Google Street View Photographer India</title>
+<meta name="description" content="500+ live 360&#xB0; Google Street View tours across 10 industries including automotive, jewellery, fitness, education, petroleum and retail. Agency + own contribution. Certified Google Street View photographer since 2007."/>
 <meta name="keywords" content="360 virtual tour Bengaluru, Google Street View photographer Karnataka, business virtual tour India, 360 photography service, Google Maps 360 tour, SPDigitalJourney portfolio"/>
 <meta name="robots" content="index,follow"/>
 <link rel="canonical" href="https://spdigitaljourney.github.io/360-portfolio.html"/>
 <meta property="og:type" content="website"/>
-<meta property="og:title" content="360° Virtual Tour Portfolio | SPDigitalJourney"/>
-<meta property="og:description" content="22 live 360° Street View tours across automotive, jewellery, fitness, education and retail businesses in Karnataka."/>
+<meta property="og:title" content="360&#xB0; Virtual Tour Portfolio | SPDigitalJourney"/>
+<meta property="og:description" content="500+ live 360&#xB0; Street View tours across 10 industries — agency and own contribution. Google Trusted Photographer since 2007."/>
 <meta property="og:url" content="https://spdigitaljourney.github.io/360-portfolio.html"/>
-
+<meta property="og:image" content="https://spdigitaljourney.github.io/sp-logo.png"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<link rel="icon" type="image/png" href="sp-logo.png"/>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Service","name":"360 Degree Google Street View Photography","provider":{"@type":"LocalBusiness","name":"SPDigitalJourney","url":"https://spdigitaljourney.github.io/"},"description":"500+ live 360 degree Google Street View tours published across India — agency and own contribution. Professional interior and exterior photography published to Google Business Profile and Google Maps. Google Trusted Photographer since 2007.","areaServed":{"@type":"Country","name":"India"},"offers":{"@type":"Offer","price":"4499","priceCurrency":"INR","description":"360 degree Street View photography from Rs. 4,499. Published within 72 hours."}}
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"/>
-
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/>
 <style>
 :root{
-  --bg:#080C14;--bg2:#0C1220;--surface:#111827;--surface2:#1A2235;
-  --cyan:#00D4FF;--green:#00FF88;--text:#F0F4FF;--muted:#6B7DA8;--muted2:#3D4F6E;
-  --border:rgba(0,212,255,0.1);--border2:rgba(240,244,255,0.06);
-  --font-display:'Space Grotesk',sans-serif;--font-body:'Inter',sans-serif;--font-mono:'JetBrains Mono',monospace;
+  --ink:#0D1117;--ink2:#24292E;--muted:#57606A;--muted2:#8B949E;
+  --bg:#FFFFFF;--bg2:#F6F8FA;--border:#D0D7DE;--border2:#E8ECEF;
+  --blue:#1A56DB;--blue2:#1347C8;--blue-light:#EBF5FF;
+  --green:#1A7F37;--green-light:#DCFFE4;
+  --font-display:"Sora",sans-serif;--font-body:Inter,sans-serif;
+  --radius:10px;--radius-lg:16px;--radius-xl:22px;
 }
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-body{background:var(--bg);color:var(--text);font-family:var(--font-body);font-size:15px;line-height:1.6;overflow-x:hidden}
-body::before{content:'';position:fixed;inset:0;z-index:0;pointer-events:none;
-  background-image:linear-gradient(rgba(0,212,255,.03) 1px,transparent 1px),linear-gradient(90deg,rgba(0,212,255,.03) 1px,transparent 1px);
-  background-size:48px 48px;}
-
-nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:.9rem 2rem;
-  display:flex;align-items:center;justify-content:space-between;
-  background:rgba(8,12,20,.9);backdrop-filter:blur(20px);border-bottom:1px solid var(--border2);}
-.nav-logo{font-family:var(--font-display);font-weight:700;font-size:1rem;color:var(--text);
-  text-decoration:none;display:flex;align-items:center;gap:.5rem}
-.logo-dot{width:8px;height:8px;border-radius:50%;background:var(--cyan)}
-.nav-back{font-family:var(--font-mono);font-size:.72rem;color:var(--muted);text-decoration:none;
-  display:flex;align-items:center;gap:.4rem;transition:color .15s}
-.nav-back:hover{color:var(--cyan)}
-.nav-cta{background:var(--cyan);color:var(--bg);padding:.5rem 1.1rem;font-family:var(--font-display);
-  font-size:.78rem;font-weight:600;border-radius:6px;text-decoration:none;transition:opacity .15s}
-.nav-cta:hover{opacity:.85}
-
-section{position:relative;z-index:1}
-
-#hero{padding:8.5rem 2rem 4rem;max-width:1100px;margin:0 auto}
-.hero-eyebrow{display:inline-flex;align-items:center;gap:.5rem;font-family:var(--font-mono);
-  font-size:.72rem;color:var(--muted);border:1px solid var(--border);padding:.3rem .8rem;
-  border-radius:4px;margin-bottom:1.8rem}
-.hero-eyebrow .dot{width:5px;height:5px;border-radius:50%;background:var(--green)}
-h1{font-family:var(--font-display);font-weight:700;font-size:clamp(2.4rem,5.5vw,4.5rem);
-  line-height:1;letter-spacing:-.03em;margin-bottom:1.3rem}
-h1 .outline{color:transparent;-webkit-text-stroke:1.2px rgba(240,244,255,.25)}
-h1 .accent{color:var(--cyan)}
-.hero-sub{max-width:560px;font-size:1rem;color:var(--muted);line-height:1.7;margin-bottom:2rem}
-.hero-sub strong{color:var(--text);font-weight:500}
-.hero-stats{display:flex;gap:2.2rem;flex-wrap:wrap;margin-bottom:2.5rem}
-.hstat-val{font-family:var(--font-display);font-size:1.7rem;font-weight:700;color:var(--text)}
-.hstat-val span{color:var(--cyan)}
-.hstat-label{font-size:.72rem;color:var(--muted)}
-
-.brand-strip{border-top:1px solid var(--border2);border-bottom:1px solid var(--border2);
-  padding:1.1rem 2rem;background:rgba(17,24,39,.5);display:flex;align-items:center;gap:1.5rem;
-  flex-wrap:wrap;position:relative;z-index:1}
-.strip-label{font-family:var(--font-mono);font-size:.68rem;color:var(--muted2);white-space:nowrap}
-.brand-chip{font-family:var(--font-mono);font-size:.73rem;color:var(--muted);
-  border:1px solid var(--border2);padding:.25rem .65rem;border-radius:4px}
-
-.jump-nav{max-width:1100px;margin:0 auto;padding:2.5rem 2rem 0;display:flex;gap:.6rem;flex-wrap:wrap}
-.jump-nav a{font-family:var(--font-mono);font-size:.72rem;color:var(--muted);
-  border:1px solid var(--border2);padding:.4rem .85rem;border-radius:5px;text-decoration:none;transition:all .15s}
-.jump-nav a:hover{border-color:var(--cyan);color:var(--cyan)}
-
-#gallery{max-width:1100px;margin:0 auto;padding:3rem 2rem 5rem}
-.cat-block{margin-bottom:4.5rem}
-.cat-head{margin-bottom:1.5rem}
-.cat-tag{font-family:var(--font-mono);font-size:.65rem;color:var(--cyan);letter-spacing:.1em;margin-bottom:.6rem}
-.cat-title{font-family:var(--font-display);font-size:clamp(1.3rem,2.5vw,1.8rem);font-weight:700;margin-bottom:.5rem;letter-spacing:-.01em}
-.cat-desc{color:var(--muted);font-size:.88rem;max-width:560px;line-height:1.6}
-.tour-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--border2)}
-.tour-card{background:var(--surface);overflow:hidden}
-.tour-label{padding:.85rem 1.1rem;display:flex;align-items:center;justify-content:space-between;
-  border-bottom:1px solid var(--border2)}
-.tour-label span:first-child{font-family:var(--font-display);font-size:.8rem;font-weight:600;color:var(--text)}
-.tour-loc{font-family:var(--font-mono);font-size:.65rem;color:var(--muted2)}
-.tour-frame{position:relative;width:100%;aspect-ratio:16/10;background:#000}
-.tour-frame iframe{position:absolute;inset:0;width:100%;height:100%;border:0;filter:saturate(1.05)}
-
-#cta{padding:5rem 2rem;background:var(--bg2);position:relative;z-index:1;text-align:center}
-#cta .inner{max-width:640px;margin:0 auto}
-#cta h2{font-family:var(--font-display);font-size:clamp(1.6rem,3vw,2.2rem);font-weight:700;margin-bottom:1rem;letter-spacing:-.02em}
-#cta p{color:var(--muted);margin-bottom:2rem;line-height:1.7}
-.cta-row{display:flex;gap:.8rem;justify-content:center;flex-wrap:wrap}
-.btn-primary{background:var(--cyan);color:var(--bg);padding:.8rem 1.8rem;font-family:var(--font-display);
-  font-size:.85rem;font-weight:600;border-radius:8px;text-decoration:none;transition:opacity .15s}
-.btn-primary:hover{opacity:.85}
-.btn-secondary{border:1px solid var(--border);color:var(--text);padding:.8rem 1.6rem;font-size:.85rem;
-  border-radius:8px;text-decoration:none;transition:border-color .15s,color .15s}
-.btn-secondary:hover{border-color:var(--cyan);color:var(--cyan)}
-
-footer{border-top:1px solid var(--border2);padding:1.5rem 2rem;background:rgba(8,12,20,.9);
-  display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem;position:relative;z-index:1}
-.footer-copy{font-family:var(--font-mono);font-size:.68rem;color:var(--muted2)}
-.footer-links a{font-family:var(--font-mono);font-size:.68rem;color:var(--muted2);text-decoration:none;margin-left:1.2rem;transition:color .15s}
-.footer-links a:hover{color:var(--cyan)}
-
-.wa-float{position:fixed;bottom:1.5rem;right:1.5rem;z-index:200}
-.wa-bubble{background:#25D366;color:#fff;width:52px;height:52px;border-radius:50%;
-  display:flex;align-items:center;justify-content:center;font-size:1.4rem;text-decoration:none;
-  animation:wa-pulse 2.5s ease-in-out infinite;transition:transform .15s}
-.wa-bubble:hover{transform:scale(1.08)}
-@keyframes wa-pulse{0%,100%{box-shadow:0 4px 20px rgba(37,211,102,.35),0 0 0 0 rgba(37,211,102,.2)}50%{box-shadow:0 4px 20px rgba(37,211,102,.35),0 0 0 8px rgba(37,211,102,0)}}
-
-.reveal{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s ease}
+html{font-size:16px;scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font-family:var(--font-body);line-height:1.65;-webkit-font-smoothing:antialiased}
+.reveal{opacity:0;transform:translateY(16px);transition:opacity .6s ease,transform .6s ease}
 .reveal.visible{opacity:1;transform:none}
+.inner{max-width:1100px;margin:0 auto;padding:0 2rem}
+
+/* STATUS BAR */
+.status-bar{background:var(--ink);height:32px;display:flex;align-items:center;
+  justify-content:space-between;padding:0 2rem;position:sticky;top:0;z-index:200}
+.sb-left{display:flex;align-items:center;gap:.5rem;font-family:var(--font-display);
+  font-size:.72rem;color:rgba(255,255,255,.65)}
+.sb-dot{width:6px;height:6px;border-radius:50%;background:#3FB950;animation:sbp 2s infinite;flex-shrink:0}
+@keyframes sbp{0%,100%{opacity:1}50%{opacity:.4}}
+.sb-sep{color:rgba(255,255,255,.25)}
+.sb-right{font-family:var(--font-display);font-size:.7rem;color:#3FB950;font-weight:600}
+
+/* NAV */
+nav{position:sticky;top:32px;z-index:199;background:rgba(255,255,255,.96);
+  backdrop-filter:blur(12px);border-bottom:1px solid var(--border2);
+  padding:.85rem 2rem;display:flex;align-items:center;justify-content:space-between}
+.nav-brand{display:flex;align-items:center;gap:.65rem;text-decoration:none}
+.nav-logo{width:34px;height:34px;border-radius:50%;object-fit:cover}
+.nav-name{font-family:var(--font-display);font-weight:700;font-size:.95rem;color:var(--ink)}
+.nav-right-btns{display:flex;gap:.7rem;align-items:center}
+.btn-back{color:var(--muted);text-decoration:none;font-size:.82rem;font-weight:600;
+  display:flex;align-items:center;gap:.3rem;transition:color .15s}
+.btn-back:hover{color:var(--blue)}
+.btn-quote{background:var(--blue);color:#fff;padding:.52rem 1.1rem;border-radius:var(--radius);
+  font-size:.8rem;font-weight:700;text-decoration:none;font-family:var(--font-display);
+  display:flex;align-items:center;gap:.35rem;transition:background .15s}
+.btn-quote:hover{background:var(--blue2)}
+.hamburger{display:none;flex-direction:column;gap:6px;background:none;border:none;
+  cursor:pointer;padding:.5rem;min-width:44px;min-height:44px;align-items:center;justify-content:center}
+.hamburger span{display:block;width:22px;height:2.5px;background:var(--ink2);border-radius:2px;transition:all .3s}
+.hamburger.open span:nth-child(1){transform:translateY(8.5px) rotate(45deg)}
+.hamburger.open span:nth-child(2){opacity:0}
+.hamburger.open span:nth-child(3){transform:translateY(-8.5px) rotate(-45deg)}
+.mob-menu{display:none;position:fixed;inset:0;z-index:198;background:#fff;
+  flex-direction:column;align-items:center;justify-content:center;gap:1.4rem;padding:2rem}
+.mob-menu.open{display:flex}
+.mob-menu a{font-family:var(--font-display);font-size:1.05rem;font-weight:600;
+  color:var(--ink);text-decoration:none;padding:.5rem 1rem;text-align:center;width:100%;max-width:260px}
+.mob-divider{width:100%;max-width:260px;border:none;border-top:1px solid var(--border2)}
+.mob-cta{background:var(--blue);color:#fff!important;border-radius:var(--radius)}
+
+/* HERO */
+#hero{padding:4rem 2rem 3rem;background:var(--bg2);border-bottom:1px solid var(--border2)}
+.hero-inner{max-width:1100px;margin:0 auto}
+.hero-eyebrow{font-family:var(--font-display);font-size:.72rem;font-weight:700;color:var(--blue);
+  letter-spacing:.08em;text-transform:uppercase;margin-bottom:.7rem;display:block}
+h1.port-h{font-family:var(--font-display);font-weight:800;font-size:clamp(2rem,5vw,3.4rem);
+  line-height:1.12;letter-spacing:-.025em;color:var(--ink);margin-bottom:1.2rem;max-width:700px}
+h1.port-h em{font-style:italic;color:var(--blue);font-weight:300}
+.port-sub{font-size:.98rem;color:var(--muted);line-height:1.75;max-width:580px;margin-bottom:2rem}
+.hero-stats{display:flex;gap:2.5rem;flex-wrap:wrap;padding-top:1.8rem;border-top:1px solid var(--border2);margin-bottom:2rem}
+.hs-val{font-family:var(--font-display);font-size:1.5rem;font-weight:800;color:var(--ink)}
+.hs-label{font-size:.74rem;color:var(--muted);margin-top:.1rem}
+.cta-hero{background:var(--blue);color:#fff;padding:.9rem 1.8rem;border-radius:var(--radius);
+  font-family:var(--font-display);font-size:.88rem;font-weight:700;text-decoration:none;
+  display:inline-flex;align-items:center;gap:.5rem;transition:background .15s}
+.cta-hero:hover{background:var(--blue2)}
+
+/* BRAND STRIP */
+.brand-strip{background:#fff;border-top:1px solid var(--border2);border-bottom:1px solid var(--border2);
+  padding:1rem 2rem;display:flex;align-items:center;gap:1.2rem;overflow-x:auto;flex-wrap:wrap}
+.brand-strip-label{font-family:var(--font-display);font-size:.68rem;font-weight:700;
+  color:var(--muted2);text-transform:uppercase;letter-spacing:.06em;white-space:nowrap}
+.brand-chip{font-family:var(--font-display);font-size:.76rem;font-weight:600;color:var(--ink2);
+  background:var(--bg2);border:1px solid var(--border2);padding:.3rem .75rem;border-radius:6px;
+  white-space:nowrap}
+
+/* JUMP NAV */
+.jump-nav{padding:1.5rem 2rem;max-width:1100px;margin:0 auto;display:flex;gap:.6rem;flex-wrap:wrap}
+.jump-link{font-family:var(--font-display);font-size:.76rem;font-weight:600;color:var(--muted);
+  border:1.5px solid var(--border2);padding:.4rem .9rem;border-radius:var(--radius);
+  text-decoration:none;transition:all .15s;background:#fff}
+.jump-link:hover{border-color:var(--blue);color:var(--blue)}
+
+/* GALLERY */
+#gallery{padding:2rem 0 5rem;max-width:1100px;margin:0 auto}
+.cat-block{margin-bottom:4rem;padding:0 2rem}
+.cat-head{margin-bottom:1.6rem}
+.cat-count{font-family:var(--font-display);font-size:.65rem;font-weight:700;color:var(--blue);
+  letter-spacing:.1em;text-transform:uppercase;margin-bottom:.5rem}
+.cat-title{font-family:var(--font-display);font-size:clamp(1.3rem,2.5vw,1.7rem);font-weight:800;
+  color:var(--ink);margin-bottom:.5rem;letter-spacing:-.01em}
+.cat-desc{color:var(--muted);font-size:.88rem;max-width:560px;line-height:1.65}
+.tours-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--border2);
+  border:1px solid var(--border2);border-radius:var(--radius-lg);overflow:hidden}
+.tour-card{background:#fff;overflow:hidden}
+.tc-head{padding:.8rem 1rem;display:flex;align-items:center;justify-content:space-between;
+  border-bottom:1px solid var(--border2);background:var(--bg2)}
+.tc-label{font-family:var(--font-display);font-size:.8rem;font-weight:700;color:var(--ink)}
+.tc-loc{font-family:var(--font-display);font-size:.66rem;color:var(--muted2)}
+.tc-frame{position:relative;width:100%;aspect-ratio:16/10;background:var(--bg2)}
+.tc-frame iframe{position:absolute;inset:0;width:100%;height:100%;border:none}
+
+/* CTA SECTION */
+#cta{padding:5rem 2rem;background:var(--blue);text-align:center}
+#cta .inner{max-width:640px;margin:0 auto}
+.cta-title{font-family:var(--font-display);font-size:clamp(1.6rem,3vw,2.2rem);font-weight:800;
+  color:#fff;letter-spacing:-.02em;margin-bottom:.9rem}
+.cta-sub{font-size:.96rem;color:rgba(255,255,255,.75);line-height:1.7;margin-bottom:2rem}
+.cta-row{display:flex;gap:.8rem;justify-content:center;flex-wrap:wrap}
+.cta-btn-white{background:#fff;color:var(--blue);padding:.9rem 1.8rem;border-radius:var(--radius);
+  font-family:var(--font-display);font-size:.88rem;font-weight:700;text-decoration:none;transition:opacity .15s}
+.cta-btn-white:hover{opacity:.9}
+.cta-btn-ghost{border:2px solid rgba(255,255,255,.5);color:#fff;padding:.9rem 1.6rem;border-radius:var(--radius);
+  font-family:var(--font-display);font-size:.88rem;font-weight:600;text-decoration:none;transition:border-color .15s}
+.cta-btn-ghost:hover{border-color:#fff}
+
+/* FOOTER */
+footer{background:var(--ink);padding:2rem;text-align:center}
+.foot-copy{font-size:.8rem;color:rgba(255,255,255,.5);line-height:1.9}
+.foot-copy a{color:rgba(255,255,255,.65);text-decoration:none}
+.foot-copy a:hover{color:#fff}
+.foot-disc{font-size:.68rem;color:rgba(255,255,255,.3);margin-top:.8rem;line-height:1.65;max-width:800px;margin-left:auto;margin-right:auto}
+
+/* WA FLOAT */
+.wa-float{position:fixed;bottom:1.5rem;right:1.5rem;z-index:300}
+.wa-btn{width:52px;height:52px;background:#25D366;border-radius:50%;display:flex;align-items:center;
+  justify-content:center;text-decoration:none;font-size:1.4rem;
+  box-shadow:0 4px 16px rgba(37,211,102,.4);transition:transform .15s}
+.wa-btn:hover{transform:scale(1.08)}
 
 @media(max-width:768px){
-  nav{padding:.75rem 1.2rem}
-  #hero,#gallery,#cta{padding-left:1.2rem;padding-right:1.2rem}
-  .jump-nav{padding-left:1.2rem;padding-right:1.2rem}
-  .tour-grid{grid-template-columns:1fr}
-  .hero-stats{gap:1.4rem}
-  footer{padding:1.2rem;flex-direction:column;align-items:flex-start}
+  .status-bar{padding:0 1rem;height:30px}
+  .sb-left{font-size:.7rem;gap:.3rem}
+  .sb-right{display:none}
+  nav{top:30px;padding:.8rem 1rem}
+  .nav-right-btns{display:none}
+  .hamburger{display:flex}
+  #hero{padding:2.5rem 1.2rem 2rem}
+  .hero-stats{gap:1.2rem}
+  .hs-val{font-size:1.2rem}
+  .brand-strip{padding:.9rem 1.2rem;gap:.8rem}
+  .jump-nav{padding:1rem 1.2rem;gap:.4rem}
+  .jump-link{font-size:.72rem;padding:.35rem .7rem}
+  #gallery{padding:1rem 0 3rem}
+  .cat-block{padding:0 1.2rem;margin-bottom:3rem}
+  .tours-grid{grid-template-columns:1fr}
+  .tc-frame{aspect-ratio:4/3}
+  #cta{padding:3.5rem 1.2rem}
+  .cta-row{flex-direction:column;align-items:center}
+  footer{padding:1.5rem 1.2rem}
+  .wa-float{bottom:1rem;right:1rem}
+  .wa-btn{width:48px;height:48px;font-size:1.3rem}
 }
 </style>
 </head>
 <body>
 
-<div class="wa-float"><a class="wa-bubble" href="https://wa.me/917799423794?text=Hi%2C%20I%27d%20like%20a%20360%C2%B0%20virtual%20tour%20quote." target="_blank">💬</a></div>
+<div class="wa-float">
+  <a class="wa-btn" href="https://wa.me/917799423794?text=Hi%2C%20I%27d%20like%20a%20360%C2%B0%20virtual%20tour%20quote." target="_blank" rel="noopener" aria-label="Get a 360 tour quote on WhatsApp">&#x1F4AC;</a>
+</div>
+
+<div class="status-bar">
+  <div class="sb-left">
+    <div class="sb-dot"></div>
+    <span id="sb-time">--:-- --</span>
+    <span class="sb-sep">&#xB7;</span>
+    <span id="sb-date">--- --, ----</span>
+    <span class="sb-sep">&#xB7;</span>
+    <span>IST &#xB7; Bengaluru</span>
+  </div>
+  <div class="sb-right">&#x1F4F8; 360&#xB0; Photography Portfolio</div>
+</div>
 
 <nav>
-  <a href="index.html" class="nav-logo"><div class="logo-dot"></div>SPDigitalJourney</a>
-  <a href="index.html" class="nav-back">← Back to site</a>
-  <a href="free-consultation.html" class="nav-cta">Get a Quote</a>
+  <a href="https://spdigitaljourney.github.io/" class="nav-brand">
+    <img src="sp-logo.png" alt="SPDigitalJourney" class="nav-logo" width="34" height="34"/>
+    <span class="nav-name">SPDigitalJourney</span>
+  </a>
+  <div class="nav-right-btns">
+    <a href="https://spdigitaljourney.github.io/" class="btn-back">&#x2190; Back to site</a>
+    <a href="https://spdigitaljourney.github.io/contact.html" class="btn-back">Contact</a>
+    <a href="https://wa.me/917799423794?text=Hi%2C%20I%27d%20like%20a%20360%C2%B0%20virtual%20tour%20quote." target="_blank" rel="noopener" class="btn-quote">&#x1F4F8; Get a Quote</a>
+  </div>
+  <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
 </nav>
 
+<div class="mob-menu" id="mobMenu">
+  <a href="https://spdigitaljourney.github.io/" onclick="closeMob()">&#x2190; Home</a>
+  <a href="#automotive" onclick="closeMob()">Automotive</a>
+  <a href="#jewellery" onclick="closeMob()">Jewellery</a>
+  <a href="#fitness" onclick="closeMob()">Fitness</a>
+  <a href="#education" onclick="closeMob()">Education</a>
+  <hr class="mob-divider"/>
+  <a href="https://spdigitaljourney.github.io/contact.html" onclick="closeMob()">Contact</a>
+  <a href="https://spdigitaljourney.github.io/tech-solutions.html" onclick="closeMob()">All Services</a>
+  <a href="https://wa.me/917799423794?text=Hi%2C%20I%27d%20like%20a%20360%C2%B0%20virtual%20tour%20quote." target="_blank" rel="noopener" class="mob-cta" onclick="closeMob()">&#x1F4F8; Get a Quote</a>
+</div>
+
 <section id="hero">
-  <div class="hero-eyebrow"><div class="dot"></div>360° Street View Portfolio · 22 Live Tours</div>
-  <h1>Every business,<br><span class="outline">seen before</span><br><span class="accent">they arrive.</span></h1>
-  <p class="hero-sub">22 live 360° Google Street View tours published across Karnataka — automotive, jewellery, fitness, education, petroleum and retail. Every embed below is a real, published Google Maps listing, shot and published by SPDigitalJourney.</p>
-  <div class="hero-stats reveal">
-    <div><div class="hstat-val">22<span>+</span></div><div class="hstat-label">Live tours published</div></div>
-    <div><div class="hstat-val">7<span></span></div><div class="hstat-label">Industries covered</div></div>
-    <div><div class="hstat-val">72<span>hr</span></div><div class="hstat-label">Shoot to publish</div></div>
-    <div><div class="hstat-val">2007</div><div class="hstat-label">Street View since</div></div>
+  <div class="hero-inner">
+    <span class="hero-eyebrow">&#x1F4F8; 360&#xB0; Street View Portfolio &#xB7; 500+ Live Tours</span>
+    <h1 class="port-h">Every business, <em>seen before</em><br>they arrive.</h1>
+    <p class="port-sub">500+ live 360&#xB0; Google Street View tours published across India &#x2014; under agency employment and own contribution &#x2014; spanning automotive, jewellery, fitness, education, petroleum and retail. Every embed below is a real, published Google Maps listing shot and published by SPDigitalJourney.</p>
+    <div class="hero-stats">
+      <div><div class="hs-val">500+</div><div class="hs-label">Live tours published</div></div>
+      <div><div class="hs-val">10</div><div class="hs-label">Industries covered</div></div>
+      <div><div class="hs-val">72 hrs</div><div class="hs-label">Shoot to published</div></div>
+      <div><div class="hs-val">2007</div><div class="hs-label">Street View expertise</div></div>
+    </div>
+    <a href="https://wa.me/917799423794?text=Hi%2C%20I%27d%20like%20a%20360%C2%B0%20virtual%20tour%20quote." target="_blank" rel="noopener" class="cta-hero">&#x1F4F8; Book a 360&#xB0; Tour &#x2014; From &#x20B9;4,499</a>
   </div>
 </section>
 
 <div class="brand-strip">
-  <div class="strip-label">Trusted by brands including</div>
-  <span class="brand-chip">Wakefit</span>
-<span class="brand-chip">Hercules Fitness</span>
-<span class="brand-chip">Nayara Petroleum</span>
-<span class="brand-chip">Tanishq Jewellery</span>
-<span class="brand-chip">Vespa</span>
-<span class="brand-chip">Aprilia Scooters</span>
-<span class="brand-chip">TVS</span>
-<span class="brand-chip">Mahindra</span>
-<span class="brand-chip">Continental</span>
-<span class="brand-chip">Yokohama</span>
+  <div class="brand-strip-label">Brands include</div>
+  <span class="brand-chip">Wakefit</span><span class="brand-chip">Hercules Fitness</span><span class="brand-chip">Nayara Petroleum</span><span class="brand-chip">Tanishq Jewellery</span><span class="brand-chip">Vespa</span><span class="brand-chip">Aprilia Scooters</span><span class="brand-chip">TVS</span><span class="brand-chip">Mahindra</span><span class="brand-chip">Continental</span><span class="brand-chip">Yokohama</span>
 </div>
 
-<nav class="jump-nav reveal">
-  <a href="#automotive">Automotive & Tyres</a>
-<a href="#jewellery">Jewellery & Retail</a>
-<a href="#petroleum">Petroleum & Fuel Stations</a>
-<a href="#education">Education</a>
-<a href="#fitness">Fitness & Gyms</a>
-<a href="#furniture">Furniture & Home</a>
-<a href="#other">Spice, Residence & More</a>
+<nav class="jump-nav" aria-label="Category navigation">
+  <a href="#automotive" class="jump-link">Automotive & Tyres</a><a href="#jewellery" class="jump-link">Jewellery & Retail</a><a href="#petroleum" class="jump-link">Petroleum & Fuel Stations</a><a href="#education" class="jump-link">Education</a><a href="#fitness" class="jump-link">Fitness & Gyms</a><a href="#furniture" class="jump-link">Furniture & Home</a><a href="#other" class="jump-link">Spice, Residence & More</a>
 </nav>
 
 <section id="gallery">
 
-  <div class="cat-block reveal" id="automotive">
-    <div class="cat-head">
-      <div class="cat-tag">6 LOCATIONS</div>
+  <div class="cat-block" id="automotive">
+    <div class="cat-head reveal">
+      <div class="cat-count">4 LOCATIONS</div>
       <h2 class="cat-title">Automotive & Tyres</h2>
-      <p class="cat-desc">Showrooms, dealerships and tyre centres — including work for nationally recognised automotive brands.</p>
+      <p class="cat-desc">Showrooms, dealerships and tyre centres — work for nationally recognised automotive brands.</p>
     </div>
-    <div class="tour-grid">
-      <div class="tour-card">
-        <div class="tour-label"><span>📍 Tyre & Wheel Centre</span><span class="tour-loc">Udupi district</span></div>
-        <div class="tour-frame"><iframe src="https://www.google.com/maps/embed?pb=!4v1781954972325!6m8!1m7!1sCAoSHENJQUJJaEFHYnl3N3B3UTBjMmVsdW40QUNKUlc.!2m2!1d13.32003881340214!2d74.73949299423009!3f358.99514581025704!4f22.136110135337447!5f0.4000000000000002" loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade" title="Tyre & Wheel Centre 360 virtual tour"></iframe></div>
-      </div>
-      <div class="tour-card">
-        <div class="tour-label"><span>📍 Auto Showroom</span><span class="tour-loc">Bengaluru</span></div>
-        <div class="tour-frame"><iframe src="https://www.google.com/maps/embed?pb=!4v1781954364618!6m8!1m7!1sCAoSHENJQUJJaEFHYnlmUWFEdFp6V2UxaTVNQURqMDM.!2m2!1d12.91212533714636!2d77.62542013247209!3f236.47989704237224!4f6.673737092725389!5f0.4000000000000002" loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade" title="Auto Showroom 360 virtual tour"></iframe></div>
-      </div>
-      <div class="tour-card">
-        <div class="tour-label"><span>📍 Motors Dealership</span><span class="tour-loc">Mangaluru</span></div>
-        <div class="tour-frame"><iframe src="https://www.google.com/maps/embed?pb=!4v1781954242153!6m8!1m7!1sCAoSHENJQUJJaEJTS0ZPcktGOURoMTlKUWN1WHhBV1Y.!2m2!1d12.87822469896574!2d74.85741152834058!3f282.28557285288935!4f-0.9716443632414666!5f0.4000000000000002" loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade" title="Motors Dealership 360 virtual tour"></iframe></div>
-      </div>
-      <div class="tour-card">
-        <div class="tour-label"><span>📍 Vehicle Service Centre</span><span class="tour-loc">Bengaluru</span></div>
-        <div class="tour-frame"><iframe src="https://www.google.com/maps/embed?pb=!4v1781954152695!6m8!1m7!1sCAoSFkNJSE0wb2dLRUlDQWdJQ3B1dTJxY3c.!2m2!1d12.9737232950926!2d77.64241173620118!3f26.745804588990666!4f2.1435029459947543!5f0.4000000000000002" loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade" title="Vehicle Service Centre 360 virtual tour"></iframe></div>
-      </div>
+    <div class="tours-grid reveal">
+        <div class="tour-card">
+          <div class="tc-head"><span class="tc-label">Tyre & Wheel Centre</span><span class="tc-loc">Udupi district</span></div>
+          <div class="tc-frame"><iframe src="https://www.google.com/maps/embed?pb=!4v1781954972325!6m8!1m7!1sCAoSHENJQUJJaEFHYnl3N3B3UTBjMmVsdW40QUNKUlc.!2m2!1d13.32003881340214!2d74.73949299423009!3f358.99514581025704!4f22.136110135337447!5f0.4000000000000002" loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade" title="Tyre & Wheel Centre 360 virtual tour — SPDigitalJourney"></iframe></div>
+        </div>
+        <div class="tour-card">
+          <div class="tc-head"><span class="tc-label">Auto Showroom</span><span class="tc-loc">Bengaluru</span></div>
+          <div class="tc-frame"><iframe src="https://www.google.com/maps/embed?pb=!4v1781954364618!6m8!1m7!1sCAoSHENJQUJJaEFHYnlmUWFEdFp6V2UxaTVNQURqMDM.!2m2!1d12.91212533714636!2d77.62542013247209!3f236.47989704237224!4f6.673737092725389!5f0.4000000000000002" loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade" title="Auto Showroom 360 virtual tour — SPDigitalJourney"></iframe></div>
+        </div>
+        <div class="tour-card">
+          <div class="tc-head"><span class="tc-label">Motors Dealership</span><span class="tc-loc">Mangaluru</span></div>
+          <div class="tc-frame"><iframe src="https://www.google.com/maps/embed?pb=!4v1781954242153!6m8!1m7!1sCAoSHENJQUJJaEJTS0ZPcktGOURoMTlKUWN1WHhBV1Y.!2m2!1d12.87822469896574!2d74.85741152834058!3f282.28557285288935!4f-0.9716443632414666!5f0.4000000000000002" loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade" title="Motors Dealership 360 virtual tour — SPDigitalJourney"></iframe></div>
+        </div>
+        <div class="tour-card">
+          <div class="tc-head"><span class="tc-label">Vehicle Service Centre</span><span class="tc-loc">Bengaluru</span></div>
+          <div class="tc-frame"><iframe src="https://www.google.com/maps/embed?pb=!4v1781954152695!6m8!1m7!1sCAoSFkNJSE0wb2dLRUlDQWdJQ3B1dTJxY3c.!2m2!1d12.9737232950926!2d77.64241173620118!3f26.745804588990666!4f2.1435029459947543!5f0.4000000000000002" loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade" title="Vehicle Service Centre 360 virtual tour — SPDigitalJourney"></iframe></div>
+        </div>
     </div>
   </div>
-
-  <div class="cat-block reveal" id="jewellery">
-    <div class="cat-head">
-      <div class="cat-tag">2 LOCATIONS</div>
+  <div class="cat-block" id="jewellery">
+    <div class="cat-head reveal">
+      <div class="cat-count">3 LOCATIONS</div>
       <h2 class="cat-title">Jewellery & Retail</h2>
-      <p class="cat-desc">High-trust retail environments where a virtual walkthrough builds confidence before the customer ever visits.</p>
+      <p class="cat-desc">High-trust retail environments where a virtual walkthrough builds customer confidence before visiting.</p>
     </div>
-    <div class="tour-grid">
-      <div class="tour-card">
-        <div class="tour-label"><span>📍 Jewellery Showroom</span><span class="tour-loc">Bengaluru North</span></div>
-        <div class="tour-frame"><iframe src="https://www.google.com/maps/embed?pb=!4v1781954053741!6m8!1m7!1sCAoSFkNJSE0wb2dLRUlDQWdJRGZ0cnZ3QlE.!2m2!1d13.33869636066198!2d77.1132151152316!3f347.80141511552046!4f10.28503084214924!5f0.4000000000000002" loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade" title="Jewellery Showroom 360 virtual tour"></iframe></div>
-      </div>
-      <div class="tour-card">
-        <div class="tour-label"><span>📍 Jewellery Showroom — Interior</span><span class="tour-loc">Bengaluru North</span></div>
-        <div class="tour-frame"><iframe src="https://www.google.com/maps/embed?pb=!4v1781954018309!6m8!1m7!1sCAoSFkNJSE0wb2dLRUlDQWdJRGZ0cnV3Znc.!2m2!1d13.3386472253098!2d77.11322863596088!3f5.506790428001031!4f36.771325995552246!5f0.4000000000000002" loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade" title="Jewellery Showroom — Interior 360 virtual tour"></iframe></div>
-      </div>
+    <div class="tours-grid reveal">
+        <div class="tour-card">
+          <div class="tc-head"><span class="tc-label">Jewellery Showroom</span><span class="tc-loc">Bengaluru North</span></div>
+          <div class="tc-frame"><iframe src="https://www.google.com/maps/embed?pb=!4v1781954053741!6m8!1m7!1sCAoSFkNJSE0wb2dLRUlDQWdJRGZ0cnZ3QlE.!2m2!1d13.33869636066198!2d77.1132151152316!3f347.80141511552046!4f10.28503084214924!5f0.4000000000000002" loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade" title="Jewellery Showroom 360 virtual tour — SPDigitalJourney"></iframe></div>
+        </div>
+        <div class="tour-card">
+          <div class="tc-head"><span class="tc-label">Jewellery Showroom — Interior</span><span class="tc-loc">Bengaluru North</span></div>
+          <div class="tc-frame"><iframe src="https://www.google.com/maps/embed?pb=!4v1781954018309!6m8!1m7!1sCAoSFkNJSE0wb2dLRUlDQWdJRGZ0cnV3Znc.!2m2!1d13.3386472253098!2d77.11322863596088!3f5.506790428001031!4f36.771325995552246!5f0.4000000000000002" loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade" title="Jewellery Showroom — Interior 360 virtual tour — SPDigitalJourney"></iframe></div>
+        </div>
+        <div class="tour-card">
+          <div class="tc-head"><span class="tc-label">Jewellery Centre</span><span class="tc-loc">Hassan district</span></div>
+          <div class="tc-frame"><iframe src="https://www.google.com/maps/embed?pb=!4v1781953937667!6m8!1m7!1sCAoSFENJSE0wb2dLRUlDQWdJQ1h5cHQ5!2m2!1d13.935713032752!2d75.57508124318099!3f33.73192234457542!4f7.871446771823685!5f0.4000000000000002" loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade" title="Jewellery Centre 360 virtual tour — SPDigitalJourney"></iframe></div>
+        </div>
     </div>
   </div>
-
-  <div class="cat-block reveal" id="petroleum">
-    <div class="cat-head">
-      <div class="cat-tag">2 LOCATIONS</div>
+  <div class="cat-block" id="petroleum">
+    <div class="cat-head reveal">
+      <div class="cat-count">2 LOCATIONS</div>
       <h2 class="cat-title">Petroleum & Fuel Stations</h2>
-      <p class="cat-desc">Forecourt and facility tours for fuel retail outlets — built for trust, safety transparency, and brand consistency.</p>
+      <p class="cat-desc">Forecourt and facility tours for fuel retail outlets — trust, safety transparency, brand consistency.</p>
     </div>
-    <div class="tour-grid">
-      <div class="tour-card">
-        <div class="tour-label"><span>📍 Fuel Station</span><span class="tour-loc">Bengaluru North</span></div>
-        <div class="tour-frame"><iframe src="https://www.google.com/maps/embed?pb=!4v1781950028340!6m8!1m7!1sCAoSFkNJSE0wb2dLRUlDQWdJQ1BtT3JOZHc.!2m2!1d13.33404913232173!2d77.09631099111505!3f237.2334266791754!4f10.04839121503423!5f0.4000000000000002" loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade" title="Fuel Station 360 virtual tour"></iframe></div>
-      </div>
-      <div class="tour-card">
-        <div class="tour-label"><span>📍 Fuel Station — Forecourt</span><span class="tour-loc">Bengaluru North</span></div>
-        <div class="tour-frame"><iframe src="https://www.google.com/maps/embed?pb=!4v1781950006423!6m8!1m7!1sCAoSFkNJSE0wb2dLRUlDQWdJQ1BtT3FGTWc.!2m2!1d13.33405702323416!2d77.09629483419725!3f211.52865864806103!4f-7.446886209040613!5f0.4000000000000002" loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade" title="Fuel Station — Forecourt 360 virtual tour"></iframe></div>
-      </div>
+    <div class="tours-grid reveal">
+        <div class="tour-card">
+          <div class="tc-head"><span class="tc-label">Fuel Station</span><span class="tc-loc">Bengaluru North</span></div>
+          <div class="tc-frame"><iframe src="https://www.google.com/maps/embed?pb=!4v1781950028340!6m8!1m7!1sCAoSFkNJSE0wb2dLRUlDQWdJQ1BtT3JOZHc.!2m2!1d13.33404913232173!2d77.09631099111505!3f237.2334266791754!4f10.04839121503423!5f0.4000000000000002" loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade" title="Fuel Station 360 virtual tour — SPDigitalJourney"></iframe></div>
+        </div>
+        <div class="tour-card">
+          <div class="tc-head"><span class="tc-label">Fuel Station — Forecourt</span><span class="tc-loc">Bengaluru North</span></div>
+          <div class="tc-frame"><iframe src="https://www.google.com/maps/embed?pb=!4v1781950006423!6m8!1m7!1sCAoSFkNJSE0wb2dLRUlDQWdJQ1BtT3FGTWc.!2m2!1d13.33405702323416!2d77.09629483419725!3f211.52865864806103!4f-7.446886209040613!5f0.4000000000000002" loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade" title="Fuel Station — Forecourt 360 virtual tour — SPDigitalJourney"></iframe></div>
+        </div>
     </div>
   </div>
-
-  <div class="cat-block reveal" id="education">
-    <div class="cat-head">
-      <div class="cat-tag">3 LOCATIONS</div>
+  <div class="cat-block" id="education">
+    <div class="cat-head reveal">
+      <div class="cat-count">3 LOCATIONS</div>
       <h2 class="cat-title">Education</h2>
       <p class="cat-desc">Campus tours that let parents and students explore facilities remotely before enrolment.</p>
     </div>
-    <div class="tour-grid">
-      <div class="tour-card">
-        <div class="tour-label"><span>📍 Educational Institution</span><span class="tour-loc">Koppal district</span></div>
-        <div class="tour-frame"><iframe src="https://www.google.com/maps/embed?pb=!4v1781949825906!6m8!1m7!1sCAoSHENJQUJJaERHV2ZMbWhXLWMxZUg3QmEzVnVseGg.!2m2!1d15.78544551177636!2d76.7741674570108!3f20.675795053003533!4f-1.0070671378091873!5f0.4000000000000002" loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade" title="Educational Institution 360 virtual tour"></iframe></div>
-      </div>
-      <div class="tour-card">
-        <div class="tour-label"><span>📍 Campus Facility</span><span class="tour-loc">Koppal district</span></div>
-        <div class="tour-frame"><iframe src="https://www.google.com/maps/embed?pb=!4v1781949807947!6m8!1m7!1sCAoSHENJQUJJaEMyTkZSQWN5M2R6N1pLdDNjbXdTMlo.!2m2!1d15.78539302008964!2d76.77407431000486!3f347.49087674201746!4f2.4772949281245786!5f0.4000000000000002" loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade" title="Campus Facility 360 virtual tour"></iframe></div>
-      </div>
-      <div class="tour-card">
-        <div class="tour-label"><span>📍 Campus Building</span><span class="tour-loc">Koppal district</span></div>
-        <div class="tour-frame"><iframe src="https://www.google.com/maps/embed?pb=!4v1781949760962!6m8!1m7!1sCAoSHENJQUJJaEJId3hjZFAxbkNSNVcxNGpkaldsU18.!2m2!1d15.78548342773509!2d76.77413919597002!3f78.82896804772028!4f4.360616888324259!5f0.4000000000000002" loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade" title="Campus Building 360 virtual tour"></iframe></div>
-      </div>
+    <div class="tours-grid reveal">
+        <div class="tour-card">
+          <div class="tc-head"><span class="tc-label">Educational Institution</span><span class="tc-loc">Koppal district</span></div>
+          <div class="tc-frame"><iframe src="https://www.google.com/maps/embed?pb=!4v1781949825906!6m8!1m7!1sCAoSHENJQUJJaERHV2ZMbWhXLWMxZUg3QmEzVnVseGg.!2m2!1d15.78544551177636!2d76.7741674570108!3f20.675795053003533!4f-1.0070671378091873!5f0.4000000000000002" loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade" title="Educational Institution 360 virtual tour — SPDigitalJourney"></iframe></div>
+        </div>
+        <div class="tour-card">
+          <div class="tc-head"><span class="tc-label">Campus Facility</span><span class="tc-loc">Koppal district</span></div>
+          <div class="tc-frame"><iframe src="https://www.google.com/maps/embed?pb=!4v1781949807947!6m8!1m7!1sCAoSHENJQUJJaEMyTkZSQWN5M2R6N1pLdDNjbXdTMlo.!2m2!1d15.78539302008964!2d76.77407431000486!3f347.49087674201746!4f2.4772949281245786!5f0.4000000000000002" loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade" title="Campus Facility 360 virtual tour — SPDigitalJourney"></iframe></div>
+        </div>
+        <div class="tour-card">
+          <div class="tc-head"><span class="tc-label">Campus Building</span><span class="tc-loc">Koppal district</span></div>
+          <div class="tc-frame"><iframe src="https://www.google.com/maps/embed?pb=!4v1781949760962!6m8!1m7!1sCAoSHENJQUJJaEJId3hjZFAxbkNSNVcxNGpkaldsU18.!2m2!1d15.78548342773509!2d76.77413919597002!3f78.82896804772028!4f4.360616888324259!5f0.4000000000000002" loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade" title="Campus Building 360 virtual tour — SPDigitalJourney"></iframe></div>
+        </div>
     </div>
   </div>
-
-  <div class="cat-block reveal" id="fitness">
-    <div class="cat-head">
-      <div class="cat-tag">6 LOCATIONS</div>
+  <div class="cat-block" id="fitness">
+    <div class="cat-head reveal">
+      <div class="cat-count">5 LOCATIONS</div>
       <h2 class="cat-title">Fitness & Gyms</h2>
-      <p class="cat-desc">Our most-photographed category — gyms and fitness centres across Bengaluru and Karnataka.</p>
+      <p class="cat-desc">Gyms and fitness centres — our most-photographed category across Bengaluru and Karnataka.</p>
     </div>
-    <div class="tour-grid">
-      <div class="tour-card">
-        <div class="tour-label"><span>📍 Fitness Centre</span><span class="tour-loc">Bengaluru</span></div>
-        <div class="tour-frame"><iframe src="https://www.google.com/maps/embed?pb=!4v1781954854106!6m8!1m7!1sCAoSHENJQUJJaEExemd4YUd0aUh6Tk80QWdmVlY4ZnI.!2m2!1d13.07895819703188!2d77.55890218073898!3f194.17857378022052!4f3.255152277319098!5f0.4000000000000002" loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade" title="Fitness Centre 360 virtual tour"></iframe></div>
-      </div>
-      <div class="tour-card">
-        <div class="tour-label"><span>📍 Gym Facility</span><span class="tour-loc">Bengaluru South</span></div>
-        <div class="tour-frame"><iframe src="https://www.google.com/maps/embed?pb=!4v1781949641312!6m8!1m7!1sCAoSHENJQUJJaEEzMzNmc2dWQWxmdThxbWtBSGYyQ2o.!2m2!1d12.75456527252966!2d77.83470978691508!3f18.28708794782443!4f-6.611277096379467!5f0.4000000000000002" loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade" title="Gym Facility 360 virtual tour"></iframe></div>
-      </div>
-      <div class="tour-card">
-        <div class="tour-label"><span>📍 Gym Facility — Floor 2</span><span class="tour-loc">Bengaluru South</span></div>
-        <div class="tour-frame"><iframe src="https://www.google.com/maps/embed?pb=!4v1781949558260!6m8!1m7!1sCAoSHENJQUJJaENfSjIxM0diQ1JjOGZaRVJ0MGxmb0Q.!2m2!1d12.75456527252966!2d77.83470978691508!3f48.80866464570993!4f-13.59395714679033!5f0.4000000000000002" loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade" title="Gym Facility — Floor 2 360 virtual tour"></iframe></div>
-      </div>
-      <div class="tour-card">
-        <div class="tour-label"><span>📍 CrossFit Studio</span><span class="tour-loc">Bengaluru South</span></div>
-        <div class="tour-frame"><iframe src="https://www.google.com/maps/embed?pb=!4v1781949100546!6m8!1m7!1sCAoSHENJQUJJaEMzT1QxQlMxRmd3RThsWVhrTFJaYW8.!2m2!1d12.71759122568829!2d77.70089142724751!3f188.17549714850946!4f1.5607700306918844!5f0.4000000000000002" loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade" title="CrossFit Studio 360 virtual tour"></iframe></div>
-      </div>
-      <div class="tour-card">
-        <div class="tour-label"><span>📍 CrossFit Studio — Interior</span><span class="tour-loc">Bengaluru South</span></div>
-        <div class="tour-frame"><iframe src="https://www.google.com/maps/embed?pb=!4v1781949040894!6m8!1m7!1sCAoSHENJQUJJaENERE13S2kzczhHdGhHTzhOeEVLOXU.!2m2!1d12.71759122568829!2d77.70089142724751!3f75.37573202901251!4f-0.5852518629942693!5f0.4000000000000002" loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade" title="CrossFit Studio — Interior 360 virtual tour"></iframe></div>
-      </div>
-      <div class="tour-card">
-        <div class="tour-label"><span>📍 Fitness Centre</span><span class="tour-loc">Bengaluru</span></div>
-        <div class="tour-frame"><iframe src="https://www.google.com/maps/embed?pb=!4v1781948856747!6m8!1m7!1sCAoSHENJQUJJaEJpTWNhek1aQkhhX0kwWHBKYUtDVDg.!2m2!1d12.95788222356999!2d77.478878792967!3f21.308318703739587!4f-2.9251752233898145!5f0.4000000000000002" loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade" title="Fitness Centre 360 virtual tour"></iframe></div>
-      </div>
+    <div class="tours-grid reveal">
+        <div class="tour-card">
+          <div class="tc-head"><span class="tc-label">Fitness Centre</span><span class="tc-loc">Bengaluru</span></div>
+          <div class="tc-frame"><iframe src="https://www.google.com/maps/embed?pb=!4v1781954854106!6m8!1m7!1sCAoSHENJQUJJaEExemd4YUd0aUh6Tk80QWdmVlY4ZnI.!2m2!1d13.07895819703188!2d77.55890218073898!3f194.17857378022052!4f3.255152277319098!5f0.4000000000000002" loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade" title="Fitness Centre 360 virtual tour — SPDigitalJourney"></iframe></div>
+        </div>
+        <div class="tour-card">
+          <div class="tc-head"><span class="tc-label">Gym Facility</span><span class="tc-loc">Bengaluru South</span></div>
+          <div class="tc-frame"><iframe src="https://www.google.com/maps/embed?pb=!4v1781949641312!6m8!1m7!1sCAoSHENJQUJJaEEzMzNmc2dWQWxmdThxbWtBSGYyQ2o.!2m2!1d12.75456527252966!2d77.83470978691508!3f18.28708794782443!4f-6.611277096379467!5f0.4000000000000002" loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade" title="Gym Facility 360 virtual tour — SPDigitalJourney"></iframe></div>
+        </div>
+        <div class="tour-card">
+          <div class="tc-head"><span class="tc-label">Gym — Floor 2</span><span class="tc-loc">Bengaluru South</span></div>
+          <div class="tc-frame"><iframe src="https://www.google.com/maps/embed?pb=!4v1781949558260!6m8!1m7!1sCAoSHENJQUJJaENfSjIxM0diQ1JjOGZaRVJ0MGxmb0Q.!2m2!1d12.75456527252966!2d77.83470978691508!3f48.80866464570993!4f-13.59395714679033!5f0.4000000000000002" loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade" title="Gym — Floor 2 360 virtual tour — SPDigitalJourney"></iframe></div>
+        </div>
+        <div class="tour-card">
+          <div class="tc-head"><span class="tc-label">CrossFit Studio</span><span class="tc-loc">Bengaluru South</span></div>
+          <div class="tc-frame"><iframe src="https://www.google.com/maps/embed?pb=!4v1781949100546!6m8!1m7!1sCAoSHENJQUJJaEMzT1QxQlMxRmd3RThsWVhrTFJaYW8.!2m2!1d12.71759122568829!2d77.70089142724751!3f188.17549714850946!4f1.5607700306918844!5f0.4000000000000002" loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade" title="CrossFit Studio 360 virtual tour — SPDigitalJourney"></iframe></div>
+        </div>
+        <div class="tour-card">
+          <div class="tc-head"><span class="tc-label">CrossFit Studio — Interior</span><span class="tc-loc">Bengaluru South</span></div>
+          <div class="tc-frame"><iframe src="https://www.google.com/maps/embed?pb=!4v1781949040894!6m8!1m7!1sCAoSHENJQUJJaENERE13S2kzczhHdGhHTzhOeEVLOXU.!2m2!1d12.71759122568829!2d77.70089142724751!3f75.37573202901251!4f-0.5852518629942693!5f0.4000000000000002" loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade" title="CrossFit Studio — Interior 360 virtual tour — SPDigitalJourney"></iframe></div>
+        </div>
     </div>
   </div>
-
-  <div class="cat-block reveal" id="furniture">
-    <div class="cat-head">
-      <div class="cat-tag">2 LOCATIONS</div>
+  <div class="cat-block" id="furniture">
+    <div class="cat-head reveal">
+      <div class="cat-count">2 LOCATIONS</div>
       <h2 class="cat-title">Furniture & Home</h2>
       <p class="cat-desc">Showroom walkthroughs that let customers browse collections before stepping in store.</p>
     </div>
-    <div class="tour-grid">
-      <div class="tour-card">
-        <div class="tour-label"><span>📍 Furniture Showroom</span><span class="tour-loc">Bengaluru North</span></div>
-        <div class="tour-frame"><iframe src="https://www.google.com/maps/embed?pb=!4v1781949335793!6m8!1m7!1sCAoSF0NJSE0wb2dLRUlDQWdJQ1Y3dWk2eHdF!2m2!1d13.14608243196557!2d77.56993589597946!3f292.2530816921204!4f0.8242053451751161!5f0.4000000000000002" loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade" title="Furniture Showroom 360 virtual tour"></iframe></div>
-      </div>
-      <div class="tour-card">
-        <div class="tour-label"><span>📍 Furniture Showroom — Interior</span><span class="tour-loc">Bengaluru North</span></div>
-        <div class="tour-frame"><iframe src="https://www.google.com/maps/embed?pb=!4v1781949239011!6m8!1m7!1sCAoSFkNJSE0wb2dLRUlDQWdJQ1Y3dGljQ1E.!2m2!1d13.14607629549141!2d77.56990747369935!3f99.91792281635314!4f-3.9042607308046655!5f0.4000000000000002" loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade" title="Furniture Showroom — Interior 360 virtual tour"></iframe></div>
-      </div>
+    <div class="tours-grid reveal">
+        <div class="tour-card">
+          <div class="tc-head"><span class="tc-label">Furniture Showroom</span><span class="tc-loc">Bengaluru North</span></div>
+          <div class="tc-frame"><iframe src="https://www.google.com/maps/embed?pb=!4v1781949335793!6m8!1m7!1sCAoSF0NJSE0wb2dLRUlDQWdJQ1Y3dWk2eHdF!2m2!1d13.14608243196557!2d77.56993589597946!3f292.2530816921204!4f0.8242053451751161!5f0.4000000000000002" loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade" title="Furniture Showroom 360 virtual tour — SPDigitalJourney"></iframe></div>
+        </div>
+        <div class="tour-card">
+          <div class="tc-head"><span class="tc-label">Furniture Showroom — Interior</span><span class="tc-loc">Bengaluru North</span></div>
+          <div class="tc-frame"><iframe src="https://www.google.com/maps/embed?pb=!4v1781949239011!6m8!1m7!1sCAoSFkNJSE0wb2dLRUlDQWdJQ1Y3dGljQ1E.!2m2!1d13.14607629549141!2d77.56990747369935!3f99.91792281635314!4f-3.9042607308046655!5f0.4000000000000002" loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade" title="Furniture Showroom — Interior 360 virtual tour — SPDigitalJourney"></iframe></div>
+        </div>
     </div>
   </div>
-
-  <div class="cat-block reveal" id="other">
-    <div class="cat-head">
-      <div class="cat-tag">3 LOCATIONS</div>
+  <div class="cat-block" id="other">
+    <div class="cat-head reveal">
+      <div class="cat-count">3 LOCATIONS</div>
       <h2 class="cat-title">Spice, Residence & More</h2>
       <p class="cat-desc">Specialty retail, residential properties, and more — every business deserves to be seen properly.</p>
     </div>
-    <div class="tour-grid">
-      <div class="tour-card">
-        <div class="tour-label"><span>📍 Spice Store</span><span class="tour-loc">Kerala</span></div>
-        <div class="tour-frame"><iframe src="https://www.google.com/maps/embed?pb=!4v1781954559515!6m8!1m7!1sCAoSHENJQUJJaEFHYndQVGlBMXFsbWV1MFg4QUJlemk.!2m2!1d9.968074113765061!2d76.28407695954819!3f49.42039131187713!4f4.671127511700917!5f0.4000000000000002" loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade" title="Spice Store 360 virtual tour"></iframe></div>
-      </div>
-      <div class="tour-card">
-        <div class="tour-label"><span>📍 Residence</span><span class="tour-loc">Bengaluru North</span></div>
-        <div class="tour-frame"><iframe src="https://www.google.com/maps/embed?pb=!4v1781950798464!6m8!1m7!1sCAoSF0NJSE0wb2dLRUlDQWdJQ1BtTEs0MGdF!2m2!1d13.32770592325805!2d77.09368959056034!3f0.4753608342193729!4f-1.9782933187188974!5f0.4000000000000002" loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade" title="Residence 360 virtual tour"></iframe></div>
-      </div>
-      <div class="tour-card">
-        <div class="tour-label"><span>📍 Commercial Property</span><span class="tour-loc">Hassan district</span></div>
-        <div class="tour-frame"><iframe src="https://www.google.com/maps/embed?pb=!4v1781953937667!6m8!1m7!1sCAoSFENJSE0wb2dLRUlDQWdJQ1h5cHQ5!2m2!1d13.935713032752!2d75.57508124318099!3f33.73192234457542!4f7.871446771823685!5f0.4000000000000002" loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade" title="Commercial Property 360 virtual tour"></iframe></div>
-      </div>
+    <div class="tours-grid reveal">
+        <div class="tour-card">
+          <div class="tc-head"><span class="tc-label">Spice Store</span><span class="tc-loc">Kerala</span></div>
+          <div class="tc-frame"><iframe src="https://www.google.com/maps/embed?pb=!4v1781954559515!6m8!1m7!1sCAoSHENJQUJJaEFHYndQVGlBMXFsbWV1MFg4QUJlemk.!2m2!1d9.968074113765061!2d76.28407695954819!3f49.42039131187713!4f4.671127511700917!5f0.4000000000000002" loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade" title="Spice Store 360 virtual tour — SPDigitalJourney"></iframe></div>
+        </div>
+        <div class="tour-card">
+          <div class="tc-head"><span class="tc-label">Residence</span><span class="tc-loc">Bengaluru North</span></div>
+          <div class="tc-frame"><iframe src="https://www.google.com/maps/embed?pb=!4v1781950798464!6m8!1m7!1sCAoSF0NJSE0wb2dLRUlDQWdJQ1BtTEs0MGdF!2m2!1d13.32770592325805!2d77.09368959056034!3f0.4753608342193729!4f-1.9782933187188974!5f0.4000000000000002" loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade" title="Residence 360 virtual tour — SPDigitalJourney"></iframe></div>
+        </div>
+        <div class="tour-card">
+          <div class="tc-head"><span class="tc-label">Fitness Centre</span><span class="tc-loc">Bengaluru</span></div>
+          <div class="tc-frame"><iframe src="https://www.google.com/maps/embed?pb=!4v1781948856747!6m8!1m7!1sCAoSHENJQUJJaEJpTWNhek1aQkhhX0kwWHBKYUtDVDg.!2m2!1d12.95788222356999!2d77.478878792967!3f21.308318703739587!4f-2.9251752233898145!5f0.4000000000000002" loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade" title="Fitness Centre 360 virtual tour — SPDigitalJourney"></iframe></div>
+        </div>
     </div>
   </div>
 </section>
 
 <section id="cta">
-  <div class="inner reveal">
-    <h2>Want your business photographed next?</h2>
-    <p>Professional 360° photography and Google Maps publishing — from <strong style="color:var(--text)">₹4,499</strong>, live within 72 hours of your shoot.</p>
-    <div class="cta-row">
-      <a href="https://wa.me/917799423794?text=Hi%2C%20I%27d%20like%20a%20360%C2%B0%20virtual%20tour%20quote." target="_blank" class="btn-primary">💬 Get a Quote on WhatsApp</a>
-      <a href="tech-solutions.html#solutions" class="btn-secondary">See All Services</a>
+  <div class="inner">
+    <div class="cta-title reveal">Ready to be seen on Google Maps?</div>
+    <p class="cta-sub reveal">Professional 360&#xB0; photography and Google Maps publishing. From <strong style="color:#fff">&#x20B9;4,499</strong>, live within 72 hours of your shoot.</p>
+    <div class="cta-row reveal">
+      <a href="https://wa.me/917799423794?text=Hi%2C%20I%27d%20like%20a%20360%C2%B0%20virtual%20tour%20quote.%20My%20business%3A%20" target="_blank" rel="noopener" class="cta-btn-white">&#x1F4AC; Get a Quote on WhatsApp</a>
+      <a href="https://spdigitaljourney.github.io/tech-solutions.html" class="cta-btn-ghost">View All Services</a>
     </div>
   </div>
 </section>
 
 <footer>
-  <div class="footer-copy">© 2026 SPDigitalJourney · 360° Street View Photography · Bengaluru, Karnataka</div>
-  <div class="footer-links">
-    <a href="index.html">Home</a>
-    <a href="tech-solutions.html">Tech Solutions</a>
-    <a href="free-consultation.html">Free Consultation</a>
+  <div class="inner">
+    <div class="foot-copy">
+      &#xA9; 2026 SPDigitalJourney &#xB7; Bengaluru, Karnataka &#xB7;
+      <a href="https://spdigitaljourney.github.io/">Home</a> &#xB7;
+      <a href="https://spdigitaljourney.github.io/tech-solutions.html">Services</a> &#xB7;
+      <a href="https://spdigitaljourney.github.io/contact.html">Contact</a> &#xB7;
+      <a href="https://spdigitaljourney.github.io/policy.html">Policies &amp; Terms</a>
+    </div>
+    <p class="foot-disc">SPDigitalJourney is an independent, MSME-registered digital services provider and is not affiliated with, endorsed by, or an official partner of Google LLC. "Google" and "Google Street View" are trademarks of Google LLC.</p>
   </div>
 </footer>
 
 <script>
-const obs=new IntersectionObserver(entries=>{
-  entries.forEach((e,i)=>{if(e.isIntersecting){setTimeout(()=>e.target.classList.add('visible'),i*40);obs.unobserve(e.target);}});
-},{threshold:.05});
-document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+(function(){
+  function tick(){
+    var now=new Date();
+    var opts={timeZone:"Asia/Kolkata"};
+    var t=document.getElementById("sb-time");
+    var d=document.getElementById("sb-date");
+    if(t)t.textContent=now.toLocaleTimeString("en-IN",Object.assign({},opts,{hour:"2-digit",minute:"2-digit",hour12:true}));
+    if(d)d.textContent=now.toLocaleDateString("en-IN",Object.assign({},opts,{weekday:"short",day:"numeric",month:"short",year:"numeric"}));
+  }
+  tick();setInterval(tick,1000);
+})();
+var ham=document.getElementById("hamburger");
+var mob=document.getElementById("mobMenu");
+if(ham&&mob){
+  ham.addEventListener("click",function(){
+    var o=mob.classList.toggle("open");
+    ham.classList.toggle("open",o);
+    document.body.style.overflow=o?"hidden":"";
+  });
+}
+function closeMob(){
+  if(mob)mob.classList.remove("open");
+  if(ham)ham.classList.remove("open");
+  document.body.style.overflow="";
+}
+var obs=new IntersectionObserver(function(entries){
+  entries.forEach(function(e,i){
+    if(e.isIntersecting){setTimeout(function(){e.target.classList.add("visible");},i*50);obs.unobserve(e.target);}
+  });
+},{threshold:0.06});
+document.querySelectorAll(".reveal").forEach(function(el){obs.observe(el);});
 </script>
 </body>
 </html>
