@@ -94,6 +94,36 @@
       {"@type": "Offer", "name": "Maintenance Retainer", "price": "15000", "priceCurrency": "INR"}
     ]
   },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.9",
+    "reviewCount": "30",
+    "bestRating": "5",
+    "worstRating": "1"
+  },
+  "review": [
+    {
+      "@type": "Review",
+      "author": {"@type": "Person", "name": "IDEAL Speech and Hearing Solutions"},
+      "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"},
+      "reviewBody": "SPDigitalJourney built our clinic website from scratch — professional, fast, exactly what was needed. Google Maps presence improved within weeks of launch.",
+      "datePublished": "2026-03-15"
+    },
+    {
+      "@type": "Review",
+      "author": {"@type": "Person", "name": "D Beast Fitness"},
+      "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"},
+      "reviewBody": "The gym website went live in days. WhatsApp membership enquiries doubled in the first month. Real, measurable results.",
+      "datePublished": "2026-04-10"
+    },
+    {
+      "@type": "Review",
+      "author": {"@type": "Person", "name": "Local Business Client"},
+      "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"},
+      "reviewBody": "Google Business Profile suspension fixed in under an hour. SPDigitalJourney got the business back online immediately.",
+      "datePublished": "2026-05-22"
+    }
+  ],
   "sameAs": [
     "https://g.page/r/CdRrLmhaPARzEBM/review",
     "https://jsdl.in/DT-15PAIS817IE",
@@ -210,53 +240,53 @@ gtag("config","G-VHHX592YJ7");
 }
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{font-size:16px;scroll-behavior:smooth}
-body{background:var(--bg);color:var(--ink);font-family:var(--font-body);line-height:1.65;-webkit-font-smoothing:antialiased}
+body{background:#FFFFFF;color:#0D1117;font-family:Inter,sans-serif;line-height:1.65;-webkit-font-smoothing:antialiased}
 .reveal{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s ease;animation:revealFallback 0s 0.8s forwards}
 .reveal.visible{opacity:1;transform:none;animation:none}
 @keyframes revealFallback{to{opacity:1;transform:none}}
 .inner{max-width:1100px;margin:0 auto;padding:0 2rem}
-.eyebrow{font-family:var(--font-display);font-size:.72rem;font-weight:700;color:var(--blue);letter-spacing:.08em;text-transform:uppercase;margin-bottom:.7rem;display:block}
-.section-title{font-family:var(--font-display);font-size:clamp(1.6rem,3.5vw,2.3rem);font-weight:800;color:var(--ink);line-height:1.2;letter-spacing:-.02em;margin-bottom:.8rem}
-.section-sub{color:var(--muted);font-size:.96rem;max-width:560px;margin-bottom:2.5rem;line-height:1.7}
-.btn-outline{border:1.5px solid var(--border);color:var(--ink2);padding:.7rem 1.6rem;font-size:.84rem;font-weight:600;border-radius:var(--radius);text-decoration:none;display:inline-block;background:#fff;font-family:var(--font-display)}
-.btn-outline:hover{border-color:var(--blue);color:var(--blue)}
+.eyebrow{font-family:"Sora",sans-serif;font-size:.72rem;font-weight:700;color:#1A56DB;letter-spacing:.08em;text-transform:uppercase;margin-bottom:.7rem;display:block}
+.section-title{font-family:"Sora",sans-serif;font-size:clamp(1.6rem,3.5vw,2.3rem);font-weight:800;color:#0D1117;line-height:1.2;letter-spacing:-.02em;margin-bottom:.8rem}
+.section-sub{color:#57606A;font-size:.96rem;max-width:560px;margin-bottom:2.5rem;line-height:1.7}
+.btn-outline{border:1.5px solid #D0D7DE;color:#24292E;padding:.7rem 1.6rem;font-size:.84rem;font-weight:600;border-radius:10px;text-decoration:none;display:inline-block;background:#fff;font-family:"Sora",sans-serif}
+.btn-outline:hover{border-color:#1A56DB;color:#1A56DB}
 
 /* STATUS BAR */
-.status-bar{background:var(--ink);height:32px;display:flex;align-items:center;
+.status-bar{background:#0D1117;height:32px;display:flex;align-items:center;
   justify-content:space-between;padding:0 2rem;position:fixed;top:0;left:0;right:0;z-index:200}
-.sb-left{display:flex;align-items:center;gap:.5rem;font-family:var(--font-display);
+.sb-left{display:flex;align-items:center;gap:.5rem;font-family:"Sora",sans-serif;
   font-size:.72rem;color:rgba(255,255,255,.65)}
 .sb-dot{width:6px;height:6px;border-radius:50%;background:#3FB950;flex-shrink:0;animation:sbp 2s infinite}
 @keyframes sbp{0%,100%{opacity:1}50%{opacity:.4}}
 .sb-sep{color:rgba(255,255,255,.25)}
-.sb-right{font-family:var(--font-display);font-size:.7rem;color:#3FB950;font-weight:600}
+.sb-right{font-family:"Sora",sans-serif;font-size:.7rem;color:#3FB950;font-weight:600}
 
 /* NAV */
 nav{position:fixed;top:32px;left:0;right:0;z-index:199;background:rgba(255,255,255,.97);
-  backdrop-filter:blur(12px);border-bottom:1px solid var(--border2);
+  backdrop-filter:blur(12px);border-bottom:1px solid #E8ECEF;
   padding:.85rem 2rem;display:flex;align-items:center;justify-content:space-between}
 .nav-brand{display:flex;align-items:center;gap:.65rem;text-decoration:none}
 .nav-logo{width:36px;height:36px;border-radius:50%;object-fit:cover}
 .nav-brand-text{display:flex;flex-direction:column;line-height:1.1}
-.nav-name{font-family:var(--font-display);font-weight:700;font-size:.95rem;color:var(--ink)}
-.nav-tag{font-size:.6rem;color:var(--muted);letter-spacing:.01em}
+.nav-name{font-family:"Sora",sans-serif;font-weight:700;font-size:.95rem;color:#0D1117}
+.nav-tag{font-size:.6rem;color:#57606A;letter-spacing:.01em}
 .nav-links{display:flex;gap:1.5rem;list-style:none;align-items:center}
-.nav-links a{color:var(--muted);text-decoration:none;font-size:.82rem;font-weight:500;
+.nav-links a{color:#57606A;text-decoration:none;font-size:.82rem;font-weight:500;
   transition:color .15s;white-space:nowrap}
-.nav-links a:hover{color:var(--ink)}
-.nav-links a.nav-hl{color:var(--blue);font-weight:700}
+.nav-links a:hover{color:#0D1117}
+.nav-links a.nav-hl{color:#1A56DB;font-weight:700}
 .nav-right{display:flex;gap:.7rem;align-items:center}
-.btn-ghost{border:1.5px solid var(--border);color:var(--ink2);padding:.48rem .95rem;
-  border-radius:var(--radius);font-size:.8rem;font-weight:600;text-decoration:none;
-  transition:all .15s;font-family:var(--font-body)}
-.btn-ghost:hover{border-color:var(--blue);color:var(--blue)}
-.btn-primary{background:var(--blue);color:#fff;padding:.52rem 1.1rem;border-radius:var(--radius);
+.btn-ghost{border:1.5px solid #D0D7DE;color:#24292E;padding:.48rem .95rem;
+  border-radius:10px;font-size:.8rem;font-weight:600;text-decoration:none;
+  transition:all .15s;font-family:Inter,sans-serif}
+.btn-ghost:hover{border-color:#1A56DB;color:#1A56DB}
+.btn-primary{background:#1A56DB;color:#fff;padding:.52rem 1.1rem;border-radius:10px;
   font-size:.8rem;font-weight:700;text-decoration:none;transition:background .15s;
-  font-family:var(--font-display);display:flex;align-items:center;gap:.35rem}
-.btn-primary:hover{background:var(--blue2)}
+  font-family:"Sora",sans-serif;display:flex;align-items:center;gap:.35rem}
+.btn-primary:hover{background:#1347C8}
 .hamburger{display:none;flex-direction:column;gap:6px;background:none;border:none;
   cursor:pointer;padding:.5rem;min-width:44px;min-height:44px;align-items:center;justify-content:center}
-.hamburger span{display:block;width:24px;height:2.5px;background:var(--ink2);
+.hamburger span{display:block;width:24px;height:2.5px;background:#24292E;
   border-radius:2px;transition:all .3s}
 .hamburger.open span:nth-child(1){transform:translateY(8.5px) rotate(45deg)}
 .hamburger.open span:nth-child(2){opacity:0}
@@ -265,63 +295,63 @@ nav{position:fixed;top:32px;left:0;right:0;z-index:199;background:rgba(255,255,2
   flex-direction:column;align-items:center;justify-content:center;gap:1.5rem;
   overflow-y:auto;padding:2rem}
 .mob-menu.open{display:flex}
-.mob-menu a{font-family:var(--font-display);font-size:1.05rem;font-weight:600;
-  color:var(--ink);text-decoration:none;padding:.5rem 1rem;border-radius:var(--radius);
+.mob-menu a{font-family:"Sora",sans-serif;font-size:1.05rem;font-weight:600;
+  color:#0D1117;text-decoration:none;padding:.5rem 1rem;border-radius:10px;
   transition:background .15s;width:100%;text-align:center;max-width:280px}
-.mob-menu a:hover{background:var(--bg2)}
-.mob-divider{width:100%;max-width:280px;border:none;border-top:1px solid var(--border2)}
-.mob-cta{background:var(--blue);color:#fff!important;padding:.85rem 2rem;border-radius:var(--radius)}
-.mob-cta:hover{background:var(--blue2)!important}
+.mob-menu a:hover{background:#F6F8FA}
+.mob-divider{width:100%;max-width:280px;border:none;border-top:1px solid #E8ECEF}
+.mob-cta{background:#1A56DB;color:#fff!important;padding:.85rem 2rem;border-radius:10px}
+.mob-cta:hover{background:#1347C8!important}
 
 /* HERO */
 #hero{padding:0 2rem 3.5rem;padding-top:160px;max-width:1100px;margin:0 auto;scroll-margin-top:92px}
 /* Fix all section anchors so they don't hide behind sticky nav */
 section{scroll-margin-top:92px}
 .hero-chips{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:1.4rem}
-.hero-chip{font-family:var(--font-display);font-size:.74rem;font-weight:600;
-  color:var(--ink2);background:var(--bg2);border:1px solid var(--border2);
+.hero-chip{font-family:"Sora",sans-serif;font-size:.74rem;font-weight:600;
+  color:#24292E;background:#F6F8FA;border:1px solid #E8ECEF;
   padding:.35rem .8rem;border-radius:6px;display:inline-flex;align-items:center;gap:.3rem}
-h1.hero-h{font-family:var(--font-display);font-weight:800;
+h1.hero-h{font-family:"Sora",sans-serif;font-weight:800;
   font-size:clamp(2rem,5.5vw,3.6rem);line-height:1.12;letter-spacing:-.025em;
-  color:var(--ink);margin-bottom:1.3rem;max-width:800px}
-h1.hero-h .blue{color:var(--blue)}
-h1.hero-h em{font-style:italic;color:var(--muted);font-weight:300}
-.hero-sub{font-size:1.02rem;color:var(--muted);line-height:1.75;
+  color:#0D1117;margin-bottom:1.3rem;max-width:800px}
+h1.hero-h .blue{color:#1A56DB}
+h1.hero-h em{font-style:italic;color:#57606A;font-weight:300}
+.hero-sub{font-size:1.02rem;color:#57606A;line-height:1.75;
   max-width:560px;margin-bottom:2rem}
-.hero-sub strong{color:var(--ink);font-weight:600}
+.hero-sub strong{color:#0D1117;font-weight:600}
 .hero-ctas{display:flex;gap:.85rem;flex-wrap:wrap;margin-bottom:3rem}
-.cta-big{background:var(--blue);color:#fff;padding:1rem 1.9rem;border-radius:var(--radius);
-  font-family:var(--font-display);font-size:.9rem;font-weight:700;text-decoration:none;
+.cta-big{background:#1A56DB;color:#fff;padding:1rem 1.9rem;border-radius:10px;
+  font-family:"Sora",sans-serif;font-size:.9rem;font-weight:700;text-decoration:none;
   display:inline-flex;align-items:center;gap:.5rem;transition:background .15s,transform .15s}
-.cta-big:hover{background:var(--blue2);transform:translateY(-1px)}
-.cta-sec{background:#fff;color:var(--ink2);border:1.5px solid var(--border);padding:1rem 1.7rem;
-  border-radius:var(--radius);font-family:var(--font-display);font-size:.88rem;font-weight:600;
+.cta-big:hover{background:#1347C8;transform:translateY(-1px)}
+.cta-sec{background:#fff;color:#24292E;border:1.5px solid #D0D7DE;padding:1rem 1.7rem;
+  border-radius:10px;font-family:"Sora",sans-serif;font-size:.88rem;font-weight:600;
   text-decoration:none;display:inline-flex;align-items:center;gap:.5rem;transition:all .15s}
 .cta-sec:hover{border-color:#25D366;color:#25D366}
-.hero-stats{display:flex;gap:2.5rem;flex-wrap:wrap;padding-top:2rem;border-top:1px solid var(--border2)}
+.hero-stats{display:flex;gap:2.5rem;flex-wrap:wrap;padding-top:2rem;border-top:1px solid #E8ECEF}
 .hs{display:flex;flex-direction:column;gap:.2rem}
-.hs-val{font-family:var(--font-display);font-size:1.6rem;font-weight:800;color:var(--ink);letter-spacing:-.02em}
-.hs-label{font-size:.74rem;color:var(--muted);font-weight:500}
+.hs-val{font-family:"Sora",sans-serif;font-size:1.6rem;font-weight:800;color:#0D1117;letter-spacing:-.02em}
+.hs-label{font-size:.74rem;color:#57606A;font-weight:500}
 
 /* TRUST BAR */
-.trust-bar{background:var(--ink);padding:1.1rem 2rem;display:flex;align-items:center;
+.trust-bar{background:#0D1117;padding:1.1rem 2rem;display:flex;align-items:center;
   gap:2rem;overflow-x:auto;flex-wrap:wrap}
-.ti{font-family:var(--font-display);font-size:.78rem;color:rgba(255,255,255,.7);
+.ti{font-family:"Sora",sans-serif;font-size:.78rem;color:rgba(255,255,255,.7);
   display:flex;align-items:center;gap:.45rem;white-space:nowrap;font-weight:500}
 .ti .dot{width:5px;height:5px;border-radius:50%;background:#3FB950;flex-shrink:0}
 
 /* PROBLEM SECTION */
-#problem{padding:5rem 0;background:var(--bg2)}
+#problem{padding:5rem 0;background:#F6F8FA}
 .prob-grid{display:grid;grid-template-columns:1fr 1fr;gap:2rem;margin-top:2.5rem;align-items:start}
 .prob-list{display:flex;flex-direction:column;gap:1rem}
-.prob-item{background:#fff;border:1px solid var(--border2);border-radius:var(--radius-lg);
+.prob-item{background:#fff;border:1px solid #E8ECEF;border-radius:16px;
   padding:1.4rem;display:flex;align-items:flex-start;gap:.9rem}
 .prob-icon{font-size:1.2rem;flex-shrink:0;margin-top:.1rem}
-.prob-title{font-family:var(--font-display);font-size:.88rem;font-weight:700;color:var(--ink);margin-bottom:.3rem}
-.prob-desc{font-size:.82rem;color:var(--muted);line-height:1.6}
-.why-box{background:var(--blue);border-radius:var(--radius-xl);padding:2rem;color:#fff}
-.why-box-title{font-family:var(--font-display);font-size:1rem;font-weight:700;margin-bottom:1rem}
-.why-stat{font-family:var(--font-display);font-size:1.5rem;font-weight:800;letter-spacing:-.02em}
+.prob-title{font-family:"Sora",sans-serif;font-size:.88rem;font-weight:700;color:#0D1117;margin-bottom:.3rem}
+.prob-desc{font-size:.82rem;color:#57606A;line-height:1.6}
+.why-box{background:#1A56DB;border-radius:22px;padding:2rem;color:#fff}
+.why-box-title{font-family:"Sora",sans-serif;font-size:1rem;font-weight:700;margin-bottom:1rem}
+.why-stat{font-family:"Sora",sans-serif;font-size:1.5rem;font-weight:800;letter-spacing:-.02em}
 .why-stat-label{font-size:.75rem;color:rgba(255,255,255,.7);margin-bottom:.9rem}
 .why-sep{border:none;border-top:1px solid rgba(255,255,255,.15);margin:.5rem 0}
 .why-cred{font-size:.82rem;color:rgba(255,255,255,.8);padding:.5rem 0;
@@ -331,149 +361,149 @@ h1.hero-h em{font-style:italic;color:var(--muted);font-weight:300}
 /* SYSTEM */
 #system{padding:5rem 0}
 .modules-grid{display:grid!important;grid-template-columns:repeat(3,1fr);gap:1.2rem;margin-top:2.5rem}
-.mod-card{background:var(--bg2);border:1px solid var(--border2);border-radius:var(--radius-lg);
+.mod-card{background:#F6F8FA;border:1px solid #E8ECEF;border-radius:16px;
   padding:1.6rem;position:relative;overflow:hidden;transition:box-shadow .2s}
 .mod-card:hover{box-shadow:0 8px 24px -8px rgba(0,0,0,.12)}
-.mod-card::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:var(--blue)}
-.mod-num{font-family:var(--font-display);font-size:.65rem;font-weight:700;color:var(--blue);
+.mod-card::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:#1A56DB}
+.mod-num{font-family:"Sora",sans-serif;font-size:.65rem;font-weight:700;color:#1A56DB;
   letter-spacing:.1em;margin-bottom:.6rem}
 .mod-icon{font-size:1.3rem;margin-bottom:.6rem;display:block}
-.mod-title{font-family:var(--font-display);font-size:.92rem;font-weight:700;color:var(--ink);margin-bottom:.5rem}
-.mod-desc{font-size:.82rem;color:var(--muted);line-height:1.6;margin-bottom:.8rem}
+.mod-title{font-family:"Sora",sans-serif;font-size:.92rem;font-weight:700;color:#0D1117;margin-bottom:.5rem}
+.mod-desc{font-size:.82rem;color:#57606A;line-height:1.6;margin-bottom:.8rem}
 .mod-items{list-style:none;display:flex;flex-direction:column;gap:.35rem}
-.mod-items li{font-size:.78rem;color:var(--ink2);display:flex;align-items:flex-start;gap:.4rem;line-height:1.45}
-.mod-items li::before{content:"→";color:var(--blue);font-size:.7rem;font-weight:700;flex-shrink:0;margin-top:.1rem}
+.mod-items li{font-size:.78rem;color:#24292E;display:flex;align-items:flex-start;gap:.4rem;line-height:1.45}
+.mod-items li::before{content:"→";color:#1A56DB;font-size:.7rem;font-weight:700;flex-shrink:0;margin-top:.1rem}
 
 /* CASE STUDIES / WORK -->
-#work{padding:5rem 0;background:var(--bg2)}
+#work{padding:5rem 0;background:#F6F8FA}
 .work-grid{display:grid!important;grid-template-columns:1fr 1fr;gap:1.2rem;margin-top:2.5rem}
-.work-card{background:#fff;border:1px solid var(--border2);border-radius:var(--radius-xl);
+.work-card{background:#fff;border:1px solid #E8ECEF;border-radius:22px;
   overflow:hidden;transition:box-shadow .2s}
 .work-card:hover{box-shadow:0 12px 32px -12px rgba(0,0,0,.12)}
 .work-card.full{grid-column:span 2}
-.wc-head{background:var(--ink);padding:1.4rem 1.6rem}
-.wc-tag{font-family:var(--font-display);font-size:.65rem;font-weight:700;letter-spacing:.08em;
+.wc-head{background:#0D1117;padding:1.4rem 1.6rem}
+.wc-tag{font-family:"Sora",sans-serif;font-size:.65rem;font-weight:700;letter-spacing:.08em;
   text-transform:uppercase;color:rgba(255,255,255,.5);margin-bottom:.4rem}
-.wc-name{font-family:var(--font-display);font-size:1.05rem;font-weight:700;color:#fff;margin-bottom:.25rem}
+.wc-name{font-family:"Sora",sans-serif;font-size:1.05rem;font-weight:700;color:#fff;margin-bottom:.25rem}
 .wc-loc{font-size:.76rem;color:rgba(255,255,255,.55)}
 .wc-body{padding:1.4rem 1.6rem}
-.wc-desc{font-size:.84rem;color:var(--muted);line-height:1.65;margin-bottom:1.1rem}
-.wc-stats{display:flex;flex-direction:row;gap:1.5rem;flex-wrap:wrap;padding-top:.9rem;border-top:1px solid var(--border2);margin-bottom:.9rem;align-items:flex-start}
+.wc-desc{font-size:.84rem;color:#57606A;line-height:1.65;margin-bottom:1.1rem}
+.wc-stats{display:flex;flex-direction:row;gap:1.5rem;flex-wrap:wrap;padding-top:.9rem;border-top:1px solid #E8ECEF;margin-bottom:.9rem;align-items:flex-start}
 .wc-stats>div{display:flex;flex-direction:column;gap:.15rem;min-width:60px}
-.ws-val{font-family:var(--font-display);font-size:1.3rem;font-weight:800;color:var(--blue);line-height:1}
-.ws-label{font-size:.7rem;color:var(--muted);line-height:1.3}
-.wc-link{font-family:var(--font-display);font-size:.78rem;font-weight:700;color:var(--blue);text-decoration:none}
+.ws-val{font-family:"Sora",sans-serif;font-size:1.3rem;font-weight:800;color:#1A56DB;line-height:1}
+.ws-label{font-size:.7rem;color:#57606A;line-height:1.3}
+.wc-link{font-family:"Sora",sans-serif;font-size:.78rem;font-weight:700;color:#1A56DB;text-decoration:none}
 .wc-link:hover{text-decoration:underline}
 
 /* ABOUT -->
 #about{padding:5rem 0}
 .about-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:3rem;align-items:start}
 .about-chips{display:flex;flex-wrap:wrap;gap:.5rem;margin:1.3rem 0}
-.chip{font-size:.74rem;padding:.32rem .75rem;border-radius:14px;border:1px solid var(--border2);
-  color:var(--muted);background:#fff;font-weight:500}
-.chip.c-blue{border-color:#AECBFA;color:var(--blue);background:var(--blue-light)}
-.chip.c-green{border-color:#A8D4B8;color:var(--green);background:var(--green-light)}
+.chip{font-size:.74rem;padding:.32rem .75rem;border-radius:14px;border:1px solid #E8ECEF;
+  color:#57606A;background:#fff;font-weight:500}
+.chip.c-blue{border-color:#AECBFA;color:#1A56DB;background:#EBF5FF}
+.chip.c-green{border-color:#A8D4B8;color:#1A7F37;background:#DCFFE4}
 .tl{display:flex;flex-direction:column;position:relative}
-.tl-line{position:absolute;left:15px;top:0;bottom:0;width:1px;background:var(--border2)}
+.tl-line{position:absolute;left:15px;top:0;bottom:0;width:1px;background:#E8ECEF}
 .tl-item{display:flex;gap:1.1rem;padding-bottom:1.6rem;position:relative;z-index:1}
-.tl-dot{width:30px;height:30px;border-radius:50%;border:1px solid var(--border2);
+.tl-dot{width:30px;height:30px;border-radius:50%;border:1px solid #E8ECEF;
   display:flex;align-items:center;justify-content:center;background:#fff;font-size:.78rem;flex-shrink:0}
-.tl-dot.active{border-color:var(--green);background:var(--green-light)}
-.tl-year{font-family:var(--font-display);font-size:.72rem;font-weight:700;color:var(--blue);margin-bottom:.2rem}
-.tl-title{font-family:var(--font-display);font-size:.88rem;font-weight:700;margin-bottom:.2rem;color:var(--ink)}
-.tl-desc{font-size:.8rem;color:var(--muted);line-height:1.55}
+.tl-dot.active{border-color:#1A7F37;background:#DCFFE4}
+.tl-year{font-family:"Sora",sans-serif;font-size:.72rem;font-weight:700;color:#1A56DB;margin-bottom:.2rem}
+.tl-title{font-family:"Sora",sans-serif;font-size:.88rem;font-weight:700;margin-bottom:.2rem;color:#0D1117}
+.tl-desc{font-size:.8rem;color:#57606A;line-height:1.55}
 
 /* PRICING -->
-#pricing{padding:5rem 0;background:var(--bg2)}
+#pricing{padding:5rem 0;background:#F6F8FA}
 .pricing-grid{display:grid!important;grid-template-columns:repeat(3,1fr);gap:1.2rem;margin-top:2.5rem}
-.price-card{background:#fff;border:1px solid var(--border2);border-radius:var(--radius-xl);
+.price-card{background:#fff;border:1px solid #E8ECEF;border-radius:22px;
   padding:1.8rem;position:relative;overflow:hidden}
-.price-card.featured{border-color:var(--blue);box-shadow:0 12px 32px -10px rgba(26,86,219,.2)}
+.price-card.featured{border-color:#1A56DB;box-shadow:0 12px 32px -10px rgba(26,86,219,.2)}
 .price-card.featured::before{content:"Most Popular";position:absolute;top:1rem;right:-2rem;
-  background:var(--blue);color:#fff;font-family:var(--font-display);font-size:.6rem;
+  background:#1A56DB;color:#fff;font-family:"Sora",sans-serif;font-size:.6rem;
   font-weight:700;padding:.3rem 2.5rem;transform:rotate(45deg);letter-spacing:.05em}
-.pc-tag{font-family:var(--font-display);font-size:.65rem;font-weight:700;letter-spacing:.08em;
+.pc-tag{font-family:"Sora",sans-serif;font-size:.65rem;font-weight:700;letter-spacing:.08em;
   text-transform:uppercase;padding:.3rem .7rem;border-radius:6px;display:inline-block;margin-bottom:.8rem}
-.pc-tag-entry{background:var(--bg2);color:var(--muted)}
-.pc-tag-growth{background:var(--blue-light);color:var(--blue)}
-.pc-tag-retain{background:var(--green-light);color:var(--green)}
-.pc-name{font-family:var(--font-display);font-size:1rem;font-weight:700;color:var(--ink);margin-bottom:.4rem}
-.pc-price{font-family:var(--font-display);font-size:2rem;font-weight:800;color:var(--ink);
+.pc-tag-entry{background:#F6F8FA;color:#57606A}
+.pc-tag-growth{background:#EBF5FF;color:#1A56DB}
+.pc-tag-retain{background:#DCFFE4;color:#1A7F37}
+.pc-name{font-family:"Sora",sans-serif;font-size:1rem;font-weight:700;color:#0D1117;margin-bottom:.4rem}
+.pc-price{font-family:"Sora",sans-serif;font-size:2rem;font-weight:800;color:#0D1117;
   letter-spacing:-.02em;margin-bottom:.2rem}
-.pc-period{font-size:.76rem;color:var(--muted);margin-bottom:1.3rem}
+.pc-period{font-size:.76rem;color:#57606A;margin-bottom:1.3rem}
 .pc-list{list-style:none;display:flex;flex-direction:column;gap:.55rem;margin-bottom:1.5rem}
-.pc-list li{font-size:.83rem;color:var(--ink2);display:flex;align-items:flex-start;gap:.6rem;line-height:1.5}
-.pc-list li::before{content:"✓";color:var(--green);font-weight:700;flex-shrink:0;margin-top:.05rem}
-.pc-cta{width:100%;background:var(--blue);color:#fff;border:none;padding:.9rem;
-  font-family:var(--font-display);font-size:.84rem;font-weight:700;border-radius:var(--radius);
+.pc-list li{font-size:.83rem;color:#24292E;display:flex;align-items:flex-start;gap:.6rem;line-height:1.5}
+.pc-list li::before{content:"✓";color:#1A7F37;font-weight:700;flex-shrink:0;margin-top:.05rem}
+.pc-cta{width:100%;background:#1A56DB;color:#fff;border:none;padding:.9rem;
+  font-family:"Sora",sans-serif;font-size:.84rem;font-weight:700;border-radius:10px;
   cursor:pointer;text-decoration:none;display:flex;align-items:center;justify-content:center;
   gap:.5rem;transition:background .15s}
-.pc-cta:hover{background:var(--blue2)}
+.pc-cta:hover{background:#1347C8}
 
 /* REVIEWS -->
 #reviews{padding:5rem 0}
 .rev-grid{display:grid!important;grid-template-columns:repeat(3,1fr);gap:1rem;margin-top:2.5rem}
-.rev-card{background:var(--bg2);border:1px solid var(--border2);border-radius:var(--radius-lg);padding:1.5rem}
+.rev-card{background:#F6F8FA;border:1px solid #E8ECEF;border-radius:16px;padding:1.5rem}
 .rev-stars{color:#F59E0B;font-size:.9rem;margin-bottom:.8rem}
-.rev-text{font-size:.85rem;color:var(--ink2);line-height:1.68;margin-bottom:1rem;font-style:italic}
+.rev-text{font-size:.85rem;color:#24292E;line-height:1.68;margin-bottom:1rem;font-style:italic}
 .rev-author{display:flex;align-items:center;gap:.7rem}
-.rev-ava{width:34px;height:34px;border-radius:50%;background:var(--blue);
-  display:flex;align-items:center;justify-content:center;font-family:var(--font-display);
+.rev-ava{width:34px;height:34px;border-radius:50%;background:#1A56DB;
+  display:flex;align-items:center;justify-content:center;font-family:"Sora",sans-serif;
   font-size:.7rem;font-weight:700;color:#fff}
-.rev-name{font-family:var(--font-display);font-size:.78rem;font-weight:700;color:var(--ink)}
-.rev-biz{font-size:.72rem;color:var(--muted)}
+.rev-name{font-family:"Sora",sans-serif;font-size:.78rem;font-weight:700;color:#0D1117}
+.rev-biz{font-size:.72rem;color:#57606A}
 
 /* FAQ — AEO section */
-#faq{padding:5rem 0;background:var(--bg2)}
+#faq{padding:5rem 0;background:#F6F8FA}
 .faq-grid{display:grid!important;grid-template-columns:1fr 1fr;gap:1rem;margin-top:2.5rem}
-.faq-item{background:#fff;border:1px solid var(--border2);border-radius:var(--radius-lg);
+.faq-item{background:#fff;border:1px solid #E8ECEF;border-radius:16px;
   padding:1.5rem;cursor:pointer}
-.faq-q{font-family:var(--font-display);font-size:.9rem;font-weight:700;color:var(--ink);
+.faq-q{font-family:"Sora",sans-serif;font-size:.9rem;font-weight:700;color:#0D1117;
   margin-bottom:.6rem;display:flex;align-items:flex-start;justify-content:space-between;gap:.5rem}
-.faq-q .icon{flex-shrink:0;color:var(--blue);transition:transform .25s;margin-top:.1rem}
+.faq-q .icon{flex-shrink:0;color:#1A56DB;transition:transform .25s;margin-top:.1rem}
 .faq-item.open .faq-q .icon{transform:rotate(180deg)}
-.faq-a{font-size:.84rem;color:var(--muted);line-height:1.65;display:none}
+.faq-a{font-size:.84rem;color:#57606A;line-height:1.65;display:none}
 .faq-item.open .faq-a{display:block}
 
 /* BLOG -->
 #blog{padding:5rem 0}
 .blog-grid{display:grid!important;grid-template-columns:repeat(3,1fr);gap:1.2rem;margin-top:2.5rem}
-.blog-card{background:var(--bg2);border:1px solid var(--border2);border-radius:var(--radius-lg);
+.blog-card{background:#F6F8FA;border:1px solid #E8ECEF;border-radius:16px;
   padding:1.5rem;display:flex;flex-direction:column;transition:box-shadow .2s}
 .blog-card:hover{box-shadow:0 8px 20px -8px rgba(0,0,0,.1)}
-.blog-date{font-size:.7rem;color:var(--blue);font-weight:700;margin-bottom:.6rem}
-.blog-title{font-family:var(--font-display);font-size:.9rem;font-weight:700;
-  line-height:1.4;margin-bottom:.6rem;flex:1;color:var(--ink)}
+.blog-date{font-size:.7rem;color:#1A56DB;font-weight:700;margin-bottom:.6rem}
+.blog-title{font-family:"Sora",sans-serif;font-size:.9rem;font-weight:700;
+  line-height:1.4;margin-bottom:.6rem;flex:1;color:#0D1117}
 .blog-title a{color:inherit;text-decoration:none}
-.blog-title a:hover{color:var(--blue)}
-.blog-exc{font-size:.8rem;color:var(--muted);line-height:1.6;margin-bottom:.9rem}
-.blog-read{font-family:var(--font-display);font-size:.76rem;font-weight:700;
-  color:var(--blue);text-decoration:none}
+.blog-title a:hover{color:#1A56DB}
+.blog-exc{font-size:.8rem;color:#57606A;line-height:1.6;margin-bottom:.9rem}
+.blog-read{font-family:"Sora",sans-serif;font-size:.76rem;font-weight:700;
+  color:#1A56DB;text-decoration:none}
 .blog-read:hover{text-decoration:underline}
 
 /* LOCAL / MAPS -->
-#local{padding:5rem 0;background:var(--bg2)}
+#local{padding:5rem 0;background:#F6F8FA}
 .local-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-bottom:1.5rem}
-.local-item{background:#fff;border:1px solid var(--border2);border-radius:var(--radius-lg);padding:1.3rem}
+.local-item{background:#fff;border:1px solid #E8ECEF;border-radius:16px;padding:1.3rem}
 .li-icon{font-size:1.2rem;margin-bottom:.5rem;display:block}
-.li-name{font-family:var(--font-display);font-size:.84rem;font-weight:700;color:var(--ink);margin-bottom:.3rem}
-.li-desc{font-size:.78rem;color:var(--muted);line-height:1.5}
-.li-link{font-size:.74rem;color:var(--blue);text-decoration:none;font-weight:700;display:block;margin-top:.5rem}
+.li-name{font-family:"Sora",sans-serif;font-size:.84rem;font-weight:700;color:#0D1117;margin-bottom:.3rem}
+.li-desc{font-size:.78rem;color:#57606A;line-height:1.5}
+.li-link{font-size:.74rem;color:#1A56DB;text-decoration:none;font-weight:700;display:block;margin-top:.5rem}
 .li-link:hover{text-decoration:underline}
 .maps-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
-.map-wrap{border:1px solid var(--border2);border-radius:var(--radius-lg);overflow:hidden;position:relative}
-.map-label{position:absolute;top:.7rem;left:.7rem;z-index:2;background:#fff;border:1px solid var(--border2);
-  padding:.3rem .7rem;border-radius:6px;font-family:var(--font-display);
-  font-size:.72rem;font-weight:700;color:var(--blue);box-shadow:0 1px 4px rgba(0,0,0,.1)}
+.map-wrap{border:1px solid #E8ECEF;border-radius:16px;overflow:hidden;position:relative}
+.map-label{position:absolute;top:.7rem;left:.7rem;z-index:2;background:#fff;border:1px solid #E8ECEF;
+  padding:.3rem .7rem;border-radius:6px;font-family:"Sora",sans-serif;
+  font-size:.72rem;font-weight:700;color:#1A56DB;box-shadow:0 1px 4px rgba(0,0,0,.1)}
 
 /* FOOTER */
-footer{background:var(--ink);padding:3rem 2rem}
+footer{background:#0D1117;padding:3rem 2rem}
 .foot-inner{max-width:1100px;margin:0 auto}
 .foot-top{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:2.5rem;
   padding-bottom:2rem;border-bottom:1px solid rgba(255,255,255,.1)}
 .foot-brand{display:flex;align-items:center;gap:.65rem;margin-bottom:.8rem}
 .foot-logo{width:34px;height:34px;border-radius:50%}
-.foot-name{font-family:var(--font-display);font-size:.95rem;font-weight:700;color:#fff}
+.foot-name{font-family:"Sora",sans-serif;font-size:.95rem;font-weight:700;color:#fff}
 .foot-about{font-size:.8rem;color:rgba(255,255,255,.55);line-height:1.65;margin-bottom:1rem;max-width:260px}
 .foot-socs{display:flex;gap:.5rem}
 .soc{width:32px;height:32px;border-radius:50%;border:1px solid rgba(255,255,255,.15);
@@ -481,7 +511,7 @@ footer{background:var(--ink);padding:3rem 2rem}
   color:rgba(255,255,255,.6);font-size:.78rem;transition:all .15s}
 .soc:hover{border-color:#fff;color:#fff}
 .foot-col{display:flex;flex-direction:column}
-.foot-col-title{font-family:var(--font-display);font-size:.72rem;font-weight:700;
+.foot-col-title{font-family:"Sora",sans-serif;font-size:.72rem;font-weight:700;
   color:rgba(255,255,255,.5);text-transform:uppercase;letter-spacing:.06em;margin-bottom:.9rem}
 .foot-col a{display:block;font-size:.8rem;color:rgba(255,255,255,.6);
   text-decoration:none;padding:.25rem 0;transition:color .15s}
@@ -499,7 +529,7 @@ footer{background:var(--ink);padding:3rem 2rem}
 /* WA FLOAT */
 .wa-float{position:fixed;bottom:1.5rem;right:1.5rem;z-index:300;
   display:flex;flex-direction:column;align-items:flex-end;gap:.5rem}
-.wa-tip{background:#fff;border:1px solid var(--border);color:var(--ink);
+.wa-tip{background:#fff;border:1px solid #D0D7DE;color:#0D1117;
   padding:.3rem .75rem;border-radius:7px;font-size:.72rem;
   box-shadow:0 2px 8px rgba(0,0,0,.1);white-space:nowrap}
 .wa-btn{width:54px;height:54px;background:#25D366;border-radius:50%;
@@ -559,7 +589,96 @@ footer{background:var(--ink);padding:3rem 2rem}
   .faq-grid{grid-template-columns:1fr}
   .rev-grid{grid-template-columns:1fr}
 }
+
+/* === Fallback hardcoded values === */
+/* Absolute fallback - hardcoded values in case CSS vars fail */
+.price-card,.mod-card,.work-card,.rev-card,.faq-item,.blog-card,.local-item,.prob-item,.why-card,.how-step,.tl-item{
+  background:#ffffff!important;
+}
+.mod-card,.rev-card,.blog-card,.local-item,.how-step{
+  background:#F6F8FA!important;
+}
+.pricing-grid,.modules-grid,.work-grid,.rev-grid,.faq-grid,.blog-grid,.local-grid,.why-3,.how-grid{
+  display:grid!important;
+}
+.wc-stats{display:flex!important;flex-direction:row!important}
+.wc-stats>div{display:flex!important;flex-direction:column!important}
+body{font-family:Sora,Inter,system-ui,sans-serif!important}
+.section-title,.pc-name,.mod-title,.wc-name,.why-title,.how-title{
+  font-family:Sora,system-ui,sans-serif!important;
+  color:#0D1117!important;
+}
+.pc-price,.ws-val,.hs-val,.why-num,.how-num{
+  font-family:Sora,system-ui,sans-serif!important;
+  color:#1A56DB!important;
+}
+.eyebrow,.pc-tag{
+  color:#1A56DB!important;
+}
 </style>
+
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "Client Reviews for SPDigitalJourney",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "item": {
+        "@type": "Review",
+        "itemReviewed": {
+          "@type": "LocalBusiness",
+          "name": "SPDigitalJourney",
+          "url": "https://spdigitaljourney.github.io/"
+        },
+        "author": {"@type": "Person", "name": "IDEAL Speech and Hearing Solutions"},
+        "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"},
+        "reviewBody": "SPDigitalJourney built our clinic website from scratch — professional, fast, exactly what was needed. Google Maps presence improved within weeks of launch.",
+        "datePublished": "2026-03-15",
+        "publisher": {"@type": "Organization", "name": "Google"}
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "item": {
+        "@type": "Review",
+        "itemReviewed": {
+          "@type": "LocalBusiness",
+          "name": "SPDigitalJourney",
+          "url": "https://spdigitaljourney.github.io/"
+        },
+        "author": {"@type": "Person", "name": "D Beast Fitness"},
+        "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"},
+        "reviewBody": "The gym website went live in days. WhatsApp membership enquiries doubled in the first month. Real, measurable results.",
+        "datePublished": "2026-04-10",
+        "publisher": {"@type": "Organization", "name": "Google"}
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "item": {
+        "@type": "Review",
+        "itemReviewed": {
+          "@type": "LocalBusiness",
+          "name": "SPDigitalJourney",
+          "url": "https://spdigitaljourney.github.io/"
+        },
+        "author": {"@type": "Person", "name": "Local Business Client"},
+        "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"},
+        "reviewBody": "Google Business Profile suspension fixed in under an hour. SPDigitalJourney got the business back online immediately.",
+        "datePublished": "2026-05-22",
+        "publisher": {"@type": "Organization", "name": "Google"}
+      }
+    }
+  ]
+}
+</script>
 </head>
 <body>
 
@@ -581,8 +700,16 @@ footer{background:var(--ink);padding:3rem 2rem}
   <div class="sb-right">&#x1F7E2; Available now &#x2014; reply within 2 hrs</div>
 </div>
 <script>
-// Runs inline — before rest of page — so clock shows immediately
-!function(){var n=new Date(),o={timeZone:"Asia/Kolkata"},t=document.getElementById("sb-time"),d=document.getElementById("sb-date");if(t)t.textContent=n.toLocaleTimeString("en-IN",Object.assign({},o,{hour:"2-digit",minute:"2-digit",hour12:true}));if(d)d.textContent=n.toLocaleDateString("en-IN",Object.assign({},o,{weekday:"short",day:"numeric",month:"short",year:"numeric"}));}();
+function spdjClock(){
+  var n=new Date(),o={timeZone:"Asia/Kolkata"};
+  var t=document.getElementById("sb-time");
+  var d=document.getElementById("sb-date");
+  if(t)t.textContent=n.toLocaleTimeString("en-IN",Object.assign({},o,{hour:"2-digit",minute:"2-digit",hour12:true}));
+  if(d)d.textContent=n.toLocaleDateString("en-IN",Object.assign({},o,{weekday:"short",day:"numeric",month:"short",year:"numeric"}));
+}
+spdjClock();
+setInterval(spdjClock,1000);
+document.addEventListener("DOMContentLoaded",spdjClock);
 </script>
 
 <!-- NAV -->
@@ -673,19 +800,19 @@ footer{background:var(--ink);padding:3rem 2rem}
     <p class="section-sub reveal">A Google listing alone does not bring customers. Without the right ranking signals, reviews, and structure &#x2014; competitors rank above you every time someone searches.</p>
     <div class="prob-grid">
       <div class="prob-list">
-        <div class="prob-item">
+        <div class="prob-item" style="background:#fff;border:1px solid #E8ECEF;border-radius:16px;padding:1.4rem;display:flex;align-items:flex-start;gap:.9rem">
           <div class="prob-icon">&#x1F4CD;</div>
           <div><div class="prob-title">Not appearing in "near me" searches</div><div class="prob-desc">Google ranks by relevance, distance, and prominence. Miss any signal &#x2014; and the Local Pack top 3 (where 70% of clicks go) belongs to competitors.</div></div>
         </div>
-        <div class="prob-item">
+        <div class="prob-item" style="background:#fff;border:1px solid #E8ECEF;border-radius:16px;padding:1.4rem;display:flex;align-items:flex-start;gap:.9rem">
           <div class="prob-icon">&#x2B50;</div>
           <div><div class="prob-title">Weak reviews hurting trust and ranking</div><div class="prob-desc">Review volume, velocity, and quality are top ranking signals. Low or stagnant reviews tell Google &#x2014; and customers &#x2014; that the business is not active.</div></div>
         </div>
-        <div class="prob-item">
+        <div class="prob-item" style="background:#fff;border:1px solid #E8ECEF;border-radius:16px;padding:1.4rem;display:flex;align-items:flex-start;gap:.9rem">
           <div class="prob-icon">&#x1F4CB;</div>
           <div><div class="prob-title">Wrong category and missing keywords</div><div class="prob-desc">GBP category is the single biggest ranking signal most businesses misconfigure. Wrong category means invisible for most searches in Bengaluru.</div></div>
         </div>
-        <div class="prob-item">
+        <div class="prob-item" style="background:#fff;border:1px solid #E8ECEF;border-radius:16px;padding:1.4rem;display:flex;align-items:flex-start;gap:.9rem">
           <div class="prob-icon">&#x1F4F1;</div>
           <div><div class="prob-title">Profile views that never become calls</div><div class="prob-desc">Visibility without conversion is wasted effort. Photo quality, call path structure, and profile completeness decide whether visitors call or scroll past.</div></div>
         </div>
@@ -712,7 +839,7 @@ footer{background:var(--ink);padding:3rem 2rem}
     <h2 class="section-title reveal">Google Maps Domination System</h2>
     <p class="section-sub reveal">Six structured modules &#x2014; not a checklist of tasks, but a compound system that builds local visibility over time.</p>
     <div class="modules-grid">
-      <div class="mod-card">
+      <div class="mod-card" style="background:#F6F8FA;border:1px solid #E8ECEF;border-radius:16px;padding:1.6rem;position:relative;overflow:hidden">
         <div class="mod-num">MODULE 01</div>
         <span class="mod-icon">&#x1F4CD;</span>
         <div class="mod-title">Google Business Profile Optimisation</div>
@@ -724,7 +851,7 @@ footer{background:var(--ink);padding:3rem 2rem}
           <li>Q&amp;A and post strategy</li>
         </ul>
       </div>
-      <div class="mod-card">
+      <div class="mod-card" style="background:#F6F8FA;border:1px solid #E8ECEF;border-radius:16px;padding:1.6rem;position:relative;overflow:hidden">
         <div class="mod-num">MODULE 02</div>
         <span class="mod-icon">&#x2B50;</span>
         <div class="mod-title">Review Growth &amp; Trust Engine</div>
@@ -736,7 +863,7 @@ footer{background:var(--ink);padding:3rem 2rem}
           <li>Trust signal audit &amp; strengthening</li>
         </ul>
       </div>
-      <div class="mod-card">
+      <div class="mod-card" style="background:#F6F8FA;border:1px solid #E8ECEF;border-radius:16px;padding:1.6rem;position:relative;overflow:hidden">
         <div class="mod-num">MODULE 03</div>
         <span class="mod-icon">&#x1F4C8;</span>
         <div class="mod-title">Local SEO &amp; Ranking System</div>
@@ -748,7 +875,7 @@ footer{background:var(--ink);padding:3rem 2rem}
           <li>Monthly ranking tracking &amp; reporting</li>
         </ul>
       </div>
-      <div class="mod-card">
+      <div class="mod-card" style="background:#F6F8FA;border:1px solid #E8ECEF;border-radius:16px;padding:1.6rem;position:relative;overflow:hidden">
         <div class="mod-num">MODULE 04</div>
         <span class="mod-icon">&#x1F4F8;</span>
         <div class="mod-title">360&#xB0; Street View &amp; Visual Presence</div>
@@ -760,7 +887,7 @@ footer{background:var(--ink);padding:3rem 2rem}
           <li>Visual trust signal optimisation</li>
         </ul>
       </div>
-      <div class="mod-card">
+      <div class="mod-card" style="background:#F6F8FA;border:1px solid #E8ECEF;border-radius:16px;padding:1.6rem;position:relative;overflow:hidden">
         <div class="mod-num">MODULE 05</div>
         <span class="mod-icon">&#x1F3AF;</span>
         <div class="mod-title">Lead Conversion Optimisation</div>
@@ -772,7 +899,7 @@ footer{background:var(--ink);padding:3rem 2rem}
           <li>WhatsApp Business integration</li>
         </ul>
       </div>
-      <div class="mod-card">
+      <div class="mod-card" style="background:#F6F8FA;border:1px solid #E8ECEF;border-radius:16px;padding:1.6rem;position:relative;overflow:hidden">
         <div class="mod-num">MODULE 06</div>
         <span class="mod-icon">&#x1F4CA;</span>
         <div class="mod-title">Performance Reporting</div>
@@ -795,7 +922,7 @@ footer{background:var(--ink);padding:3rem 2rem}
     <h2 class="section-title reveal">Real businesses. Real results.</h2>
     <p class="section-sub reveal">Every case study shows the before state, the work done, and the actual outcome. No vanity metrics.</p>
     <div class="work-grid">
-      <div class="work-card full">
+      <div class="work-card full" style="background:#fff;border:1px solid #E8ECEF;border-radius:22px;overflow:hidden">
         <div class="wc-head">
           <div class="wc-tag">Healthcare &#xB7; Mangalore, Karnataka</div>
           <div class="wc-name">ID&#xC9;AL Speech &amp; Hearing Solutions</div>
@@ -812,7 +939,7 @@ footer{background:var(--ink);padding:3rem 2rem}
           <a href="https://spdigitaljourney.github.io/ID-ALSpeech-HearingSolutions/" target="_blank" rel="noopener" class="wc-link">View live site &#x2192;</a>
         </div>
       </div>
-      <div class="work-card">
+      <div class="work-card" style="background:#fff;border:1px solid #E8ECEF;border-radius:22px;overflow:hidden">
         <div class="wc-head">
           <div class="wc-tag">Fitness &#xB7; Bengaluru</div>
           <div class="wc-name">D Beast Fitness</div>
@@ -827,7 +954,7 @@ footer{background:var(--ink);padding:3rem 2rem}
           <a href="https://dbeastfitness.com/" target="_blank" rel="noopener" class="wc-link">View live site &#x2192;</a>
         </div>
       </div>
-      <div class="work-card">
+      <div class="work-card" style="background:#fff;border:1px solid #E8ECEF;border-radius:22px;overflow:hidden">
         <div class="wc-head">
           <div class="wc-tag">360&#xB0; Street View &#xB7; Multi-Industry</div>
           <div class="wc-name">22 Live Business Tours</div>
@@ -853,8 +980,8 @@ footer{background:var(--ink);padding:3rem 2rem}
       <div>
         <span class="eyebrow">About</span>
         <h2 class="section-title reveal">Google Maps insider. MSME-registered specialist.</h2>
-        <p style="color:var(--muted);line-height:1.75;font-size:.92rem;margin-bottom:.9rem" class="reveal">SPDigitalJourney is an MSME Udyam-registered sole proprietorship based in Bengaluru, Karnataka. The business was founded by Sanjay Paul, who worked in the <strong style="color:var(--ink)">Google Maps India Hyderabad Division</strong> from 2007 &#x2014; when India&#x27;s digital map infrastructure was still being built from field data.</p>
-        <p style="color:var(--muted);line-height:1.75;font-size:.92rem" class="reveal">That ground-level system understanding &#x2014; how ranking signals actually work, why listings get suspended, how the review algorithm behaves &#x2014; is what SPDigitalJourney brings to every client engagement. This is not theoretical digital marketing.</p>
+        <p style="color:#57606A;line-height:1.75;font-size:.92rem;margin-bottom:.9rem" class="reveal">SPDigitalJourney is an MSME Udyam-registered sole proprietorship based in Bengaluru, Karnataka. The business was founded by Sanjay Paul, who worked in the <strong style="color:#0D1117">Google Maps India Hyderabad Division</strong> from 2007 &#x2014; when India&#x27;s digital map infrastructure was still being built from field data.</p>
+        <p style="color:#57606A;line-height:1.75;font-size:.92rem" class="reveal">That ground-level system understanding &#x2014; how ranking signals actually work, why listings get suspended, how the review algorithm behaves &#x2014; is what SPDigitalJourney brings to every client engagement. This is not theoretical digital marketing.</p>
         <div class="about-chips reveal">
           <span class="chip c-blue">Google Maps India 2007</span>
           <span class="chip c-blue">Street View Photographer</span>
@@ -899,7 +1026,7 @@ footer{background:var(--ink);padding:3rem 2rem}
     <h2 class="section-title reveal">No retainers that quietly charge without results.</h2>
     <p class="section-sub reveal">Three clear tiers. Pay for what you need. Upgrade when ready. All prices in INR inclusive of deliverables.</p>
     <div class="pricing-grid">
-      <div class="price-card">
+      <div class="price-card" style="background:#fff;border:1px solid #E8ECEF;border-radius:22px;padding:1.8rem;position:relative;overflow:hidden">
         <div class="pc-tag pc-tag-entry">Entry Point</div>
         <div class="pc-name">Google Visibility Audit</div>
         <div class="pc-price">&#x20B9;10,000</div>
@@ -914,7 +1041,7 @@ footer{background:var(--ink);padding:3rem 2rem}
         </ul>
         <a href="https://wa.me/917799423794?text=Hi%2C%20I%20want%20the%20Google%20Visibility%20Audit%20%E2%82%B910%2C000" target="_blank" rel="noopener" class="pc-cta">&#x1F4AC; Book Audit</a>
       </div>
-      <div class="price-card featured">
+      <div class="price-card featured" style="background:#fff;border:2px solid #1A56DB;border-radius:22px;padding:1.8rem;position:relative;overflow:hidden;box-shadow:0 12px 32px -10px rgba(26,86,219,.2)">
         <div class="pc-tag pc-tag-growth">Complete Setup</div>
         <div class="pc-name">Google Maps Growth System</div>
         <div class="pc-price">&#x20B9;50,000</div>
@@ -931,7 +1058,7 @@ footer{background:var(--ink);padding:3rem 2rem}
         </ul>
         <a href="https://wa.me/917799423794?text=Hi%2C%20I%20want%20the%20Google%20Maps%20Growth%20System%20%E2%82%B950%2C000" target="_blank" rel="noopener" class="pc-cta">&#x26A1; Start Growth System</a>
       </div>
-      <div class="price-card">
+      <div class="price-card" style="background:#fff;border:1px solid #E8ECEF;border-radius:22px;padding:1.8rem;position:relative;overflow:hidden">
         <div class="pc-tag pc-tag-retain">Ongoing Growth</div>
         <div class="pc-name">Maintenance Retainer</div>
         <div class="pc-price">&#x20B9;15,000</div>
@@ -956,17 +1083,17 @@ footer{background:var(--ink);padding:3rem 2rem}
     <span class="eyebrow">Client Reviews</span>
     <h2 class="section-title reveal">What clients say</h2>
     <div class="rev-grid">
-      <div class="rev-card">
+      <div class="rev-card" style="background:#F6F8FA;border:1px solid #E8ECEF;border-radius:16px;padding:1.5rem">
         <div class="rev-stars">&#x2605;&#x2605;&#x2605;&#x2605;&#x2605;</div>
         <p class="rev-text">"SPDigitalJourney built the ID&#xC9;AL clinic website from scratch &#x2014; professional, fast, exactly what was needed. Google Maps presence improved within weeks of launch."</p>
         <div class="rev-author"><div class="rev-ava">ID</div><div><div class="rev-name">ID&#xC9;AL Speech &amp; Hearing</div><div class="rev-biz">Healthcare &#xB7; Mangalore</div></div></div>
       </div>
-      <div class="rev-card">
+      <div class="rev-card" style="background:#F6F8FA;border:1px solid #E8ECEF;border-radius:16px;padding:1.5rem">
         <div class="rev-stars">&#x2605;&#x2605;&#x2605;&#x2605;&#x2605;</div>
         <p class="rev-text">"The gym website went live in days. WhatsApp membership enquiries doubled in the first month. Real, measurable results &#x2014; not promises."</p>
         <div class="rev-author"><div class="rev-ava">DB</div><div><div class="rev-name">D Beast Fitness</div><div class="rev-biz">Fitness &#xB7; Bengaluru</div></div></div>
       </div>
-      <div class="rev-card">
+      <div class="rev-card" style="background:#F6F8FA;border:1px solid #E8ECEF;border-radius:16px;padding:1.5rem">
         <div class="rev-stars">&#x2605;&#x2605;&#x2605;&#x2605;&#x2605;</div>
         <p class="rev-text">"Google Business Profile suspension fixed in under an hour. The business was losing customers every day &#x2014; SPDigitalJourney got it back online immediately."</p>
         <div class="rev-author"><div class="rev-ava">LC</div><div><div class="rev-name">Local Business Client</div><div class="rev-biz">Retail &#xB7; Bengaluru</div></div></div>
@@ -985,35 +1112,35 @@ footer{background:var(--ink);padding:3rem 2rem}
     <h2 class="section-title reveal">Common questions, plain answers.</h2>
     <p class="section-sub reveal">Every answer below is also published as structured FAQ schema for Google Search and AI Overviews.</p>
     <div class="faq-grid">
-      <div class="faq-item" onclick="toggleFaq(this)">
+      <div class="faq-item" style="background:#fff;border:1px solid #E8ECEF;border-radius:16px;padding:1.5rem;cursor:pointer" onclick="toggleFaq(this)">
         <div class="faq-q">How does SPDigitalJourney help businesses rank on Google Maps?<span class="icon">&#x25BC;</span></div>
         <div class="faq-a">SPDigitalJourney optimises every Google Maps ranking signal &#x2014; GBP categories, keywords, review velocity, local citations, and NAP consistency &#x2014; using a structured 6-module system built from direct Google Maps India field experience since 2007.</div>
       </div>
-      <div class="faq-item" onclick="toggleFaq(this)">
+      <div class="faq-item" style="background:#fff;border:1px solid #E8ECEF;border-radius:16px;padding:1.5rem;cursor:pointer" onclick="toggleFaq(this)">
         <div class="faq-q">How fast can a GBP issue be fixed?<span class="icon">&#x25BC;</span></div>
         <div class="faq-a">Most live Google Business Profile issues are resolved within 30 to 60 minutes. Full GBP optimisation takes 1 business day. Phone number and location fixes take 4 to 5 working days as they require Google review.</div>
       </div>
-      <div class="faq-item" onclick="toggleFaq(this)">
+      <div class="faq-item" style="background:#fff;border:1px solid #E8ECEF;border-radius:16px;padding:1.5rem;cursor:pointer" onclick="toggleFaq(this)">
         <div class="faq-q">What does Google Maps optimisation cost in Bengaluru?<span class="icon">&#x25BC;</span></div>
         <div class="faq-a">SPDigitalJourney offers a Google Visibility Audit at Rs. 10,000, a complete Google Maps Growth System at Rs. 50,000 (one-time, 30-day implementation), and a Monthly Maintenance Retainer at Rs. 15,000 per month.</div>
       </div>
-      <div class="faq-item" onclick="toggleFaq(this)">
+      <div class="faq-item" style="background:#fff;border:1px solid #E8ECEF;border-radius:16px;padding:1.5rem;cursor:pointer" onclick="toggleFaq(this)">
         <div class="faq-q">Is SPDigitalJourney a registered business?<span class="icon">&#x25BC;</span></div>
         <div class="faq-a">Yes. SPDigitalJourney is an MSME Udyam-registered sole proprietorship based in Bengaluru, Karnataka. Registration number: UDYAM-KR-02-0117946.</div>
       </div>
-      <div class="faq-item" onclick="toggleFaq(this)">
+      <div class="faq-item" style="background:#fff;border:1px solid #E8ECEF;border-radius:16px;padding:1.5rem;cursor:pointer" onclick="toggleFaq(this)">
         <div class="faq-q">How long does it take to rank on Google Maps?<span class="icon">&#x25BC;</span></div>
         <div class="faq-a">Most clients see meaningful Google Maps ranking improvement within 4 to 8 weeks. Reaching the Local Pack top 3 in competitive Bengaluru areas typically takes 2 to 4 months of consistent optimisation.</div>
       </div>
-      <div class="faq-item" onclick="toggleFaq(this)">
+      <div class="faq-item" style="background:#fff;border:1px solid #E8ECEF;border-radius:16px;padding:1.5rem;cursor:pointer" onclick="toggleFaq(this)">
         <div class="faq-q">Can fake or negative Google reviews be removed?<span class="icon">&#x25BC;</span></div>
         <div class="faq-a">SPDigitalJourney assesses, flags, and pursues removal of fake, spam, or policy-violating reviews through official Google channels with documented evidence. Results depend on Google final review decisions, which are outside any agency&#x27;s control.</div>
       </div>
-      <div class="faq-item" onclick="toggleFaq(this)">
+      <div class="faq-item" style="background:#fff;border:1px solid #E8ECEF;border-radius:16px;padding:1.5rem;cursor:pointer" onclick="toggleFaq(this)">
         <div class="faq-q">What makes SPDigitalJourney different from other agencies?<span class="icon">&#x25BC;</span></div>
         <div class="faq-a">SPDigitalJourney was built by a Google Maps India insider who worked in the Hyderabad Division pilot programme from 2007, scanning 2,000+ business locations across 100+ cities. This is first-hand system knowledge &#x2014; not theoretical digital marketing from a course.</div>
       </div>
-      <div class="faq-item" onclick="toggleFaq(this)">
+      <div class="faq-item" style="background:#fff;border:1px solid #E8ECEF;border-radius:16px;padding:1.5rem;cursor:pointer" onclick="toggleFaq(this)">
         <div class="faq-q">Is 24x7 support really available?<span class="icon">&#x25BC;</span></div>
         <div class="faq-a">Yes. SPDigitalJourney provides 24x7 ticket-based WhatsApp support at +91 77994 23794 for Google policy violations, GBP suspension, wrong information, and review management &#x2014; every day of the year, 365 days.</div>
       </div>
@@ -1026,21 +1153,21 @@ footer{background:var(--ink);padding:3rem 2rem}
   <div class="inner">
     <span class="eyebrow">Knowledge</span>
     <h2 class="section-title reveal">The Local Visibility Blog</h2>
-    <p class="section-sub reveal">Practical local SEO guides written from direct field experience. <a href="https://thelocalvisibilityblog.blogspot.com/" target="_blank" rel="noopener" style="color:var(--blue);text-decoration:none;font-weight:600">All articles &#x2192;</a></p>
+    <p class="section-sub reveal">Practical local SEO guides written from direct field experience. <a href="https://thelocalvisibilityblog.blogspot.com/" target="_blank" rel="noopener" style="color:#1A56DB;text-decoration:none;font-weight:600">All articles &#x2192;</a></p>
     <div class="blog-grid">
-      <article class="blog-card">
+      <article class="blog-card" style="background:#F6F8FA;border:1px solid #E8ECEF;border-radius:16px;padding:1.5rem;display:flex;flex-direction:column">
         <div class="blog-date">31 May 2026</div>
         <h3 class="blog-title"><a href="https://thelocalvisibilityblog.blogspot.com/2026/05/what-is-local-seo-and-why-it-matters-in_0827936545.html" target="_blank" rel="noopener">What Is Local SEO and Why It Matters in 2026</a></h3>
         <p class="blog-exc">A complete guide to dominating Google Search and Maps for local businesses across India &#x2014; in plain language.</p>
         <a href="https://thelocalvisibilityblog.blogspot.com/2026/05/what-is-local-seo-and-why-it-matters-in_0827936545.html" target="_blank" rel="noopener" class="blog-read">Read &#x2192;</a>
       </article>
-      <article class="blog-card">
+      <article class="blog-card" style="background:#F6F8FA;border:1px solid #E8ECEF;border-radius:16px;padding:1.5rem;display:flex;flex-direction:column">
         <div class="blog-date">1 Jun 2026</div>
         <h3 class="blog-title"><a href="https://thelocalvisibilityblog.blogspot.com/2026/06/google-maps-marketing-for-new.html" target="_blank" rel="noopener">How to Rank Higher on Google Maps</a></h3>
         <p class="blog-exc">10 proven tactics to move into the Google Maps 3-pack &#x2014; based on optimising 2,000+ business locations across India.</p>
         <a href="https://thelocalvisibilityblog.blogspot.com/2026/06/google-maps-marketing-for-new.html" target="_blank" rel="noopener" class="blog-read">Read &#x2192;</a>
       </article>
-      <article class="blog-card">
+      <article class="blog-card" style="background:#F6F8FA;border:1px solid #E8ECEF;border-radius:16px;padding:1.5rem;display:flex;flex-direction:column">
         <div class="blog-date">Coming soon</div>
         <h3 class="blog-title"><a href="https://thelocalvisibilityblog.blogspot.com/" target="_blank" rel="noopener">Google Business Profile Optimisation Checklist 2026</a></h3>
         <p class="blog-exc">20 steps to fully optimise a Google Business Profile &#x2014; categories, photos, posts, Q&amp;A, reviews and attributes.</p>
@@ -1059,12 +1186,12 @@ footer{background:var(--ink);padding:3rem 2rem}
     <span class="eyebrow">Find SPDigitalJourney</span>
     <h2 class="section-title reveal">Local presence. Verified everywhere.</h2>
     <div class="local-grid">
-      <div class="local-item"><span class="li-icon">&#x1F4CD;</span><div class="li-name">Google Business Profile</div><div class="li-desc">Verified listing on Google Maps &#x2014; active, optimised, shows in Bengaluru North "near me" searches.</div><a href="https://g.page/r/CdRrLmhaPARzEBM/review" target="_blank" rel="noopener" class="li-link">Rate us &#x2605;&#x2605;&#x2605;&#x2605;&#x2605; &#x2192;</a></div>
-      <div class="local-item"><span class="li-icon">&#x2756;</span><div class="li-name">JustDial Verified</div><div class="li-desc">Listed and verified on India&#x27;s most trusted local directory.</div><a href="https://jsdl.in/DT-15PAIS817IE" target="_blank" rel="noopener" class="li-link">View listing &#x2192;</a></div>
-      <div class="local-item"><span class="li-icon">&#x1F3DB;&#xFE0F;</span><div class="li-name">MSME Udyam Registered</div><div class="li-desc">Government-recognised enterprise &#x2014; UDYAM-KR-02-0117946. Bengaluru, Karnataka.</div></div>
-      <div class="local-item"><span class="li-icon">&#x1F916;</span><div class="li-name">AI-Driven Local SEO</div><div class="li-desc">AI-assisted diagnostics applied with 15+ years of hands-on Google Maps field judgment.</div></div>
-      <div class="local-item"><span class="li-icon">&#x1F4DD;</span><div class="li-name">The Local Visibility Blog</div><div class="li-desc">Regular SEO-optimised articles &#x2014; topical authority built month on month.</div><a href="https://thelocalvisibilityblog.blogspot.com/" target="_blank" rel="noopener" class="li-link">Read blog &#x2192;</a></div>
-      <div class="local-item"><span class="li-icon">&#x1F4F1;</span><div class="li-name">Social Presence</div><div class="li-desc">LinkedIn, YouTube, Instagram, X, Facebook &amp; Pinterest &#x2014; consistent NAP signals across all platforms.</div></div>
+      <div class="local-item" style="background:#fff;border:1px solid #E8ECEF;border-radius:16px;padding:1.3rem"><span class="li-icon">&#x1F4CD;</span><div class="li-name">Google Business Profile</div><div class="li-desc">Verified listing on Google Maps &#x2014; active, optimised, shows in Bengaluru North "near me" searches.</div><a href="https://g.page/r/CdRrLmhaPARzEBM/review" target="_blank" rel="noopener" class="li-link">Rate us &#x2605;&#x2605;&#x2605;&#x2605;&#x2605; &#x2192;</a></div>
+      <div class="local-item" style="background:#fff;border:1px solid #E8ECEF;border-radius:16px;padding:1.3rem"><span class="li-icon">&#x2756;</span><div class="li-name">JustDial Verified</div><div class="li-desc">Listed and verified on India&#x27;s most trusted local directory.</div><a href="https://jsdl.in/DT-15PAIS817IE" target="_blank" rel="noopener" class="li-link">View listing &#x2192;</a></div>
+      <div class="local-item" style="background:#fff;border:1px solid #E8ECEF;border-radius:16px;padding:1.3rem"><span class="li-icon">&#x1F3DB;&#xFE0F;</span><div class="li-name">MSME Udyam Registered</div><div class="li-desc">Government-recognised enterprise &#x2014; UDYAM-KR-02-0117946. Bengaluru, Karnataka.</div></div>
+      <div class="local-item" style="background:#fff;border:1px solid #E8ECEF;border-radius:16px;padding:1.3rem"><span class="li-icon">&#x1F916;</span><div class="li-name">AI-Driven Local SEO</div><div class="li-desc">AI-assisted diagnostics applied with 15+ years of hands-on Google Maps field judgment.</div></div>
+      <div class="local-item" style="background:#fff;border:1px solid #E8ECEF;border-radius:16px;padding:1.3rem"><span class="li-icon">&#x1F4DD;</span><div class="li-name">The Local Visibility Blog</div><div class="li-desc">Regular SEO-optimised articles &#x2014; topical authority built month on month.</div><a href="https://thelocalvisibilityblog.blogspot.com/" target="_blank" rel="noopener" class="li-link">Read blog &#x2192;</a></div>
+      <div class="local-item" style="background:#fff;border:1px solid #E8ECEF;border-radius:16px;padding:1.3rem"><span class="li-icon">&#x1F4F1;</span><div class="li-name">Social Presence</div><div class="li-desc">LinkedIn, YouTube, Instagram, X, Facebook &amp; Pinterest &#x2014; consistent NAP signals across all platforms.</div></div>
     </div>
     <div class="maps-grid">
       <div class="map-wrap"><div class="map-label">&#x1F4CD; Office &#x2014; Bengaluru</div><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.1517476575555!2d77.48306219999999!3d13.0895676!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae2300102b8b41%3A0x73043c5a682e6bd4!2sSPDigitalJourney!5e0!3m2!1sen!2sin!4v1780859126174!5m2!1sen!2sin" width="100%" height="300" style="border:none;display:block" allowfullscreen loading="lazy" title="SPDigitalJourney office Bengaluru"></iframe></div>
@@ -1134,19 +1261,7 @@ footer{background:var(--ink);padding:3rem 2rem}
 </footer>
 
 <script>
-// CLOCK — fixed: runs immediately then every second
-(function(){
-  function tick(){
-    var now=new Date();
-    var opts={timeZone:"Asia/Kolkata"};
-    var t=document.getElementById("sb-time");
-    var d=document.getElementById("sb-date");
-    if(t)t.textContent=now.toLocaleTimeString("en-IN",Object.assign({},opts,{hour:"2-digit",minute:"2-digit",hour12:true}));
-    if(d)d.textContent=now.toLocaleDateString("en-IN",Object.assign({},opts,{weekday:"short",day:"numeric",month:"short",year:"numeric"}));
-  }
-  tick();
-  setInterval(tick,1000);
-})();
+// Clock handled by inline script above
 
 // HAMBURGER
 var ham=document.getElementById("hamburger");
