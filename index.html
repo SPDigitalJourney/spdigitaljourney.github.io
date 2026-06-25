@@ -214,13 +214,13 @@
 }
 </script>
 
-<!-- GA4 PLACEHOLDER — replace G-VHHX592YJ7 with your real Measurement ID from analytics.google.com -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-VHHX592YJ7"></script>
+<!-- GA4 PLACEHOLDER — replace G-XXXXXXXXXX with your real Measurement ID from analytics.google.com -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
 <script>
 window.dataLayer=window.dataLayer||[];
 function gtag(){dataLayer.push(arguments);}
 gtag("js",new Date());
-gtag("config","G-VHHX592YJ7");
+gtag("config","G-XXXXXXXXXX");
 </script>
 
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
@@ -544,50 +544,119 @@ footer{background:#0D1117;padding:3rem 2rem}
   .pricing-grid{grid-template-columns:1fr}
 }
 @media(max-width:900px){
-  .prob-grid,.about-grid,.work-grid{grid-template-columns:1fr}
+  .prob-grid,.work-grid{grid-template-columns:1fr}
   .work-card.full{grid-column:span 1}
   .faq-grid,.rev-grid,.blog-grid{grid-template-columns:1fr}
   .local-grid{grid-template-columns:1fr 1fr}
   .maps-grid{grid-template-columns:1fr}
+  .work-2col{grid-template-columns:1fr!important}
+  .faq-inline-grid{grid-template-columns:1fr!important}
+  .reviews-inline-grid{grid-template-columns:1fr!important}
+  .about-inline-grid{grid-template-columns:1fr!important}
+  .pricing-inline-grid{grid-template-columns:1fr!important}
 }
 @media(max-width:768px){
   html{font-size:16px}
+
+  /* STATUS BAR */
   .status-bar{padding:0 1rem;height:30px}
   .sb-left{font-size:.7rem;gap:.3rem}
   .sb-right{display:none}
+
+  /* NAV */
   nav{top:30px;padding:.8rem 1rem}
   .nav-links,.nav-right{display:none}
   .hamburger{display:flex}
   .nav-tag{display:none}
+  .nav-name{font-size:.9rem}
+
+  /* HERO */
   #hero{padding:0 1.2rem 2.5rem;padding-top:120px}
-  .hero-chips{gap:.4rem}
-  .hero-chip{font-size:.72rem;padding:.3rem .65rem}
-  h1.hero-h{font-size:1.9rem;line-height:1.18}
-  .hero-sub{font-size:.95rem}
-  .hero-stats{gap:1.2rem}
-  .hs-val{font-size:1.3rem}
-  .hs-label{font-size:.76rem}
-  .trust-bar{padding:.9rem 1.2rem;gap:1rem}
-  .ti{font-size:.74rem}
+  .hero-chips{gap:.4rem;flex-wrap:wrap}
+  .hero-chip{font-size:.7rem;padding:.28rem .6rem}
+  h1.hero-h{font-size:1.7rem;line-height:1.2}
+  .hero-sub{font-size:.9rem}
+  .hero-stats{gap:1rem;flex-wrap:wrap}
+  .hs-val{font-size:1.2rem}
+  .hs-label{font-size:.72rem}
+  .cta-big{font-size:.84rem;padding:.85rem 1.4rem}
+  .cta-sec{font-size:.82rem;padding:.85rem 1.2rem}
+
+  /* TRUST BAR */
+  .trust-bar{padding:.8rem 1.2rem;gap:.9rem;flex-wrap:wrap}
+  .ti{font-size:.72rem}
+
+  /* SYSTEM */
+  #problem,#system,#blog,#local{padding:2.5rem 0}
   .inner{padding:0 1.2rem}
-  #problem,#system,#work,#about,#pricing,#reviews,#faq,#blog,#local{padding:3rem 0}
-  .section-title{font-size:1.55rem}
-  .section-sub{font-size:.9rem;margin-bottom:1.5rem}
+  .section-title{font-size:1.4rem;line-height:1.25}
+  .section-sub{font-size:.88rem;margin-bottom:1.4rem}
+  .eyebrow{font-size:.68rem}
   .modules-grid{grid-template-columns:1fr}
-  .pricing-grid{grid-template-columns:1fr}
+  .mod-card{padding:1.2rem}
+  .mod-title{font-size:.86rem}
+  .mod-desc{font-size:.8rem}
+  .prob-grid{grid-template-columns:1fr}
+  .prob-item{padding:1.1rem}
+
+  /* WORK SECTION — inline grid overrides */
+  #work{padding:2.5rem 0!important}
+  .section-inner{padding:0 1.2rem!important}
+  .work-2col{grid-template-columns:1fr!important;gap:.9rem!important}
+
+  /* ABOUT SECTION */
+  #about{padding:2.5rem 0!important}
+  .about-inline-grid{
+    grid-template-columns:1fr!important;
+    gap:1.8rem!important;
+    padding:0 1.2rem!important
+  }
+
+  /* PRICING SECTION */
+  #pricing{padding:2.5rem 0!important}
+  .pricing-inline-grid{grid-template-columns:1fr!important;gap:.9rem!important}
+
+  /* REVIEWS SECTION */
+  #reviews{padding:2.5rem 0!important}
+  .reviews-inline-grid{grid-template-columns:1fr!important;gap:.9rem!important}
+
+  /* FAQ SECTION */
+  #faq{padding:2.5rem 0!important}
+  .faq-inline-grid{grid-template-columns:1fr!important;gap:.9rem!important}
+  .faq-q{font-size:.86rem!important}
+
+  /* BLOG */
+  .blog-grid{grid-template-columns:1fr}
+  .blog-card{padding:1.2rem}
+
+  /* LOCAL */
   .local-grid{grid-template-columns:1fr}
-  .foot-top{grid-template-columns:1fr;gap:1.8rem}
+  .local-item{padding:1.1rem}
+  .maps-grid{grid-template-columns:1fr}
+
+  /* HOW */
+  .how-grid{grid-template-columns:1fr}
+
+  /* FOOTER */
   footer{padding:2rem 1.2rem}
+  .foot-top{grid-template-columns:1fr;gap:1.5rem}
   .foot-bottom{flex-direction:column;align-items:flex-start}
+  .foot-col{margin-bottom:.5rem}
+  .foot-navs{gap:.8rem}
+
+  /* WA FLOAT */
   .wa-float{bottom:1rem;right:1rem}
   .wa-tip{display:none}
-  .wa-btn{width:50px;height:50px;font-size:1.3rem}
-  .price-card.featured::before{display:none}
+  .wa-btn{width:48px;height:48px;font-size:1.3rem}
 }
 @media(max-width:420px){
-  h1.hero-h{font-size:1.65rem}
-  .faq-grid{grid-template-columns:1fr}
-  .rev-grid{grid-template-columns:1fr}
+  h1.hero-h{font-size:1.45rem!important}
+  .hero-stats{justify-content:space-between}
+  .work-2col{grid-template-columns:1fr!important}
+  .pricing-inline-grid{grid-template-columns:1fr!important}
+  .reviews-inline-grid{grid-template-columns:1fr!important}
+  .faq-inline-grid{grid-template-columns:1fr!important}
+  .about-inline-grid{grid-template-columns:1fr!important}
 }
 
 /* === Fallback hardcoded values === */
@@ -917,7 +986,7 @@ document.addEventListener("DOMContentLoaded",spdjClock);
 
 <!-- WORK / CASE STUDIES -->
 <section id="work" aria-label="Case studies and portfolio" style="padding:4rem 0;background:#F6F8FA">
-  <div style="max-width:1100px;margin:0 auto;padding:0 2rem">
+  <div class="section-inner" style="max-width:1100px;margin:0 auto;padding:0 2rem">
     <span style="font-family:Sora,sans-serif;font-size:.72rem;font-weight:700;color:#1A56DB;letter-spacing:.08em;text-transform:uppercase;margin-bottom:.7rem;display:block">Proof</span>
     <h2 style="font-family:Sora,sans-serif;font-size:clamp(1.6rem,3.5vw,2.3rem);font-weight:800;color:#0D1117;line-height:1.2;letter-spacing:-.02em;margin-bottom:.8rem">Real businesses. Real results.</h2>
     <p style="color:#57606A;font-size:.96rem;max-width:560px;margin-bottom:2.5rem;line-height:1.7">Every case study shows the before state, the work done, and the actual outcome. No vanity metrics.</p>
@@ -931,7 +1000,7 @@ document.addEventListener("DOMContentLoaded",spdjClock);
       </div>
       <div style="padding:1.4rem 1.8rem">
         <p style="font-size:.88rem;color:#57606A;line-height:1.7;margin-bottom:1.2rem">Zero online presence to a fully optimised, ranking multi-location Google Maps presence with a 10-page SEO website &mdash; Mangalore&apos;s only Cochlear Implant Mapping centre now ranking for key healthcare terms and receiving direct patient enquiries from Google Maps and Search.</p>
-        <div style="display:flex;flex-direction:row;gap:1.8rem;flex-wrap:wrap;padding-top:.9rem;border-top:1px solid #E8ECEF;margin-bottom:.9rem;align-items:flex-start">
+        <div class="stats-row" style="display:flex;flex-direction:row;gap:1.8rem;flex-wrap:wrap;padding-top:.9rem;border-top:1px solid #E8ECEF;margin-bottom:.9rem;align-items:flex-start">
           <div style="display:flex;flex-direction:column;gap:.15rem"><span style="font-family:Sora,sans-serif;font-size:1.3rem;font-weight:800;color:#1A56DB;line-height:1">2</span><span style="font-size:.7rem;color:#57606A">GBP locations built</span></div>
           <div style="display:flex;flex-direction:column;gap:.15rem"><span style="font-family:Sora,sans-serif;font-size:1.3rem;font-weight:800;color:#1A56DB;line-height:1">10</span><span style="font-size:.7rem;color:#57606A">Pages built &amp; optimised</span></div>
           <div style="display:flex;flex-direction:column;gap:.15rem"><span style="font-family:Sora,sans-serif;font-size:1.3rem;font-weight:800;color:#1A56DB;line-height:1">~93%</span><span style="font-size:.7rem;color:#57606A">Image size reduction</span></div>
@@ -942,7 +1011,7 @@ document.addEventListener("DOMContentLoaded",spdjClock);
     </div>
 
     <!-- CASE 2: D Beast -->
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.2rem">
+    <div class="work-2col" style="display:grid;grid-template-columns:1fr 1fr;gap:1.2rem">
 
       <div style="background:#ffffff;border:1px solid #E8ECEF;border-radius:18px;overflow:hidden;box-shadow:0 4px 16px -8px rgba(0,0,0,.08)">
         <div style="background:#0D1117;padding:1.2rem 1.4rem">
@@ -952,7 +1021,7 @@ document.addEventListener("DOMContentLoaded",spdjClock);
         </div>
         <div style="padding:1.2rem 1.4rem">
           <p style="font-size:.85rem;color:#57606A;line-height:1.65;margin-bottom:1rem">High-energy gym website with 360&deg; Street View, WhatsApp integration, and Google Maps embed. WhatsApp membership enquiries doubled in month one.</p>
-          <div style="display:flex;flex-direction:row;gap:1.5rem;padding-top:.8rem;border-top:1px solid #E8ECEF;margin-bottom:.8rem">
+          <div class="stats-row" style="display:flex;flex-direction:row;gap:1.5rem;padding-top:.8rem;border-top:1px solid #E8ECEF;margin-bottom:.8rem">
             <div style="display:flex;flex-direction:column;gap:.15rem"><span style="font-family:Sora,sans-serif;font-size:1.2rem;font-weight:800;color:#1A56DB;line-height:1">2&times;</span><span style="font-size:.68rem;color:#57606A">WhatsApp enquiries M1</span></div>
             <div style="display:flex;flex-direction:column;gap:.15rem"><span style="font-family:Sora,sans-serif;font-size:1.2rem;font-weight:800;color:#1A56DB;line-height:1">360&deg;</span><span style="font-size:.68rem;color:#57606A">Street View live</span></div>
           </div>
@@ -969,7 +1038,7 @@ document.addEventListener("DOMContentLoaded",spdjClock);
         </div>
         <div style="padding:1.2rem 1.4rem">
           <p style="font-size:.85rem;color:#57606A;line-height:1.65;margin-bottom:1rem">Wakefit, Tanishq, TVS, Mahindra, Continental, Yokohama, Nayara Petroleum, Vespa, Aprilia and more &mdash; 500+ live tours across 10 industries. Under agency employment and own contribution.</p>
-          <div style="display:flex;flex-direction:row;gap:1.5rem;padding-top:.8rem;border-top:1px solid #E8ECEF;margin-bottom:.8rem">
+          <div class="stats-row" style="display:flex;flex-direction:row;gap:1.5rem;padding-top:.8rem;border-top:1px solid #E8ECEF;margin-bottom:.8rem">
             <div style="display:flex;flex-direction:column;gap:.15rem"><span style="font-family:Sora,sans-serif;font-size:1.2rem;font-weight:800;color:#1A56DB;line-height:1">500+</span><span style="font-size:.68rem;color:#57606A">Live on Google Maps</span></div>
             <div style="display:flex;flex-direction:column;gap:.15rem"><span style="font-family:Sora,sans-serif;font-size:1.2rem;font-weight:800;color:#1A56DB;line-height:1">10</span><span style="font-size:.68rem;color:#57606A">Industries</span></div>
           </div>
@@ -983,7 +1052,7 @@ document.addEventListener("DOMContentLoaded",spdjClock);
 
 <!-- ABOUT -->
 <section id="about" aria-label="About SPDigitalJourney" style="padding:4rem 0;background:#ffffff">
-  <div style="max-width:1100px;margin:0 auto;padding:0 2rem;display:grid;grid-template-columns:1.1fr .9fr;gap:3rem;align-items:start">
+  <div class="about-inline-grid" style="max-width:1100px;margin:0 auto;padding:0 2rem;display:grid;grid-template-columns:1.1fr .9fr;gap:3rem;align-items:start">
     <div>
       <span style="font-family:Sora,sans-serif;font-size:.72rem;font-weight:700;color:#1A56DB;letter-spacing:.08em;text-transform:uppercase;margin-bottom:.7rem;display:block">About</span>
       <h2 style="font-family:Sora,sans-serif;font-size:clamp(1.5rem,3vw,2.1rem);font-weight:800;color:#0D1117;line-height:1.2;letter-spacing:-.02em;margin-bottom:.9rem">Google Maps insider.<br>MSME-registered specialist.</h2>
@@ -1029,11 +1098,11 @@ document.addEventListener("DOMContentLoaded",spdjClock);
 
 <!-- PRICING -->
 <section id="pricing" aria-label="Pricing" style="padding:4rem 0;background:#F6F8FA">
-  <div style="max-width:1100px;margin:0 auto;padding:0 2rem">
+  <div class="section-inner" style="max-width:1100px;margin:0 auto;padding:0 2rem">
     <span style="font-family:Sora,sans-serif;font-size:.72rem;font-weight:700;color:#1A56DB;letter-spacing:.08em;text-transform:uppercase;margin-bottom:.7rem;display:block">Transparent Pricing</span>
     <h2 style="font-family:Sora,sans-serif;font-size:clamp(1.6rem,3.5vw,2.3rem);font-weight:800;color:#0D1117;line-height:1.2;letter-spacing:-.02em;margin-bottom:.8rem">No retainers that quietly charge without results.</h2>
     <p style="color:#57606A;font-size:.96rem;max-width:560px;margin-bottom:2.5rem;line-height:1.7">Three clear tiers. Pay for what you need. Upgrade when ready. All prices in INR inclusive of deliverables.</p>
-    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem">
+    <div class="pricing-inline-grid" style="display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem">
 
       <!-- Entry Point -->
       <div style="background:#ffffff;border:1px solid #E8ECEF;border-radius:22px;padding:1.8rem;position:relative;overflow:hidden">
@@ -1095,10 +1164,10 @@ document.addEventListener("DOMContentLoaded",spdjClock);
 
 <!-- REVIEWS -->
 <section id="reviews" aria-label="Client reviews" style="padding:4rem 0;background:#ffffff">
-  <div style="max-width:1100px;margin:0 auto;padding:0 2rem">
+  <div class="section-inner" style="max-width:1100px;margin:0 auto;padding:0 2rem">
     <span style="font-family:Sora,sans-serif;font-size:.72rem;font-weight:700;color:#1A56DB;letter-spacing:.08em;text-transform:uppercase;margin-bottom:.7rem;display:block">Client Reviews</span>
     <h2 style="font-family:Sora,sans-serif;font-size:clamp(1.6rem,3.5vw,2.3rem);font-weight:800;color:#0D1117;line-height:1.2;letter-spacing:-.02em;margin-bottom:2rem">What clients say</h2>
-    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-bottom:1.5rem">
+    <div class="reviews-inline-grid" style="display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-bottom:1.5rem">
       <div style="background:#F6F8FA;border:1px solid #E8ECEF;border-radius:16px;padding:1.5rem">
         <div style="color:#F59E0B;font-size:.9rem;margin-bottom:.9rem">&#x2605;&#x2605;&#x2605;&#x2605;&#x2605;</div>
         <p style="font-size:.86rem;color:#24292E;line-height:1.68;margin-bottom:1rem;font-style:italic">"SPDigitalJourney built the ID&Eacute;AL clinic website from scratch &mdash; professional, fast, exactly what was needed. Google Maps presence improved within weeks of launch."</p>
@@ -1123,11 +1192,11 @@ document.addEventListener("DOMContentLoaded",spdjClock);
 
 <!-- FAQ — AEO OPTIMISED -->
 <section id="faq" aria-label="FAQ" style="padding:4rem 0;background:#F6F8FA">
-  <div style="max-width:1100px;margin:0 auto;padding:0 2rem">
+  <div class="section-inner" style="max-width:1100px;margin:0 auto;padding:0 2rem">
     <span style="font-family:Sora,sans-serif;font-size:.72rem;font-weight:700;color:#1A56DB;letter-spacing:.08em;text-transform:uppercase;margin-bottom:.7rem;display:block">FAQ</span>
     <h2 style="font-family:Sora,sans-serif;font-size:clamp(1.6rem,3.5vw,2.3rem);font-weight:800;color:#0D1117;line-height:1.2;letter-spacing:-.02em;margin-bottom:.8rem">Common questions, plain answers.</h2>
     <p style="color:#57606A;font-size:.96rem;max-width:560px;margin-bottom:2.5rem;line-height:1.7">Every answer below is also published as structured FAQ schema for Google Search and AI Overviews.</p>
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem">
+    <div class="faq-inline-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:1rem">
       <div class="faq-item" onclick="toggleFaq(this)" style="background:#ffffff;border:1px solid #E8ECEF;border-radius:16px;padding:1.5rem;cursor:pointer">
         <div class="faq-q" style="font-family:Sora,sans-serif;font-size:.9rem;font-weight:700;color:#0D1117;margin-bottom:.6rem;display:flex;align-items:flex-start;justify-content:space-between;gap:.5rem">How does SPDigitalJourney help businesses rank on Google Maps?<span class="icon" style="flex-shrink:0;color:#1A56DB;transition:transform .25s;margin-top:.1rem">&#x25BC;</span></div>
         <div class="faq-a" style="font-size:.84rem;color:#57606A;line-height:1.65;display:none">SPDigitalJourney optimises every Google Maps ranking signal &mdash; GBP categories, keywords, review velocity, local citations, and NAP consistency &mdash; using a structured 6-module system built from direct Google Maps India field experience since 2007.</div>
