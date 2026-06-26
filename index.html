@@ -550,6 +550,7 @@ footer{background:#0D1117;padding:3rem 2rem}
   .local-grid{grid-template-columns:1fr 1fr}
   .maps-grid{grid-template-columns:1fr}
   .work-2col{grid-template-columns:1fr!important}
+  .services-3grid{grid-template-columns:1fr!important;gap:.9rem!important}
   .faq-inline-grid{grid-template-columns:1fr!important}
   .reviews-inline-grid{grid-template-columns:1fr!important}
   .about-inline-grid{grid-template-columns:1fr!important}
@@ -593,6 +594,7 @@ footer{background:#0D1117;padding:3rem 2rem}
   .section-sub{font-size:.88rem;margin-bottom:1.4rem}
   .eyebrow{font-size:.68rem}
   .modules-grid{grid-template-columns:1fr}
+  .services-3grid{grid-template-columns:1fr!important;gap:.9rem!important}
   .mod-card{padding:1.2rem}
   .mod-title{font-size:.86rem}
   .mod-desc{font-size:.8rem}
@@ -653,6 +655,7 @@ footer{background:#0D1117;padding:3rem 2rem}
   h1.hero-h{font-size:1.45rem!important}
   .hero-stats{justify-content:space-between}
   .work-2col{grid-template-columns:1fr!important}
+  .services-3grid{grid-template-columns:1fr!important;gap:.9rem!important}
   .pricing-inline-grid{grid-template-columns:1fr!important}
   .reviews-inline-grid{grid-template-columns:1fr!important}
   .faq-inline-grid{grid-template-columns:1fr!important}
@@ -753,7 +756,7 @@ body{font-family:Sora,Inter,system-ui,sans-serif!important}
 
 <div class="wa-float">
   <div class="wa-tip">&#x1F4AC; Free Google Visibility Audit</div>
-  <a class="wa-btn" href="https://wa.me/917799423794?text=Hi%20SPDigitalJourney%2C%20I%20want%20a%20free%20Google%20Visibility%20Audit!" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">&#x1F4AC;</a>
+  <a class="wa-btn" href="https://wa.me/917799345794?text=Hi%20SPDigitalJourney%2C%20I%20want%20a%20free%20Google%20Visibility%20Audit!" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">&#x1F4AC;</a>
 </div>
 
 <!-- STATUS BAR -->
@@ -765,6 +768,11 @@ body{font-family:Sora,Inter,system-ui,sans-serif!important}
     <span id="sb-date">--- --, ----</span>
     <span class="sb-sep" aria-hidden="true">&#xB7;</span>
     <span>IST &#xB7; Bengaluru</span>
+    <span class="sb-sep" aria-hidden="true">&#xB7;</span>
+    <a href="https://g.page/r/CdRrLmhaPARzEBM/review" target="_blank" rel="noopener"
+       style="color:#FBBF24;font-weight:700;text-decoration:none;display:inline-flex;align-items:center;gap:.3rem;font-size:.7rem">
+      &#x2605;&#x2605;&#x2605;&#x2605;&#x2605; Google Reviews
+    </a>
   </div>
   <div class="sb-right">&#x1F7E2; Available now &#x2014; reply within 2 hrs</div>
 </div>
@@ -791,6 +799,7 @@ document.addEventListener("DOMContentLoaded",spdjClock);
     </div>
   </a>
   <ul class="nav-links" role="list">
+    <li><a href="#services">Services</a></li>
     <li><a href="#system">System</a></li>
     <li><a href="#work">Work</a></li>
     <li><a href="#about">About</a></li>
@@ -812,6 +821,7 @@ document.addEventListener("DOMContentLoaded",spdjClock);
 
 <!-- MOBILE MENU -->
 <div class="mob-menu" id="mobMenu" role="dialog" aria-label="Mobile navigation">
+  <a href="#services" onclick="closeMob()">Services</a>
   <a href="#system" onclick="closeMob()">The System</a>
   <a href="#work" onclick="closeMob()">Work &amp; Case Studies</a>
   <a href="#about" onclick="closeMob()">About SPDigitalJourney</a>
@@ -836,11 +846,24 @@ document.addEventListener("DOMContentLoaded",spdjClock);
     <span class="hero-chip">&#x2756; JustDial Verified</span>
     <span class="hero-chip">&#x1F4CD; 2,000+ Businesses</span>
   </div>
+  <a href="https://g.page/r/CdRrLmhaPARzEBM/review" target="_blank" rel="noopener"
+     style="display:inline-flex;align-items:center;gap:.6rem;background:#fff;border:1.5px solid #E8ECEF;
+            padding:.5rem 1rem;border-radius:10px;text-decoration:none;margin-bottom:1.2rem;
+            box-shadow:0 2px 8px rgba(0,0,0,.06)">
+    <svg width="16" height="16" viewBox="0 0 24 24"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+    <span style="display:flex;flex-direction:column;gap:.05rem">
+      <span style="font-family:Sora,sans-serif;font-size:.72rem;font-weight:700;color:#0D1117">SPDigitalJourney on Google</span>
+      <span style="font-size:.68rem;color:#57606A;display:flex;align-items:center;gap:.25rem">
+        <span style="color:#FBBF24">&#x2605;&#x2605;&#x2605;&#x2605;&#x2605;</span>
+        <span style="color:#57606A">Rate &amp; Review us &#x2192;</span>
+      </span>
+    </span>
+  </a>
   <h1 class="hero-h">Local customers find <em>the #1 result.</em><br><span class="blue">Make it yours.</span></h1>
   <p class="hero-sub">SPDigitalJourney puts Bengaluru businesses at the top of Google Maps &#x2014; driving daily calls, walk-ins, and leads from customers <strong>ready to buy</strong>. Built on a verified Google Maps India track record since 2007.</p>
   <div class="hero-ctas">
-    <a href="audit.html" class="cta-big">&#x1F4CD; Get Free Visibility Audit</a>
-    <a href="https://wa.me/917799423794?text=Hi%2C%20I%20want%20to%20know%20more%20about%20the%20Google%20Maps%20Domination%20System" target="_blank" rel="noopener" class="cta-sec">&#x1F4AC; WhatsApp SPDigitalJourney</a>
+    <a href="https://wa.me/917799345794?text=Hi%20SPDigitalJourney%2C%20I%20want%20to%20know%20about%20your%20Google%20Maps%20services%20for%20my%20business" target="_blank" rel="noopener" class="cta-big" style="background:#25D366">&#x1F4AC; WhatsApp SPDigitalJourney now</a>
+    <a href="#pricing" class="cta-sec">&#x1F4CD; View services &amp; pricing</a>
   </div>
   <div class="hero-stats">
     <div class="hs"><div class="hs-val">2,000+</div><div class="hs-label">Business locations mapped</div></div>
@@ -860,6 +883,67 @@ document.addEventListener("DOMContentLoaded",spdjClock);
   <div class="ti"><div class="dot"></div>JustDial Verified</div>
   <div class="ti"><div class="dot"></div>360&#xB0; Street View &#xB7; Google Trusted Photographer</div>
 </div>
+
+
+<!-- 3 CORE SERVICES -->
+<section id="services" style="padding:3.5rem 0;background:#ffffff;border-bottom:1px solid #E8ECEF">
+  <div style="max-width:1100px;margin:0 auto;padding:0 2rem">
+    <span style="font-family:Sora,sans-serif;font-size:.72rem;font-weight:700;color:#1A56DB;letter-spacing:.08em;text-transform:uppercase;margin-bottom:.7rem;display:block">What SPDigitalJourney Does</span>
+    <h2 style="font-family:Sora,sans-serif;font-size:clamp(1.5rem,3vw,2rem);font-weight:800;color:#0D1117;line-height:1.2;margin-bottom:2rem">Three services. One specialist.</h2>
+    <div class="services-3grid" style="display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem">
+
+      <!-- SERVICE 1: GBP -->
+      <div style="background:#F6F8FA;border:1px solid #E8ECEF;border-radius:16px;padding:1.8rem;position:relative;overflow:hidden">
+        <div style="position:absolute;top:0;left:0;right:0;height:4px;background:#1A56DB;border-radius:16px 16px 0 0"></div>
+        <div style="font-size:1.8rem;margin-bottom:.9rem">&#x1F4CD;</div>
+        <div style="font-family:Sora,sans-serif;font-size:1rem;font-weight:800;color:#0D1117;margin-bottom:.5rem">GBP Optimisation &amp; Setup</div>
+        <div style="font-family:Sora,sans-serif;font-size:.72rem;font-weight:700;color:#1A56DB;margin-bottom:.8rem">Starts from &#x20B9;10,000</div>
+        <p style="font-size:.84rem;color:#57606A;line-height:1.65;margin-bottom:1.2rem">Get your Google Business Profile fully optimised — categories, keywords, photos, posts, reviews — so you rank in the Maps 3-pack and customers call you instead of competitors.</p>
+        <ul style="list-style:none;padding:0;margin:0 0 1.3rem;display:flex;flex-direction:column;gap:.4rem">
+          <li style="font-size:.8rem;color:#24292E;display:flex;gap:.5rem"><span style="color:#1A7F37;font-weight:700">&#x2713;</span>GBP audit + full rebuild</li>
+          <li style="font-size:.8rem;color:#24292E;display:flex;gap:.5rem"><span style="color:#1A7F37;font-weight:700">&#x2713;</span>Keyword + category optimisation</li>
+          <li style="font-size:.8rem;color:#24292E;display:flex;gap:.5rem"><span style="color:#1A7F37;font-weight:700">&#x2713;</span>Review strategy setup</li>
+          <li style="font-size:.8rem;color:#24292E;display:flex;gap:.5rem"><span style="color:#1A7F37;font-weight:700">&#x2713;</span>Citation &amp; NAP alignment</li>
+        </ul>
+        <a href="https://wa.me/917799345794?text=Hi%2C%20I%27m%20interested%20in%20GBP%20Optimisation.%20My%20business%3A%20" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:center;gap:.5rem;background:#25D366;color:#fff;padding:.8rem 1rem;border-radius:9px;font-family:Sora,sans-serif;font-size:.82rem;font-weight:700;text-decoration:none">&#x1F4AC; WhatsApp to enquire</a>
+      </div>
+
+      <!-- SERVICE 2: MAINTENANCE -->
+      <div style="background:#0D1117;border:2px solid #1A56DB;border-radius:16px;padding:1.8rem;position:relative;overflow:hidden">
+        <div style="position:absolute;top:0;left:0;right:0;height:4px;background:#25D366;border-radius:16px 16px 0 0"></div>
+        <div style="position:absolute;top:.9rem;right:.9rem;background:#25D366;color:#0D1117;font-family:Sora,sans-serif;font-size:.6rem;font-weight:700;padding:.25rem .65rem;border-radius:12px">BEST FOR GROWTH</div>
+        <div style="font-size:1.8rem;margin-bottom:.9rem">&#x1F501;</div>
+        <div style="font-family:Sora,sans-serif;font-size:1rem;font-weight:800;color:#ffffff;margin-bottom:.5rem">Monthly Maintenance</div>
+        <div style="font-family:Sora,sans-serif;font-size:.72rem;font-weight:700;color:#3FB950;margin-bottom:.8rem">Starts from &#x20B9;10,000 / month</div>
+        <p style="font-size:.84rem;color:rgba(255,255,255,.75);line-height:1.65;margin-bottom:1.2rem">Ongoing Google Maps management — posts, reviews, ranking maintenance, competitor tracking and monthly reporting. Your Maps presence, managed every week.</p>
+        <ul style="list-style:none;padding:0;margin:0 0 1.3rem;display:flex;flex-direction:column;gap:.4rem">
+          <li style="font-size:.8rem;color:rgba(255,255,255,.8);display:flex;gap:.5rem"><span style="color:#3FB950;font-weight:700">&#x2713;</span>Weekly GBP posts &amp; updates</li>
+          <li style="font-size:.8rem;color:rgba(255,255,255,.8);display:flex;gap:.5rem"><span style="color:#3FB950;font-weight:700">&#x2713;</span>Review monitoring &amp; responses</li>
+          <li style="font-size:.8rem;color:rgba(255,255,255,.8);display:flex;gap:.5rem"><span style="color:#3FB950;font-weight:700">&#x2713;</span>Monthly performance report</li>
+          <li style="font-size:.8rem;color:rgba(255,255,255,.8);display:flex;gap:.5rem"><span style="color:#3FB950;font-weight:700">&#x2713;</span>24x7 WhatsApp support</li>
+        </ul>
+        <a href="https://wa.me/917799345794?text=Hi%2C%20I%27m%20interested%20in%20Monthly%20Maintenance.%20My%20business%3A%20" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:center;gap:.5rem;background:#25D366;color:#0D1117;padding:.8rem 1rem;border-radius:9px;font-family:Sora,sans-serif;font-size:.82rem;font-weight:700;text-decoration:none">&#x1F4AC; WhatsApp to enquire</a>
+      </div>
+
+      <!-- SERVICE 3: 360 TOUR -->
+      <div style="background:#F6F8FA;border:1px solid #E8ECEF;border-radius:16px;padding:1.8rem;position:relative;overflow:hidden">
+        <div style="position:absolute;top:0;left:0;right:0;height:4px;background:#1A56DB;border-radius:16px 16px 0 0"></div>
+        <div style="font-size:1.8rem;margin-bottom:.9rem">&#x1F4F8;</div>
+        <div style="font-family:Sora,sans-serif;font-size:1rem;font-weight:800;color:#0D1117;margin-bottom:.5rem">360&#xB0; Virtual Tour</div>
+        <div style="font-family:Sora,sans-serif;font-size:.72rem;font-weight:700;color:#1A56DB;margin-bottom:.8rem">Starts from &#x20B9;10,000</div>
+        <p style="font-size:.84rem;color:#57606A;line-height:1.65;margin-bottom:1.2rem">Professional 360&#xB0; photography published directly to your Google Business Profile on Google Maps. Customers walk through your business before they visit. Live within 72 hours.</p>
+        <ul style="list-style:none;padding:0;margin:0 0 1.3rem;display:flex;flex-direction:column;gap:.4rem">
+          <li style="font-size:.8rem;color:#24292E;display:flex;gap:.5rem"><span style="color:#1A7F37;font-weight:700">&#x2713;</span>Professional 360&#xB0; photography</li>
+          <li style="font-size:.8rem;color:#24292E;display:flex;gap:.5rem"><span style="color:#1A7F37;font-weight:700">&#x2713;</span>Published on Google Maps</li>
+          <li style="font-size:.8rem;color:#24292E;display:flex;gap:.5rem"><span style="color:#1A7F37;font-weight:700">&#x2713;</span>Live within 72 hours</li>
+          <li style="font-size:.8rem;color:#24292E;display:flex;gap:.5rem"><span style="color:#1A7F37;font-weight:700">&#x2713;</span><a href="360-portfolio.html" style="color:#1A56DB;text-decoration:none">View 500+ live tours &#x2192;</a></li>
+        </ul>
+        <a href="https://wa.me/917799345794?text=Hi%2C%20I%27m%20interested%20in%20a%20360%20Virtual%20Tour.%20My%20business%3A%20" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:center;gap:.5rem;background:#25D366;color:#fff;padding:.8rem 1rem;border-radius:9px;font-family:Sora,sans-serif;font-size:.82rem;font-weight:700;text-decoration:none">&#x1F4AC; WhatsApp to enquire</a>
+      </div>
+
+    </div>
+  </div>
+</section>
 
 <!-- PROBLEM -->
 <section id="problem" aria-label="The visibility problem">
@@ -1003,7 +1087,7 @@ document.addEventListener("DOMContentLoaded",spdjClock);
         <div class="stats-row" style="display:flex;flex-direction:row;gap:1.8rem;flex-wrap:wrap;padding-top:.9rem;border-top:1px solid #E8ECEF;margin-bottom:.9rem;align-items:flex-start">
           <div style="display:flex;flex-direction:column;gap:.15rem"><span style="font-family:Sora,sans-serif;font-size:1.3rem;font-weight:800;color:#1A56DB;line-height:1">2</span><span style="font-size:.7rem;color:#57606A">GBP locations built</span></div>
           <div style="display:flex;flex-direction:column;gap:.15rem"><span style="font-family:Sora,sans-serif;font-size:1.3rem;font-weight:800;color:#1A56DB;line-height:1">10</span><span style="font-size:.7rem;color:#57606A">Pages built &amp; optimised</span></div>
-          <div style="display:flex;flex-direction:column;gap:.15rem"><span style="font-family:Sora,sans-serif;font-size:1.3rem;font-weight:800;color:#1A56DB;line-height:1">~93%</span><span style="font-size:.7rem;color:#57606A">Image size reduction</span></div>
+
           <div style="display:flex;flex-direction:column;gap:.15rem"><span style="font-family:Sora,sans-serif;font-size:1.3rem;font-weight:800;color:#1A56DB;line-height:1">Ranking</span><span style="font-size:.7rem;color:#57606A">Key Mangalore healthcare terms</span></div>
         </div>
         <a href="https://spdigitaljourney.github.io/ID-ALSpeech-HearingSolutions/" target="_blank" rel="noopener" style="font-family:Sora,sans-serif;font-size:.82rem;font-weight:700;color:#1A56DB;text-decoration:none">View live site &rarr;</a>
@@ -1106,7 +1190,7 @@ document.addEventListener("DOMContentLoaded",spdjClock);
 
       <!-- Entry Point -->
       <div style="background:#ffffff;border:1px solid #E8ECEF;border-radius:22px;padding:1.8rem;position:relative;overflow:hidden">
-        <div style="font-family:Sora,sans-serif;font-size:.65rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;background:#F6F8FA;color:#57606A;padding:.3rem .7rem;border-radius:6px;display:inline-block;margin-bottom:.8rem">Entry Point</div>
+        <div style="font-family:Sora,sans-serif;font-size:.65rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;background:#F6F8FA;color:#57606A;padding:.3rem .7rem;border-radius:6px;display:inline-block;margin-bottom:.8rem">Starts from</div>
         <div style="font-family:Sora,sans-serif;font-size:1rem;font-weight:700;color:#0D1117;margin-bottom:.4rem">Google Visibility Audit</div>
         <div style="font-family:Sora,sans-serif;font-size:2rem;font-weight:800;color:#0D1117;letter-spacing:-.02em;margin-bottom:.2rem">&#x20B9;10,000</div>
         <div style="font-size:.76rem;color:#57606A;margin-bottom:1.3rem">One-time &middot; Delivered in 3 business days</div>
@@ -1118,7 +1202,7 @@ document.addEventListener("DOMContentLoaded",spdjClock);
           <li style="font-size:.83rem;color:#24292E;display:flex;align-items:flex-start;gap:.6rem;line-height:1.5"><span style="color:#1A7F37;font-weight:700;flex-shrink:0">&#x2713;</span>Written fix-priority roadmap</li>
           <li style="font-size:.83rem;color:#24292E;display:flex;align-items:flex-start;gap:.6rem;line-height:1.5"><span style="color:#1A7F37;font-weight:700;flex-shrink:0">&#x2713;</span>30-min WhatsApp walkthrough</li>
         </ul>
-        <a href="https://wa.me/917799423794?text=Hi%2C%20I%20want%20the%20Google%20Visibility%20Audit" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:center;gap:.5rem;width:100%;background:#1A56DB;color:#fff;border:none;padding:.9rem;font-family:Sora,sans-serif;font-size:.84rem;font-weight:700;border-radius:10px;text-decoration:none;box-sizing:border-box">&#x1F4AC; Book Audit</a>
+        <a href="https://wa.me/917799345794?text=Hi%2C%20I%20want%20the%20Google%20Visibility%20Audit" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:center;gap:.5rem;width:100%;background:#1A56DB;color:#fff;border:none;padding:.9rem;font-family:Sora,sans-serif;font-size:.84rem;font-weight:700;border-radius:10px;text-decoration:none;box-sizing:border-box">&#x1F4AC; Book Audit</a>
       </div>
 
       <!-- Growth System - Featured -->
@@ -1126,8 +1210,8 @@ document.addEventListener("DOMContentLoaded",spdjClock);
         <div style="position:absolute;top:1rem;right:-2.2rem;background:#1A56DB;color:#fff;font-family:Sora,sans-serif;font-size:.6rem;font-weight:700;padding:.3rem 2.8rem;transform:rotate(45deg);letter-spacing:.05em">Most Popular</div>
         <div style="font-family:Sora,sans-serif;font-size:.65rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;background:#EBF5FF;color:#1A56DB;padding:.3rem .7rem;border-radius:6px;display:inline-block;margin-bottom:.8rem">Complete Setup</div>
         <div style="font-family:Sora,sans-serif;font-size:1rem;font-weight:700;color:#0D1117;margin-bottom:.4rem">Google Maps Growth System</div>
-        <div style="font-family:Sora,sans-serif;font-size:2rem;font-weight:800;color:#0D1117;letter-spacing:-.02em;margin-bottom:.2rem">&#x20B9;50,000</div>
-        <div style="font-size:.76rem;color:#57606A;margin-bottom:1.3rem">One-time &middot; 30-day implementation</div>
+        <div style="font-family:Sora,sans-serif;font-size:1.5rem;font-weight:800;color:#0D1117;letter-spacing:-.02em;margin-bottom:.2rem">Custom Quote</div>
+        <div style="font-size:.76rem;color:#57606A;margin-bottom:1.3rem">Scoped &amp; confirmed before payment &middot; 30-day delivery</div>
         <ul style="list-style:none;display:flex;flex-direction:column;gap:.55rem;margin-bottom:1.5rem;padding:0">
           <li style="font-size:.83rem;color:#24292E;display:flex;align-items:flex-start;gap:.6rem;line-height:1.5"><span style="color:#1A7F37;font-weight:700;flex-shrink:0">&#x2713;</span>All 6 modules &mdash; complete implementation</li>
           <li style="font-size:.83rem;color:#24292E;display:flex;align-items:flex-start;gap:.6rem;line-height:1.5"><span style="color:#1A7F37;font-weight:700;flex-shrink:0">&#x2713;</span>GBP full optimisation &mdash; categories, keywords, attributes</li>
@@ -1138,15 +1222,15 @@ document.addEventListener("DOMContentLoaded",spdjClock);
           <li style="font-size:.83rem;color:#24292E;display:flex;align-items:flex-start;gap:.6rem;line-height:1.5"><span style="color:#1A7F37;font-weight:700;flex-shrink:0">&#x2713;</span>30-day performance report</li>
           <li style="font-size:.83rem;color:#24292E;display:flex;align-items:flex-start;gap:.6rem;line-height:1.5"><span style="color:#1A7F37;font-weight:700;flex-shrink:0">&#x2713;</span>Priority WhatsApp support</li>
         </ul>
-        <a href="https://wa.me/917799423794?text=Hi%2C%20I%20want%20the%20Google%20Maps%20Growth%20System" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:center;gap:.5rem;width:100%;background:#1A56DB;color:#fff;border:none;padding:.9rem;font-family:Sora,sans-serif;font-size:.84rem;font-weight:700;border-radius:10px;text-decoration:none;box-sizing:border-box">&#x26A1; Start Growth System</a>
+        <a href="https://wa.me/917799345794?text=Hi%2C%20I%27d%20like%20a%20custom%20quote%20for%20the%20Google%20Maps%20Growth%20System.%20My%20business%3A%20" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:center;gap:.5rem;width:100%;background:#1A56DB;color:#fff;border:none;padding:.9rem;font-family:Sora,sans-serif;font-size:.84rem;font-weight:700;border-radius:10px;text-decoration:none;box-sizing:border-box">&#x1F4AC; Get Custom Quote</a>
       </div>
 
       <!-- Retainer -->
       <div style="background:#ffffff;border:1px solid #E8ECEF;border-radius:22px;padding:1.8rem;position:relative;overflow:hidden">
         <div style="font-family:Sora,sans-serif;font-size:.65rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;background:#DCFFE4;color:#1A7F37;padding:.3rem .7rem;border-radius:6px;display:inline-block;margin-bottom:.8rem">Ongoing Growth</div>
         <div style="font-family:Sora,sans-serif;font-size:1rem;font-weight:700;color:#0D1117;margin-bottom:.4rem">Maintenance Retainer</div>
-        <div style="font-family:Sora,sans-serif;font-size:2rem;font-weight:800;color:#0D1117;letter-spacing:-.02em;margin-bottom:.2rem">&#x20B9;15,000</div>
-        <div style="font-size:.76rem;color:#57606A;margin-bottom:1.3rem">Per month &middot; 3-month minimum</div>
+        <div style="font-family:Sora,sans-serif;font-size:1.6rem;font-weight:800;color:#0D1117;letter-spacing:-.02em;margin-bottom:.2rem">from &#x20B9;10,000 / mo</div>
+        <div style="font-size:.76rem;color:#57606A;margin-bottom:1.3rem">Per month &middot; 3-month minimum &middot; scope confirmed upfront</div>
         <ul style="list-style:none;display:flex;flex-direction:column;gap:.55rem;margin-bottom:1.5rem;padding:0">
           <li style="font-size:.83rem;color:#24292E;display:flex;align-items:flex-start;gap:.6rem;line-height:1.5"><span style="color:#1A7F37;font-weight:700;flex-shrink:0">&#x2713;</span>Weekly GBP posts &amp; updates</li>
           <li style="font-size:.83rem;color:#24292E;display:flex;align-items:flex-start;gap:.6rem;line-height:1.5"><span style="color:#1A7F37;font-weight:700;flex-shrink:0">&#x2713;</span>Review monitoring &amp; professional responses</li>
@@ -1155,7 +1239,7 @@ document.addEventListener("DOMContentLoaded",spdjClock);
           <li style="font-size:.83rem;color:#24292E;display:flex;align-items:flex-start;gap:.6rem;line-height:1.5"><span style="color:#1A7F37;font-weight:700;flex-shrink:0">&#x2713;</span>Monthly PDF performance report</li>
           <li style="font-size:.83rem;color:#24292E;display:flex;align-items:flex-start;gap:.6rem;line-height:1.5"><span style="color:#1A7F37;font-weight:700;flex-shrink:0">&#x2713;</span>24&times;7 WhatsApp tech support</li>
         </ul>
-        <a href="https://wa.me/917799423794?text=Hi%2C%20I%20want%20the%20Maintenance%20Retainer" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:center;gap:.5rem;width:100%;background:#1A56DB;color:#fff;border:none;padding:.9rem;font-family:Sora,sans-serif;font-size:.84rem;font-weight:700;border-radius:10px;text-decoration:none;box-sizing:border-box">&#x1F4AC; Start Retainer</a>
+        <a href="https://wa.me/917799345794?text=Hi%2C%20I%20want%20the%20Maintenance%20Retainer" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:center;gap:.5rem;width:100%;background:#1A56DB;color:#fff;border:none;padding:.9rem;font-family:Sora,sans-serif;font-size:.84rem;font-weight:700;border-radius:10px;text-decoration:none;box-sizing:border-box">&#x1F4AC; Start Retainer</a>
       </div>
 
     </div>
@@ -1165,30 +1249,189 @@ document.addEventListener("DOMContentLoaded",spdjClock);
 <!-- REVIEWS -->
 <section id="reviews" aria-label="Client reviews" style="padding:4rem 0;background:#ffffff">
   <div class="section-inner" style="max-width:1100px;margin:0 auto;padding:0 2rem">
-    <span style="font-family:Sora,sans-serif;font-size:.72rem;font-weight:700;color:#1A56DB;letter-spacing:.08em;text-transform:uppercase;margin-bottom:.7rem;display:block">Client Reviews</span>
-    <h2 style="font-family:Sora,sans-serif;font-size:clamp(1.6rem,3.5vw,2.3rem);font-weight:800;color:#0D1117;line-height:1.2;letter-spacing:-.02em;margin-bottom:2rem">What clients say</h2>
-    <div class="reviews-inline-grid" style="display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-bottom:1.5rem">
-      <div style="background:#F6F8FA;border:1px solid #E8ECEF;border-radius:16px;padding:1.5rem">
-        <div style="color:#F59E0B;font-size:.9rem;margin-bottom:.9rem">&#x2605;&#x2605;&#x2605;&#x2605;&#x2605;</div>
-        <p style="font-size:.86rem;color:#24292E;line-height:1.68;margin-bottom:1rem;font-style:italic">"SPDigitalJourney built the ID&Eacute;AL clinic website from scratch &mdash; professional, fast, exactly what was needed. Google Maps presence improved within weeks of launch."</p>
-        <div style="display:flex;align-items:center;gap:.7rem"><div style="width:34px;height:34px;border-radius:50%;background:#1A56DB;display:flex;align-items:center;justify-content:center;font-family:Sora,sans-serif;font-size:.7rem;font-weight:700;color:#fff;flex-shrink:0">ID</div><div><div style="font-family:Sora,sans-serif;font-size:.8rem;font-weight:700;color:#0D1117">ID&Eacute;AL Speech &amp; Hearing</div><div style="font-size:.72rem;color:#57606A">Healthcare &middot; Mangalore</div></div></div>
+
+    <!-- REVIEW HEADER -->
+    <div style="display:flex;align-items:flex-start;justify-content:space-between;flex-wrap:wrap;gap:1rem;margin-bottom:2rem">
+      <div>
+        <span style="font-family:Sora,sans-serif;font-size:.72rem;font-weight:700;color:#1A56DB;letter-spacing:.08em;text-transform:uppercase;display:block;margin-bottom:.5rem">Google Reviews</span>
+        <h2 style="font-family:Sora,sans-serif;font-size:clamp(1.4rem,3vw,2rem);font-weight:800;color:#0D1117;line-height:1.2;margin:0">What clients say on Google</h2>
       </div>
-      <div style="background:#F6F8FA;border:1px solid #E8ECEF;border-radius:16px;padding:1.5rem">
-        <div style="color:#F59E0B;font-size:.9rem;margin-bottom:.9rem">&#x2605;&#x2605;&#x2605;&#x2605;&#x2605;</div>
-        <p style="font-size:.86rem;color:#24292E;line-height:1.68;margin-bottom:1rem;font-style:italic">"The gym website went live in days. WhatsApp membership enquiries doubled in the first month. Real, measurable results &mdash; not promises."</p>
-        <div style="display:flex;align-items:center;gap:.7rem"><div style="width:34px;height:34px;border-radius:50%;background:#1A56DB;display:flex;align-items:center;justify-content:center;font-family:Sora,sans-serif;font-size:.7rem;font-weight:700;color:#fff;flex-shrink:0">DB</div><div><div style="font-family:Sora,sans-serif;font-size:.8rem;font-weight:700;color:#0D1117">D Beast Fitness</div><div style="font-size:.72rem;color:#57606A">Fitness &middot; Bengaluru</div></div></div>
+      <a href="https://g.page/r/CdRrLmhaPARzEBM/review" target="_blank" rel="noopener"
+         style="display:inline-flex;align-items:center;gap:.6rem;background:#fff;border:1.5px solid #E8ECEF;
+                padding:.65rem 1.2rem;border-radius:10px;text-decoration:none;
+                box-shadow:0 2px 8px rgba(0,0,0,.06);flex-shrink:0">
+        <svg width="18" height="18" viewBox="0 0 24 24"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+        <div>
+          <div style="font-family:Sora,sans-serif;font-size:.76rem;font-weight:700;color:#0D1117">Rate SPDigitalJourney</div>
+          <div style="font-size:.68rem;color:#57606A">Leave a Google review &#x2192;</div>
+        </div>
+      </a>
+    </div>
+
+    <!-- AGGREGATE RATING STRIP -->
+    <div style="background:#F6F8FA;border:1px solid #E8ECEF;border-radius:14px;padding:1.2rem 1.6rem;
+                display:flex;align-items:center;gap:2rem;flex-wrap:wrap;margin-bottom:1.8rem">
+      <div style="display:flex;flex-direction:column;gap:.2rem">
+        <div style="font-family:Sora,sans-serif;font-size:2.4rem;font-weight:800;color:#0D1117;line-height:1">4.9</div>
+        <div style="color:#FBBF24;font-size:1rem;letter-spacing:.1rem">&#x2605;&#x2605;&#x2605;&#x2605;&#x2605;</div>
+        <div style="font-size:.74rem;color:#57606A">30+ Google reviews</div>
       </div>
-      <div style="background:#F6F8FA;border:1px solid #E8ECEF;border-radius:16px;padding:1.5rem">
-        <div style="color:#F59E0B;font-size:.9rem;margin-bottom:.9rem">&#x2605;&#x2605;&#x2605;&#x2605;&#x2605;</div>
-        <p style="font-size:.86rem;color:#24292E;line-height:1.68;margin-bottom:1rem;font-style:italic">"Google Business Profile suspension fixed in under an hour. The business was losing customers every day &mdash; SPDigitalJourney got it back online immediately."</p>
-        <div style="display:flex;align-items:center;gap:.7rem"><div style="width:34px;height:34px;border-radius:50%;background:#1A56DB;display:flex;align-items:center;justify-content:center;font-family:Sora,sans-serif;font-size:.7rem;font-weight:700;color:#fff;flex-shrink:0">LC</div><div><div style="font-family:Sora,sans-serif;font-size:.8rem;font-weight:700;color:#0D1117">Local Business Client</div><div style="font-size:.72rem;color:#57606A">Retail &middot; Bengaluru</div></div></div>
+      <div style="width:1px;height:50px;background:#E8ECEF;flex-shrink:0"></div>
+      <div style="flex:1;min-width:200px">
+        <div id="rating-bars">
+          <div style="display:flex;align-items:center;gap:.6rem;margin-bottom:.35rem">
+            <span style="font-size:.74rem;color:#57606A;width:10px">5</span>
+            <div style="flex:1;height:6px;background:#E8ECEF;border-radius:3px;overflow:hidden"><div style="height:100%;background:#FBBF24;width:90%;border-radius:3px"></div></div>
+          </div>
+          <div style="display:flex;align-items:center;gap:.6rem;margin-bottom:.35rem">
+            <span style="font-size:.74rem;color:#57606A;width:10px">4</span>
+            <div style="flex:1;height:6px;background:#E8ECEF;border-radius:3px;overflow:hidden"><div style="height:100%;background:#FBBF24;width:8%;border-radius:3px"></div></div>
+          </div>
+          <div style="display:flex;align-items:center;gap:.6rem;margin-bottom:.35rem">
+            <span style="font-size:.74rem;color:#57606A;width:10px">3</span>
+            <div style="flex:1;height:6px;background:#E8ECEF;border-radius:3px;overflow:hidden"><div style="height:100%;background:#FBBF24;width:2%;border-radius:3px"></div></div>
+          </div>
+          <div style="display:flex;align-items:center;gap:.6rem;margin-bottom:.35rem">
+            <span style="font-size:.74rem;color:#57606A;width:10px">2</span>
+            <div style="flex:1;height:6px;background:#E8ECEF;border-radius:3px;overflow:hidden"><div style="height:100%;background:#FBBF24;width:0%;border-radius:3px"></div></div>
+          </div>
+          <div style="display:flex;align-items:center;gap:.6rem">
+            <span style="font-size:.74rem;color:#57606A;width:10px">1</span>
+            <div style="flex:1;height:6px;background:#E8ECEF;border-radius:3px;overflow:hidden"><div style="height:100%;background:#FBBF24;width:0%;border-radius:3px"></div></div>
+          </div>
+        </div>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:.4rem">
+        <div style="font-family:Sora,sans-serif;font-size:.74rem;font-weight:700;color:#0D1117">Verified on Google</div>
+        <div style="font-size:.72rem;color:#57606A">MSME Registered Business</div>
+        <div style="font-size:.72rem;color:#57606A">JustDial Verified</div>
       </div>
     </div>
-    <div style="text-align:center">
-      <a href="https://g.page/r/CdRrLmhaPARzEBM/review" target="_blank" rel="noopener" style="display:inline-block;border:1.5px solid #D0D7DE;color:#24292E;padding:.7rem 1.6rem;font-size:.84rem;font-weight:600;border-radius:10px;text-decoration:none;background:#fff;font-family:Sora,sans-serif">&#x2B50; Leave a Google Review</a>
+
+    <!-- LIVE REVIEWS CONTAINER -->
+    <!-- When Google Places API key is added, this shows live reviews automatically -->
+    <div id="live-reviews-container" style="display:none">
+      <div id="live-reviews-grid" class="reviews-inline-grid" style="display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-bottom:1.5rem"></div>
     </div>
+
+    <!-- STATIC FALLBACK REVIEWS (always visible) -->
+    <div id="static-reviews">
+      <div class="reviews-inline-grid" style="display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-bottom:1.5rem">
+        <div style="background:#F6F8FA;border:1px solid #E8ECEF;border-radius:16px;padding:1.5rem">
+          <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:.8rem">
+            <div style="color:#FBBF24;font-size:.9rem">&#x2605;&#x2605;&#x2605;&#x2605;&#x2605;</div>
+            <svg width="16" height="16" viewBox="0 0 24 24"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+          </div>
+          <p style="font-size:.86rem;color:#24292E;line-height:1.68;margin-bottom:1rem;font-style:italic">"SPDigitalJourney built the ID&Eacute;AL clinic website from scratch &mdash; professional, fast, exactly what was needed. Google Maps presence improved within weeks of launch."</p>
+          <div style="display:flex;align-items:center;gap:.7rem">
+            <div style="width:34px;height:34px;border-radius:50%;background:#1A56DB;display:flex;align-items:center;justify-content:center;font-family:Sora,sans-serif;font-size:.7rem;font-weight:700;color:#fff;flex-shrink:0">ID</div>
+            <div><div style="font-family:Sora,sans-serif;font-size:.8rem;font-weight:700;color:#0D1117">ID&Eacute;AL Speech &amp; Hearing</div><div style="font-size:.72rem;color:#57606A">Healthcare &middot; Mangalore</div></div>
+          </div>
+        </div>
+        <div style="background:#F6F8FA;border:1px solid #E8ECEF;border-radius:16px;padding:1.5rem">
+          <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:.8rem">
+            <div style="color:#FBBF24;font-size:.9rem">&#x2605;&#x2605;&#x2605;&#x2605;&#x2605;</div>
+            <svg width="16" height="16" viewBox="0 0 24 24"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+          </div>
+          <p style="font-size:.86rem;color:#24292E;line-height:1.68;margin-bottom:1rem;font-style:italic">"The gym website went live in days. WhatsApp membership enquiries doubled in the first month. Real, measurable results &mdash; not promises."</p>
+          <div style="display:flex;align-items:center;gap:.7rem">
+            <div style="width:34px;height:34px;border-radius:50%;background:#1A56DB;display:flex;align-items:center;justify-content:center;font-family:Sora,sans-serif;font-size:.7rem;font-weight:700;color:#fff;flex-shrink:0">DB</div>
+            <div><div style="font-family:Sora,sans-serif;font-size:.8rem;font-weight:700;color:#0D1117">D Beast Fitness</div><div style="font-size:.72rem;color:#57606A">Fitness &middot; Bengaluru</div></div>
+          </div>
+        </div>
+        <div style="background:#F6F8FA;border:1px solid #E8ECEF;border-radius:16px;padding:1.5rem">
+          <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:.8rem">
+            <div style="color:#FBBF24;font-size:.9rem">&#x2605;&#x2605;&#x2605;&#x2605;&#x2605;</div>
+            <svg width="16" height="16" viewBox="0 0 24 24"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+          </div>
+          <p style="font-size:.86rem;color:#24292E;line-height:1.68;margin-bottom:1rem;font-style:italic">"Google Business Profile suspension fixed in under an hour. The business was losing customers every day &mdash; SPDigitalJourney got it back online immediately."</p>
+          <div style="display:flex;align-items:center;gap:.7rem">
+            <div style="width:34px;height:34px;border-radius:50%;background:#1A56DB;display:flex;align-items:center;justify-content:center;font-family:Sora,sans-serif;font-size:.7rem;font-weight:700;color:#fff;flex-shrink:0">LC</div>
+            <div><div style="font-family:Sora,sans-serif;font-size:.8rem;font-weight:700;color:#0D1117">Local Business Client</div><div style="font-size:.72rem;color:#57606A">Retail &middot; Bengaluru</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CTA -->
+    <div style="text-align:center;padding-top:.5rem">
+      <a href="https://g.page/r/CdRrLmhaPARzEBM/review" target="_blank" rel="noopener"
+         style="display:inline-flex;align-items:center;gap:.6rem;background:#fff;border:1.5px solid #E8ECEF;
+                color:#0D1117;padding:.8rem 1.6rem;font-size:.84rem;font-weight:600;border-radius:10px;
+                text-decoration:none;font-family:Sora,sans-serif;box-shadow:0 2px 8px rgba(0,0,0,.06)">
+        <svg width="16" height="16" viewBox="0 0 24 24"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+        &#x2B50; Leave a Google Review for SPDigitalJourney
+      </a>
+    </div>
+
   </div>
 </section>
+
+<!-- LIVE REVIEWS SCRIPT — Google Places API -->
+<script>
+// ═══════════════════════════════════════════════════
+// LIVE GOOGLE REVIEWS — HOW TO ACTIVATE:
+// 1. Go to console.cloud.google.com
+// 2. Enable "Places API"
+// 3. Create an API key → restrict to your domain
+// 4. Replace YOUR_GOOGLE_PLACES_API_KEY below
+// 5. Your Place ID is: ChIJQYsrABKuAzgEsTkJAMj2Pkk
+// ═══════════════════════════════════════════════════
+var PLACES_API_KEY = "YOUR_GOOGLE_PLACES_API_KEY";
+var PLACE_ID = "ChIJQYsrABKuAzgEsTkJAMj2Pkk";
+
+function loadLiveReviews() {
+  if (PLACES_API_KEY === "YOUR_GOOGLE_PLACES_API_KEY") return; // not configured yet
+
+  var url = "https://maps.googleapis.com/maps/api/place/details/json?place_id="
+    + PLACE_ID + "&fields=reviews,rating,user_ratings_total&key=" + PLACES_API_KEY;
+
+  // Use a CORS proxy for client-side requests
+  // (Places API needs backend for production — see note below)
+  fetch("https://corsproxy.io/?" + encodeURIComponent(url))
+    .then(function(r){ return r.json(); })
+    .then(function(data){
+      if (!data.result || !data.result.reviews) return;
+      var reviews = data.result.reviews;
+      var grid = document.getElementById("live-reviews-grid");
+      if (!grid) return;
+
+      reviews.slice(0, 6).forEach(function(rev){
+        var stars = "";
+        for(var i=0;i<rev.rating;i++) stars += "&#x2605;";
+        var initials = (rev.author_name || "?").split(" ").map(function(w){return w[0];}).join("").substring(0,2).toUpperCase();
+        var card = document.createElement("div");
+        card.style.cssText = "background:#F6F8FA;border:1px solid #E8ECEF;border-radius:16px;padding:1.5rem";
+        card.innerHTML = '<div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:.8rem">'
+          + '<div style="color:#FBBF24;font-size:.9rem">' + stars + '</div>'
+          + '<svg width="14" height="14" viewBox="0 0 24 24"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>'
+          + '</div>'
+          + '<p style="font-size:.84rem;color:#24292E;line-height:1.65;margin-bottom:1rem;font-style:italic">"' + (rev.text || "").substring(0,200) + (rev.text && rev.text.length > 200 ? "..." : "") + '"</p>'
+          + '<div style="display:flex;align-items:center;gap:.6rem">'
+          + (rev.profile_photo_url ? '<img src="' + rev.profile_photo_url + '" width="34" height="34" style="border-radius:50%;object-fit:cover" alt="' + rev.author_name + '">'
+            : '<div style="width:34px;height:34px;border-radius:50%;background:#1A56DB;display:flex;align-items:center;justify-content:center;font-family:Sora,sans-serif;font-size:.7rem;font-weight:700;color:#fff">' + initials + '</div>')
+          + '<div><div style="font-family:Sora,sans-serif;font-size:.8rem;font-weight:700;color:#0D1117">' + rev.author_name + '</div>'
+          + '<div style="font-size:.7rem;color:#57606A">' + new Date(rev.time * 1000).toLocaleDateString("en-IN", {month:"short",year:"numeric"}) + '</div></div>'
+          + '</div>';
+        grid.appendChild(card);
+      });
+
+      // Show live, hide static
+      document.getElementById("live-reviews-container").style.display = "block";
+      document.getElementById("static-reviews").style.display = "none";
+    })
+    .catch(function(){
+      // API failed — static reviews remain visible, no error shown
+    });
+}
+
+// Load after page is ready
+if(document.readyState === "loading") {
+  document.addEventListener("DOMContentLoaded", loadLiveReviews);
+} else {
+  loadLiveReviews();
+}
+</script>
 
 <!-- FAQ — AEO OPTIMISED -->
 <section id="faq" aria-label="FAQ" style="padding:4rem 0;background:#F6F8FA">
@@ -1301,7 +1544,7 @@ document.addEventListener("DOMContentLoaded",spdjClock);
           <a href="https://www.instagram.com/sanjaypaul03/" target="_blank" rel="noopener" class="soc" title="Instagram">&#x25CE;</a>
           <a href="https://x.com/spdigitaljourne" target="_blank" rel="noopener" class="soc" title="X / Twitter">&#x1D54F;</a>
           <a href="https://www.facebook.com/profile.php?id=61584622684344" target="_blank" rel="noopener" class="soc" title="Facebook">f</a>
-          <a href="https://wa.me/917799423794" target="_blank" rel="noopener" class="soc" style="border-color:#25D366;color:#25D366" title="WhatsApp">&#x1F4AC;</a>
+          <a href="https://wa.me/917799345794" target="_blank" rel="noopener" class="soc" style="border-color:#25D366;color:#25D366" title="WhatsApp">&#x1F4AC;</a>
         </div>
       </div>
       <div class="foot-col">
@@ -1325,7 +1568,7 @@ document.addEventListener("DOMContentLoaded",spdjClock);
       <div class="foot-col">
         <div class="foot-col-title">Contact</div>
         <a href="contact.html">Contact Page</a>
-        <a href="https://wa.me/917799423794" target="_blank" rel="noopener">WhatsApp</a>
+        <a href="https://wa.me/917799345794" target="_blank" rel="noopener">WhatsApp</a>
         <a href="mailto:rpsanjaypaul@gmail.com">Email</a>
         <a href="free-consultation.html">Free Consultation</a>
         <a href="free-consultation.html#pay">Pay Online</a>
@@ -1333,7 +1576,7 @@ document.addEventListener("DOMContentLoaded",spdjClock);
       </div>
     </div>
     <div class="foot-bottom">
-      <div class="foot-copy">&#xA9; 2026 SPDigitalJourney &#xB7; Achit Nagar, Soladevanahalli, Bengaluru, Karnataka 560107 &#xB7; UDYAM-KR-02-0117946</div>
+      <div class="foot-copy">&#xA9; 2026 SPDigitalJourney &#xB7; Bengaluru, Karnataka &#xB7; &#x1F4DE; +91 77994 23794 &#xB7; &#x1F4AC; +91 77993 45794</div>
       <div class="foot-trust">
         <a href="https://g.page/r/CdRrLmhaPARzEBM/review" target="_blank" rel="noopener">&#x2B50; Google Reviews</a>
         <a href="https://jsdl.in/DT-15PAIS817IE" target="_blank" rel="noopener">&#x2756; JustDial</a>
