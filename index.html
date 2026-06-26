@@ -560,19 +560,21 @@ footer{background:#0D1117;padding:3rem 2rem}
   html{font-size:16px}
 
   /* STATUS BAR */
-  .status-bar{padding:0 1rem;height:30px}
-  .sb-left{font-size:.7rem;gap:.3rem}
+  .status-bar{padding:0 .8rem;height:28px}
+  .sb-left{font-size:.65rem;gap:.25rem;overflow:hidden}
   .sb-right{display:none}
+  .sb-stars{display:none}
+  #sb-date{display:none}
 
   /* NAV */
-  nav{top:30px;padding:.8rem 1rem}
+  nav{top:28px;padding:.8rem 1rem}
   .nav-links,.nav-right{display:none}
   .hamburger{display:flex}
   .nav-tag{display:none}
   .nav-name{font-size:.9rem}
 
   /* HERO */
-  #hero{padding:0 1.2rem 2.5rem;padding-top:120px}
+  #hero{padding:0 1.2rem 2.5rem;padding-top:112px}
   .hero-chips{gap:.4rem;flex-wrap:wrap}
   .hero-chip{font-size:.7rem;padding:.28rem .6rem}
   h1.hero-h{font-size:1.7rem;line-height:1.2}
@@ -769,7 +771,7 @@ body{font-family:Sora,Inter,system-ui,sans-serif!important}
     <span class="sb-sep" aria-hidden="true">&#xB7;</span>
     <span>IST &#xB7; Bengaluru</span>
     <span class="sb-sep" aria-hidden="true">&#xB7;</span>
-    <a href="https://g.page/r/CdRrLmhaPARzEBM/review" target="_blank" rel="noopener"
+    <a href="https://g.page/r/CdRrLmhaPARzEBM/review" target="_blank" rel="noopener" class="sb-stars"
        style="color:#FBBF24;font-weight:700;text-decoration:none;display:inline-flex;align-items:center;gap:.3rem;font-size:.7rem">
       &#x2605;&#x2605;&#x2605;&#x2605;&#x2605; Google Reviews
     </a>
@@ -1191,9 +1193,9 @@ document.addEventListener("DOMContentLoaded",spdjClock);
       <!-- Entry Point -->
       <div style="background:#ffffff;border:1px solid #E8ECEF;border-radius:22px;padding:1.8rem;position:relative;overflow:hidden">
         <div style="font-family:Sora,sans-serif;font-size:.65rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;background:#F6F8FA;color:#57606A;padding:.3rem .7rem;border-radius:6px;display:inline-block;margin-bottom:.8rem">Starts from</div>
-        <div style="font-family:Sora,sans-serif;font-size:1rem;font-weight:700;color:#0D1117;margin-bottom:.4rem">Google Visibility Audit</div>
+        <div style="font-family:Sora,sans-serif;font-size:1rem;font-weight:700;color:#0D1117;margin-bottom:.4rem">GBP Fix &amp; Audit</div>
         <div style="font-family:Sora,sans-serif;font-size:2rem;font-weight:800;color:#0D1117;letter-spacing:-.02em;margin-bottom:.2rem">&#x20B9;10,000</div>
-        <div style="font-size:.76rem;color:#57606A;margin-bottom:1.3rem">One-time &middot; Delivered in 3 business days</div>
+        <div style="font-size:.76rem;color:#57606A;margin-bottom:1.3rem">One-time &middot; GBP fix or full audit &middot; starts from &#x20B9;10,000</div>
         <ul style="list-style:none;display:flex;flex-direction:column;gap:.55rem;margin-bottom:1.5rem;padding:0">
           <li style="font-size:.83rem;color:#24292E;display:flex;align-items:flex-start;gap:.6rem;line-height:1.5"><span style="color:#1A7F37;font-weight:700;flex-shrink:0">&#x2713;</span>Full GBP audit across 8 ranking factors</li>
           <li style="font-size:.83rem;color:#24292E;display:flex;align-items:flex-start;gap:.6rem;line-height:1.5"><span style="color:#1A7F37;font-weight:700;flex-shrink:0">&#x2713;</span>Competitor gap analysis &mdash; top 3 rivals</li>
@@ -1202,7 +1204,7 @@ document.addEventListener("DOMContentLoaded",spdjClock);
           <li style="font-size:.83rem;color:#24292E;display:flex;align-items:flex-start;gap:.6rem;line-height:1.5"><span style="color:#1A7F37;font-weight:700;flex-shrink:0">&#x2713;</span>Written fix-priority roadmap</li>
           <li style="font-size:.83rem;color:#24292E;display:flex;align-items:flex-start;gap:.6rem;line-height:1.5"><span style="color:#1A7F37;font-weight:700;flex-shrink:0">&#x2713;</span>30-min WhatsApp walkthrough</li>
         </ul>
-        <a href="https://wa.me/917799345794?text=Hi%2C%20I%20want%20the%20Google%20Visibility%20Audit" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:center;gap:.5rem;width:100%;background:#1A56DB;color:#fff;border:none;padding:.9rem;font-family:Sora,sans-serif;font-size:.84rem;font-weight:700;border-radius:10px;text-decoration:none;box-sizing:border-box">&#x1F4AC; Book Audit</a>
+        <a href="https://wa.me/917799345794?text=Hi%2C%20I%20want%20the%20Google%20Visibility%20Audit" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:center;gap:.5rem;width:100%;background:#1A56DB;color:#fff;border:none;padding:.9rem;font-family:Sora,sans-serif;font-size:.84rem;font-weight:700;border-radius:10px;text-decoration:none;box-sizing:border-box">&#x1F4AC; WhatsApp to fix / audit</a>
       </div>
 
       <!-- Growth System - Featured -->
@@ -1622,8 +1624,22 @@ document.querySelectorAll(".reveal").forEach(function(el){obs.observe(el);});
 // FAQ ACCORDION
 function toggleFaq(el){
   var isOpen=el.classList.contains("open");
-  document.querySelectorAll(".faq-item.open").forEach(function(f){f.classList.remove("open");});
-  if(!isOpen)el.classList.add("open");
+  // Close all
+  document.querySelectorAll(".faq-item").forEach(function(f){
+    f.classList.remove("open");
+    var ans=f.querySelector(".faq-a");
+    var icon=f.querySelector(".icon");
+    if(ans) ans.style.display="none";
+    if(icon) icon.style.transform="rotate(0deg)";
+  });
+  // Open clicked if it was closed
+  if(!isOpen){
+    el.classList.add("open");
+    var ans=el.querySelector(".faq-a");
+    var icon=el.querySelector(".icon");
+    if(ans) ans.style.display="block";
+    if(icon) icon.style.transform="rotate(180deg)";
+  }
 }
 
 // SMOOTH SCROLL for mobile menu links
