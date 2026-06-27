@@ -157,6 +157,10 @@ footer{background:var(--ink);padding:2rem;text-align:center}
 .wa-btn:hover{transform:scale(1.08)}
 
 @media(max-width:768px){
+  .cta-form-grid{grid-template-columns:1fr!important}
+  #stickyBar{flex-direction:column;gap:.6rem;text-align:center;padding:.8rem 1rem}
+  #leadPopup{width:calc(100vw - 2rem);right:1rem;bottom:4.5rem}
+  .form360-grid{grid-template-columns:1fr!important}
   .status-bar{padding:0 1rem;height:30px}
   .sb-left{font-size:.7rem;gap:.3rem}
   .sb-right{display:none}
@@ -184,7 +188,7 @@ footer{background:var(--ink);padding:2rem;text-align:center}
 <body>
 
 <div class="wa-float">
-  <a class="wa-btn" href="https://wa.me/917799423794?text=Hi%2C%20I%27d%20like%20a%20360%C2%B0%20virtual%20tour%20quote." target="_blank" rel="noopener" aria-label="Get a 360 tour quote on WhatsApp">&#x1F4AC;</a>
+  <a class="wa-btn" href="https://wa.me/917799345794?text=Hi%2C%20I%27d%20like%20a%20360%C2%B0%20virtual%20tour%20quote." target="_blank" rel="noopener" aria-label="Get a 360 tour quote on WhatsApp">&#x1F4AC;</a>
 </div>
 
 <div class="status-bar">
@@ -207,7 +211,7 @@ footer{background:var(--ink);padding:2rem;text-align:center}
   <div class="nav-right-btns">
     <a href="https://spdigitaljourney.github.io/" class="btn-back">&#x2190; Back to site</a>
     <a href="https://spdigitaljourney.github.io/contact.html" class="btn-back">Contact</a>
-    <a href="https://wa.me/917799423794?text=Hi%2C%20I%27d%20like%20a%20360%C2%B0%20virtual%20tour%20quote." target="_blank" rel="noopener" class="btn-quote">&#x1F4F8; Get a Quote</a>
+    <a href="https://wa.me/917799345794?text=Hi%2C%20I%27d%20like%20a%20360%C2%B0%20virtual%20tour%20quote." target="_blank" rel="noopener" class="btn-quote">&#x1F4F8; Get a Quote</a>
   </div>
   <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
 </nav>
@@ -221,7 +225,52 @@ footer{background:var(--ink);padding:2rem;text-align:center}
   <hr class="mob-divider"/>
   <a href="https://spdigitaljourney.github.io/contact.html" onclick="closeMob()">Contact</a>
   <a href="https://spdigitaljourney.github.io/tech-solutions.html" onclick="closeMob()">All Services</a>
-  <a href="https://wa.me/917799423794?text=Hi%2C%20I%27d%20like%20a%20360%C2%B0%20virtual%20tour%20quote." target="_blank" rel="noopener" class="mob-cta" onclick="closeMob()">&#x1F4F8; Get a Quote</a>
+  <a href="https://wa.me/917799345794?text=Hi%2C%20I%27d%20like%20a%20360%C2%B0%20virtual%20tour%20quote." target="_blank" rel="noopener" class="mob-cta" onclick="closeMob()">&#x1F4F8; Get a Quote</a>
+</div>
+
+<!-- STICKY QUOTE BAR -->
+<div id="stickyBar" style="position:fixed;bottom:0;left:0;right:0;z-index:190;background:#1A56DB;padding:.7rem 1.5rem;display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap;box-shadow:0 -4px 20px rgba(0,0,0,.3);transform:translateY(100%);transition:transform .4s ease">
+  <div style="display:flex;align-items:center;gap:.8rem">
+    <div style="width:8px;height:8px;border-radius:50%;background:#3FB950;animation:sbp 2s infinite;flex-shrink:0"></div>
+    <span style="font-family:Sora,sans-serif;font-size:.82rem;font-weight:600;color:#fff">Like what you see? <strong>Get a 360&#xB0; tour for your business</strong></span>
+  </div>
+  <div style="display:flex;gap:.6rem;flex-shrink:0">
+    <a href="#cta" onclick="openLeadForm()" style="background:#fff;color:#1A56DB;padding:.5rem 1.1rem;border-radius:8px;font-family:Sora,sans-serif;font-size:.78rem;font-weight:700;text-decoration:none">Get Quote</a>
+    <button onclick="closeStickyBar()" style="background:transparent;border:none;color:rgba(255,255,255,.5);font-size:1.1rem;cursor:pointer;padding:.2rem .5rem">&#x2715;</button>
+  </div>
+</div>
+
+<!-- HOT LEAD POPUP -->
+<div id="leadPopup" style="display:none;position:fixed;bottom:5rem;right:1.2rem;z-index:195;width:300px;background:#fff;border-radius:16px;box-shadow:0 12px 40px rgba(0,0,0,.25);overflow:hidden">
+  <div style="background:#1A56DB;padding:1rem 1.2rem;display:flex;align-items:center;justify-content:space-between">
+    <div>
+      <div style="font-family:Sora,sans-serif;font-size:.82rem;font-weight:700;color:#fff">&#x1F4F8; Book a 360&#xB0; tour</div>
+      <div style="font-size:.68rem;color:rgba(255,255,255,.65);margin-top:.15rem">Reply within 2 hours</div>
+    </div>
+    <button onclick="closePopup()" style="background:transparent;border:none;color:rgba(255,255,255,.6);font-size:1rem;cursor:pointer;line-height:1">&#x2715;</button>
+  </div>
+  <div style="padding:1.1rem" id="popupForm">
+    <div style="margin-bottom:.65rem">
+      <label style="font-family:Sora,sans-serif;font-size:.6rem;font-weight:700;color:#8B949E;text-transform:uppercase;letter-spacing:.05em;display:block;margin-bottom:.25rem">Business name *</label>
+      <input type="text" id="p_biz" placeholder="My Business" style="width:100%;background:#F6F8FA;border:1.5px solid #E8ECEF;color:#0D1117;padding:.6rem .8rem;border-radius:8px;font-size:.85rem;outline:none;font-family:Inter,sans-serif"/>
+    </div>
+    <div style="margin-bottom:.65rem">
+      <label style="font-family:Sora,sans-serif;font-size:.6rem;font-weight:700;color:#8B949E;text-transform:uppercase;letter-spacing:.05em;display:block;margin-bottom:.25rem">WhatsApp number *</label>
+      <input type="tel" id="p_phone" placeholder="+91 98765 43210" inputmode="numeric" style="width:100%;background:#F6F8FA;border:1.5px solid #E8ECEF;color:#0D1117;padding:.6rem .8rem;border-radius:8px;font-size:.85rem;outline:none;font-family:Inter,sans-serif"/>
+    </div>
+    <div style="margin-bottom:.9rem">
+      <label style="font-family:Sora,sans-serif;font-size:.6rem;font-weight:700;color:#8B949E;text-transform:uppercase;letter-spacing:.05em;display:block;margin-bottom:.25rem">City</label>
+      <input type="text" id="p_city" placeholder="Bengaluru" style="width:100%;background:#F6F8FA;border:1.5px solid #E8ECEF;color:#0D1117;padding:.6rem .8rem;border-radius:8px;font-size:.85rem;outline:none;font-family:Inter,sans-serif"/>
+    </div>
+    <a href="#" onclick="sendPopupWA(event)" style="display:flex;align-items:center;justify-content:center;gap:.5rem;width:100%;background:#25D366;color:#fff;padding:.75rem;border-radius:9px;font-family:Sora,sans-serif;font-size:.84rem;font-weight:700;text-decoration:none;box-sizing:border-box">&#x1F4AC; WhatsApp my quote</a>
+    <p style="font-size:.62rem;color:#8B949E;text-align:center;margin-top:.5rem">&#x1F512; Details shared only with SPDigitalJourney</p>
+  </div>
+  <div id="popupSuccess" style="display:none;padding:1.5rem;text-align:center">
+    <div style="font-size:2rem;margin-bottom:.6rem">&#x2705;</div>
+    <div style="font-family:Sora,sans-serif;font-size:.88rem;font-weight:700;color:#0D1117;margin-bottom:.3rem">Request sent!</div>
+    <p style="font-size:.78rem;color:#57606A;line-height:1.5;margin-bottom:.8rem">SPDigitalJourney will WhatsApp you within 2 hours.</p>
+    <a href="https://wa.me/917799345794" target="_blank" rel="noopener" style="font-family:Sora,sans-serif;font-size:.78rem;font-weight:700;color:#25D366;text-decoration:none">Open WhatsApp &#x2192;</a>
+  </div>
 </div>
 
 <section id="hero">
@@ -235,7 +284,7 @@ footer{background:var(--ink);padding:2rem;text-align:center}
       <div><div class="hs-val">72 hrs</div><div class="hs-label">Shoot to published</div></div>
       <div><div class="hs-val">2007</div><div class="hs-label">Street View expertise</div></div>
     </div>
-    <a href="https://wa.me/917799423794?text=Hi%2C%20I%27d%20like%20a%20360%C2%B0%20virtual%20tour%20quote." target="_blank" rel="noopener" class="cta-hero">&#x1F4F8; Book a 360&#xB0; Tour &#x2014; From &#x20B9;4,499</a>
+    <a href="https://wa.me/917799345794?text=Hi%2C%20I%27d%20like%20a%20360%C2%B0%20virtual%20tour%20quote." target="_blank" rel="noopener" class="cta-hero">&#x1F4F8; Book a 360&#xB0; Tour &#x2014; From &#x20B9;4,499</a>
   </div>
 </section>
 
@@ -403,16 +452,131 @@ footer{background:var(--ink);padding:2rem;text-align:center}
   </div>
 </section>
 
-<section id="cta">
-  <div class="inner">
-    <div class="cta-title reveal">Ready to be seen on Google Maps?</div>
-    <p class="cta-sub reveal">Professional 360&#xB0; photography and Google Maps publishing. From <strong style="color:#fff">&#x20B9;4,499</strong>, live within 72 hours of your shoot.</p>
-    <div class="cta-row reveal">
-      <a href="https://wa.me/917799423794?text=Hi%2C%20I%27d%20like%20a%20360%C2%B0%20virtual%20tour%20quote.%20My%20business%3A%20" target="_blank" rel="noopener" class="cta-btn-white">&#x1F4AC; Get a Quote on WhatsApp</a>
-      <a href="https://spdigitaljourney.github.io/tech-solutions.html" class="cta-btn-ghost">View All Services</a>
+<section id="cta" style="padding:5rem 2rem;background:#0D1117">
+  <div style="max-width:820px;margin:0 auto">
+
+    <span style="font-family:Sora,sans-serif;font-size:.7rem;font-weight:700;color:#1A56DB;letter-spacing:.08em;text-transform:uppercase;display:block;margin-bottom:.6rem;text-align:center">Book Your Tour</span>
+    <h2 style="font-family:Sora,sans-serif;font-size:clamp(1.5rem,3vw,2.2rem);font-weight:800;color:#ffffff;line-height:1.2;margin-bottom:.7rem;text-align:center">Ready to be seen on Google Maps?</h2>
+    <p style="font-size:.9rem;color:rgba(255,255,255,.6);line-height:1.7;margin-bottom:2.5rem;text-align:center;max-width:520px;margin-left:auto;margin-right:auto">Every embed above is a real published Google Maps tour. Your business can be next. Fill in the form &#x2014; SPDigitalJourney will reply on WhatsApp within 2 hours with availability and pricing.</p>
+
+    <!-- EMBEDDED LEAD FORM -->
+    <div style="background:#161B22;border:1px solid #30363D;border-radius:20px;padding:2rem;margin-bottom:1.5rem" id="ctaForm">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:.9rem;margin-bottom:.9rem" class="cta-form-grid">
+        <div>
+          <label style="font-family:Sora,sans-serif;font-size:.62rem;font-weight:700;color:#8B949E;text-transform:uppercase;letter-spacing:.05em;display:block;margin-bottom:.28rem">Business name *</label>
+          <input type="text" id="f360_biz" placeholder="My Business" style="width:100%;background:#0D1117;border:1.5px solid #30363D;color:#E8ECEF;padding:.72rem .9rem;font-family:Inter,sans-serif;font-size:.88rem;border-radius:9px;outline:none;transition:border-color .15s" onfocus="this.style.borderColor='#1A56DB'" onblur="this.style.borderColor='#30363D'"/>
+        </div>
+        <div>
+          <label style="font-family:Sora,sans-serif;font-size:.62rem;font-weight:700;color:#8B949E;text-transform:uppercase;letter-spacing:.05em;display:block;margin-bottom:.28rem">Your name *</label>
+          <input type="text" id="f360_name" placeholder="Rahul Sharma" style="width:100%;background:#0D1117;border:1.5px solid #30363D;color:#E8ECEF;padding:.72rem .9rem;font-family:Inter,sans-serif;font-size:.88rem;border-radius:9px;outline:none;transition:border-color .15s" onfocus="this.style.borderColor='#1A56DB'" onblur="this.style.borderColor='#30363D'"/>
+        </div>
+        <div>
+          <label style="font-family:Sora,sans-serif;font-size:.62rem;font-weight:700;color:#8B949E;text-transform:uppercase;letter-spacing:.05em;display:block;margin-bottom:.28rem">WhatsApp number *</label>
+          <input type="tel" id="f360_phone" placeholder="+91 98765 43210" inputmode="numeric" style="width:100%;background:#0D1117;border:1.5px solid #30363D;color:#E8ECEF;padding:.72rem .9rem;font-family:Inter,sans-serif;font-size:.88rem;border-radius:9px;outline:none;transition:border-color .15s" onfocus="this.style.borderColor='#1A56DB'" onblur="this.style.borderColor='#30363D'"/>
+        </div>
+        <div>
+          <label style="font-family:Sora,sans-serif;font-size:.62rem;font-weight:700;color:#8B949E;text-transform:uppercase;letter-spacing:.05em;display:block;margin-bottom:.28rem">City / Area *</label>
+          <input type="text" id="f360_city" placeholder="Bengaluru" style="width:100%;background:#0D1117;border:1.5px solid #30363D;color:#E8ECEF;padding:.72rem .9rem;font-family:Inter,sans-serif;font-size:.88rem;border-radius:9px;outline:none;transition:border-color .15s" onfocus="this.style.borderColor='#1A56DB'" onblur="this.style.borderColor='#30363D'"/>
+        </div>
+        <div>
+          <label style="font-family:Sora,sans-serif;font-size:.62rem;font-weight:700;color:#8B949E;text-transform:uppercase;letter-spacing:.05em;display:block;margin-bottom:.28rem">Business type</label>
+          <select id="f360_type" style="width:100%;background:#0D1117;border:1.5px solid #30363D;color:#E8ECEF;padding:.72rem .9rem;font-family:Inter,sans-serif;font-size:.88rem;border-radius:9px;outline:none">
+            <option value="">Select...</option>
+            <option>Gym / Fitness</option>
+            <option>Clinic / Healthcare</option>
+            <option>Jewellery Showroom</option>
+            <option>Restaurant / Cafe</option>
+            <option>Automotive / Dealership</option>
+            <option>Retail / Shop</option>
+            <option>Education</option>
+            <option>Hotel / Hospitality</option>
+            <option>Fuel / Petroleum Station</option>
+            <option>Furniture / Home Decor</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div>
+          <label style="font-family:Sora,sans-serif;font-size:.62rem;font-weight:700;color:#8B949E;text-transform:uppercase;letter-spacing:.05em;display:block;margin-bottom:.28rem">Locations to shoot</label>
+          <select id="f360_locs" style="width:100%;background:#0D1117;border:1.5px solid #30363D;color:#E8ECEF;padding:.72rem .9rem;font-family:Inter,sans-serif;font-size:.88rem;border-radius:9px;outline:none">
+            <option value="1 location">1 location</option>
+            <option value="2 locations">2 locations</option>
+            <option value="3 locations">3 locations</option>
+            <option value="4+ locations">4+ locations</option>
+            <option value="Not sure yet">Not sure yet</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- WHAT'S INCLUDED STRIP -->
+      <div style="display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:1.2rem">
+        <span style="font-size:.72rem;color:rgba(255,255,255,.5);padding:.28rem .7rem;border:1px solid #30363D;border-radius:12px">&#x2713; Professional 360&#xB0; photography</span>
+        <span style="font-size:.72rem;color:rgba(255,255,255,.5);padding:.28rem .7rem;border:1px solid #30363D;border-radius:12px">&#x2713; Published on Google Maps</span>
+        <span style="font-size:.72rem;color:rgba(255,255,255,.5);padding:.28rem .7rem;border:1px solid #30363D;border-radius:12px">&#x2713; Live within 72 hours</span>
+        <span style="font-size:.72rem;color:rgba(255,255,255,.5);padding:.28rem .7rem;border:1px solid #30363D;border-radius:12px">&#x2713; From &#x20B9;10,000</span>
+      </div>
+
+      <div style="display:flex;gap:.8rem;flex-wrap:wrap">
+        <a href="#" onclick="sendCTAWA(event)" style="flex:1;background:#25D366;color:#fff;padding:1rem;font-family:Sora,sans-serif;font-size:.9rem;font-weight:700;border-radius:10px;text-decoration:none;display:flex;align-items:center;justify-content:center;gap:.5rem;min-width:180px;box-sizing:border-box">&#x1F4AC; Send quote request on WhatsApp</a>
+        <a href="https://wa.me/917799345794?text=Hi%2C%20I%27d%20like%20a%20360%C2%B0%20virtual%20tour%20quote%20for%20my%20business." target="_blank" rel="noopener" style="background:#0D1117;border:1.5px solid #30363D;color:rgba(255,255,255,.6);padding:1rem 1.4rem;font-family:Sora,sans-serif;font-size:.84rem;font-weight:600;border-radius:10px;text-decoration:none;display:flex;align-items:center;gap:.5rem;white-space:nowrap">&#x1F4AC; WhatsApp directly</a>
+      </div>
+      <p style="font-size:.66rem;color:rgba(255,255,255,.28);text-align:center;margin-top:.7rem">&#x1F512; Details used only to quote your tour. Never shared.</p>
     </div>
+
+    <!-- SUCCESS STATE -->
+    <div id="ctaSuccess" style="display:none;background:#161B22;border:1px solid #1A7F37;border-radius:20px;padding:2.5rem;text-align:center">
+      <div style="font-size:2.5rem;margin-bottom:.8rem">&#x2705;</div>
+      <div style="font-family:Sora,sans-serif;font-size:1.2rem;font-weight:800;color:#ffffff;margin-bottom:.5rem">Quote request sent!</div>
+      <p style="font-size:.88rem;color:rgba(255,255,255,.55);line-height:1.7;margin-bottom:1.4rem">SPDigitalJourney will contact you on WhatsApp within <strong style="color:#fff">2 hours</strong> on business days with availability and pricing.</p>
+      <a href="https://wa.me/917799345794" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:.5rem;background:#25D366;color:#fff;padding:.9rem 2rem;border-radius:10px;font-family:Sora,sans-serif;font-size:.9rem;font-weight:700;text-decoration:none">&#x1F4AC; Open WhatsApp now</a>
+    </div>
+
+    <!-- STAT STRIP -->
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:.8rem;margin-top:1.5rem">
+      <div style="background:#161B22;border:1px solid #30363D;border-radius:12px;padding:1.1rem;text-align:center">
+        <div style="font-family:Sora,sans-serif;font-size:1.4rem;font-weight:800;color:#1A56DB">500+</div>
+        <div style="font-size:.7rem;color:rgba(255,255,255,.4);margin-top:.2rem">Tours published</div>
+      </div>
+      <div style="background:#161B22;border:1px solid #30363D;border-radius:12px;padding:1.1rem;text-align:center">
+        <div style="font-family:Sora,sans-serif;font-size:1.4rem;font-weight:800;color:#1A56DB">72hr</div>
+        <div style="font-size:.7rem;color:rgba(255,255,255,.4);margin-top:.2rem">Shoot to live</div>
+      </div>
+      <div style="background:#161B22;border:1px solid #30363D;border-radius:12px;padding:1.1rem;text-align:center">
+        <div style="font-family:Sora,sans-serif;font-size:1.4rem;font-weight:800;color:#1A56DB">10</div>
+        <div style="font-size:.7rem;color:rgba(255,255,255,.4);margin-top:.2rem">Industries</div>
+      </div>
+      <div style="background:#161B22;border:1px solid #30363D;border-radius:12px;padding:1.1rem;text-align:center">
+        <div style="font-family:Sora,sans-serif;font-size:1.4rem;font-weight:800;color:#FBBF24">&#x20B9;10K</div>
+        <div style="font-size:.7rem;color:rgba(255,255,255,.4);margin-top:.2rem">Starting price</div>
+      </div>
+    </div>
+
   </div>
 </section>
+
+
+
+<script>
+function send360WA(e){
+  e.preventDefault();
+  var biz=document.getElementById('t_biz').value.trim();
+  var phone=document.getElementById('t_phone').value.trim();
+  var city=document.getElementById('t_city').value.trim()||'Not specified';
+  var type=document.getElementById('t_type').value||'Not specified';
+  if(!biz||!phone){alert('Please fill in your business name and WhatsApp number.');return;}
+  var msg='Hi SPDigitalJourney! I would like a 360° virtual tour quote.
+
+Business: '+biz+'
+WhatsApp: '+phone+'
+City: '+city+'
+Type: '+type+'
+
+Please contact me to discuss. Thank you!';
+  window.open('https://wa.me/917799345794?text='+encodeURIComponent(msg),'_blank');
+  document.getElementById('tourForm360').style.display='none';
+  document.getElementById('success360').style.display='block';
+}
+</script>
+
 
 <footer>
   <div class="inner">
@@ -459,6 +623,76 @@ var obs=new IntersectionObserver(function(entries){
   });
 },{threshold:0.06});
 document.querySelectorAll(".reveal").forEach(function(el){obs.observe(el);});
+
+// ── STICKY BAR: show after 20s or after scrolling 40% ──
+var stickyShown = false;
+function showStickyBar(){
+  if(stickyShown) return;
+  stickyShown = true;
+  document.getElementById('stickyBar').style.transform = 'translateY(0)';
+}
+setTimeout(showStickyBar, 20000);
+window.addEventListener('scroll', function(){
+  if((window.scrollY / document.body.scrollHeight) > 0.4) showStickyBar();
+});
+function closeStickyBar(){
+  document.getElementById('stickyBar').style.transform = 'translateY(100%)';
+}
+
+// ── POPUP: show after 45s or after scrolling 60% ──
+var popupShown = false;
+function showPopup(){
+  if(popupShown) return;
+  popupShown = true;
+  document.getElementById('leadPopup').style.display = 'block';
+}
+setTimeout(showPopup, 45000);
+window.addEventListener('scroll', function(){
+  if((window.scrollY / document.body.scrollHeight) > 0.6) showPopup();
+});
+function closePopup(){
+  document.getElementById('leadPopup').style.display = 'none';
+}
+function openLeadForm(){
+  document.getElementById('leadPopup').style.display = 'block';
+}
+
+// ── POPUP FORM SUBMIT ──
+function sendPopupWA(e){
+  e.preventDefault();
+  var biz = document.getElementById('p_biz').value.trim();
+  var phone = document.getElementById('p_phone').value.trim();
+  var city = document.getElementById('p_city').value.trim() || 'Not specified';
+  if(!biz || !phone){ alert('Please fill in your business name and WhatsApp number.'); return; }
+  var msg = 'Hi SPDigitalJourney! I\'d like a 360\u00b0 virtual tour quote.\n\nBusiness: ' + biz + '\nWhatsApp: ' + phone + '\nCity: ' + city + '\n\nPlease contact me. Thank you!';
+  window.open('https://wa.me/917799345794?text=' + encodeURIComponent(msg), '_blank');
+  document.getElementById('popupForm').style.display = 'none';
+  document.getElementById('popupSuccess').style.display = 'block';
+}
+
+// ── MAIN CTA FORM SUBMIT ──
+function sendCTAWA(e){
+  e.preventDefault();
+  var biz = document.getElementById('f360_biz').value.trim();
+  var name = document.getElementById('f360_name').value.trim();
+  var phone = document.getElementById('f360_phone').value.trim();
+  var city = document.getElementById('f360_city').value.trim() || 'Not specified';
+  var type = document.getElementById('f360_type').value || 'Not specified';
+  var locs = document.getElementById('f360_locs').value || 'Not specified';
+  if(!biz || !name || !phone){ alert('Please fill in business name, your name and WhatsApp number.'); return; }
+  var msg = 'Hi SPDigitalJourney! I\'d like a 360\u00b0 virtual tour quote.\n\n'
+    + 'Business: ' + biz + '\n'
+    + 'Name: ' + name + '\n'
+    + 'WhatsApp: ' + phone + '\n'
+    + 'City: ' + city + '\n'
+    + 'Business type: ' + type + '\n'
+    + 'Locations: ' + locs + '\n\n'
+    + 'Please send pricing and availability. Thank you!';
+  window.open('https://wa.me/917799345794?text=' + encodeURIComponent(msg), '_blank');
+  document.getElementById('ctaForm').style.display = 'none';
+  document.getElementById('ctaSuccess').style.display = 'block';
+  document.getElementById('ctaSuccess').scrollIntoView({behavior:'smooth', block:'center'});
+}
 </script>
 </body>
 </html>
